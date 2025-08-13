@@ -404,15 +404,15 @@
         const notes = document.getElementById('customer-notes').value.trim();
 
         // صياغة رسالة الطلب
-        let message = "طلب جديد من متجر الحدث موبايل:\n\n";
-        message += "👤 الاسم: ${name}\n";
-        message += "📞 رقم الهاتف: ${phone}\n";
-        message += "🏠 العنوان: ${address}\n";
-        if(notes) message += "📝 ملاحظات: ${notes}\n";
-        message += "\n📦 المنتجات:\n";
+        let message = 'طلب جديد من متجر الحدث موبايل:\n\n';
+        message += '👤 الاسم: ${name}\n';
+        message += '📞 رقم الهاتف: ${phone}\n';
+        message += '🏠 العنوان: ${address}\n';
+        if(notes) message += '📝 ملاحظات: ${notes}\n';
+        message += '\n📦 المنتجات:\n';
 
         cart.forEach(item => {
-            message += - ${item.name} ×${item.quantity} (السعر: ${item.price} JD)\n;
+            message += '- ${item.name} ×${item.quantity} (السعر: ${item.price} JD)\n';
         });
 
         // إرسال للتيليجرام
@@ -436,7 +436,7 @@
         const botToken = '8429839299:AAGIZDR0i2whW7AvRzdGh5DdpfKavCWtw4E';
         const chatId = '8403706325';
 
-        const url = "https://api.telegram.org/bot${botToken}/sendMessage";
+        const url = 'https://api.telegram.org/bot${botToken}/sendMessage';
 
         const params = {
             chat_id: chatId,
@@ -455,9 +455,8 @@
             throw new Error('Failed to send message');
         }
         return await response.json();
-    }
-
-    بدء العرض عند تحميل الصفحه //
+}
+  بدء العرض عند تحميل الصفحة // 
     showBrands();
     const firstBrand = document.querySelector('.brand');
     if (firstBrand) {
