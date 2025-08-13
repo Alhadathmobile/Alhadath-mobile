@@ -1,135 +1,192 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الحدث موبايل</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>متجر الحدث موبايل</title>
     <style>
+        /* بعض التنسيقات الأساسية */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            direction: rtl;
+            margin: 20px;
         }
-        header {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-        h2 {
-            background-color: #ddd;
-            padding: 0.5rem;
-            margin: 0;
-        }
-        .company-section {
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        .product {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-            padding-bottom: 1rem;
-        }
-        .product img {
+        #search-bar {
             width: 100%;
-            height: 180px;
-            object-fit: cover;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
-        .product h3 {
-            font-size: 1.1rem;
-            margin: 0.5rem 0;
+        .brands-container {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            margin-bottom: 20px;
         }
-        .product p {
-            color: #555;
-            margin: 0.5rem 0;
-        }
-        .whatsapp-btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #25d366;
+        .brand {
+            padding: 10px 20px;
+            background-color: #007bff;
             color: white;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-top: 0.5rem;
+            cursor: pointer;
+            border-radius: 8px;
+            white-space: nowrap;
+            user-select: none;
         }
-        .top-btn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #222;
-            color: white;
-            padding: 0.5rem 1rem;
+        .brand.active {
+            background-color: #0056b3;
+        }
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+            gap: 15px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
             border-radius: 4px;
-            text-decoration: none;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>الحدث موبايل</h1>
-    <p>أفضل العروض على الهواتف والأجهزة اللوحية</p>
-</header>
+    <input type="text" id="search-bar" placeholder="ابحث عن منتج..." />
 
-<h2>📱 Samsung</h2>
-<div class="company-section">
-    <div class="product">
-        <img src="https://via.placeholder.com/200x180.png?text=Samsung+A06+64GB" alt="Samsung A06 64GB">
-        <h3>Samsung A06 - 64GB / 4GB RAM</h3>
-        <p>49JD</p>
-        <a class="whatsapp-btn" href="https://wa.me/962796313243">اطلب الآن</a>
+    <div class="brands-container" id="brands-container">
+        <!-- البراندات ستضاف هنا -->
     </div>
-    <div class="product">
-        <img src="https://via.placeholder.com/200x180.png?text=Samsung+A06+128GB" alt="Samsung A06 128GB">
-        <h3>Samsung A06 - 128GB / 4GB RAM</h3>
-        <p>59JD</p>
-        <a class="whatsapp-btn" href="https://wa.me/962796313243">اطلب الآن</a>
-    </div>
-    <div class="product">
-        <img src="https://via.placeholder.com/200x180.png?text=Samsung+A16" alt="Samsung A16">
-        <h3>Samsung A16 - 128GB / 4GB RAM</h3>
-        <p>99JD</p>
-        <a class="whatsapp-btn" href="https://wa.me/962796313243">اطلب الآن</a>
-    </div>
-</div>
 
-<h2>📱 Xiaomi</h2>
-<div class="company-section">
-    <div class="product">
-        <img src="https://via.placeholder.com/200x180.png?text=Mi+Note+14" alt="Mi Note 14">
-        <h3>Mi Note 14 - 256GB / 8GB RAM</h3>
-        <p>149JD</p>
-        <a class="whatsapp-btn" href="https://wa.me/962796313243">اطلب الآن</a>
+    <div class="products-container" id="products-container">
+        <!-- المنتجات ستعرض هنا -->
     </div>
-</div>
 
-<h2> Apple</h2>
-<div class="company-section">
-    <div class="product">
-        <img src="https://via.placeholder.com/200x180.png?text=iPhone+16+Pro+Max" alt="iPhone 16 Pro Max">
-        <h3>iPhone 16 Pro Max - 256GB</h3>
-        <p>900JD</p>
-        <a class="whatsapp-btn" href="https://wa.me/962796313243">اطلب الآن</a>
-    </div>
-</div>
+<script>
+    // بيانات براندات مع منتجاتهم (مثال)
+    const data = {
+        Samsung: [
+            {name: "Samsung A06 64G", image: "https://example.com/samsung_a06_64g.jpg", price: "49JD"},
+            {name: "Samsung A06 128G", image: "https://example.com/samsung_a06_128g.jpg", price: "59JD"},
+        ],
+        Apple: [
+            {name: "iPhone 16 Pro Max", image: "https://example.com/iphone16promax.jpg", price: "1200JD"},
+            {name: "iPhone 14", image: "https://example.com/iphone14.jpg", price: "800JD"},
+        ],
+        Xiaomi: [
+            {name: "Xiaomi Redmi Note 11", image: "https://example.com/xiaomi_note11.jpg", price: "200JD"},
+        ],
+    };
 
-<h2>💻 الأجهزة اللوحية</h2>
-<div class="company-section">
-    <div class="product">
-        <img src="images/tab_pad_se_2.jbg" alt="Tap Pad SE 2">
-        <h3>Tab Pad SE 2</h3>
-        <p>159JD</p>
-        <a class="whatsapp-btn" href="https://wa.me/962796313243">اطلب الآن</a>
-    </div>
-</div>
+    const brandsContainer = document.getElementById('brands-container');
+    const productsContainer = document.getElementById('products-container');
+    const searchBar = document.getElementById('search-bar');
 
-<a href="#" class="top-btn">🔝 للأعلى</a>
+    // عرض البراندات في الأعلى
+    function showBrands() {
+        for (let brand in data) {
+            const brandDiv = document.createElement('div');
+            brandDiv.textContent = brand;
+            brandDiv.classList.add('brand');
+            brandDiv.addEventListener('click', () => {
+                setActiveBrand(brandDiv);
+                showProducts(brand);
+            });
+            brandsContainer.appendChild(brandDiv);
+        }
+    }
 
+    // تحديد البراند المختار وتغيير اللون
+    function setActiveBrand(selectedBrandDiv) {
+        const allBrands = document.querySelectorAll('.brand');
+        allBrands.forEach(b => b.classList.remove('active'));
+        selectedBrandDiv.classList.add('active');
+    }
+
+    // عرض المنتجات حسب البراند
+    function showProducts(brand) {
+        productsContainer.innerHTML = '';
+        const products = data[brand];
+        if (!products) return;
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+
+            productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" />
+                <h4>${product.name}</h4>
+                <p>السعر: ${product.price}</p>
+            `;
+
+            productsContainer.appendChild(productCard);
+        });
+    }
+
+    // البحث عن منتج داخل كل البراندات
+    function searchProducts(keyword) {
+        productsContainer.innerHTML = '';
+        keyword = keyword.trim().toLowerCase();
+
+        if (keyword === '') {
+            // اذا كان البحث فارغ، إظهار أول براند تلقائيا
+            const firstBrand = document.querySelector('.brand');
+            if(firstBrand) {
+                setActiveBrand(firstBrand);
+                showProducts(firstBrand.textContent);
+            }
+            return;
+        }
+
+        // البحث داخل جميع المنتجات
+        const allProducts = [];
+        for (let brand in data) {
+            allProducts.push(...data[brand].map(p => ({...p, brand})));
+        }
+
+        const filtered = allProducts.filter(product => product.name.toLowerCase().includes(keyword));
+
+        if (filtered.length === 0) {
+            productsContainer.innerHTML = '<p>لم يتم العثور على منتجات.</p>';
+            return;
+        }
+
+        // إزالة تمييز البراند عند البحث
+        const allBrands = document.querySelectorAll('.brand');
+        allBrands.forEach(b => b.classList.remove('active'));
+
+        filtered.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+
+            productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" />
+                <h4>${product.name}</h4>
+                <p>السعر: ${product.price}</p>
+                <p>براند: ${product.brand}</p>
+            `;
+
+            productsContainer.appendChild(productCard);
+        });
+    }
+
+    // حدث عند كتابة شيء في مربع البحث
+    searchBar.addEventListener('input', (e) => {
+        searchProducts(e.target.value);
+    });
+
+    // عرض البراندات والمنتجات أول مرة عند تحميل الصفحة
+    showBrands();
+    // عرض أول براند بشكل افتراضي
+    const firstBrand = document.querySelector('.brand');
+    if (firstBrand) {
+        setActiveBrand(firstBrand);
+        showProducts(firstBrand.textContent);
+    }
+
+</script>
 </body>
 </html>
