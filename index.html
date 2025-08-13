@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title> متجر الحدث موبايل </title>
+<title>متجر الحدث موبايل</title>
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -269,7 +269,6 @@
             productsContainer.appendChild(productCard);
         });
 
-        // ربط أزرار الإضافة للسلة
         document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const productId = parseInt(btn.getAttribute('data-id'));
@@ -322,7 +321,6 @@
             cartItemsContainer.appendChild(div);
         });
 
-        // ربط أزرار الحذف
         document.querySelectorAll('.remove-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const id = parseInt(btn.getAttribute('data-id'));
@@ -403,19 +401,17 @@
         const address = document.getElementById('customer-address').value.trim();
         const notes = document.getElementById('customer-notes').value.trim();
 
-        // صياغة رسالة الطلب
-        let message = 'طلب جديد من متجر الحدث موبايل:\n\n';
+        let message = 'طلب جديد من متجر الحدث موبايل':\n\n;
         message += '👤 الاسم: ${name}\n';
         message += '📞 رقم الهاتف: ${phone}\n';
         message += '🏠 العنوان: ${address}\n';
-        if(notes) message += '📝 ملاحظات: ${notes}\n';
+        if (notes) message += '📝 ملاحظات: ${notes}\n';
         message += '\n📦 المنتجات:\n';
 
         cart.forEach(item => {
             message += '- ${item.name} ×${item.quantity} (السعر: ${item.price} JD)\n';
         });
 
-        // إرسال للتيليجرام
         try {
             await sendTelegramMessage(message);
             messageDiv.style.color = 'green';
@@ -431,7 +427,6 @@
         }
     });
 
-    // دالة إرسال رسالة إلى بوت تليجرام عبر API
     async function sendTelegramMessage(text) {
         const botToken = '8429839299:AAGIZDR0i2whW7AvRzdGh5DdpfKavCWtw4E';
         const chatId = '8403706325';
@@ -444,7 +439,6 @@
             parse_mode: 'Markdown'
         };
 
-        // نرسل الطلب POST بصيغة JSON
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -456,8 +450,8 @@
         }
         return await response.json();
     }
-  
-    بدء العرض عند تحميل الصفحة // 
+
+    // بدء العرض عند تحميل الصفحة
     showBrands();
     const firstBrand = document.querySelector('.brand');
     if (firstBrand) {
