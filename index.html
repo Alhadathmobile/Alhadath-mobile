@@ -1,136 +1,49 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>متجر الحدث موبايل</title>
 <style>
-    body {font-family: Arial, sans-serif; background-color: #121212; color: white; margin: 0;}
-    header {background-color: #1f1f1f; padding: 15px; text-align: center; font-size: 24px; font-weight: bold; border-bottom: 2px solid #00ff99;}
-    .offers-bar {background-color: #00ff99; color: black; padding: 10px 0; overflow: hidden; white-space: nowrap; box-shadow: 0 0 10px rgba(0,255,153,0.5);}
-    .offers-text {display: inline-block; padding-left: 100%; animation: scroll 15s linear infinite; font-weight: bold;}
-    @keyframes scroll {0% {transform: translateX(0);} 100% {transform: translateX(-100%);}}
-    .cart {position: fixed; top: 10px; left: 10px; background:#00ff99; color:black; padding:5px 10px; border-radius:5px; z-index: 999;}
-    section {padding: 20px;}
-    h2 {color: #00ff99; border-bottom: 1px solid #00ff99; padding-bottom: 5px;}
-    .product-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;}
-    .product {background-color: #1f1f1f; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 0 10px rgba(0,255,153,0.3); transition: transform 0.3s ease;}
-    .product:hover {transform: scale(1.05);}
-    .product img {max-width: 100%; border-radius: 5px;}
-    .price {color: #ffcc00; font-size: 18px; margin: 5px 0;}
-    button {background-color: #25D366; border: none; padding: 8px 15px; margin-top: 5px; color: white; border-radius: 5px; cursor: pointer;}
-    button:hover {background-color: #1ebc59;}
-    #checkout {margin: 20px; display: none; background:#1f1f1f; padding:15px; border-radius:8px;}
-    input, textarea {width: 100%; padding: 8px; margin: 5px 0; border-radius: 5px; border: none;}
-    #sendOrder {background: #00ff99; color: black; font-weight: bold;}
+body { font-family: Arial, sans-serif; direction: rtl; text-align: center; }
+.products { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.product { border: 1px solid #ccc; padding: 10px; width: 220px; border-radius: 8px; }
+.product img { width: 100%; height: auto; border-radius: 8px; }
+button { background: green; color: white; padding: 10px; border: none; cursor: pointer; border-radius: 5px; }
+button:hover { background: darkgreen; }
+a { display: block; margin: 15px; font-weight: bold; }
 </style>
 </head>
 <body>
 
-<header>📱 متجر الحدث موبايل</header>
+<h1>📱 متجر الحدث موبايل</h1>
+<a href="cart.html">عرض السلة 🛒</a>
 
-<div class="offers-bar">
-    <div class="offers-text">🔥 عروض خاصة: خصم 10% على جميع الأجهزة - شحن مجاني داخل الأردن 🔥</div>
+<div class="products">
+
+<div class="product">
+    <img src="https://i.ibb.co/7NJyVxq/samsung-a06.jpg" alt="Samsung A06 64GB">
+    <h3>Samsung A06 - 64GB / 4GB RAM</h3>
+    <p>السعر: 49 دينار</p>
+    <button onclick="addToCart('Samsung A06 - 64GB / 4GB RAM', 49)">أضف للسلة</button>
 </div>
 
-<div class="cart">🛒 السلة: <span id="cartCount">0</span></div>
-
-<section>
-    <h2>📌 أجهزة Samsung</h2>
-    <div class="product-grid">
-        <div class="product">
-            <img src="images/samsung-a06-64.jpg" alt="Samsung A06 64GB">
-            <h3>Samsung A06 - 64GB / 4GB RAM</h3>
-            <div class="price">49 دينار</div>
-            <button onclick="addToCart('Samsung A06 - 64GB - 49JD')">أضف للسلة</button>
-        </div>
-        <div class="product">
-            <img src="images/samsung-a06-128.jpg" alt="Samsung A06 128GB">
-            <h3>Samsung A06 - 128GB / 4GB RAM</h3>
-            <div class="price">59 دينار</div>
-            <button onclick="addToCart('Samsung A06 - 128GB - 59JD')">أضف للسلة</button>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>🍏 أجهزة iPhone</h2>
-    <div class="product-grid">
-        <div class="product">
-            <img src="images/iphone-16-pro-max.jpg" alt="iPhone 16 Pro Max">
-            <h3>iPhone 16 Pro Max</h3>
-            <div class="price">999 دينار</div>
-            <button onclick="addToCart('iPhone 16 Pro Max - 999JD')">أضف للسلة</button>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>📱 أجهزة أخرى</h2>
-    <div class="product-grid">
-        <div class="product">
-            <img src="images/xiaomi-redmi.jpg" alt="Xiaomi Redmi Note">
-            <h3>Xiaomi Redmi Note</h3>
-            <div class="price">120 دينار</div>
-            <button onclick="addToCart('Xiaomi Redmi Note - 120JD')">أضف للسلة</button>
-        </div>
-    </div>
-</section>
-
-<div id="checkout">
-    <h2>📦 إتمام الطلب</h2>
-    <input type="text" id="name" placeholder="الاسم الكامل" required>
-    <input type="text" id="phone" placeholder="رقم الهاتف" required>
-    <textarea id="address" placeholder="العنوان الكامل" required></textarea>
-    <button id="sendOrder">📩 إرسال الطلب</button>
+<div class="product">
+    <img src="https://i.ibb.co/5cTtV8y/iphone-16-pro-max.jpg" alt="iPhone 16 Pro Max">
+    <h3>iPhone 16 Pro Max</h3>
+    <p>السعر: 999 دينار</p>
+    <button onclick="addToCart('iPhone 16 Pro Max', 999)">أضف للسلة</button>
 </div>
 
-<script>
-let cart = [];
-const cartCount = document.getElementById("cartCount");
-const checkout = document.getElementById("checkout");
+<div class="product">
+    <img src="https://i.ibb.co/7NJyVxq/samsung-a06.jpg" alt="Samsung A06 128GB">
+    <h3>Samsung A06 - 128GB / 4GB RAM</h3>
+    <p>السعر: 59 دينار</p>
+    <button onclick="addToCart('Samsung A06 - 128GB / 4GB RAM', 59)">أضف للسلة</button>
+</div>
 
-function addToCart(item) {
-    cart.push(item);
-    cartCount.textContent = cart.length;
-    checkout.style.display = "block";
-}
+</div>
 
-// ضع التوكن و الـ Chat ID هنا
-const BOT_TOKEN = "8429839299:AAGIZDR0i2whW7AvRzdGh5DdpfKavCWtw4E";
-const CHAT_ID = "8403706325";
-
-document.getElementById("sendOrder").addEventListener("click", function(){
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
-
-    if(!name || !phone || !address){
-        alert("يرجى تعبئة جميع البيانات");
-        return;
-    }
-
-    let orderText = "🛒 طلب جديد من متجر الحدث موبايل\n\n";
-    orderText += "👤 الاسم: " + name + "\n";
-    orderText += "📞 الهاتف: " + phone + "\n";
-    orderText += "📍 العنوان: " + address + "\n\n";
-    orderText += "📦 المنتجات:\n" + cart.join("\n");
-
-    fetch(https://api.telegram.org/bot${BOT_TOKEN}/sendMessage, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({chat_id: CHAT_ID, text: orderText})
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert("✅ تم إرسال الطلب بنجاح!");
-        cart = [];
-        cartCount.textContent = 0;
-        checkout.style.display = "none";
-    })
-    .catch(err => alert("❌ فشل الإرسال: " + err));
-});
-</script>
-
+<script src="cart.js"></script>
 </body>
 </html>
