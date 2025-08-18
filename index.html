@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>متجر الحدث موبايل</title>
+  <style>
+    body {font-family: Tahoma, sans-serif; direction: rtl; margin:0; padding:0; background:#f7f7f7;}
+    header {background:#222; color:#fff; padding:15px; text-align:center;}
+    header h1 {margin:0;}
+    nav {background:#444; color:#fff; display:flex; justify-content:center; flex-wrap:wrap;}
+    nav button {margin:5px; padding:10px 15px; background:#eee; border:none; cursor:pointer;}
+    nav button:hover {background:#ddd;}
+    #searchBar {width:90%; margin:15px auto; display:block; padding:10px;}
+    .products {display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:15px; padding:15px;}
+    .product {background:#fff; border-radius:5px; padding:10px; box-shadow:0 0 5px #aaa;}
+    .product img {width:100%; height:200px; object-fit:cover;}
+    .product h3 {margin:10px 0 5px;}
+    .product p {margin:3px 0; font-size:14px;}
+    .product button {background:#28a745; color:#fff; padding:8px 12px; border:none; cursor:pointer; margin-top:8px;}
+    #cart {position:fixed; top:0; left:0; width:300px; height:100%; background:#fff; border-left:2px solid #ccc;
+           padding:15px; overflow:auto; transform:translateX(-100%); transition:0.3s;}
+    #cart.active {transform:translateX(0);}
+    #cart h2 {margin-top:0;}
+    #cart ul {list-style:none; padding:0;}
+    #cart li {margin-bottom:8px; font-size:14px;}
+    #checkout {background:#007bff; color:#fff; padding:10px; border:none; cursor:pointer; margin-top:10px;}
+    form {display:flex; flex-direction:column; margin-top:15px;}
+    form input, form textarea {margin-bottom:10px; padding:8px;}
+    form button {background:#28a745; color:#fff; padding:10px; border:none; cursor:pointer;}
+    .cart-toggle {position:fixed; top:20px; left:20px; background:#007bff; color:#fff; padding:10px; border:none; cursor:pointer;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📱 متجر الحدث موبايل</h1>
+  <p>إكتشف أحدث الجوالات وأجهزة الأيباد بأفضل الأسعار في الأردن</p>
+</header>
+
+<nav>
+  <button onclick="filterProducts('all')">الكل</button>
+  <button onclick="filterProducts('Samsung')">سامسونج</button>
+  <button onclick="filterProducts('iPhone')">آيفون</button>
+  <button onclick="filterProducts('Xiaomi')">شاومي</button>
+  <button onclick="filterProducts('Honor')">هونر</button>
+  <button onclick="filterProducts('Infinix')">إنفينيكس</button>
+  <button onclick="filterProducts('Tecno')">تكنو</button>
+</nav>
+
+<input type="text" id="searchBar" placeholder="🔍 ابحث عن جهاز..." onkeyup="searchProducts()">
+
+<div class="products" id="productsContainer"></div>
+
+<button class="cart-toggle" onclick="toggleCart()">🛒 السلة</button>
+<div id="cart">
+  <h2>سلة المشتريات</h2>
+  <ul id="cartItems"></ul>
+  <button id="checkout" onclick="showCheckoutForm()">إتمام الطلب</button>
+  <form id="orderForm" style="display:none;">
+    <input type="text" id="customerName" placeholder="الاسم الكامل" required>
+    <input type="tel" id="customerPhone" placeholder="رقم الهاتف" required>
+    <input type="text" id="customerAddress" placeholder="العنوان" required>
+    <textarea id="customerNotes" placeholder="ملاحظات"></textarea>
+    <button type="button" onclick="sendOrder()">إرسال الطلب</button>
+  </form>
+</div>
+
+<script>
+// قاعدة بيانات الأجهزة
+const productsDB = [
+  // 🔹 Samsung (10 أجهزة)
+  {brand:"Samsung", name:"Galaxy A06 4GB/64GB", price:"49JD", specs:"بطارية 5000mAh، كاميرا 13MP+2MP، معالج Helio G36.", img:"https://via.placeholder.com/250x200?text=Samsung+A06"},
+  {brand:"Samsung", name:"Galaxy A15 5G 6/128GB", price:"139JD", specs:"شاشة 6.5'' Super AMOLED، معالج Dimensity 6100+.", img:"https://via.placeholder.com/250x200?text=Samsung+A15"},
+  {brand:"Samsung", name:"Galaxy A25 5G 8/256GB", price:"209JD", specs:"كاميرا 50MP OIS، بطارية 5000mAh، شاشة FHD+.", img:"https://via.placeholder.com/250x200?text=Samsung+A25"},
+  {brand:"Samsung", name:"Galaxy S23 8/256GB", price:"479JD", specs:"Snapdragon 8 Gen 2، شاشة 6.1'' AMOLED، 120Hz.", img:"https://via.placeholder.com/250x200?text=S23"},
+  {brand:"Samsung", name:"Galaxy S23 Ultra 12/512GB", price:"699JD", specs:"كاميرا 200MP، شاشة 6.8'' QHD+، قلم S-Pen.", img:"https://via.placeholder.com/250x200?text=S23+Ultra"},
+  {brand:"Samsung", name:"Galaxy A55 8/256GB", price:"259JD", specs:"معالج Exynos 1480، شاشة AMOLED 6.6''، بطارية 5000.", img:"https://via.placeholder.com/250x200?text=A55"},
+  {brand:"Samsung", name:"Galaxy Z Flip5 8/256GB", price:"599JD", specs:"قابل للطي، شاشة 6.7'' AMOLED، كاميرا 12MP مزدوجة.", img:"https://via.placeholder.com/250x200?text=Z+Flip5"},
+  {brand:"Samsung", name:"Galaxy Z Fold5 12/512GB", price:"999JD", specs:"شاشة 7.6'' AMOLED، دعم قلم S Pen، أداء فائق.", img:"https://via.placeholder.com/250x200?text=Z+Fold5"},
+  {brand:"Samsung", name:"Galaxy M14 5G 6/128GB", price:"119JD", specs:"بطارية 6000mAh، شاشة 6.6''، كاميرا 50MP.", img:"https://via.placeholder.com/250x200?text=M14"},
+  {brand:"Samsung", name:"Galaxy A35 8/256GB", price:"189JD", specs:"شاشة 6.6'' AMOLED، معالج Exynos 1380، مقاومة ماء IP67.", img:"https://via.placeholder.com/250x200?text=A35"},
+  
+  // 🔹 iPhone (10 أجهزة)
+  {brand:"iPhone", name:"iPhone 16 Pro Max 256GB", price:"1099JD", specs:"شاشة Super Retina XDR، معالج A18 Pro، كاميرا 48MP.", img:"https://via.placeholder.com/250x200?text=iPhone+16+Pro+Max"},
+  {brand:"iPhone", name:"iPhone 16 Pro 256GB", price:"999JD", specs:"تصميم تيتانيوم، شاشة 6.1''، كاميرا Telephoto.", img:"https://via.placeholder.com/250x200?text=iPhone+16+Pro"},
+  {brand:"iPhone", name:"iPhone 16 128GB", price:"799JD", specs:"شاشة 6.1''، كاميرا 48MP، iOS 18.", img:"https://via.placeholder.com/250x200?text=iPhone+16"},
+  {brand:"iPhone", name:"iPhone 15 Pro Max 256GB", price:"899JD", specs:"شاشة 6.7''، معالج A17 Pro، كاميرا 5x زوم.", img:"https://via.placeholder.com/250x200?text=iPhone+15+Pro+Max"},
+  {brand:"iPhone", name:"iPhone 15 128GB", price:"699JD", specs:"Dynamic Island، شاشة OLED، بطارية محسنة.", img:"https://via.placeholder.com/250x200?text=iPhone+15"},
+  {brand:"iPhone", name:"iPhone 14 Pro Max 256GB", price:"799JD", specs:"شاشة ProMotion 120Hz، كاميرا 48MP.", img:"https://via.placeholder.com/250x200?text=iPhone+14+Pro+Max"},
+  {brand:"iPhone", name:"iPhone 14 128GB", price:"549JD", specs:"شاشة 6.1''، أداء A15 Bionic، iOS 17.", img:"https://via.placeholder.com/250x200?text=iPhone+14"},
+  {brand:"iPhone", name:"iPhone 13 128GB", price:"449JD", specs:"شاشة Super Retina، كاميرا 12MP مزدوجة.", img:"https://via.placeholder.com/250x200?text=iPhone+13"},
+  {brand:"iPhone", name:"iPhone 12 128GB", price:"349JD", specs:"شاشة 6.1''، معالج A14 Bionic.", img:"https://via.placeholder.com/250x200?text=iPhone+12"},
+  {brand:"iPhone", name:"iPhone SE 2022 128GB", price:"279JD", specs:"شاشة 4.7''، بصمة Touch ID، معالج A15 Bionic.", img:"https://via.placeholder.com/250x200?text=iPhone+SE+2022"},
+
+  // 🔹 Xiaomi (10 أجهزة)
+  {brand:"Xiaomi", name:"Redmi Note 13 Pro+ 5G", price:"279JD", specs:"كاميرا 200MP، شحن سريع 120W، شاشة AMOLED.", img:"https://via.placeholder.com/250x200?text=Note+13+Pro+"},
+  {brand:"Xiaomi", name:"Redmi Note 13 Pro", price:"229JD", specs:"شاشة 6.67'' AMOLED، بطارية 5100mAh، كاميرا 200MP.", img:"https://via.placeholder.com/250x200?text=Note+13+Pro"},
+  {brand:"Xiaomi", name:"Redmi Note 13", price:"179JD", specs:"شاشة AMOLED 120Hz، معالج Dimensity 6080.", img:"https://via.placeholder.com/250x200?text=Note+13"},
+  {brand:"Xiaomi", name:"Xiaomi 14 Ultra", price:"699JD", specs:"كاميرا Leica 50MP رباعية، Snapdragon 8 Gen 3.", img:"https://via.placeholder.com/250x200?text=Xiaomi+14+Ultra"},
+  {brand:"Xiaomi", name:"Xiaomi 14 Pro", price:"599JD", specs:"شاشة AMOLED QHD+، شحن 120W.", img:"https://via.placeholder.com/250x200?text=Xiaomi+14+Pro"},
+  {brand:"Xiaomi", name:"Xiaomi 14", price:"549JD", specs:"Snapdragon 8 Gen 3، شاشة AMOLED 6.36''.", img:"https://via.placeholder.com/250x200?text=Xiaomi+14"},
+  {brand:"Xiaomi", name:"Redmi 13C 6/128GB", price:"99JD", specs:"بطارية 5000، شاشة 6.74''، كاميرا 50MP.", img:"https://via.placeholder.com/250x200?text=Redmi+13C"},
+  {brand:"Xiaomi", name:"Redmi 12 8/256GB", price:"139JD", specs:"شاشة FHD+، معالج Helio G88، بطارية 5000.", img:"https://via.placeholder.com/250x200?text=Redmi+12"},
+  {brand:"Xiaomi", name:"Redmi Note 12 Pro 5G", price:"189JD", specs:"شاشة AMOLED، كاميرا 108MP، شحن 67W.", img:"https://via.placeholder.com/250x200?text=Note+12+Pro"},
+  {brand:"Xiaomi", name:"Redmi Note 12 4G", price:"129JD", specs:"Snapdragon 685، شاشة AMOLED 120Hz.", img:"https://via.placeholder.com/250x200?text=Note+12"},
+
+  // 🔹 Honor (10 أجهزة)
+  {brand:"Honor", name:"Honor 200 Pro 5G", price:"449JD", specs:"شاشة AMOLED 120Hz، معالج Snapdragon 8s Gen 3.", img:"https://via.placeholder.com/250x200?text=Honor+200+Pro"},
+  {brand:"Honor", name:"Honor 200 5G", price:"349JD", specs:"كاميرا 50MP مزدوجة، بطارية 5200mAh.", img:"https://via.placeholder.com/250x200?text=Honor+200"},
+  {brand:"Honor", name:"Honor Magic6 Pro", price:"799JD", specs:"شاشة LTPO AMOLED، كاميرا 180MP، شحن 80W.", img:"https://via.placeholder.com/250x200?text=Magic6+Pro"},
+  {brand:"Honor", name:"Honor Magic6", price:"599JD", specs:"Snapdragon 8 Gen 3، شاشة OLED 120Hz.", img:"https://via.placeholder.com/250x200?text=Magic6"},
+  {brand:"Honor", name:"Honor X9b", price:"199JD", specs:"شاشة 6.78'' AMOLED، بطارية 5800mAh.", img:"https://via.placeholder.com/250x200?text=Honor+X9b"},
+  {brand:"Honor", name:"Honor X8b", price:"159JD", specs:"شاشة AMOLED، كاميرا 108MP.", img:"https://via.placeholder.com/250x200?text=Honor+X8b"},
+  {brand:"Honor", name:"Honor 90", price:"249JD", specs:"شاشة AMOLED، معالج Snapdragon 7 Gen 1.", img:"https://via.placeholder.com/250x200?text=Honor+90"},
+  {brand:"Honor", name:"Honor 90 Lite", price:"159JD", specs:"شاشة 6.7''، معالج Dimensity 6020.", img:"https://via.placeholder.com/250x200?text=Honor+90+Lite"},
+  {brand:"Honor", name:"Honor X7b", price:"139JD", specs:"بطارية 6000mAh، شاشة 6.8'' FHD+.", img:"https://via.placeholder.com/250x200?text=Honor+X7b"},
+  {brand:"Honor", name:"Honor Magic V2", price:"999JD", specs:"قابل للطي، شاشة OLED مزدوجة، Snapdragon 8 Gen 2.", img:"https://via.placeholder.com/250x200?text=Magic+V2"},
+
+  // 🔹 Infinix (10 أجهزة)
+  {brand:"Infinix", name:"Infinix Zero Ultra", price:"229JD", specs:"شحن 180W، كاميرا 200MP، شاشة AMOLED.", img:"https://via.placeholder.com/250x200?text=Zero+Ultra"},
+  {brand:"Infinix", name:"Infinix GT 20 Pro", price:"199JD", specs:"شاشة 6.78'' AMOLED، معالج Dimensity 8200.", img:"https://via.placeholder.com/250x200?text=GT+20+Pro"},
+  {brand:"Infinix", name:"Infinix Note 40 Pro+", price:"179JD", specs:"شحن 100W، شاشة AMOLED، بطارية 4600mAh.", img:"https://via.placeholder.com/250x200?text=Note+40+Pro+"},
+  {brand:"Infinix", name:"Infinix Note 40 Pro", price:"169JD", specs:"شاشة AMOLED 120Hz، بطارية 5000mAh.", img:"https://via.placeholder.com/250x200?text=Note+40+Pro"},
+  {brand:"Infinix", name:"Infinix Note 40", price:"149JD", specs:"شاشة AMOLED 120Hz، كاميرا 108MP.", img:"https://via.placeholder.com/250x200?text=Note+40"},
+  {brand:"Infinix", name:"Infinix Smart 8 Pro", price:"89JD", specs:"شاشة 6.6'' HD+، بطارية 5000mAh.", img:"https://via.placeholder.com/250x200?text=Smart+8+Pro"},
+  {brand:"Infinix", name:"Infinix Hot 40 Pro", price:"119JD", specs:"شاشة 6.78''، كاميرا 108MP، بطارية 5000mAh.", img:"https://via.placeholder.com/250x200?text=Hot+40+Pro"},
+  {brand:"Infinix", name:"Infinix Hot 40i", price:"99JD", specs:"ذاكرة 8/256GB، شاشة
