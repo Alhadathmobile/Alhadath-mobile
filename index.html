@@ -209,57 +209,6 @@
 </style>
 </head>
 <body>
-<script>
-let slideIndex = 0;
-let slides = document.querySelectorAll(".slide");
-let dots = document.querySelectorAll(".dot");
-let interval = setInterval(nextSlide, 4000); // تغيير كل 4 ثواني
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    dots[i].classList.remove("active");
-  });
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
-  slideIndex = index;
-}
-
-function nextSlide() {
-  slideIndex = (slideIndex + 1) % slides.length;
-  showSlide(slideIndex);
-}
-
-function prevSlide() {
-  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-  showSlide(slideIndex);
-}
-
-document.querySelector(".next").addEventListener("click", () => {
-  nextSlide();
-  resetInterval();
-});
-
-document.querySelector(".prev").addEventListener("click", () => {
-  prevSlide();
-  resetInterval();
-});
-
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
-    showSlide(i);
-    resetInterval();
-  });
-});
-
-function resetInterval() {
-  clearInterval(interval);
-  interval = setInterval(nextSlide, 4000);
-}
-
-// عرض أول صورة عند البداية
-showSlide(slideIndex);
-</script>
 <header>
     <h1>متجر الحدث موبايل</h1>
 </header>
@@ -322,25 +271,28 @@ showSlide(slideIndex);
         <p>بطارية 5000mAh - تدوم يوم كامل من الاستخدام</p>
         <p>الكاميرا: خلفية مزدوجة 13MP + 2MP</p>
         <p>الأداء: معالج Helio G36 مناسب للتصفح والتطبيقات الأساسية</p>
-        <button onclick="openForm('Samsung A06')">اطلب الآن</button>
+        <button class="orderBtn" data-product="Samsung A06">أضف إلى السلة</button>
+    </div>
+      
        <div class="product-card" data-brand="Samsung">
-        <img src="samsung-A06.jpeg" alt="Samsung A06">
-        <h3>Samsung A06</h3>
+        <img src="samsung-A16.jpeg" alt="Samsung A16">
+        <h3>Samsung A16</h3>
         <p>4GB RAM / 64GB</p>
         <p>السعر: 49JD</p>
         <p>بطارية 5000mAh - تدوم يوم كامل من الاستخدام</p>
         <p>الكاميرا: خلفية مزدوجة 13MP + 2MP</p>
         <p>الأداء: معالج Helio G36 مناسب للتصفح والتطبيقات الأساسية</p>
-        <button onclick="openForm('Samsung A06')">اطلب الآن</button>
-          <div class="product-card" data-brand="Samsung">
-        <img src="samsung-A06.jpeg" alt="Samsung A06">
-        <h3>Samsung A06</h3>
+        <button class="orderBtn" data-product="Samsung A16">أضف إلى السلة</button>
+        </div> 
+       <div class="product-card" data-brand="Samsung">  
+        <img src="samsung-A26.jpeg" alt="Samsung 26">
+        <h3>Samsung A26</h3>
         <p>4GB RAM / 64GB</p>
         <p>السعر: 49JD</p>
         <p>بطارية 5000mAh - تدوم يوم كامل من الاستخدام</p>
         <p>الكاميرا: خلفية مزدوجة 13MP + 2MP</p>
         <p>الأداء: معالج Helio G36 مناسب للتصفح والتطبيقات الأساسية</p>
-        <button onclick="openForm('Samsung A06')">اطلب الآن</button>
+        <button class="orderBtn" data-product="Samsung A26">أضف إلى السلة</button>
     </div>
 
     <!-- iPhone -->
@@ -352,7 +304,7 @@ showSlide(slideIndex);
         <p>بطارية تدوم طوال اليوم</p>
         <p>كاميرا خلفية 48MP + 12MP</p>
         <p>معالج A18 Bionic قوي وسريع</p>
-        <button onclick="openForm('iPhone 16 Pro Max')">اطلب الآن</button>
+        <button class="orderBtn" data-product="iphone 16 Pro Max">أضف إلى السلة</button>
     </div>
 
     <!-- Xiaomi -->
@@ -364,7 +316,7 @@ showSlide(slideIndex);
         <p>بطارية 5000mAh</p>
         <p>كاميرا خلفية 108MP</p>
         <p>معالج Snapdragon 732G</p>
-        <button onclick="openForm('Xiaomi Note 12')">اطلب الآن</button>
+        <button class="orderBtn" data-product="Xiami Note 12">أضف إلى السلة</button>
     </div>
 
     <!-- Honor -->
@@ -376,7 +328,7 @@ showSlide(slideIndex);
         <p>بطارية 4000mAh</p>
         <p>كاميرا خلفية 64MP</p>
         <p>معالج Snapdragon 680</p>
-        <button onclick="openForm('Honor X8')">اطلب الآن</button>
+        <button class="orderBtn" data-product="Honor X8">أضف إلى السلة</button>
     </div>
 
     <!-- Infinix -->
@@ -388,7 +340,7 @@ showSlide(slideIndex);
         <p>بطارية 4500mAh</p>
         <p>كاميرا خلفية 48MP</p>
         <p>معالج MediaTek Helio G95</p>
-        <button onclick="openForm('Infinix Zero 5')">اطلب الآن</button>
+        <button class="orderBtn" data-product="Infinix Zero 5">أضف إلى السلة</button>
     </div>
 
     <!-- Tecno -->
@@ -400,21 +352,29 @@ showSlide(slideIndex);
         <p>بطارية 5000mAh</p>
         <p>كاميرا خلفية 48MP</p>
         <p>معالج Helio G85</p>
-        <button onclick="openForm('Tecno Camon 19')">اطلب الآن</button>
+        <button class="orderBtn" data-product="Tecno camon 19">أضف إلى السلة</button>
     </div>
 
 </div>
 
-<!-- نموذج بيانات الزبون -->
-<div id="customerForm">
-    <form onsubmit="submitForm(event)">
-        <h3 id="selectedProduct"></h3>
-        <input type="text" id="fullName" placeholder="الاسم الكامل" required>
-        <input type="tel" id="phoneNumber" placeholder="رقم الهاتف" required>
-        <input type="text" id="address" placeholder="العنوان" required>
-        <textarea id="notes" placeholder="ملاحظات"></textarea>
-        <button type="submit">إرسال الطلب</button>
-    </form>
+      <!-- سلة المشتريات -->
+<div id="cart" style="padding:20px; border:1px solid #ccc; max-width:600px; margin:auto; background:#f9f9f9;">
+  <h3>سلة المشتريات</h3>
+  <ul id="cartItems"></ul>
+  <button id="checkoutBtn" style="padding:10px 20px; background:#007bff; color:white; border:none; cursor:pointer;">تأكيد الطلب</button>
+</div>
+
+<!-- نموذج إدخال البيانات -->
+<div id="orderForm" style="display:none; padding:20px; border:1px solid #ccc; max-width:400px; margin:auto; background:#f9f9f9;">
+  <h3>أدخل بياناتك لإرسال الطلب</h3>
+  <input type="text" id="fullName" placeholder="الاسم الكامل" required style="width:100%; margin-bottom:10px; padding:5px;">
+  <input type="text" id="phone" placeholder="رقم الهاتف" required style="width:100%; margin-bottom:10px; padding:5px;">
+  <textarea id="address" placeholder="العنوان" required style="width:100%; margin-bottom:10px; padding:5px;"></textarea>
+  <textarea id="notes" placeholder="ملاحظات" style="width:100%; margin-bottom:10px; padding:5px;"></textarea>
+  <button id="sendOrder" style="padding:10px 20px; background:#28a745; color:white; border:none; cursor:pointer;">إرسال الطلب</button>
+  <button id="cancelOrder" style="padding:10px 20px; background:#dc3545; color:white; border:none; cursor:pointer;">إلغاء</button>
+</div>
+
 </div>
 
   <script>
@@ -490,43 +450,94 @@ function searchProduct() {
             p.style.display = 'none';
         }
     });
+
+let cart = [];
+const cartItems = document.getElementById('cartItems');
+const checkoutBtn = document.getElementById('checkoutBtn');
+const orderForm = document.getElementById('orderForm');
+const sendOrder = document.getElementById('sendOrder');
+const cancelOrder = document.getElementById('cancelOrder');
+
+// زر "اطلب الآن" لكل منتج
+const orderButtons = document.querySelectorAll('.orderBtn');
+orderButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const productName = btn.getAttribute('data-product');
+    cart.push(productName);
+    updateCart();
+  });
+});
+
+// تحديث عرض السلة
+function updateCart() {
+  cartItems.innerHTML = '';
+  cart.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.textContent = item + ' ';
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'إزالة';
+    removeBtn.style.marginLeft = '10px';
+    removeBtn.addEventListener('click', () => {
+      cart.splice(index,1);
+      updateCart();
+    });
+    li.appendChild(removeBtn);
+    cartItems.appendChild(li);
+  });
 }
 
-function openForm(productName) {
-    document.getElementById('selectedProduct').innerText = "الطلب: " + productName;
-    document.getElementById('customerForm').style.display = 'flex';
-}
+// زر "تأكيد الطلب" يظهر نموذج البيانات
+checkoutBtn.addEventListener('click', () => {
+  if(cart.length === 0){
+    alert('السلة فارغة!');
+    return;
+  }
+  orderForm.style.display = 'block';
+  window.scrollTo({ top: orderForm.offsetTop, behavior: 'smooth' });
+});
 
-function submitForm(e) {
-    e.preventDefault();
-    const name = document.getElementById('fullName').value;
-    const phone = document.getElementById('phoneNumber').value;
-    const address = document.getElementById('address').value;
-    const notes = document.getElementById('notes').value;
-    const product = document.getElementById('selectedProduct').innerText;
+// زر إلغاء
+cancelOrder.addEventListener('click', () => {
+  orderForm.style.display = 'none';
+});
 
-    const message = encodeURIComponent(`طلب جديد!\n${product}\nالاسم: ${name}\nرقم الهاتف: ${phone}\nالعنوان: ${address}\nملاحظات: ${notes}`);
+// إرسال الطلب إلى التليجرام
+sendOrder.addEventListener('click', () => {
+  const fullName = document.getElementById('fullName').value;
+  const phone = document.getElementById('phone').value;
+  const address = document.getElementById('address').value;
+  const notes = document.getElementById('notes').value;
 
-    fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage?chat_id=${chatId}&text=${message}`)
-        .then(response => {
-            if(response.ok) {
-                alert("تم إرسال الطلب بنجاح!");
-            } else {
-                alert("حدث خطأ أثناء إرسال الطلب.");
-            }
-            document.getElementById('customerForm').style.display = 'none';
-            e.target.reset();
-        })
-        .catch(err => {
-            alert("حدث خطأ أثناء إرسال الطلب.");
-            console.error(err);
-        });
-}
+  if(!fullName || !phone || !address){
+    alert('الرجاء تعبئة جميع الحقول المطلوبة');
+    return;
+  }
+
+  const telegramBotToken = '8429839299:AAGIZDR0i2whW7AvRzdGh5DdpfKavCWtw4E';
+  const chatId = '8403706325';
+  const message =`طلب جديد:\nالمنتجات: ${cart.join(', ')}\nالاسم: ${fullName}\nالهاتف: ${phone}\nالعنوان: ${address}\nملاحظات: ${notes}`;
+ 
+
+  fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
+    .then(() => {
+      alert('تم إرسال طلبك بنجاح');
+      cart = [];
+      updateCart();
+      orderForm.style.display = 'none';
+      document.getElementById('fullName').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('address').value = '';
+      document.getElementById('notes').value = '';
+    })
+    .catch(() => alert('حدث خطأ أثناء الإرسال'));
+});
+    
 </script>
 
 </body>
 
 </html>
+
 
 
 
