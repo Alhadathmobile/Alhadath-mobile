@@ -397,7 +397,7 @@ cartDrawer.addEventListener('click', (e)=>{ if(e.target===cartDrawer) cartDrawer
 
 /* ================ إرسال الطلب إلى تيليجرام عبر وسيط آمن ================ */
 /* ضع هنا رابط الوسيط الخاص بك (Cloudflare Worker / Netlify Function / Apps Script) */
-const TELEGRAM_PROXY_URL = ""; // مثال: "https://script.google.com/macros/s/AKfycbx.../exec"
+const TELEGRAM_PROXY_URL = "https://script.google.com/macros/s/AKfycbzt4DagCv0vuwsKV9zanPCxD8SXU4feF_bdtBBz94CqxWnuH0Hgl6zsGzz2bymnrhw/exec";
 
 async function sendToTelegram(payload){
   if(!TELEGRAM_PROXY_URL){
