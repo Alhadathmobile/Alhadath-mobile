@@ -395,27 +395,32 @@ openCartBtn.addEventListener('click', ()=> cartDrawer.classList.add('open') );
 closeCartBtn.addEventListener('click', ()=> cartDrawer.classList.remove('open') );
 cartDrawer.addEventListener('click', (e)=>{ if(e.target===cartDrawer) cartDrawer.classList.remove('open'); });
 
-/* ================ إرسال الطلب إلى تيليجرام عبر وسيط آمن ================ */
-/* ضع هنا رابط الوسيط الخاص بك (Cloudflare Worker / Netlify Function / Apps Script) */
-const TELEGRAM_PROXY_URL ="https://script.google.com/macros/s/AKfycbwJM-ij-KPcHdjRQv9O7e7CJ32Az6fU1G5k0YWni5ZH2uvVulDwH7xtrItQMPtHXJc/exec";
+<!-- ===== Telegram proxy (Apps Script) ===== -->
+<script>
+  // ضع رابط الـ Web App الذي ينتهي بـ /exec فقط
+  const TELEGRAM_PROXY_URL = "https://script.google.com/macros/s/AKfycbzt4DagCv0uwsKV9zanPCx0BSXU4feF_bdtBBz94CqxWhuH0HgI6zsGzz2bynnrhcA/exec";
 
-async function sendToTelegram(payload){
-  if(!TELEGRAM_PROXY_URL){
-    alert("يرجى إعداد رابط وسيط تيليجرام TELEGRAM_PROXY_URL أولًا (شرح قدّمته لك).");
-    return { ok:false };
+  async function sendToTelegram(payload){
+    if (!TELEGRAM_PROXY_URL || TELEGRAM_PROXY_URL.indexOf('/exec') === -1) {
+      alert("يرجى وضع رابط Web App الصحيح (ينتهي بـ /exec).");
+      return { ok:false };
+    }
+    try{
+      const res = await fetch(TELEGRAM_PROXY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      return await res.json();
+    }catch(err){
+      console.error(err);
+      return { ok:false, error:String(err) };
+    }
   }
-  try{
-    const res = await fetch(TELEGRAM_PROXY_URL, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify(payload)
-    });
-    return await res.json();
-  }catch(err){
-    console.error(err);
-    return { ok:false, error:String(err) };
-  }
-}
+
+  // تشخيص سريع: تأكد أن الصفحة قرأت الرابط
+  console.log('TELEGRAM_PROXY_URL =', TELEGRAM_PROXY_URL);
+</script>
 
 submitOrderBtn.addEventListener('click', async ()=>{
   const name = document.getElementById('buyerName').value.trim();
