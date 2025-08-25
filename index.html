@@ -396,7 +396,6 @@ closeCartBtn.addEventListener('click', ()=> cartDrawer.classList.remove('open') 
 cartDrawer.addEventListener('click', (e)=>{ if(e.target===cartDrawer) cartDrawer.classList.remove('open'); });
 
 <!-- ===== Telegram proxy (Apps Script) ===== -->
-<script>
   // ضع رابط الـ Web App الذي ينتهي بـ /exec فقط
   const TELEGRAM_PROXY_URL = "https://script.google.com/macros/s/AKfycbwWGHogVjFk2o0pcyXXYRh_R_kz-mbxsojzg2jzBPUakOZDnvhHJFwtdIivh2vMl4Mz/exec";
 
@@ -420,7 +419,6 @@ cartDrawer.addEventListener('click', (e)=>{ if(e.target===cartDrawer) cartDrawer
 
   // تشخيص سريع: تأكد أن الصفحة قرأت الرابط
   console.log('TELEGRAM_PROXY_URL =', TELEGRAM_PROXY_URL);
-</script>
 
 submitOrderBtn.addEventListener('click', async ()=>{
   const name = document.getElementById('buyerName').value.trim();
