@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>متجر الحدث موبايل</title>
+<style>
+  :root{
+    --bg:#f7f9fc; --card:#ffffff; --text:#1f2937; --muted:#6b7280;
+    --primary:#2563eb; --primary-600:#1d4ed8; --accent:#10b981;
+    --danger:#ef4444; --border:#e5e7eb; --chip:#f1f5f9; --badge:#eef2ff;
+    --shadow:0 6px 20px rgba(17,24,39,.08); --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{ margin:0; background:var(--bg); color:var(--text); font-family:"Segoe UI",Tahoma,Arial,sans-serif; }
+  header{ position:sticky; top:0; z-index:50; background:#fff; box-shadow:var(--shadow); }
+  .topbar{ max-width:1200px; margin:auto; display:flex; gap:12px; align-items:center; padding:14px 16px; }
+  .brand{ font-weight:800; letter-spacing:.3px; font-size:20px; background:linear-gradient(90deg,var(--primary),#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .search{ flex:1; }
+  .search input{ width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:12px; font-size:15px; background:#fff; }
+  .cart-btn{ position:relative; background:var(--primary); color:#fff; border:none; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600; }
+  .cart-badge{ position:absolute; top:-8px; left:-8px; background:var(--danger); color:#fff; font-size:12px; line-height:1; padding:5px 7px; border-radius:999px; min-width:22px; text-align:center; }
+  .tabs{ max-width:1200px; margin:10px auto 0; padding:0 16px 16px; }
+  .tab-list{ display:flex; gap:10px; flex-wrap:wrap; background:#fff; padding:10px; border-radius:12px; border:1px solid var(--border); }
+  .tab{ padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--chip); cursor:pointer; font-weight:600; color:#334155; }
+  .tab.active{ border-color:var(--primary); background:var(--badge); color:var(--primary-600); }
+  .grid{ max-width:1200px; margin:16px auto; padding:0 16px; display:grid; gap:16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column; }
+  .thumb{ width:100%; aspect-ratio:4/3; background:#f3f4f6; display:flex; align-items:center; justify-content:center; }
+  .thumb img{ width:100%; height:100%; object-fit:cover; }
+  .content{ padding:14px 14px 8px; display:flex; flex-direction:column; gap:10px; flex:1;}
+  .title{ font-weight:700; font-size:16px; }
+  .prices{ display:flex; align-items:center; gap:10px; }
+  .price-now{ font-weight:800; color:var(--accent); font-size:18px; }
+  .price-old{ color:var(--muted); text-decoration:line-through; font-size:14px; }
+  .badge-off{ margin-inline-start:auto; background:var(--badge); color:var(--primary-600); font-weight:700; padding:6px 10px; border-radius:999px; font-size:12px; }
+  .specs{ background:#f8fafc; border:1px dashed var(--border); border-radius:12px; padding:10px; color:#334155; min-height:64px; white-space:pre-line; }
+  .colors{ display:flex; gap:8px; align-items:center; }
+  .swatch{ width:28px; height:28px; border-radius:999px; border:2px solid #fff; box-shadow:0 0 0 2px var(--border); cursor:pointer; }
+  .swatch.active{ box-shadow:0 0 0 2px var(--primary); }
+  .actions{ display:flex; gap:10px; margin-top:auto; }
+  .btn{ flex:1; background:var(--primary); color:#fff; border:none; padding:10px 12px; border-radius:10px; font-weight:700; cursor:pointer; }
+  .btn.outline{ background:#fff; color:var(--primary); border:1px solid var(--primary); }
+  .drawer{ position:fixed; inset:0; display:none; background:rgba(15,23,42,.45); align-items:center; justify-content:center; padding:16px; z-index:100; }
+  .drawer.open{ display:flex; }
+  .panel{ width:min(900px, 100%); background:#fff; border-radius:16px; overflow:hidden; box-shadow:var(--shadow); display:grid; grid-template-columns:1.1fr .9fr; min-height:420px; }
+  @media (max-width:900px){ .panel{ grid-template-columns:1fr; } }
+  .panel section{ padding:16px; }
+  .panel h3{ margin:0 0 12px; }
+  .cart-list{ display:flex; flex-direction:column; gap:12px; max-height:55vh; overflow:auto; }
+  .cart-item{ display:grid; grid-template-columns:64px 1fr auto; gap:10px; align-items:center; border:1px solid var(--border); border-radius:12px; padding:10px; }
+  .cart-item img{ width:64px; height:64px; object-fit:cover; border-radius:8px; }
+  .qty{ display:flex; align-items:center; gap:8px; }
+  .qty button{ width:28px; height:28px; border-radius:8px; border:1px solid var(--border); background:#fff; cursor:pointer; }
+  .total{ margin-top:10px; display:flex; justify-content:space-between; font-weight:800; }
+  .form-grid{ display:grid; gap:10px; grid-template-columns:1fr 1fr; }
+  .form-grid .full{ grid-column:1/-1; }
+  input, textarea{ width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:10px; font-size:14px; background:#fff; }
+  textarea{ min-height:90px; resize:vertical; }
+  .note{ font-size:12px; color:var(--muted); margin-top:6px; }
+  .inline{ display:flex; gap:8px; align-items:center;}
+  footer{ max-width:1200px; margin:30px auto; padding:16px; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="brand">متجر الحدث موبايل</div>
+    <div class="search">
+      <input id="search" type="text" placeholder="ابحث عن جهاز… (لا يغيّر ارتفاع الصفحة)" />
+    </div>
+    <button class="cart-btn" id="openCart">
+      السلة
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+  </div>
+  <div class="tabs">
+    <div class="tab-list">
+      <button class="tab active" data-tab="phones">هواتف ذكية</button>
+      <button class="tab" data-tab="tablets">أجهزة لوحية</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="grid" id="productGrid"></div>
+</main>
+
+<div class="drawer" id="cartDrawer" aria-hidden="true">
+  <div class="panel" role="dialog" aria-label="سلة المشتريات">
+    <section style="border-inline-end:1px solid var(--border)">
+      <h3>سلة المشتريات</h3>
+      <div class="cart-list" id="cartList"></div>
+      <div class="total"><div>الإجمالي</div><div id="cartTotal">0 JD</div></div>
+    </section>
+    <section>
+      <h3>بيانات التوصيل</h3>
+      <div class="form-grid">
+        <div><input id="buyerName" placeholder="الاسم الكامل" /></div>
+        <div><input id="buyerPhone" placeholder="رقم الهاتف" /></div>
+        <div class="full"><input id="buyerAddress" placeholder="العنوان (تفصيلي)" /></div>
+        <div class="full"><textarea id="buyerNotes" placeholder="ملاحظات إضافية (اختياري)"></textarea></div>
+      </div>
+      <div class="note">سيتم إرسال تفاصيل الطلب إلى تيليجرام عبر وسيط آمن.</div>
+      <div class="inline" style="margin-top:12px">
+        <button class="btn outline" id="closeCart">متابعة التسوق</button>
+        <button class="btn" id="submitOrder">تأكيد الطلب</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer>©️ <span id="year"></span> الحدث موبايل — جودة، ثقة، أسعار منافسة</footer>
+
+<!-- ===== واجهة المتجر (منتجات + سلة) ===== -->
+<script>
+const PRODUCTS=[
+ {id:"a06-64",tab:"phones",name:"Samsung A06 — 64GB / 4GB RAM",img:"images/samsung-A06.jpg",priceNow:49,priceOld:59,specs:"شاشة 6.5\\\" | كاميرا 50MP | بطارية 5000mAh",colors:["#111827","#d1d5db","#9ca3af"]},
+ {id:"a16-128",tab:"phones",name:"Samsung A16 — 128GB / 4GB RAM",img:"images/samsung-A16.jpg",priceNow:99,priceOld:115,specs:"شاشة 6.6\\\" 90Hz | كاميرا 50MP | بطارية 5000mAh",colors:["#0f172a","#94a3b8","#e2e8f0"]},
+ {id:"mi-note14-256",tab:"phones",name:"Mi Note 14 — 256GB / 8GB RAM",img:"images/mi-note-14.jpg",priceNow:149,priceOld:179,specs:"شاشة AMOLED | معالج قوي | شحن سريع",colors:["#111827","#334155","#d4d4d4"]},
+ {id:"iphone16pm-256",tab:"phones",name:"iPhone 16 Pro Max — 256GB",img:"images/iphone-16-pro-max.jpg",priceNow:900,priceOld:980,specs:"شاشة Super Retina | كاميرات Pro | A18",colors:["#0f172a","#b45309","#e5e7eb"]},
+ {id:"tab-pad-se2",tab:"tablets",name:"Tab Pad SE 2",img:"images/tab-pad-se2.jpg",priceNow:159,priceOld:189,specs:"شاشة 10\\\" | ستيريو | بطارية كبيرة",colors:["#111827","#94a3b8","#f3f4f6"]},
+ {id:"ipad-10gen-64",tab:"tablets",name:"iPad 10th Gen — 64GB",img:"images/ipad-10th.jpg",priceNow:339,priceOld:379,specs:"شاشة 10.9\\\" | Apple Pencil | أداء موثوق",colors:["#1f2937","#60a5fa","#fde68a"]}
+];
+const grid=document.getElementById('productGrid'),search=document.getElementById('search');
+const cartDrawer=document.getElementById('cartDrawer'),openCartBtn=document.getElementById('openCart'),closeCartBtn=document.getElementById('closeCart');
+const cartList=document.getElementById('cartList'),cartTotal=document.getElementById('cartTotal'),cartCount=document.getElementById('cartCount'),submitOrderBtn=document.getElementById('submitOrder');
+let activeTab='phones';
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeTab=btn.dataset.tab;render();}));
+function formatJD(n){return `${n} JD`;}
+
+function productCard(p){
+  const discount=Math.max(0,Math.round((1-p.priceNow/p.priceOld)*100));
+  const colors=p.colors.map((c,i)=>`<button class="swatch ${i===0?'active':''}" style="background:${c}" data-color="${c}" aria-label="لون"></button>`).join('');
+  const el=document.createElement('article'); el.className='card';
+  el.innerHTML=`
+    <div class="thumb"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+    <div class="content">
+      <div class="title">${p.name}</div>
+      <div class="prices">
+        <div class="price-now">${formatJD(p.priceNow)}</div>
+        <div class="price-old">${formatJD(p.priceOld)}</div>
+        <div class="badge-off">${discount}% خصم</div>
+      </div>
+      <div class="specs">${p.specs}</div>
+      <div class="colors">${colors}</div>
+      <div class="actions">
+        <button class="btn outline" data-more>تفاصيل</button>
+        <button class="btn" data-add>أضف إلى السلة</button>
+      </div>
+    </div>`;
+  let selectedColor=p.colors[0];
+  el.querySelectorAll('.swatch').forEach(sw=>sw.addEventListener('click',()=>{
+    el.querySelectorAll('.swatch').forEach(s=>s.classList.remove('active'));
+    sw.classList.add('active'); selectedColor=sw.dataset.color;
+  }));
+  el.querySelector('[data-more]').addEventListener('click',()=>alert(`المواصفات:\n${p.specs}`));
+  el.querySelector('[data-add]').addEventListener('click',()=>addToCart({id:p.id,name:p.name,img:p.img,priceNow:p.priceNow,priceOld:p.priceOld,specs:p.specs,color:selectedColor}));
+  return el;
+}
+function render(){
+  const q=search.value.trim().toLowerCase(); grid.innerHTML='';
+  PRODUCTS.filter(p=>p.tab===activeTab).filter(p=>!q||p.name.toLowerCase().includes(q)).forEach(p=>grid.appendChild(productCard(p)));
+}
+render(); search.addEventListener('input',render);
+
+// cart
+const CART_KEY='hadath_cart_v1'; let cart=JSON.parse(localStorage.getItem(CART_KEY)||'[]');
+function saveCart(){ localStorage.setItem(CART_KEY,JSON.stringify(cart)); updateCartUI(); }
+function addToCart(item){ const key=`${item.id}_${item.color}`; const ex=cart.find(x=>x.key===key); ex?ex.qty++:cart.push({...item,key,qty:1}); saveCart(); cartDrawer.classList.add('open'); }
+function removeFromCart(key){ cart=cart.filter(x=>x.key!==key); saveCart(); }
+function changeQty(key,delta){ const it=cart.find(x=>x.key===key); if(!it)return; it.qty+=delta; if(it.qty<=0)removeFromCart(key); saveCart(); }
+function updateCartUI(){
+  cartCount.textContent=cart.reduce((a,b)=>a+b.qty,0);
+  cartList.innerHTML='';
+  cart.forEach(it=>{
+    const row=document.createElement('div'); row.className='cart-item';
+    row.innerHTML=`
+      <img src="${it.img}" alt="">
+      <div>
+        <div style="font-weight:700">${it.name}</div>
+        <div style="font-size:13px;color:#475569">اللون:
+          <span style="display:inline-block;width:14px;height:14px;border-radius:999px;background:${it.color};vertical-align:middle;margin:0 6px 0 3px"></span>
+          | ${it.specs}
+        </div>
+        <div class="prices" style="margin-top:6px">
+          <span class="price-now">${formatJD(it.priceNow)}</span>
+          <span class="price-old">${formatJD(it.priceOld)}</span>
+        </div>
+      </div>
+      <div class="qty">
+        <button aria-label="نقص" onclick="changeQty('${it.key}',-1)">−</button>
+        <div>${it.qty}</div>
+        <button aria-label="زيادة" onclick="changeQty('${it.key}',1)">+</button>
+      </div>`;
+    cartList.appendChild(row);
+  });
+  cartTotal.textContent=formatJD(cart.reduce((a,b)=>a+b.priceNow*b.qty,0));
+}
+updateCartUI();
+openCartBtn.addEventListener('click',()=>cartDrawer.classList.add('open'));
+closeCartBtn.addEventListener('click',()=>cartDrawer.classList.remove('open'));
+cartDrawer.addEventListener('click',(e)=>{ if(e.target===cartDrawer) cartDrawer.classList.remove('open'); });
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+<!-- ===== Telegram proxy (Apps Script) ===== -->
+<script>
+const TELEGRAM_PROXY_URL="https://script.google.com/macros/s/AKfycbwWGHogVjFk2o0pcyXXYRh_R_kz-mbxsojzg2jzBPUakOZDnvhHJFwtdIivh2vMl4Mz/exec";
+
+async function sendToTelegram(payload){
+  if(!TELEGRAM_PROXY_URL || TELEGRAM_PROXY_URL.indexOf('/exec')===-1){ alert("يرجى وضع رابط Web App الصحيح."); return {ok:false}; }
+  try{
+    const res=await fetch(TELEGRAM_PROXY_URL,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+    return await res.json();
+  }catch(err){ console.error(err); return {ok:false,error:String(err)}; }
+}
+
+document.getElementById('submitOrder').addEventListener('click', async ()=>{
+  const name=document.getElementById('buyerName').value.trim();
+  const phone=document.getElementById('buyerPhone').value.trim();
+  const address=document.getElementById('buyerAddress').value.trim();
+  const notes=document.getElementById('buyerNotes').value.trim();
+  if(!name||!phone){ alert("يرجى إدخال الاسم ورقم الهاتف."); return; }
+  if(!Array.isArray(window.cart)||window.cart.length===0){ alert("السلة فارغة."); return; }
+  const total=window.cart.reduce((a,b)=>a+b.priceNow*b.qty,0);
+  const lines=[
+    "🛒 طلب جديد - الحدث موبايل",
+    `👤 الاسم: ${name}`,
+    `📱 الهاتف: ${phone}`,
+    address?`📍 العنوان: ${address}`:"",
+    notes?`📝 ملاحظات: ${notes}`:"",
+    "", "المنتجات:"
+  ];
+  window.cart.forEach((it,i)=>lines.push(`${i+1}) ${it.name} | اللون: ${it.color} | الكمية: ${it.qty} | السعر: ${it.priceNow} JD`));
+  lines.push("", `الإجمالي: ${total} JD`);
+  const resp=await sendToTelegram({message:lines.filter(Boolean).join('\n')});
+  if(resp&&resp.ok){ alert("تم إرسال الطلب ✅"); window.cart=[]; localStorage.setItem('hadath_cart_v1','[]'); if(typeof window.updateCartUI==='function') window.updateCartUI(); document.getElementById('cartDrawer').classList.remove('open'); }
+  else{ alert("تعذّر الإرسال ❌"); console.error(resp); }
+});
+</script>
+
+</body>
+</html>
