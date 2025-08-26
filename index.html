@@ -167,6 +167,7 @@ render(); search.addEventListener('input',render);
 
 // cart
 const CART_KEY='hadath_cart_v1'; let cart=JSON.parse(localStorage.getItem(CART_KEY)||'[]');
+window.cart = cart;
 function saveCart(){ localStorage.setItem(CART_KEY,JSON.stringify(cart)); updateCartUI(); }
 function addToCart(item){ const key=`${item.id}_${item.color}`; const ex=cart.find(x=>x.key===key); ex?ex.qty++:cart.push({...item,key,qty:1}); saveCart(); cartDrawer.classList.add('open'); }
 function removeFromCart(key){ cart=cart.filter(x=>x.key!==key); saveCart(); }
@@ -223,7 +224,7 @@ document.getElementById('submitOrder').addEventListener('click', async ()=>{
   const address=document.getElementById('buyerAddress').value.trim();
   const notes=document.getElementById('buyerNotes').value.trim();
   if(!name||!phone){ alert("يرجى إدخال الاسم ورقم الهاتف."); return; }
-  if(!Array.isArray(window.cart)||window.cart.length===0){ alert("السلة فارغة."); return; }
+  if(!Array.isArray(cart)||cart.length===0){ alert("السلة فارغة."); return; }
   const total=window.cart.reduce((a,b)=>a+b.priceNow*b.qty,0);
   const lines=[
     "🛒 طلب جديد - الحدث موبايل",
@@ -233,10 +234,10 @@ document.getElementById('submitOrder').addEventListener('click', async ()=>{
     notes?`📝 ملاحظات: ${notes}`:"",
     "", "المنتجات:"
   ];
-  window.cart.forEach((it,i)=>lines.push(`${i+1}) ${it.name} | اللون: ${it.color} | الكمية: ${it.qty} | السعر: ${it.priceNow} JD`));
+  cart.forEach((it,i)=>lines.push(`${i+1}) ${it.name} | اللون: ${it.color} | الكمية: ${it.qty} | السعر: ${it.priceNow} JD`));
   lines.push("", `الإجمالي: ${total} JD`);
   const resp=await sendToTelegram({message:lines.filter(Boolean).join('\n')});
-  if(resp&&resp.ok){ alert("تم إرسال الطلب ✅"); window.cart=[]; localStorage.setItem('hadath_cart_v1','[]'); if(typeof window.updateCartUI==='function') window.updateCartUI(); document.getElementById('cartDrawer').classList.remove('open'); }
+  if(resp&&resp.ok){ alert("تم إرسال الطلب ✅"); cart.length = 0; saveCart (); cartDrawer.classList.remove('open'); if(typeof window.updateCartUI==='function') window.updateCartUI(); document.getElementById('cartDrawer').classList.remove('open'); }
   else{ alert("تعذّر الإرسال ❌"); console.error(resp); }
 });
 </script>
