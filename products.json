@@ -1,0 +1,74 @@
+[
+  {
+    "id": "s-a06-64",
+    "name": "Samsung A06 - 64GB / 4GB RAM",
+    "brand": "Samsung",
+    "price": 49.0,
+    "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800&auto=format&fit=crop",
+    "variants": [
+      "64GB / 4GB RAM"
+    ],
+    "specs": "شاشة 6.5 بوصة | كاميرا مزدوجة | بطارية 5000mAh",
+    "promo": true
+  },
+  {
+    "id": "s-a06-128",
+    "name": "Samsung A06 - 128GB / 4GB RAM",
+    "brand": "Samsung",
+    "price": 59.0,
+    "img": "https://images.unsplash.com/photo-1510552776732-01acc9a4c14f?q=80&w=800&auto=format&fit=crop",
+    "variants": [
+      "128GB / 4GB RAM"
+    ],
+    "specs": "شاشة 6.5 بوصة | بطارية 5000mAh",
+    "promo": false
+  },
+  {
+    "id": "s-a16-128",
+    "name": "Samsung A16 - 128GB",
+    "brand": "Samsung",
+    "price": 99.0,
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop",
+    "variants": [
+      "128GB"
+    ],
+    "specs": "شاشة 6.6 بوصة | 90Hz",
+    "promo": false
+  },
+  {
+    "id": "mi-note-14-256",
+    "name": "Mi Note 14 - 256GB / 8GB RAM",
+    "brand": "Redmi-MI",
+    "price": 149.0,
+    "img": "https://images.unsplash.com/photo-1510552776732-01acc9a4c14f?q=80&w=800&auto=format&fit=crop",
+    "variants": [
+      "256GB / 8GB RAM"
+    ],
+    "specs": "Snapdragon | شاشة AMOLED",
+    "promo": true
+  },
+  {
+    "id": "tab-pad-se2",
+    "name": "Tab Pad SE 2",
+    "brand": "Accessories",
+    "price": 159.0,
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop",
+    "variants": [
+      "Wi-Fi"
+    ],
+    "specs": "شاشة 11 بوصة",
+    "promo": false
+  },
+  {
+    "id": "iphone-16-pro-max-256",
+    "name": "iPhone 16 Pro Max - 256GB",
+    "brand": "iPhone",
+    "price": 900.0,
+    "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800&auto=format&fit=crop",
+    "variants": [
+      "256GB"
+    ],
+    "specs": "شريحة قوية | كاميرا احترافية",
+    "promo": false
+  }
+]
