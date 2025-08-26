@@ -313,13 +313,13 @@ submitOrderBtn.addEventListener('click', async ()=>{
   lines.push("",`الإجمالي: ${total} JD`);
 
   async function sendToTelegram(payload){
-    try{ const res=await fetch(TELEGRAM_PROXY_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); return await res.json(); }
-    catch(err){ console.error(err); return {ok:false,error:String(err)}; }
+    try{ const res=await fetch }
+    catch(err){ console. }
   }
 
   const resp=await sendToTelegram({message:lines.filter(Boolean).join('\n')});
   if(resp && resp.ok){ alert("تم إرسال الطلب ✅"); saveOrderSummary({t:Date.now(),name,total,items:cart.reduce((a,b)=>a+b.qty,0)}); cart.length=0; saveCart(); cartDrawer.classList.remove('open'); }
-  else{ alert("تعذّر الإرسال ❌"); console.error(resp); }
+  else{ alert("تعذّر الإرسال ❌"); console. }
 });
 
 document.getElementById('year').textContent=new Date().getFullYear();
