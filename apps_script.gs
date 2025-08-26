@@ -1,1 +1,0 @@
-/* Apps Script غير مطلوب هنا لأن رابط exec مُضمّن في index.html */
