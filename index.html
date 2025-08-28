@@ -1,103 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>الحدث موبايل | Alhadath Mobile</title>
-<link rel="stylesheet" href="style.css?v=1756253301" />
-<script defer src="config.js?v=1756253301"></script>
-<script defer src="app.js?v=1756253301"></script>
-  <!-- Build version: 1756253301 -->
-</head>
-<body>
-  <header class="container header">
-    <div class="brand">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Phone_font_awesome.svg" alt="Logo" class="logo" />
-      <div>
-        <h1>الحدث موبايل | Alhadath Mobile</h1>
-        <p class="muted">التوصيل داخل عمّان خلال 24 ساعة · المحافظات خلال 48 ساعة · الدفع عند الاستلام</p>
-      </div>
-    </div>
-
-    <div class="actions">
-      <input id="search" type="search" placeholder="ابحث باسم الجهاز أو الشركة..." />
-      <button class="cart-btn" id="open-cart" aria-label="افتح السلة">
-        🛒 <span id="cart-count" class="badge">0</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Slider -->
-  <section class="slider container" aria-label="عروض مميزة">
-    <div class="slides" id="slides">
-      <a class="slide active" href="#">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1400&auto=format&fit=crop" alt="عرض هواتف" />
-      </a>
-      <a class="slide" href="#">
-        <img src="https://images.unsplash.com/photo-1510552776732-01acc9a4c14f?q=80&w=1400&auto=format&fit=crop" alt="إكسسوارات أصلية" />
-      </a>
-      <a class="slide" href="#">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1400&auto=format&fit=crop" alt="خصومات" />
-      </a>
-    </div>
-    <div class="slider-controls">
-      <button id="prev" aria-label="السابق">‹</button>
-      <div class="dots" id="dots"></div>
-      <button id="next" aria-label="التالي">›</button>
-    </div>
-  </section>
-
-  <!-- Tabs -->
-  <nav class="tabs container" id="tabs">
-    <button data-brand="all" class="tab active">الكل</button>
-    <button data-brand="Samsung" class="tab">Samsung</button>
-    <button data-brand="iPhone" class="tab">iPhone</button>
-    <button data-brand="Redmi-MI" class="tab">Redmi-MI</button>
-    <button data-brand="Tecno" class="tab">Tecno</button>
-    <button data-brand="Infinix" class="tab">Infinix</button>
-    <button data-brand="Honor" class="tab">Honor</button>
-    <button data-brand="Accessories" class="tab">اكسسوارات</button>
-    <button data-brand="promo" class="tab">العروض</button>
-  </nav>
-
-  <!-- Products -->
-  <main class="container" id="products-grid" aria-live="polite" aria-busy="true"></main>
-
-  <!-- Cart Modal -->
-  <div id="cart-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="cart-title">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 id="cart-title">السلة</h2>
-        <button id="close-cart" class="icon-btn" aria-label="إغلاق">✕</button>
-      </div>
-
-      <div id="cart-items" class="cart-items"></div>
-
-      <div class="cart-form">
-        <label>الاسم الكامل <input id="cust-name" placeholder="مثال: أحمد عمر"></label>
-        <label>رقم الهاتف <input id="cust-phone" placeholder="07xxxxxxxx"></label>
-        <label>العنوان <input id="cust-addr" placeholder="المدينة / المنطقة / أقرب معلم"></label>
-        <label>ملاحظات <textarea id="cust-notes" rows="2" placeholder="مواعيد التوصيل، لون الجهاز ..."></textarea></label>
-      </div>
-
-      <div class="cart-footer">
-        <div class="totals">
-          <span>الإجمالي:</span>
-          <strong id="cart-total">0 JD</strong>
-        </div>
-        <div class="cart-actions">
-          <button id="empty-cart" class="danger">إفراغ السلة</button>
-          <button id="confirm-order" class="primary">تأكيد الطلب</button>
-        </div>
-      </div>
-      <div class="disclaimer">
-        <small>ضمان الوكيل · الفحص عند التسليم</small>
-      </div>
-    </div>
-  </div>
-
-  <footer class="container footer">
-    <small>© <span id="year"></span> الحدث موبايل — واتساب: <a href="https://wa.me/962796313243" target="_blank" rel="noopener">0796313243</a></small>
-  </footer>
-</body>
-</html>
