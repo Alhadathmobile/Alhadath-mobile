@@ -1,144 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <meta name="theme-color" content="#0f172a" />
-  <title>متجر الحدث موبايل</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/app.js"></script>
-</head>
-<body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <div class="brand">
-        <span class="brand__logo" aria-hidden="true">📱</span>
-        <span class="brand__name">الحدث موبايل</span>
-      </div>
-
-      <div class="search-wrap">
-        <input id="searchInput" class="search" type="search" inputmode="search" placeholder="ابحث عن منتج… (لا يتغير حجم الشاشة)" autocomplete="off" />
-      </div>
-
-      <nav class="badges">
-        <span class="badge">توصيل داخل عمّان خلال 24 ساعة</span>
-        <span class="badge">الدفع عند الاستلام</span>
-        <span class="badge">ضمان الوكيل</span>
-      </nav>
-    </div>
-
-    <div class="tabs" id="tabs">
-      <!-- سيتم توليد الأزرار JS -->
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Slider -->
-    <section class="slider" aria-label="عروض مميزة">
-      <button class="nav prev" id="prevBtn" aria-label="السابق">‹</button>
-      <div class="slides" id="slides">
-        <div class="slide active">
-          <img src="assets/images/banner-1.jpg" alt="عروض الافتتاح" />
-        </div>
-        <div class="slide">
-          <img src="assets/images/banner-2.jpg" alt="خصومات هواتف" />
-        </div>
-        <div class="slide">
-          <img src="assets/images/banner-3.jpg" alt="إكسسوارات أصلية" />
-        </div>
-      </div>
-      <button class="nav next" id="nextBtn" aria-label="التالي">›</button>
-      <div class="dots" id="dots"></div>
-    </section>
-
-    <!-- Products -->
-    <section class="container">
-      <header class="section-head">
-        <h2>المنتجات</h2>
-        <div class="sort">
-          <label for="sortSelect">ترتيب:</label>
-          <select id="sortSelect" aria-label="ترتيب المنتجات">
-            <option value="popular">الأشهر</option>
-            <option value="priceAsc">الأقل سعراً</option>
-            <option value="priceDesc">الأعلى سعراً</option>
-          </select>
-        </div>
-      </header>
-
-      <div id="productsGrid" class="grid" aria-live="polite"></div>
-
-      <div id="emptyState" class="empty-state" hidden>
-        لا توجد نتائج مطابقة لبحثك.
-      </div>
-    </section>
-  </main>
-
-  <!-- Floating Cart Button -->
-  <button id="cartFab" class="cart-fab" aria-label="فتح السلة" data-corner="end">
-    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.45a1 1 0 0 0 .9 1.46h10.8v-2H10.42a.25.25 0 0 1-.22-.37L11 13h6.55a2 2 0 0 0 1.8-1.1l3.24-6.49A1 1 0 0 0 21.7 4H7zM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-    </svg>
-    <span id="cartCount" class="badge badge--primary">0</span>
-  </button>
-
-  <!-- Cart Modal -->
-  <div id="cartModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
-    <div class="modal__dialog">
-      <header class="modal__head">
-        <h3 id="cartTitle">سلة المشتريات</h3>
-        <button id="closeCart" class="icon-btn" aria-label="إغلاق">✕</button>
-      </header>
-
-      <div id="cartItems" class="cart-items"></div>
-
-      <div class="cart-summary">
-        <div class="cart-summary__row">
-          <span>الإجمالي</span>
-          <strong id="cartTotal">0</strong>
-        </div>
-        <div class="cart-actions">
-          <button id="clearCart" class="btn btn--secondary">إفراغ السلة</button>
-          <button id="checkoutBtn" class="btn btn--primary">تأكيد الطلب</button>
-        </div>
-      </div>
-
-      <form id="checkoutForm" class="checkout" hidden>
-        <h4>بيانات المشتري</h4>
-        <div class="form-row">
-          <label for="custName">الاسم الكامل</label>
-          <input id="custName" name="name" type="text" required />
-        </div>
-        <div class="form-row">
-          <label for="custPhone">رقم الهاتف</label>
-          <input id="custPhone" name="phone" type="tel" pattern="^[0-9+\-()\s]{9,15}$" required />
-        </div>
-        <div class="form-row">
-          <label for="custAddr">العنوان</label>
-          <input id="custAddr" name="address" type="text" required />
-        </div>
-        <div class="form-row">
-          <label for="custNote">ملاحظات (اختياري)</label>
-          <textarea id="custNote" name="note" rows="2"></textarea>
-        </div>
-
-        <div class="cart-actions">
-          <button type="button" id="backToCart" class="btn btn--secondary">رجوع للسلة</button>
-          <button type="submit" class="btn btn--primary">إرسال الطلب</button>
-        </div>
-
-        <p class="muted tiny">
-          لن تتغير أبعاد الشاشة أثناء إدخال البيانات. جميع الحقول بخط 16px لتجنب التكبير.
-        </p>
-      </form>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> الحدث موبايل — عمّان، الأردن</p>
-      <p>واتساب: <a href="https://wa.me/962796313243" target="_blank" rel="noopener">0796313243</a></p>
-    </div>
-  </footer>
-</body>
-</html>
