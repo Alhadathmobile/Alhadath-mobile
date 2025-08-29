@@ -224,8 +224,11 @@ $("#checkoutForm").addEventListener("submit", async (e)=>{
     let ok = false;
     // Preferred: Apps Script endpoint (proxy to Telegram)
     if(ORDER_ENDPOINT){
-      const res = await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload) });
-      ok = res.ok;
+      const res = await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload) });
+      ok = (res.ok);
+       alert("تم إرسال الطلب بنجاح. سنتواصل معك قريبًا.");
+       state.cart = {}; save("cart", state.cart); renderCart(); updateCartCount(); closeCart();
+       
     }else if(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID){
       // Direct Telegram (exposes token in client—غير مفضل)
       const text = [
