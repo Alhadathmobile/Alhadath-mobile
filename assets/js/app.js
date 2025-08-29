@@ -11,7 +11,7 @@ const CURRENCY = "JD";
 const WHATSAPP_NUMBER = ""; // 0796313243
 // الطريقة الآمنة الموصى بها: ضع رابط Google Apps Script (POST JSON) هنا
 // مثال: https://script.google.com/macros/s/XXXX/exec
-const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycby_rcjDShr6Za6HjwgehDz6A-_3tx3M5oD46F-UhPTPoXDH9IIo75jhyiX-est3EIE1/exec"; // ضع رابطك هنا
+const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbxN_xH3lDKhj_ETMWCExBhe5MZ0XlYY3Ej7W7NvemsIHdHqt0lxUFu0DQrBL9P1N93S/exec"; // ضع رابطك هنا
 // ——— بديل (غير آمن لأنه يكشف التوكن) ———
 const TELEGRAM_BOT_TOKEN = ""; // ضع التوكن على مسؤوليتك (غير مفضل)
 const TELEGRAM_CHAT_ID = "";   // ضع chat_id
