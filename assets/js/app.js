@@ -8,7 +8,7 @@
 ========================= */
 
 const CURRENCY = "JD";
-const WHATSAPP_NUMBER = "962796313243"; // 0796313243
+const WHATSAPP_NUMBER = ""; // 0796313243
 // الطريقة الآمنة الموصى بها: ضع رابط Google Apps Script (POST JSON) هنا
 // مثال: https://script.google.com/macros/s/XXXX/exec
 const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycby_rcjDShr6Za6HjwgehDz6A-_3tx3M5oD46F-UhPTPoXDH9IIo75jhyiX-est3EIE1/exec"; // ضع رابطك هنا
