@@ -1,7 +1,7 @@
 /* ============ Alhadath Mobile (SAFE) ============ */
 const CURRENCY = "JD";
 const WHATSAPP_NUMBER = ""; 
-const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbxN_xH3lDKhj_ETMWCExBhe5MZ0XlYY3Ej7W7NvemsIHdHqt0lxUFu0DQrBL9P1N93S/exec";
+const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbxEJNtSPNT9t-L4RzAcAPVsaMh9fRqJpmradb5IMe_8_AcK4z_TDDZ1ewW2GD6GpQGL/exec";
 
 const TELEGRAM_BOT_TOKEN = "";
 const TELEGRAM_CHAT_ID = "";
