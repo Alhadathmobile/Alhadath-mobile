@@ -1,284 +1,209 @@
-/* =========================
-   Alhadath Mobile - GitHub Pages RTL Store Starter
-   - ثابت الحجم: لا يحدث تكبير تلقائي عند إدخال النص (حقول 16px+)
-   - زر سلة عائم بالأسفل
-   - سلايدر، تبويبات ماركات، بحث، ترتيب
-   - سلة محلية (localStorage)
-   - إرسال الطلب عبر Google Apps Script (مستحسن) أو Telegram (اختياري)
-========================= */
-
-/* ====== الإعدادات ====== */
+/* ============ Alhadath Mobile (SAFE) ============ */
 const CURRENCY = "JD";
-const WHATSAPP_NUMBER = ""; // مثال: "0796313243" (فقط fallback)
-const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbxN_xH3lDKhj_ETMWCExBhe5MZ0XlYY3Ej7W7NvemsIHdHqt0lxUFu0DQrBL9P1N93S/exec"; // رابط Web App من GAS
+const WHATSAPP_NUMBER = ""; 
+const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbxN_xH3lDKhj_ETMWCExBhe5MZ0XlYY3Ej7W7NvemsIHdHqt0lxUFu0DQrBL9P1N93S/exec";
 
-// ——— بديل (غير آمن لأنه يكشف التوكن على العميل) ———
-const TELEGRAM_BOT_TOKEN = ""; // ضع التوكن على مسؤوليتك
-const TELEGRAM_CHAT_ID = "";   // ضع chat_id
+const TELEGRAM_BOT_TOKEN = "";
+const TELEGRAM_CHAT_ID = "";
 
-/* ====== بيانات الواجهة ====== */
-const BRANDS = ["الكل", "Samsung", "iPhone", "Redmi/MI", "Tecno", "Infinix", "Honor", "Accessories"];
-
+const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 const PRODUCTS = [
-  { id: "s-a06-64",   title: "Samsung A06 - 64GB / 4GB RAM",           brand:"Samsung",   price:49,  image:"assets/images/samsung-a06.jpg" },
-  { id: "s-a06-128",  title: "Samsung A06 - 128GB / 4GB RAM",          brand:"Samsung",   price:59,  image:"assets/images/samsung-a06.jpg" },
-  { id: "s-a16-128",  title: "Samsung A16 - 128GB / 4GB RAM",          brand:"Samsung",   price:99,  image:"assets/images/samsung-a06.jpg" },
-  { id: "ip-16pm-256",title: "iPhone 16 Pro Max - 256GB",              brand:"iPhone",    price:900, image:"assets/images/iphone-16-pro-max.jpg" },
-  { id: "mi-note-14-256", title: "Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
-  { id: "tec-spark",  title: "Tecno Spark",                            brand:"Tecno",     price:115, image:"assets/images/tecno-spark.jpg" },
-  { id: "inf-hot",    title: "Infinix Hot",                            brand:"Infinix",   price:120, image:"assets/images/infinix-hot.jpg" },
-  { id: "hon-x9",     title: "Honor X9",                               brand:"Honor",     price:199, image:"assets/images/honor-x9.jpg" },
-  { id: "acc-charger",title: "شاحن أصلي سريع",                        brand:"Accessories", price:12, image:"assets/images/accessory-charger.jpg" },
+  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.jpg" },
+  { id:"s-a06-128", title:"Samsung A06 - 128GB / 4GB RAM", brand:"Samsung", price:59, image:"assets/images/samsung-a06.jpg" },
+  { id:"s-a16-128", title:"Samsung A16 - 128GB / 4GB RAM", brand:"Samsung", price:99, image:"assets/images/samsung-a06.jpg" },
+  { id:"ip-16pm-256", title:"iPhone 16 Pro Max - 256GB", brand:"iPhone", price:900, image:"assets/images/iphone-16-pro-max.jpg" },
+  { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
+  { id:"tec-spark", title:"Tecno Spark", brand:"Tecno", price:115, image:"assets/images/tecno-spark.jpg" },
+  { id:"inf-hot", title:"Infinix Hot", brand:"Infinix", price:120, image:"assets/images/infinix-hot.jpg" },
+  { id:"hon-x9", title:"Honor X9", brand:"Honor", price:199, image:"assets/images/honor-x9.jpg" },
+  { id:"acc-charger", title:"شاحن أصلي سريع", brand:"Accessories", price:12, image:"assets/images/accessory-charger.jpg" },
 ];
 
-/* ====== أدوات مساعدة ====== */
-const $  = (sel, root=document) => root.querySelector(sel);
-const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
-const formatPrice = (v)=> ${Number(v).toFixed(2)} ${CURRENCY};
+function $(sel, root){ return (root||document).querySelector(sel); }
+function $all(sel, root){ return Array.prototype.slice.call((root||document).querySelectorAll(sel)); }
+function formatPrice(v){ v=Number(v)||0; return v.toFixed(2)+" "+CURRENCY; }
+function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+function load(k,fallback){ try{ var v=localStorage.getItem(k); return v? JSON.parse(v): fallback; }catch(e){ return fallback; } }
 
-const save = (k,v)=> localStorage.setItem(k, JSON.stringify(v));
-const load = (k, fallback)=> { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch { return fallback; } };
+var state = { brand:"الكل", query:"", sort:"popular", cart: load("cart", {}) };
 
-/* ====== الحالة ====== */
-let state = {
-  brand: "الكل",
-  query: "",
-  sort: "popular",
-  cart: load("cart", {}), // {id: {qty, product}}
-};
+function safeAddEvent(el, ev, fn){ if(el && el.addEventListener){ el.addEventListener(ev, fn); } }
 
-/* ====== التبويبات (الماركات) ====== */
 function renderTabs(){
-  const tabs = $("#tabs");
-  if (!tabs) return;
-  tabs.innerHTML = "";
-  BRANDS.forEach(b=>{
-    const btn = document.createElement("button");
-    btn.className = "tab" + (b===state.brand? " active" : "");
-    btn.textContent = b;
-    btn.onclick = () => { state.brand = b; filterAndRender(); setActiveTab(b); };
+  var tabs = $("#tabs"); if(!tabs) return;
+  tabs.innerHTML="";
+  BRANDS.forEach(function(b){
+    var btn=document.createElement("button");
+    btn.className="tab"+(b===state.brand?" active":"");
+    btn.textContent=b;
+    btn.onclick=function(){ state.brand=b; filterAndRender(); setActiveTab(b); };
     tabs.appendChild(btn);
   });
 }
 function setActiveTab(label){
-  $$(".tab").forEach(el=> el.classList.toggle("active", el.textContent===label));
+  $all(".tab").forEach(function(el){ el.classList.toggle("active", el.textContent===label); });
 }
 
-/* ====== البحث + الترتيب ====== */
-$("#searchInput")?.addEventListener("input", (e)=>{
-  state.query = e.target.value.trim().toLowerCase();
+safeAddEvent($("#searchInput"), "input", function(e){
+  state.query=(e.target.value||"").trim().toLowerCase();
   filterAndRender();
 });
-$("#sortSelect")?.addEventListener("change", (e)=>{
-  state.sort = e.target.value;
+safeAddEvent($("#sortSelect"), "change", function(e){
+  state.sort=e.target.value;
   filterAndRender();
 });
 
-/* ====== عرض المنتجات ====== */
 function filterAndRender(){
-  const grid = $("#productsGrid");
-  const empty = $("#emptyState");
-  if(!grid) return;
+  var grid=$("#productsGrid"); if(!grid) return;
+  var empty=$("#emptyState");
 
-  let items = PRODUCTS
-    .filter(p => state.brand==="الكل" || p.brand===state.brand)
-    .filter(p => p.title.toLowerCase().includes(state.query));
+  var items=PRODUCTS
+    .filter(function(p){ return state.brand==="الكل" || p.brand===state.brand; })
+    .filter(function(p){ return p.title.toLowerCase().includes(state.query); });
 
-  if(state.sort==="priceAsc") items.sort((a,b)=> a.price-b.price);
-  else if(state.sort==="priceDesc") items.sort((a,b)=> b.price-a.price);
+  if(state.sort==="priceAsc") items.sort(function(a,b){ return a.price-b.price; });
+  else if(state.sort==="priceDesc") items.sort(function(a,b){ return b.price-a.price; });
 
-  grid.innerHTML = "";
-  if(items.length===0){
-    if(empty) empty.hidden=false;
-    return;
-  } else if(empty) empty.hidden=true;
+  grid.innerHTML="";
+  if(items.length===0){ if(empty) empty.hidden=false; return; } else { if(empty) empty.hidden=true; }
 
-  const frag = document.createDocumentFragment();
-  items.forEach(p=> frag.appendChild(cardTemplate(p)));
+  var frag=document.createDocumentFragment();
+  items.forEach(function(p){ frag.appendChild(cardTemplate(p)); });
   grid.appendChild(frag);
   updateCartCount();
 }
 
 function cardTemplate(p){
-  const el = document.createElement("article");
+  var el=document.createElement("article");
   el.className="card";
-  el.innerHTML = `
-    <div class="card__img"><img src="${p.image}" alt="${p.title}"></div>
-    <div class="card__body">
-      <h3 class="card__title">${p.title}</h3>
-      <div class="card__meta">
-        <span class="price">${formatPrice(p.price)}</span>
-        <button class="btn btn--primary" data-add="${p.id}">أضف للسلة</button>
-      </div>
-    </div>
-  `;
-  el.querySelector("[data-add]").onclick = ()=> addToCart(p);
+  el.innerHTML =
+    '<div class="card__img"><img src="'+p.image+'" alt="'+p.title+'"></div>'+
+    '<div class="card__body">'+
+      '<h3 class="card__title">'+p.title+'</h3>'+
+      '<div class="card__meta">'+
+        '<span class="price">'+formatPrice(p.price)+'</span>'+
+        '<button class="btn btn--primary" data-add="'+p.id+'">أضف للسلة</button>'+
+      '</div>'+
+    '</div>';
+  var addBtn = el.querySelector("[data-add]");
+  if(addBtn){ addBtn.onclick=function(){ addToCart(p); }; }
   return el;
 }
 
-/* ====== السلة ====== */
 function addToCart(p){
-  const item = state.cart[p.id] || { qty:0, product:p };
-  item.qty += 1;
-  state.cart[p.id] = item;
+  var item=state.cart[p.id] || { qty:0, product:p };
+  item.qty+=1;
+  state.cart[p.id]=item;
   save("cart", state.cart);
   animateFab();
   updateCartCount();
 }
 function updateCartCount(){
-  const count = Object.values(state.cart).reduce((sum, it)=> sum + it.qty, 0);
-  $("#cartCount") && ($("#cartCount").textContent = count);
+  var count=Object.values(state.cart).reduce(function(s,it){ return s+it.qty; },0);
+  var badge=$("#cartCount"); if(badge) badge.textContent=count;
 }
 function animateFab(){
-  const fab = $("#cartFab");
-  if(!fab) return;
+  var fab=$("#cartFab"); if(!fab || !fab.animate) return;
   fab.animate([{transform:"scale(1)"},{transform:"scale(1.08)"},{transform:"scale(1)"}], {duration:260});
 }
 
-/* ====== المودال ====== */
-$("#cartFab")?.addEventListener("click", openCart);
-$("#closeCart")?.addEventListener("click", closeCart);
-$("#clearCart")?.addEventListener("click", ()=>{
+safeAddEvent($("#cartFab"), "click", openCart);
+safeAddEvent($("#closeCart"), "click", closeCart);
+safeAddEvent($("#clearCart"), "click", function(){
   if(confirm("هل تريد إفراغ السلة بالكامل؟")){
-    state.cart = {}; save("cart", state.cart); renderCart(); updateCartCount();
+    state.cart={}; save("cart", state.cart); renderCart(); updateCartCount();
   }
 });
-$("#checkoutBtn")?.addEventListener("click", ()=>{
-  $("#checkoutForm").hidden = false;
-  $(".cart-summary")?.scrollIntoView({behavior:"smooth", block:"end"});
+safeAddEvent($("#checkoutBtn"), "click", function(){
+  var f=$("#checkoutForm"); if(f) f.hidden=false;
+  var cs=$(".cart-summary"); if(cs && cs.scrollIntoView) cs.scrollIntoView({behavior:"smooth", block:"end"});
 });
-$("#backToCart")?.addEventListener("click", ()=>{
-  $("#checkoutForm").hidden = true;
+safeAddEvent($("#backToCart"), "click", function(){
+  var f=$("#checkoutForm"); if(f) f.hidden=true;
 });
 
-function openCart(){
-  renderCart();
-  disableScroll(true);
-  $("#cartModal").hidden = false;
-}
-function closeCart(){
-  $("#cartModal").hidden = true;
-  disableScroll(false);
-}
-function disableScroll(lock){
-  document.body.style.overflow = lock ? "hidden" : "";
-}
+function openCart(){ renderCart(); disableScroll(true); var m=$("#cartModal"); if(m) m.hidden=false; }
+function closeCart(){ var m=$("#cartModal"); if(m) m.hidden=true; disableScroll(false); }
+function disableScroll(lock){ document.body.style.overflow = lock? "hidden": ""; }
 
 function renderCart(){
-  const wrap = $("#cartItems");
-  if(!wrap) return;
-  wrap.innerHTML = "";
-  const entries = Object.values(state.cart);
-  if(entries.length===0){
-    wrap.innerHTML = '<p class="muted">سلتك فارغة.</p>';
-  }else{
-    entries.forEach(({product, qty})=> wrap.appendChild(cartRow(product, qty)));
+  var wrap=$("#cartItems"); if(!wrap) return;
+  wrap.innerHTML="";
+  var entries=Object.values(state.cart);
+  if(entries.length===0){ wrap.innerHTML='<p class="muted">سلتك فارغة.</p>'; }
+  else{
+    entries.forEach(function(it){ wrap.appendChild(cartRow(it.product, it.qty)); });
   }
-  const total = entries.reduce((sum, it)=> sum + it.product.price*it.qty, 0);
-  $("#cartTotal") && ($("#cartTotal").textContent = formatPrice(total));
-  $("#checkoutForm") && ($("#checkoutForm").hidden = true);
+  var total=entries.reduce(function(s,it){ return s + it.product.price*it.qty; },0);
+  var ct=$("#cartTotal"); if(ct) ct.textContent=formatPrice(total);
+  var f=$("#checkoutForm"); if(f) f.hidden=true;
 }
 
 function cartRow(p, qty){
-  const row = document.createElement("div");
-  row.className = "cart-row";
-  row.innerHTML = `
-    <img src="${p.image}" alt="${p.title}">
-    <div>
-      <div style="font-weight:700">${p.title}</div>
-      <div class="muted tiny">${formatPrice(p.price)} للوحدة</div>
-    </div>
-    <div class="qty">
-      <button type="button" data-dec>−</button>
-      <strong>${qty}</strong>
-      <button type="button" data-inc>+</button>
-    </div>
-    <div style="text-align:end">${formatPrice(p.price * qty)}</div>
-  `;
-  row.querySelector("[data-inc]").onclick = ()=>{ state.cart[p.id].qty++; save("cart", state.cart); renderCart(); updateCartCount(); }
-  row.querySelector("[data-dec]").onclick = ()=>{
-    state.cart[p.id].qty--;
-    if(state.cart[p.id].qty<=0) delete state.cart[p.id];
-    save("cart", state.cart); renderCart(); updateCartCount();
-  }
+  var row=document.createElement("div");
+  row.className="cart-row";
+  row.innerHTML =
+    '<img src="'+p.image+'" alt="'+p.title+'">'+
+    '<div><div style="font-weight:700">'+p.title+'</div><div class="muted tiny">'+formatPrice(p.price)+' للوحدة</div></div>'+
+    '<div class="qty">'+
+      '<button type="button" data-dec>−</button>'+
+      '<strong>'+qty+'</strong>'+
+      '<button type="button" data-inc>+</button>'+
+    '</div>'+
+    '<div style="text-align:end">'+formatPrice(p.price*qty)+'</div>';
+  var inc=row.querySelector("[data-inc]");
+  var dec=row.querySelector("[data-dec]");
+  if(inc){ inc.onclick=function(){ state.cart[p.id].qty++; save("cart", state.cart); renderCart(); updateCartCount(); }; }
+  if(dec){ dec.onclick=function(){ state.cart[p.id].qty--; if(state.cart[p.id].qty<=0) delete state.cart[p.id]; save("cart", state.cart); renderCart(); updateCartCount(); }; }
   return row;
 }
 
-/* ====== إرسال الطلب ====== */
-$("#checkoutForm")?.addEventListener("submit", async (e)=>{
+safeAddEvent($("#checkoutForm"), "submit", async function(e){
   e.preventDefault();
-  const fd = new FormData(e.currentTarget);
-  const buyer = Object.fromEntries(fd.entries());
+  var fd=new FormData(e.currentTarget);
+  var buyer={}; fd.forEach(function(v,k){ buyer[k]=v; });
 
-  // تحقق من الحقول المطلوبة
-  if(!buyer.name || !buyer.phone || !buyer.address){
-    alert("يرجى تعبئة جميع الحقول المطلوبة"); return;
-  }
+  if(!buyer.name || !buyer.phone || !buyer.address){ alert("يرجى تعبئة جميع الحقول المطلوبة"); return; }
 
-  const items = Object.values(state.cart).map(({product, qty})=> ({
-    id: product.id, title: product.title, price: product.price, qty, subtotal: product.price*qty
-  }));
-  if(items.length===0){ alert("السلة فارغة"); return; }
-
-  const total = items.reduce((s, it)=> s+it.subtotal, 0);
-  const payload = { buyer, items, total, currency: CURRENCY, createdAt: new Date().toISOString() };
+  var entries=Object.values(state.cart);
+  if(entries.length===0){ alert("السلة فارغة"); return; }
+  var items=entries.map(function(it){ return { id:it.product.id, title:it.product.title, price:it.product.price, qty:it.qty, subtotal:it.product.price*it.qty }; });
+  var total=items.reduce(function(s,it){ return s+it.subtotal; },0);
+  var payload={ buyer:buyer, items:items, total:total, currency:CURRENCY, createdAt:new Date().toISOString() };
 
   try{
-    let ok = false, errMsg = "";
+    var ok=false, errMsg="";
 
     if(ORDER_ENDPOINT){
-      // إرسال إلى GAS (موصى به)
-      const res = await fetch(ORDER_ENDPOINT, {
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body: JSON.stringify(payload)
-      });
-
-      const text = await res.text();
-      try {
-        const data = JSON.parse(text);
-        ok = res.ok && (data.success === true || data.telegram === 'sent');
-        if (!ok) errMsg = data.error || data.body || text || HTTP ${res.status};
-      } catch {
+      var res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload) });
+      var text=await res.text();
+      try{
+        var data=JSON.parse(text);
+        ok = res.ok && (data.success===true || data.telegram==='sent');
+        if(!ok) errMsg = data.error || data.body || text || ("HTTP "+res.status);
+      }catch(_){
         ok = res.ok;
-        if (!ok) errMsg = text || HTTP ${res.status};
+        if(!ok) errMsg = text || ("HTTP "+res.status);
       }
-
-    } else if(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID){
-      // تيليجرام مباشر (غير مفضل أمنياً)
-      const textMsg = [
-        "طلب جديد من متجر الحدث موبايل",
-        الاسم: ${buyer.name},
-        الهاتف: ${buyer.phone},
-        العنوان: ${buyer.address},
-        buyer.note ? ملاحظات: ${buyer.note} : "",
-        "—".repeat(10),
-        ...items.map(it=> • ${it.title} × ${it.qty} = ${it.subtotal} ${CURRENCY}),
-        "—".repeat(10),
-        الإجمالي: ${total} ${CURRENCY}
-      ].filter(Boolean).join("\n");
-
-      const tgURL = https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage;
-      const res = await fetch(tgURL, {
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: textMsg })
-      });
-      ok = res.ok;
-
-    } else {
-      // واتساب كـ Fallback (فتح محادثة فقط)
-      const wa = https://wa.me/${WHATSAPP_NUMBER}?text= +
-        encodeURIComponent(طلب جديد\nالاسم: ${buyer.name}\nالهاتف: ${buyer.phone}\nالعنوان: ${buyer.address}\nالمجموع: ${total} ${CURRENCY});
-      window.open(wa, "_blank");
-      ok = true;
+    }else if(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID){
+      var msg=["طلب جديد من متجر الحدث موبايل","الاسم: "+buyer.name,"الهاتف: "+buyer.phone,"العنوان: "+buyer.address];
+      if(buyer.note) msg.push("ملاحظات: "+buyer.note);
+      msg.push("— — —");
+      items.forEach(function(it){ msg.push("• "+it.title+" × "+it.qty+" = "+it.subtotal+" "+CURRENCY); });
+      msg.push("— — —","الإجمالي: "+total+" "+CURRENCY);
+      var tgURL="https://api.telegram.org/bot"+TELEGRAM_BOT_TOKEN+"/sendMessage";
+      var r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
+      ok=r.ok;
+    }else{
+      var wa="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("طلب جديد\nالاسم: "+buyer.name+"\nالهاتف: "+buyer.phone+"\nالعنوان: "+buyer.address+"\nالمجموع: "+total+" "+CURRENCY);
+      window.open(wa, "_blank"); ok=true;
     }
 
     if(ok){
       alert("تم إرسال الطلب بنجاح. سنتواصل معك قريبًا.");
-      state.cart = {}; save("cart", state.cart); renderCart(); updateCartCount(); closeCart();
+      state.cart={}; save("cart", state.cart); renderCart(); updateCartCount(); closeCart();
     }else{
-      alert("تعذر إرسال الطلب:\n" + (errMsg || "تحقق من الرابط أو الشبكة"));
+      alert("تعذر إرسال الطلب:\n"+(errMsg||"تحقق من الرابط أو الشبكة"));
     }
   }catch(err){
     console.error(err);
@@ -286,41 +211,37 @@ $("#checkoutForm")?.addEventListener("submit", async (e)=>{
   }
 });
 
-/* ====== السلايدر ====== */
-let slideIndex = 0;
+/* ===== Slider ===== */
+var slideIndex=0;
 function showSlide(i){
-  const slides = $$(".slide");
-  if(slides.length === 0) return;
-  slideIndex = (i + slides.length) % slides.length;
-  slides.forEach((s, idx)=> s.classList.toggle("active", idx===slideIndex));
-  const dots = $$(".dot");
-  dots.forEach((d, idx)=> d.classList.toggle("active", idx===slideIndex));
+  var slides=$all(".slide"); if(slides.length===0) return;
+  slideIndex=(i+slides.length)%slides.length;
+  slides.forEach(function(s,idx){ s.classList.toggle("active", idx===slideIndex); });
+  var dots=$all(".dot"); dots.forEach(function(d,idx){ d.classList.toggle("active", idx===slideIndex); });
 }
 function next(){ showSlide(slideIndex+1); }
 function prev(){ showSlide(slideIndex-1); }
-$("#nextBtn") && ($("#nextBtn").onclick = next);
-$("#prevBtn") && ($("#prevBtn").onclick = prev);
+var nb=$("#nextBtn"); if(nb) nb.onclick=next;
+var pb=$("#prevBtn"); if(pb) pb.onclick=prev;
 
 function renderDots(){
-  const dots = $("#dots");
-  const slides = $$(".slide");
-  if(!dots || slides.length === 0) return;
-  dots.innerHTML = "";
-  slides.forEach((_, idx)=>{
-    const b = document.createElement("button");
-    b.className="dot" + (idx===0? " active": "");
-    b.onclick = ()=> showSlide(idx);
-    dots.appendChild(b);
+  var dots=$("#dots"); var slides=$all(".slide"); if(!dots || slides.length===0) return;
+  dots.innerHTML="";
+  slides.forEach(function(_,idx){
+    var b=document.createElement("button"); b.className="dot"+(idx===0?" active":"");
+    b.onclick=function(){ showSlide(idx); }; dots.appendChild(b);
   });
 }
-setInterval(()=> { try{ next(); }catch{} }, 5000);
+setInterval(function(){ try{ next(); }catch(e){} }, 5000);
 
-/* ====== التهيئة ====== */
+/* ===== Init ===== */
 function init(){
-  $("#year") && ($("#year").textContent = new Date().getFullYear());
+  var y=$("#year"); if(y) y.textContent=(new Date()).getFullYear();
   renderTabs();
   renderDots();
   filterAndRender();
   updateCartCount();
 }
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", function(){
+  try{ init(); }catch(err){ console.error("Init error:", err); alert("خطأ في التهيئة: "+err); }
+});
