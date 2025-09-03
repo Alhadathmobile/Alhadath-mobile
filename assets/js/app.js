@@ -3,8 +3,8 @@ const CURRENCY = "JD";
 const WHATSAPP_NUMBER = ""; 
 const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbwVgEvRuqo-I4uqBolBSyV-wJ9dRNfhIziu_9XlrIFgtiZiDhhSXOCdvgg6UGP6-BJu/exec";
 
-const TELEGRAM_BOT_TOKEN = "";
-const TELEGRAM_CHAT_ID = "";
+const TELEGRAM_BOT_TOKEN = "8429839299:AAGIZDR0i2whW7AvRzdGh5DdpfKavCWtw4E";
+const TELEGRAM_CHAT_ID = "8403706325";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 const PRODUCTS = [
