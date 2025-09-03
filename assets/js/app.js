@@ -3,8 +3,8 @@ const CURRENCY = "JD";
 const WHATSAPP_NUMBER = ""; 
 const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbwVgEvRuqo-I4uqBolBSyV-wJ9dRNfhIziu_9XlrIFgtiZiDhhSXOCdvgg6UGP6-BJu/exec";
 
-const TELEGRAM_BOT_TOKEN = "8429839299:AAGIZDR0i2whW7AvRzdGh5DdpfKavCWtw4E";
-const TELEGRAM_CHAT_ID = "8403706325";
+const TELEGRAM_BOT_TOKEN = "";
+const TELEGRAM_CHAT_ID = "";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 const PRODUCTS = [
@@ -175,11 +175,11 @@ safeAddEvent($("#checkoutForm"), "submit", async function(e){
     var ok=false, errMsg="";
 
     if(ORDER_ENDPOINT){
-      var res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"text/plain;charest=utf-8"}, body: JSON.stringify(payload) });
+      var res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload) });
       var text=await res.text();
       try{
         var data=JSON.parse(text);
-        ok = res.ok && (data.success===true || data.telegram==='sent');
+        ok = res.ok && (data.ok===true || data.success===true || data.telegram==='sent');
         if(!ok) errMsg = data.error || data.body || text || ("HTTP "+res.status);
       }catch(_){
         ok = res.ok;
@@ -192,7 +192,7 @@ safeAddEvent($("#checkoutForm"), "submit", async function(e){
       items.forEach(function(it){ msg.push("• "+it.title+" × "+it.qty+" = "+it.subtotal+" "+CURRENCY); });
       msg.push("— — —","الإجمالي: "+total+" "+CURRENCY);
       var tgURL="https://api.telegram.org/bot"+TELEGRAM_BOT_TOKEN+"/sendMessage";
-      var r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"text/plain;charest=utf-8"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
+      var r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
       ok=r.ok;
     }else{
       var wa="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("طلب جديد\nالاسم: "+buyer.name+"\nالهاتف: "+buyer.phone+"\nالعنوان: "+buyer.address+"\nالمجموع: "+total+" "+CURRENCY);
