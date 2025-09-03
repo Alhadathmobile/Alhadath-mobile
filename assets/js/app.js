@@ -169,7 +169,7 @@ safeAddEvent($("#checkoutForm"), "submit", async function(e){
   if(entries.length===0){ alert("السلة فارغة"); return; }
   var items=entries.map(function(it){ return { id:it.product.id, title:it.product.title, price:it.product.price, qty:it.qty, subtotal:it.product.price*it.qty }; });
   var total=items.reduce(function(s,it){ return s+it.subtotal; },0);
-  var payload={ buyer:buyer, items:items, total:total, currency:CURRENCY, createdAt:new Date().toISOString() };
+  var payload={ customer:buyer, items:items, total:total, currency:CURRENCY, createdAt:new Date().toISOString() };
 
   try{
     var ok=false, errMsg="";
