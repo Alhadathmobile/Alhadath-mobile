@@ -175,7 +175,7 @@ safeAddEvent($("#checkoutForm"), "submit", async function(e){
     var ok=false, errMsg="";
 
     if(ORDER_ENDPOINT){
-      var res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload) });
+      var res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"text/plain;charest=utf-8"}, body: JSON.stringify(payload) });
       var text=await res.text();
       try{
         var data=JSON.parse(text);
@@ -192,7 +192,7 @@ safeAddEvent($("#checkoutForm"), "submit", async function(e){
       items.forEach(function(it){ msg.push("• "+it.title+" × "+it.qty+" = "+it.subtotal+" "+CURRENCY); });
       msg.push("— — —","الإجمالي: "+total+" "+CURRENCY);
       var tgURL="https://api.telegram.org/bot"+TELEGRAM_BOT_TOKEN+"/sendMessage";
-      var r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
+      var r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"text/plain;charest=utf-8"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
       ok=r.ok;
     }else{
       var wa="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("طلب جديد\nالاسم: "+buyer.name+"\nالهاتف: "+buyer.phone+"\nالعنوان: "+buyer.address+"\nالمجموع: "+total+" "+CURRENCY);
