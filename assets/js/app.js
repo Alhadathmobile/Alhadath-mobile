@@ -8,10 +8,10 @@ const TELEGRAM_CHAT_ID = "8403706325";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 const PRODUCTS = [
-  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.jpg" },
+  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.webp" },
   { id:"s-a06-128", title:"Samsung A06 - 128GB / 4GB RAM", brand:"Samsung", price:59, image:"assets/images/samsung-a06.jpg" },
   { id:"s-a16-128", title:"Samsung A16 - 128GB / 4GB RAM", brand:"Samsung", price:99, image:"assets/images/samsung-a06.jpg" },
-  { id:"ip-16pm-256", title:"iPhone 16 Pro Max - 256GB", brand:"iPhone", price:900, image:"assets/images/iphone-16-pro-max.jpg" },
+  { id:"ip-16pm-256", title:"iPhone 16 Pro Max - 256GB", brand:"iPhone", price:900, image:"assets/images/iphone-16-pro-max.jpeg" },
   { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
   { id:"tec-spark", title:"Tecno Spark", brand:"Tecno", price:115, image:"assets/images/tecno-spark.jpg" },
   { id:"inf-hot", title:"Infinix Hot", brand:"Infinix", price:120, image:"assets/images/infinix-hot.jpg" },
