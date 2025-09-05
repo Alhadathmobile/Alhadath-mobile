@@ -4,13 +4,13 @@
   --surface:#ffffff;
   --card:#ffffff;
   --text:#000000;
-  --muted:#94a3b8;
-  --primary:#22c55e;
-  --primary-600:#16a34a;
-  --accent:#38bdf8;
+  --muted:#444444;
+  --primary:#2563eb;
+  --primary-600:#1d4ed8;
+  --accent:#10b981;
   --danger:#ef4444;
-  --border:#1f2937;
-  --chip:#0b2a1a;
+  --border:#e5e7eb;
+  --chip:#f1f5f9;
   --shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
