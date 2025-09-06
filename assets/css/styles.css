@@ -156,27 +156,35 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .footer{margin-top:24px; border-top:1px solid var(--border); background:rgba(15,23,42,.7); backdrop-filter: blur(8px)}
 .footer__inner{display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; padding:14px 0}
 
-/* أيقونة + نص يتمدد عند التحويم/اللمس */
-.whatsapp-btn{
-  position:fixed; left:50%; bottom:max(12px, env(safe-area-inset-bottom));
-  transform:translateX(-50%);
-  background:#25D366; color:#fff; border-radius:999px; 
-  padding:8px 10px; font-size:13px; font-weight:700; 
-  display:inline-flex; align-items:center; gap:8px;
-  text-decoration:none; box-shadow:0 6px 14px rgba(0,0,0,.15);
-  z-index:60;
-}
-.w-ico{font-size:16px; line-height:1;}
-.w-label{
-  max-width:0; overflow:hidden; white-space:nowrap;
-  transition:max-width .25s ease;
-}
-.whatsapp-btn:focus .w-label,
-.whatsapp-btn:hover .w-label{
-  max-width:220px;                 /* يظهر النص عند التحويم/اللمس */
+/* زر واتساب عائم على يمين الشاشة */
+.whatsapp-btn {
+  position: fixed;
+  right: 16px;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  background: #25D366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,.2);
+  z-index: 70;
+
+  width: 48px;
+  overflow: hidden;
+  transition: width 0.3s ease;
 }
 
-/* إظهار النص دائمًا على الشاشات الصغيرة إذا حبيت */
-@media (max-width: 420px){
-  .w-label{ max-width:160px; }
+.w-ico { font-size: 18px; line-height: 1; }
+.w-label { white-space: nowrap; }
+
+/* لما يكون مفعّل (expanded) */
+.whatsapp-btn.expanded {
+  width: 220px;
+  justify-content: flex-start;
+  padding: 14px 20px;
 }
