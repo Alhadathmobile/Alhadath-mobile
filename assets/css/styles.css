@@ -160,13 +160,13 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 
 .cart-fab .badge {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #ef4444;   /* أحمر */
-  color: #fff;
-  border-radius: 50%;
-  font-size: 12px;
-  padding: 2px 5px;
+  top: 4px;
+  right: 4px;
+  background: transparent;   /* بدون خلفية */
+  color: #ffffff;               /* رقم باللون الأسود */
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0;                /* بدون مسافة إضافية */
 }
 
 /* ============ Modal (Cart) ============ */
