@@ -155,6 +155,23 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 /* ============ Footer ============ */
 .footer{margin-top:24px; border-top:1px solid var(--border); background:rgba(15,23,42,.7); backdrop-filter: blur(8px)}
 .footer__inner{display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; padding:14px 0}
+/* حركة اهتزاز للأيقونة */
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+}
+
+.call-icon {
+  color: #25D366;          /* أخضر */
+  font-size: 18px;
+  margin-inline-end: 6px;
+  display: inline-block;
+  animation: shake 1s ease-in-out 5s infinite; 
+  /* 1s مدة الاهتزاز، 5s فترة التكرار */
+}
 
 /* زر واتساب عائم على يمين الشاشة */
 .whatsapp-btn {
