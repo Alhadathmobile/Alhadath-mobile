@@ -281,34 +281,46 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .cart-fab .badge.bump {
   animation: badge-bump .28s ease-out;
 }
-.card__specs .show-toggle {
-  background: none;
-  border: none;
-  color: #6b7280;        /* رمادي متوسط */
-  font-size: 15px;
-  cursor: pointer;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  transition: color 0.3s ease;
+/* ============ Specs List ============ */
+.card__specs{
+  margin: 6px 0 10px;
+  padding-inline-start: 18px;   /* مسافة قبل النقاط */
+  font-size: 13px;
+  color: #374151;               /* رمادي داكن */
+  line-height: 1.5;
+  position: relative;
 }
 
-/* سهم لأسفل */
-.card__specs .show-toggle::after {
-  content: "▼";
-  margin-inline-start: 6px;
-  font-size: 12px;
-  color: #6b7280;        /* رمادي متوسط */
-  transition: color 0.3s ease, transform 0.3s ease;
-}
+/* عناصر إضافية تُخفى افتراضياً */
+.card__specs li.more{ display:none; }
 
-/* عند الفتح يتحول السهم لفوق */
-.card__specs[data-collapsed="false"] .show-toggle::after {
-  content: "▲";
-}
+/* عند الفتح تُعرض العناصر الإضافية */
+.card__specs[data-collapsed="false"] li.more{ display:list-item; }
 
-/* عند المرور (Hover) الزر والسهم يغمقوا */
-.card__specs .show-toggle:hover,
-.card__specs .show-toggle:hover::after {
-  color: #374151;   /* رمادي أغمق */
+/* زر التحكّم (سهم) */
+.card__specs .specs-cta{ list-style:none; margin-top:4px; padding:0; }
+.card__specs .show-toggle{
+  background:none;
+  border:none;
+  color:#6b7280;                /* رمادي هادئ */
+  font-size:15px;
+  cursor:pointer;
+  padding:0;
+  display:inline-flex;
+  align-items:center;
+  transition:color .3s ease;
+}
+.card__specs .show-toggle:hover{ color:#374151; }   /* يغمق عند الهوفر */
+
+/* السهم: يبدأ لأسفل، ويدور عند الفتح */
+.card__specs .show-toggle::after{
+  content:"▼";
+  margin-inline-start:6px;
+  font-size:12px;
+  color:inherit;                /* نفس لون الزر */
+  display:inline-block;
+  transition:transform .3s ease, color .3s ease;
+}
+.card__specs[data-collapsed="false"] .show-toggle::after{
+  transform:rotate(180deg);     /* دوران لأعلى */
 }
