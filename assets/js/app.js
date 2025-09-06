@@ -77,27 +77,51 @@ function cardTemplate(p){
   var el=document.createElement("article");
   el.className="card";
 
-  // لو عند المنتج مواصفات (specs) اعرضها كقائمة نقطية
+  // بناء قائمة المواصفات (أول 3 ظاهرة، والباقي قابلة للطي)
   var specsHTML = "";
   if (p.specs && p.specs.length) {
-    specsHTML = "<ul class='card__specs'>" +
-      p.specs.map(function(s){ return "<li>"+s+"</li>"; }).join("") +
-      "</ul>";
+    var first3 = p.specs.slice(0,3);
+    var rest   = p.specs.slice(3);
+
+    specsHTML = "<ul class='card__specs' data-collapsed='true'>" +
+      first3.map(function(s){ return "<li>"+s+"</li>"; }).join("");
+
+    if (rest.length) {
+      specsHTML += rest.map(function(s){ return "<li class='more'>"+s+"</li>"; }).join("");
+      specsHTML += "<li class='specs-cta'><button type='button' class='show-toggle' aria-expanded='false'>عرض المزيد</button></li>";
+    }
+
+    specsHTML += "</ul>";
   }
 
   el.innerHTML =
     '<div class="card__img"><img src="'+p.image+'" alt="'+p.title+'"></div>'+
     '<div class="card__body">'+
       '<h3 class="card__title">'+p.title+'</h3>'+
-      specsHTML +   // ✅ إدراج القائمة هنا
+      specsHTML +
       '<div class="card__meta">'+
         '<span class="price">'+formatPrice(p.price)+'</span>'+
         '<button class="btn btn--primary" data-add="'+p.id+'">أضف للسلة</button>'+
       '</div>'+
     '</div>';
 
+  // زر "أضف للسلة"
   var addBtn = el.querySelector("[data-add]");
   if(addBtn){ addBtn.onclick=function(){ addToCart(p); }; }
+
+  // زر عرض المزيد/أقل (تبديل)
+  var toggleBtn = el.querySelector(".show-toggle");
+  if(toggleBtn){
+    toggleBtn.onclick = function(){
+      var list = el.querySelector(".card__specs");
+      var collapsed = list.getAttribute("data-collapsed") === "true";
+      // قلب الحالة
+      list.setAttribute("data-collapsed", collapsed ? "false" : "true");
+      toggleBtn.textContent = collapsed ? "عرض أقل" : "عرض المزيد";
+      toggleBtn.setAttribute("aria-expanded", collapsed ? "true" : "false");
+    };
+  }
+
   return el;
 }
 
