@@ -160,13 +160,25 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 
 .cart-fab .badge {
   position: absolute;
-  top: 4px;
-  right: 4px;
-  background: transparent;   /* بدون خلفية */
-  color: #ffffff;               /* رقم باللون الأسود */
-  font-size: 13px;
+  top: 2px;                   /* أقرب لفوق */
+  right: 50%;                 /* في منتصف الزر */
+  transform: translateX(50%); /* يعيد الرقم لمركز الأيقونة */
+  background: transparent;    /* بدون خلفية */
+  color: #ffffff;             /* أبيض */
+  font-size: 15px;            /* حجم واضح */
   font-weight: 700;
-  padding: 0;                /* بدون مسافة إضافية */
+  padding: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* ظل خفيف لزيادة الوضوح */
+  pointer-events: none;       /* يمنع التداخل مع الضغط */
+}
+@keyframes badge-pulse {
+  0%   { transform: translateX(50%) scale(1); }
+  50%  { transform: translateX(50%) scale(1.4); }
+  100% { transform: translateX(50%) scale(1); }
+}
+
+.cart-fab .badge.bump {
+  animation: badge-pulse 0.35s ease-out;
 }
 
 /* ============ Modal (Cart) ============ */
