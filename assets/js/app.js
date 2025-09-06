@@ -245,3 +245,31 @@ function init(){
 document.addEventListener("DOMContentLoaded", function(){
   try{ init(); }catch(err){ console.error("Init error:", err); alert("خطأ في التهيئة: "+err); }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const whatsappBtn = document.getElementById("whatsappBtn");
+  if (!whatsappBtn) return;
+
+  let expanded = false;
+  let timer;
+
+  whatsappBtn.addEventListener("click", function(e) {
+    if (!expanded) {
+      e.preventDefault(); // لا يفتح الرابط أول مرة
+      whatsappBtn.classList.add("expanded");
+      expanded = true;
+
+      // يرجع يصغر تلقائياً بعد 5 ثواني إذا ما ضغط مرة ثانية
+      timer = setTimeout(() => {
+        whatsappBtn.classList.remove("expanded");
+        expanded = false;
+      }, 5000);
+
+    } else {
+      // يلغي المؤقت لو ضغط المستخدم
+      clearTimeout(timer);
+      window.open(whatsappBtn.href, "_blank");
+      whatsappBtn.classList.remove("expanded");
+      expanded = false;
+    }
+  });
+});
