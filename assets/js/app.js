@@ -99,8 +99,16 @@ function addToCart(p){
   updateCartCount();
 }
 function updateCartCount(){
-  var count=Object.values(state.cart).reduce(function(s,it){ return s+it.qty; },0);
-  var badge=$("#cartCount"); if(badge) badge.textContent=count;
+  var count = Object.values(state.cart).reduce(function(s,it){ return s+it.qty; }, 0);
+  var badge = $("#cartCount");
+  if (!badge) return;
+  badge.textContent = count;
+
+  // شغّل نبضة العداد كل مرة يتغير الرقم
+  badge.classList.remove("bump");
+  void badge.offsetWidth;               // لإعادة تشغيل الأنيميشن
+  badge.classList.add("bump");
+  setTimeout(function(){ badge.classList.remove("bump"); }, 400);
 }
 function animateFab(){
   var fab=$("#cartFab"); if(!fab || !fab.animate) return;
@@ -290,15 +298,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // شغّل تأثير الـ Pop
     btn.classList.add("added");
     setTimeout(() => btn.classList.remove("added"), 240);
-
-    // (اختياري) نبضة سريعة لعداد السلة إن وُجد
-    const badge = document.querySelector(".cart-fab .badge");
-    if (badge) {
-      badge.classList.remove("bump"); // لإعادة التشغيل لو تكرر بسرعة
-      // إجبار إعادة التدفق لإعادة تشغيل الأنيميشن
-      void badge.offsetWidth;
-      badge.classList.add("bump");
-      setTimeout(() => badge.classList.remove("bump"), 300);
-    }
-  });
-});
