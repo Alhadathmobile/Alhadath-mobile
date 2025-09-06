@@ -281,3 +281,34 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .cart-fab .badge.bump {
   animation: badge-bump .28s ease-out;
 }
+.card__specs .show-toggle {
+  background: none;
+  border: none;
+  color: #6b7280;        /* رمادي متوسط */
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* سهم لأسفل */
+.card__specs .show-toggle::after {
+  content: "▼";
+  margin-inline-start: 6px;
+  font-size: 12px;
+  color: #6b7280;        /* رمادي متوسط */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* عند الفتح يتحول السهم لفوق */
+.card__specs[data-collapsed="false"] .show-toggle::after {
+  content: "▲";
+}
+
+/* عند المرور (Hover) الزر والسهم يغمقوا */
+.card__specs .show-toggle:hover,
+.card__specs .show-toggle:hover::after {
+  color: #374151;   /* رمادي أغمق */
+}
