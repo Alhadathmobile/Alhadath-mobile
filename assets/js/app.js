@@ -76,15 +76,26 @@ function filterAndRender(){
 function cardTemplate(p){
   var el=document.createElement("article");
   el.className="card";
+
+  // لو عند المنتج مواصفات (specs) اعرضها كقائمة نقطية
+  var specsHTML = "";
+  if (p.specs && p.specs.length) {
+    specsHTML = "<ul class='card__specs'>" +
+      p.specs.map(function(s){ return "<li>"+s+"</li>"; }).join("") +
+      "</ul>";
+  }
+
   el.innerHTML =
     '<div class="card__img"><img src="'+p.image+'" alt="'+p.title+'"></div>'+
     '<div class="card__body">'+
       '<h3 class="card__title">'+p.title+'</h3>'+
+      specsHTML +   // ✅ إدراج القائمة هنا
       '<div class="card__meta">'+
         '<span class="price">'+formatPrice(p.price)+'</span>'+
         '<button class="btn btn--primary" data-add="'+p.id+'">أضف للسلة</button>'+
       '</div>'+
     '</div>';
+
   var addBtn = el.querySelector("[data-add]");
   if(addBtn){ addBtn.onclick=function(){ addToCart(p); }; }
   return el;
