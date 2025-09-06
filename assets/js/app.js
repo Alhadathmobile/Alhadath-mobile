@@ -335,3 +335,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => btn.classList.remove("added"), 240);
     });
 });
+document.addEventListener("click", function(e){
+  const toggle = e.target.closest(".show-toggle");
+  if(!toggle) return;
+
+  const list = toggle.closest(".card__specs");
+  const collapsed = list.getAttribute("data-collapsed") !== "false";
+  list.setAttribute("data-collapsed", collapsed ? "false" : "true");
+});
