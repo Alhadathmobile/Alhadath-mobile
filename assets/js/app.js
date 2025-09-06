@@ -298,3 +298,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // شغّل تأثير الـ Pop
     btn.classList.add("added");
     setTimeout(() => btn.classList.remove("added"), 240);
+    });
+});
