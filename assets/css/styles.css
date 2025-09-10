@@ -282,7 +282,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   animation: badge-bump .28s ease-out;
 }
 /* ============ Specs List ============ */
-.card__specs{
+.card__specs {
   margin: 6px 0 10px;
   padding-inline-start: 18px;   /* مسافة قبل النقاط */
   font-size: 13px;
@@ -291,36 +291,46 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   position: relative;
 }
 
-/* عناصر إضافية تُخفى افتراضياً */
-.card__specs li.more{ display:none; }
+/* عند الإغلاق: أظهر أول 3 فقط */
+.card__specs[data-collapsed="true"] li:nth-child(n+4) {
+  display: none;
+}
 
-/* عند الفتح تُعرض العناصر الإضافية */
-.card__specs[data-collapsed="false"] li.more{ display:list-item; }
+/* عند الفتح: أظهر الكل */
+.card__specs[data-collapsed="false"] li {
+  display: list-item;
+}
 
 /* زر التحكّم (سهم) */
-.card__specs .specs-cta{ list-style:none; margin-top:4px; padding:0; }
-.card__specs .show-toggle{
-  background:none;
-  border:none;
-  color:#6b7280;                /* رمادي هادئ */
-  font-size:15px;
-  cursor:pointer;
-  padding:0;
-  display:inline-flex;
-  align-items:center;
-  transition:color .3s ease;
+.card__specs .specs-cta { 
+  list-style: none; 
+  margin-top: 4px; 
+  padding: 0; 
 }
-.card__specs .show-toggle:hover{ color:#374151; }   /* يغمق عند الهوفر */
+.card__specs .show-toggle {
+  background: none;
+  border: none;
+  color: #6b7280;                /* رمادي هادئ */
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  transition: color .3s ease;
+}
+.card__specs .show-toggle:hover { 
+  color: #374151;                /* يغمق عند الهوفر */
+}
 
 /* السهم: يبدأ لأسفل، ويدور عند الفتح */
-.card__specs .show-toggle::after{
-  content:"▼";
-  margin-inline-start:6px;
-  font-size:12px;
-  color:inherit;                /* نفس لون الزر */
-  display:inline-block;
-  transition:transform .3s ease, color .3s ease;
+.card__specs .show-toggle::after {
+  content: "▼";
+  margin-inline-start: 6px;
+  font-size: 12px;
+  color: inherit;                /* نفس لون الزر */
+  display: inline-block;
+  transition: transform .3s ease, color .3s ease;
 }
-.card__specs[data-collapsed="false"] .show-toggle::after{
-  transform:rotate(180deg);     /* دوران لأعلى */
+.card__specs[data-collapsed="false"] .show-toggle::after {
+  transform: rotate(180deg);     /* دوران لأعلى */
 }
