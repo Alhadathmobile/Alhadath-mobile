@@ -1,254 +1,348 @@
 /* ============ Alhadath Mobile (SAFE) ============ */
 const CURRENCY = "JD";
-const WHATSAPP_NUMBER = ""; 
+const WHATSAPP_NUMBER = "";
 const ORDER_ENDPOINT = "";
 
 const TELEGRAM_BOT_TOKEN = "8400045424:AAF57FN0km9UN3_LNdF87wOGWKfbcbdrkhk";
 const TELEGRAM_CHAT_ID = "8403706325";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
+
+/* ================= PRODUCTS =================
+   ملاحظة: الأجهزة التي لها أكثر من سعة/رام جُمعت في منتج واحد مع variants
+   حتى لا تتكرر الـ IDs. يمكن تعديل الأسعار/العناوين بحرية.
+*/
 const PRODUCTS = [
-  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4+4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.webp",specs: [
-    "شاشة 6.7 بوصة +HD",
-    "معالج MediaTek Helio G85",
-    "Android 14 + One UI 6.1",
-    "ذاكرة 64GB / 4GB RAM",
-    "كاميرا خلفية 50MP + 2MP",
-    "كاميرا أمامية 8MP",
-    "بطارية 5000mAh شحن سريع 25W"
-  ] 
-}, 
-  
-  { id:"s-a06-128", title:"Samsung A06 - 128GB / 4+4GB RAM", brand:"Samsung", price:59, image:"assets/images/samsung-a06.jpg" },
-  { id:"s-a16-128", title:"Samsung A16 - 128GB / 4+4GB RAM", brand:"Samsung", price:99, image:"assets/images/samsung-a16.jpg" },
-  { id:"s-a16-128", title:"Samsung A16 - 128GB / 6+6GB RAM", brand:"Samsung", price:115, image:"assets/images/samsung-a16.jpg" },
-  { id:"s-a16-256", title:"Samsung A16 - 128GB / 8+8GB RAM", brand:"Samsung", price:135, image:"assets/images/samsung-a16.jpg" },
-  { id:"s-a26-5G-128", title:"Samsung A26 5G - 128GB / 6+6GB RAM", brand:"Samsung", price:140, image:"assets/images/samsung-a26.jpg" },
-  { id:"s-a26-5G-256", title:"Samsung A26 5G - 256GB / 8+8GB RAM", brand:"Samsung", price:160, image:"assets/images/samsung-a26.jpg" },
-  { id:"s-a36-5G-128", title:"Samsung A36 5G - 128GB / 8+8GB RAM", brand:"Samsung", price:190, image:"assets/images/samsung-a36.jpg" },
-  { id:"s-a36-5G-256", title:"Samsung A36 5G - 256GB / 8+8GB RAM", brand:"Samsung", price:210, image:"assets/images/samsung-a36.jpg" },
-  { id:"s-a56-5G-128", title:"Samsung A56 5G - 128GB / 8+8GB RAM", brand:"Samsung", price:220, image:"assets/images/samsung-a56.jpg" },
-  { id:"s-a56-5G-256", title:"Samsung A56 5G - 256GB / 8+8GB RAM", brand:"Samsung", price:260, image:"assets/images/samsung-a56.jpg" },
-  { id:"s-a56-5G-256", title:"Samsung A56 5G - 256GB / 12+12GB RAM", brand:"Samsung", price:299, image:"assets/images/samsung-a56.jpg" },
-  { id:"s-S25-ULTRA-12-256", title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM", brand:"Samsung", price:720, image:"assets/images/samsung-s25-ultra.jpg" },
+  // A06 (نسختان)
+  {
+    id: "s-a06",
+    title: "Samsung A06",
+    brand: "Samsung",
+    image: "assets/images/samsung-a06.jpg", // صورة عامة للجهاز (يمكن تبديلها)
+    variants: [
+      { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49, image: "assets/images/samsung-a06.webp" },
+      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpg" }
+    ],
+    specs: [
+      "شاشة 6.7 بوصة +HD",
+      "معالج MediaTek Helio G85",
+      "Android 14 + One UI 6.1",
+      "كاميرا خلفية 50MP + 2MP",
+      "كاميرا أمامية 8MP",
+      "بطارية 5000mAh شحن سريع 25W"
+    ]
+  },
+
+  // A16 (ثلاث نسخ)
+  {
+    id: "s-a16",
+    title: "Samsung A16",
+    brand: "Samsung",
+    image: "assets/images/samsung-a16.jpg",
+    variants: [
+      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 99 },
+      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 115 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 135 }
+    ],
+    specs: [
+      "شاشة 6.7 بوصة +HD",
+      "Android 14 + One UI",
+      "كاميرا 50MP",
+      "بطارية 5000mAh"
+    ]
+  },
+
+  // A26 5G (نسختان)
+  {
+    id: "s-a26-5g",
+    title: "Samsung A26 5G",
+    brand: "Samsung",
+    image: "assets/images/samsung-a26.jpg",
+    variants: [
+      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
+    ]
+  },
+
+  // A36 5G (نسختان)
+  {
+    id: "s-a36-5g",
+    title: "Samsung A36 5G",
+    brand: "Samsung",
+    image: "assets/images/samsung-a36.jpg",
+    variants: [
+      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
+    ]
+  },
+
+  // A56 5G (نسختان)
+  {
+    id: "s-a56-5g",
+    title: "Samsung A56 5G",
+    brand: "Samsung",
+    image: "assets/images/samsung-a56.jpg",
+    variants: [
+      { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 220 },
+      { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
+      { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
+    ]
+  },
+
+  // S25 Ultra (سعة واحدة)
+  { id:"s-s25-ultra-12-256", title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM", brand:"Samsung", price:720, image:"assets/images/samsung-s25-ultra.jpg" },
+
+  // iPhone
   { id:"ip-16pm-256", title:"iPhone 16 Pro Max - 256GB", brand:"iPhone", price:900, image:"assets/images/iphone-16-pro-max.jpeg" },
   { id:"ip-16pm-512", title:"iPhone 16 Pro Max - 512GB", brand:"iPhone", price:999, image:"assets/images/iphone-16-pro-max.jpeg" },
-  { id:"ip-16p-256", title:"iPhone 16 Pro - 256GB", brand:"iPhone", price:850, image:"assets/images/iphone-16-pro.jpeg" },
-  { id:"ip-16-128", title:"iPhone 16 - 128GB", brand:"iPhone", price:580, image:"assets/images/iphone-16.jpeg" },
-  { id:"ip-16-256", title:"iPhone 16 - 256GB", brand:"iPhone", price:610, image:"assets/images/iphone-16.jpeg" },
-  { id:"ip-15-128", title:"iPhone 15 - 128GB", brand:"iPhone", price:490, image:"assets/images/iphone-15.jpeg" },
-  { id:"ip-14-128", title:"iPhone 14 - 128GB", brand:"iPhone", price:440, image:"assets/images/iphone-14.jpeg" },
-  { id:"ip-13-128", title:"iPhone 13 - 128GB", brand:"iPhone", price:360, image:"assets/images/iphone-13.jpeg" },
+  { id:"ip-16p-256",  title:"iPhone 16 Pro - 256GB",     brand:"iPhone", price:850, image:"assets/images/iphone-16-pro.jpeg" },
+  { id:"ip-16-128",   title:"iPhone 16 - 128GB",         brand:"iPhone", price:580, image:"assets/images/iphone-16.jpeg" },
+  { id:"ip-16-256",   title:"iPhone 16 - 256GB",         brand:"iPhone", price:610, image:"assets/images/iphone-16.jpeg" },
+  { id:"ip-15-128",   title:"iPhone 15 - 128GB",         brand:"iPhone", price:490, image:"assets/images/iphone-15.jpeg" },
+  { id:"ip-14-128",   title:"iPhone 14 - 128GB",         brand:"iPhone", price:440, image:"assets/images/iphone-14.jpeg" },
+  { id:"ip-13-128",   title:"iPhone 13 - 128GB",         brand:"iPhone", price:360, image:"assets/images/iphone-13.jpeg" },
+
+  // Redmi/MI
   { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
-  { id:"tec-spark", title:"Tecno Spark", brand:"Tecno", price:115, image:"assets/images/tecno-spark.jpg" },
-  { id:"inf-hot", title:"Infinix Hot", brand:"Infinix", price:120, image:"assets/images/infinix-hot.jpg" },
-  { id:"hon-x9", title:"Honor X9", brand:"Honor", price:199, image:"assets/images/honor-x9.jpg" },
-  { id:"acc-charger", title:"شاحن أصلي سريع", brand:"Accessories", price:12, image:"assets/images/accessory-charger.jpg" },
+
+  // Tecno / Infinix / Honor / Accessories
+  { id:"tec-spark",  title:"Tecno Spark",    brand:"Tecno",    price:115, image:"assets/images/tecno-spark.jpg" },
+  { id:"inf-hot",    title:"Infinix Hot",    brand:"Infinix",  price:120, image:"assets/images/infinix-hot.jpg" },
+  { id:"hon-x9",     title:"Honor X9",       brand:"Honor",    price:199, image:"assets/images/honor-x9.jpg" },
+  { id:"acc-charger",title:"شاحن أصلي سريع", brand:"Accessories", price:12, image:"assets/images/accessory-charger.jpg" },
 ];
 
+/* ============== Helpers ============== */
 function $(sel, root){ return (root||document).querySelector(sel); }
-function $all(sel, root){ return Array.prototype.slice.call((root||document).querySelectorAll(sel)); }
+function $all(sel, root){ return Array.from((root||document).querySelectorAll(sel)); }
 function formatPrice(v){ v=Number(v)||0; return v.toFixed(2)+" "+CURRENCY; }
 function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
-function load(k,fallback){ try{ var v=localStorage.getItem(k); return v? JSON.parse(v): fallback; }catch(e){ return fallback; } }
+function load(k,fallback){ try{ const v=localStorage.getItem(k); return v? JSON.parse(v): fallback; }catch(e){ return fallback; } }
 
-var state = { brand:"الكل", query:"", sort:"popular", cart: load("cart", {}) };
+const state = { brand:"الكل", query:"", sort:"popular", cart: load("cart", {}) };
 
+function hasVariants(p){ return Array.isArray(p.variants) && p.variants.length>0; }
+function basePrice(p){ return hasVariants(p) ? p.variants[0].price : p.price; }
+function variantFullTitle(p,v){ return p.title + " - " + v.label; }
+
+/* ============== UI: Tabs / Search / Sort ============== */
 function safeAddEvent(el, ev, fn){ if(el && el.addEventListener){ el.addEventListener(ev, fn); } }
 
 function renderTabs(){
-  var tabs = $("#tabs"); if(!tabs) return;
+  const tabs = $("#tabs"); if(!tabs) return;
   tabs.innerHTML="";
-  BRANDS.forEach(function(b){
-    var btn=document.createElement("button");
+  BRANDS.forEach((b)=>{
+    const btn=document.createElement("button");
     btn.className="tab"+(b===state.brand?" active":"");
     btn.textContent=b;
-    btn.onclick=function(){ state.brand=b; filterAndRender(); setActiveTab(b); };
+    btn.onclick=()=>{ state.brand=b; filterAndRender(); setActiveTab(b); };
     tabs.appendChild(btn);
   });
 }
-function setActiveTab(label){
-  $all(".tab").forEach(function(el){ el.classList.toggle("active", el.textContent===label); });
-}
+function setActiveTab(label){ $all(".tab").forEach(el=> el.classList.toggle("active", el.textContent===label)); }
 
-safeAddEvent($("#searchInput"), "input", function(e){
+safeAddEvent($("#searchInput"), "input", (e)=>{
   state.query=(e.target.value||"").trim().toLowerCase();
   filterAndRender();
 });
-safeAddEvent($("#sortSelect"), "change", function(e){
+safeAddEvent($("#sortSelect"), "change", (e)=>{
   state.sort=e.target.value;
   filterAndRender();
 });
 
+/* ============== Render Grid ============== */
 function filterAndRender(){
-  var grid=$("#productsGrid"); if(!grid) return;
-  var empty=$("#emptyState");
+  const grid=$("#productsGrid"); if(!grid) return;
+  const empty=$("#emptyState");
 
-  var items=PRODUCTS
-    .filter(function(p){ return state.brand==="الكل" || p.brand===state.brand; })
-    .filter(function(p){ return p.title.toLowerCase().includes(state.query); });
+  let items=PRODUCTS
+    .filter(p => state.brand==="الكل" || p.brand===state.brand)
+    .filter(p => p.title.toLowerCase().includes(state.query));
 
-  if(state.sort==="priceAsc") items.sort(function(a,b){ return a.price-b.price; });
-  else if(state.sort==="priceDesc") items.sort(function(a,b){ return b.price-a.price; });
+  if(state.sort==="priceAsc")  items.sort((a,b)=> basePrice(a)-basePrice(b));
+  else if(state.sort==="priceDesc") items.sort((a,b)=> basePrice(b)-basePrice(a));
 
   grid.innerHTML="";
   if(items.length===0){ if(empty) empty.hidden=false; return; } else { if(empty) empty.hidden=true; }
 
-  var frag=document.createDocumentFragment();
-  items.forEach(function(p){ frag.appendChild(cardTemplate(p)); });
+  const frag=document.createDocumentFragment();
+  items.forEach(p=> frag.appendChild(cardTemplate(p)));
   grid.appendChild(frag);
   updateCartCount();
 }
 
+/* ============== Card Template ============== */
 function cardTemplate(p){
-  var el=document.createElement("article");
+  const el=document.createElement("article");
   el.className="card";
 
-  // بناء قائمة المواصفات (أول 3 ظاهرة، والباقي قابلة للطي)
-  var specsHTML = "";
+  // المواصفات (3 أولى ظاهرة)
+  let specsHTML = "";
   if (p.specs && p.specs.length) {
-    var first3 = p.specs.slice(0,3);
-    var rest   = p.specs.slice(3);
-
-    specsHTML = "<ul class='card__specs' data-collapsed='true'>" +
-      first3.map(function(s){ return "<li>"+s+"</li>"; }).join("");
-
+    const first3 = p.specs.slice(0,3);
+    const rest   = p.specs.slice(3);
+    specsHTML = "<ul class='card__specs' data-collapsed='true'>"
+              + first3.map(s=><li>${s}</li>).join("");
     if (rest.length) {
-      specsHTML += rest.map(function(s){ return "<li class='more'>"+s+"</li>"; }).join("");
-      specsHTML += "<li class='specs-cta'><button type='button' class='show-toggle' aria-expanded='false'>عرض المزيد</button></li>";
+      specsHTML += rest.map(s=><li>${s}</li>).join("")
+               +  <li class="specs-cta"><button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button></li>;
     }
-
     specsHTML += "</ul>";
   }
 
+  // المتغيرات (إن وجدت)
+  let variantHTML = "";
+  let initialPrice = basePrice(p);
+  let initialImage = p.image;
+
+  if (hasVariants(p)) {
+    variantHTML =
+      `<label class="muted tiny" for="${p.id}-v">النسخة:</label>
+       <select id="${p.id}-v" class="variant" data-pid="${p.id}">
+         ${p.variants.map((v,i)=><option value="${v.id}" ${i===0?"selected":""}>${v.label} — ${formatPrice(v.price)}</option>).join("")}
+       </select>`;
+    if (p.variants[0]?.image) initialImage = p.variants[0].image;
+  }
+
   el.innerHTML =
-    '<div class="card__img"><img src="'+p.image+'" alt="'+p.title+'"></div>'+
-    '<div class="card__body">'+
-      '<h3 class="card__title">'+p.title+'</h3>'+
-      specsHTML +
-      '<div class="card__meta">'+
-        '<span class="price">'+formatPrice(p.price)+'</span>'+
-        '<button class="btn btn--primary" data-add="'+p.id+'">أضف للسلة</button>'+
-      '</div>'+
-    '</div>';
+    `<div class="card__img"><img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}"></div>
+     <div class="card__body">
+       <h3 class="card__title">${p.title}</h3>
+       ${specsHTML}
+       ${variantHTML}
+       <div class="card__meta">
+         <span class="price" data-price-for="${p.id}">${formatPrice(initialPrice)}</span>
+         <button class="btn btn--primary" data-add="${p.id}">أضف للسلة</button>
+       </div>
+     </div>`;
+
+  // تحديث السعر/الصورة عند تغيير المتغير
+  if (hasVariants(p)) {
+    const sel     = el.querySelector(#${p.id}-v);
+    const priceEl = el.querySelector([data-price-for="${p.id}"]);
+    const imgEl   = el.querySelector([data-img-for="${p.id}"]);
+    sel.addEventListener("change", ()=>{
+      const v = p.variants.find(x=> x.id===sel.value);
+      if (v && priceEl) priceEl.textContent = formatPrice(v.price);
+      if (v && v.image && imgEl) imgEl.src = v.image;
+    });
+  }
 
   // زر "أضف للسلة"
-  var addBtn = el.querySelector("[data-add]");
-  if(addBtn){ addBtn.onclick=function(){ addToCart(p); }; }
-
-  // زر عرض المزيد/أقل (تبديل)
-  var toggleBtn = el.querySelector(".show-toggle");
-  if(toggleBtn){
-    toggleBtn.onclick = function(){
-      var list = el.querySelector(".card__specs");
-      var collapsed = list.getAttribute("data-collapsed") === "true";
-      // قلب الحالة
-      list.setAttribute("data-collapsed", collapsed ? "false" : "true");
-      toggleBtn.textContent = collapsed ? "عرض أقل" : "عرض المزيد";
-      toggleBtn.setAttribute("aria-expanded", collapsed ? "true" : "false");
+  const addBtn = el.querySelector("[data-add]");
+  if(addBtn){
+    addBtn.onclick = ()=>{
+      let payload;
+      if (hasVariants(p)) {
+        const sel = el.querySelector(#${p.id}-v);
+        const v   = p.variants.find(x=> x.id===sel.value) || p.variants[0];
+        const key = p.id + "|" + v.id;
+        payload = { id:key, baseId:p.id, title: variantFullTitle(p,v), price: v.price, image: (v.image || p.image) };
+      } else {
+        payload = { id:p.id, baseId:p.id, title: p.title, price: p.price, image: p.image };
+      }
+      addToCartWithKey(payload.id, payload);
     };
   }
 
   return el;
 }
 
-function addToCart(p){
-  var item=state.cart[p.id] || { qty:0, product:p };
-  item.qty+=1;
-  state.cart[p.id]=item;
+/* ============== Cart ============== */
+function addToCartWithKey(key, meta){
+  const item = state.cart[key] || { qty:0, product: meta };
+  item.qty += 1;
+  state.cart[key] = item;
   save("cart", state.cart);
   animateFab();
   updateCartCount();
 }
+
 function updateCartCount(){
-  var count = Object.values(state.cart).reduce(function(s,it){ return s+it.qty; }, 0);
-  var badge = $("#cartCount");
+  const count = Object.values(state.cart).reduce((s,it)=> s+it.qty, 0);
+  const badge = $("#cartCount");
   if (!badge) return;
   badge.textContent = count;
-
-  // شغّل نبضة العداد كل مرة يتغير الرقم
-  badge.classList.remove("bump");
-  void badge.offsetWidth;               // لإعادة تشغيل الأنيميشن
-  badge.classList.add("bump");
-  setTimeout(function(){ badge.classList.remove("bump"); }, 400);
+  badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump");
+  setTimeout(()=> badge.classList.remove("bump"), 400);
 }
+
 function animateFab(){
-  var fab=$("#cartFab"); if(!fab || !fab.animate) return;
+  const fab=$("#cartFab"); if(!fab || !fab.animate) return;
   fab.animate([{transform:"scale(1)"},{transform:"scale(1.08)"},{transform:"scale(1)"}], {duration:260});
 }
 
 safeAddEvent($("#cartFab"), "click", openCart);
 safeAddEvent($("#closeCart"), "click", closeCart);
-safeAddEvent($("#clearCart"), "click", function(){
+safeAddEvent($("#clearCart"), "click", ()=>{
   if(confirm("هل تريد إفراغ السلة بالكامل؟")){
     state.cart={}; save("cart", state.cart); renderCart(); updateCartCount();
   }
 });
-safeAddEvent($("#checkoutBtn"), "click", function(){
-  var f=$("#checkoutForm"); if(f) f.hidden=false;
-  var cs=$(".cart-summary"); if(cs && cs.scrollIntoView) cs.scrollIntoView({behavior:"smooth", block:"end"});
+safeAddEvent($("#checkoutBtn"), "click", ()=>{
+  const f=$("#checkoutForm"); if(f) f.hidden=false;
+  const cs=$(".cart-summary"); if(cs && cs.scrollIntoView) cs.scrollIntoView({behavior:"smooth", block:"end"});
 });
-safeAddEvent($("#backToCart"), "click", function(){
-  var f=$("#checkoutForm"); if(f) f.hidden=true;
+safeAddEvent($("#backToCart"), "click", ()=>{
+  const f=$("#checkoutForm"); if(f) f.hidden=true;
 });
 
-function openCart(){ renderCart(); disableScroll(true); var m=$("#cartModal"); if(m) m.hidden=false; }
-function closeCart(){ var m=$("#cartModal"); if(m) m.hidden=true; disableScroll(false); }
+function openCart(){ renderCart(); disableScroll(true); const m=$("#cartModal"); if(m) m.hidden=false; }
+function closeCart(){ const m=$("#cartModal"); if(m) m.hidden=true; disableScroll(false); }
 function disableScroll(lock){ document.body.style.overflow = lock? "hidden": ""; }
 
 function renderCart(){
-  var wrap=$("#cartItems"); if(!wrap) return;
+  const wrap=$("#cartItems"); if(!wrap) return;
   wrap.innerHTML="";
-  var entries=Object.values(state.cart);
+  const entries=Object.values(state.cart);
   if(entries.length===0){ wrap.innerHTML='<p class="muted">سلتك فارغة.</p>'; }
-  else{
-    entries.forEach(function(it){ wrap.appendChild(cartRow(it.product, it.qty)); });
-  }
-  var total=entries.reduce(function(s,it){ return s + it.product.price*it.qty; },0);
-  var ct=$("#cartTotal"); if(ct) ct.textContent=formatPrice(total);
-  var f=$("#checkoutForm"); if(f) f.hidden=true;
+  else{ entries.forEach(it=> wrap.appendChild(cartRow(it.product, it.qty))); }
+
+  const total=entries.reduce((s,it)=> s + it.product.price*it.qty, 0);
+  const ct=$("#cartTotal"); if(ct) ct.textContent=formatPrice(total);
+  const f=$("#checkoutForm"); if(f) f.hidden=true;
 }
 
 function cartRow(p, qty){
-  var row=document.createElement("div");
+  const row=document.createElement("div");
   row.className="cart-row";
   row.innerHTML =
-    '<img src="'+p.image+'" alt="'+p.title+'">'+
-    '<div><div style="font-weight:700">'+p.title+'</div><div class="muted tiny">'+formatPrice(p.price)+' للوحدة</div></div>'+
-    '<div class="qty">'+
-      '<button type="button" data-dec>−</button>'+
-      '<strong>'+qty+'</strong>'+
-      '<button type="button" data-inc>+</button>'+
-    '</div>'+
-    '<div style="text-align:end">'+formatPrice(p.price*qty)+'</div>';
-  var inc=row.querySelector("[data-inc]");
-  var dec=row.querySelector("[data-dec]");
-  if(inc){ inc.onclick=function(){ state.cart[p.id].qty++; save("cart", state.cart); renderCart(); updateCartCount(); }; }
-  if(dec){ dec.onclick=function(){ state.cart[p.id].qty--; if(state.cart[p.id].qty<=0) delete state.cart[p.id]; save("cart", state.cart); renderCart(); updateCartCount(); }; }
+    `<img src="${p.image}" alt="${p.title}">
+     <div><div style="font-weight:700">${p.title}</div><div class="muted tiny">${formatPrice(p.price)} للوحدة</div></div>
+     <div class="qty">
+       <button type="button" data-dec>−</button>
+       <strong>${qty}</strong>
+       <button type="button" data-inc>+</button>
+     </div>
+     <div style="text-align:end">${formatPrice(p.price*qty)}</div>`;
+  const inc=row.querySelector("[data-inc]");
+  const dec=row.querySelector("[data-dec]");
+  if(inc){ inc.onclick=()=>{ state.cart[p.id].qty++; save("cart", state.cart); renderCart(); updateCartCount(); }; }
+  if(dec){ dec.onclick=()=>{ state.cart[p.id].qty--; if(state.cart[p.id].qty<=0) delete state.cart[p.id]; save("cart", state.cart); renderCart(); updateCartCount(); }; }
   return row;
 }
 
-safeAddEvent($("#checkoutForm"), "submit", async function(e){
+/* ============== Checkout (Telegram/WhatsApp/Endpoint) ============== */
+safeAddEvent($("#checkoutForm"), "submit", async (e)=>{
   e.preventDefault();
-  var fd=new FormData(e.currentTarget);
-  var buyer={}; fd.forEach(function(v,k){ buyer[k]=v; });
+  const fd=new FormData(e.currentTarget);
+  const buyer={}; fd.forEach((v,k)=> buyer[k]=v);
 
   if(!buyer.name || !buyer.phone || !buyer.address){ alert("يرجى تعبئة جميع الحقول المطلوبة"); return; }
 
-  var entries=Object.values(state.cart);
+  const entries=Object.values(state.cart);
   if(entries.length===0){ alert("السلة فارغة"); return; }
-  var items=entries.map(function(it){ return { id:it.product.id, title:it.product.title, price:it.product.price, qty:it.qty, subtotal:it.product.price*it.qty }; });
-  var total=items.reduce(function(s,it){ return s+it.subtotal; },0);
-  var payload={ customer:buyer, items:items, total:total, currency:CURRENCY, createdAt:new Date().toISOString() };
+  const items=entries.map(it=> ({ id:it.product.id, title:it.product.title, price:it.product.price, qty:it.qty, subtotal:it.product.price*it.qty }));
+  const total=items.reduce((s,it)=> s+it.subtotal, 0);
+  const payload={ customer:buyer, items, total, currency:CURRENCY, createdAt:new Date().toISOString() };
 
   try{
-    var ok=false, errMsg="";
-
+    let ok=false, errMsg="";
     if(ORDER_ENDPOINT){
-      var res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload) });
-      var text=await res.text();
+      const res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload) });
+      const text=await res.text();
       try{
-        var data=JSON.parse(text);
+        const data=JSON.parse(text);
         ok = res.ok && (data.ok===true || data.success===true || data.telegram==='sent');
         if(!ok) errMsg = data.error || data.body || text || ("HTTP "+res.status);
       }catch(_){
@@ -256,16 +350,16 @@ safeAddEvent($("#checkoutForm"), "submit", async function(e){
         if(!ok) errMsg = text || ("HTTP "+res.status);
       }
     }else if(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID){
-      var msg=["طلب جديد من متجر الحدث موبايل","الاسم: "+buyer.name,"الهاتف: "+buyer.phone,"العنوان: "+buyer.address];
+      const msg=["طلب جديد من متجر الحدث موبايل","الاسم: "+buyer.name,"الهاتف: "+buyer.phone,"العنوان: "+buyer.address];
       if(buyer.note) msg.push("ملاحظات: "+buyer.note);
       msg.push("— — —");
-      items.forEach(function(it){ msg.push("• "+it.title+" × "+it.qty+" = "+it.subtotal+" "+CURRENCY); });
+      items.forEach(it=> msg.push("• "+it.title+" × "+it.qty+" = "+it.subtotal+" "+CURRENCY));
       msg.push("— — —","الإجمالي: "+total+" "+CURRENCY);
-      var tgURL="https://api.telegram.org/bot"+TELEGRAM_BOT_TOKEN+"/sendMessage";
-      var r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
+      const tgURL="https://api.telegram.org/bot"+TELEGRAM_BOT_TOKEN+"/sendMessage";
+      const r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
       ok=r.ok;
     }else{
-      var wa="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("طلب جديد\nالاسم: "+buyer.name+"\nالهاتف: "+buyer.phone+"\nالعنوان: "+buyer.address+"\nالمجموع: "+total+" "+CURRENCY);
+      const wa="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("طلب جديد\nالاسم: "+buyer.name+"\nالهاتف: "+buyer.phone+"\nالعنوان: "+buyer.address+"\nالمجموع: "+total+" "+CURRENCY);
       window.open(wa, "_blank"); ok=true;
     }
 
@@ -281,61 +375,53 @@ safeAddEvent($("#checkoutForm"), "submit", async function(e){
   }
 });
 
-/* ===== Slider ===== */
-var slideIndex=0;
+/* ============== Slider ============== */
+let slideIndex=0;
 function showSlide(i){
-  var slides=$all(".slide"); if(slides.length===0) return;
+  const slides=$all(".slide"); if(slides.length===0) return;
   slideIndex=(i+slides.length)%slides.length;
-  slides.forEach(function(s,idx){ s.classList.toggle("active", idx===slideIndex); });
-  var dots=$all(".dot"); dots.forEach(function(d,idx){ d.classList.toggle("active", idx===slideIndex); });
+  slides.forEach((s,idx)=> s.classList.toggle("active", idx===slideIndex));
+  const dots=$all(".dot"); dots.forEach((d,idx)=> d.classList.toggle("active", idx===slideIndex));
 }
 function next(){ showSlide(slideIndex+1); }
 function prev(){ showSlide(slideIndex-1); }
-var nb=$("#nextBtn"); if(nb) nb.onclick=next;
-var pb=$("#prevBtn"); if(pb) pb.onclick=prev;
+const nb=$("#nextBtn"); if(nb) nb.onclick=next;
+const pb=$("#prevBtn"); if(pb) pb.onclick=prev;
 
 function renderDots(){
-  var dots=$("#dots"); var slides=$all(".slide"); if(!dots || slides.length===0) return;
+  const dots=$("#dots"); const slides=$all(".slide"); if(!dots || slides.length===0) return;
   dots.innerHTML="";
-  slides.forEach(function(_,idx){
-    var b=document.createElement("button"); b.className="dot"+(idx===0?" active":"");
-    b.onclick=function(){ showSlide(idx); }; dots.appendChild(b);
+  slides.forEach((_,idx)=>{
+    const b=document.createElement("button"); b.className="dot"+(idx===0?" active":"");
+    b.onclick=()=>{ showSlide(idx); }; dots.appendChild(b);
   });
 }
-setInterval(function(){ try{ next(); }catch(e){} }, 5000);
+setInterval(()=>{ try{ next(); }catch(e){} }, 5000);
 
-/* ===== Init ===== */
+/* ============== Init ============== */
 function init(){
-  var y=$("#year"); if(y) y.textContent=(new Date()).getFullYear();
+  const y=$("#year"); if(y) y.textContent=(new Date()).getFullYear();
   renderTabs();
   renderDots();
   filterAndRender();
   updateCartCount();
 }
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", ()=>{
   try{ init(); }catch(err){ console.error("Init error:", err); alert("خطأ في التهيئة: "+err); }
 });
-document.addEventListener("DOMContentLoaded", () => {
+
+/* واتساب العائم */
+document.addEventListener("DOMContentLoaded", ()=>{
   const whatsappBtn = document.getElementById("whatsappBtn");
   if (!whatsappBtn) return;
-
-  let expanded = false;
-  let timer;
-
+  let expanded = false, timer;
   whatsappBtn.addEventListener("click", function(e) {
     if (!expanded) {
-      e.preventDefault(); // لا يفتح الرابط أول مرة
+      e.preventDefault();
       whatsappBtn.classList.add("expanded");
       expanded = true;
-
-      // يرجع يصغر تلقائياً بعد 5 ثواني إذا ما ضغط مرة ثانية
-      timer = setTimeout(() => {
-        whatsappBtn.classList.remove("expanded");
-        expanded = false;
-      }, 5000);
-
+      timer = setTimeout(()=>{ whatsappBtn.classList.remove("expanded"); expanded = false; }, 5000);
     } else {
-      // يلغي المؤقت لو ضغط المستخدم
       clearTimeout(timer);
       window.open(whatsappBtn.href, "_blank");
       whatsappBtn.classList.remove("expanded");
@@ -343,30 +429,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  // تأثير Pop على أي زر "أضف للسلة"
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest('[data-add-to-cart], [data-action="add"], [data-role="add"], .add-to-cart, .btn-add, .btn--add, .btn'); 
-    if (!btn) return;
 
-    // لو هذا الزر هو فعلاً زر إضافة (نحاول نتأكد بالنص/الداتا إن وُجدت)
+/* تأثير Pop على أزرار الإضافة */
+document.addEventListener("DOMContentLoaded", ()=>{
+  document.addEventListener("click", (e)=>{
+    const btn = e.target.closest('[data-add], [data-add-to-cart], [data-action="add"], [data-role="add"], .add-to-cart, .btn-add, .btn--add, .btn');
+    if (!btn) return;
     const txt = (btn.innerText || "").trim();
     const looksLikeAdd =
-      btn.matches('[data-add-to-cart], [data-action="add"], [data-role="add"], .add-to-cart, .btn-add, .btn--add') ||
+      btn.matches('[data-add], [data-add-to-cart], [data-action="add"], [data-role="add"], .add-to-cart, .btn-add, .btn--add') ||
       /أضف|اضافة|إضافة|Add/i.test(txt);
-
     if (!looksLikeAdd) return;
-
-    // شغّل تأثير الـ Pop
     btn.classList.add("added");
-    setTimeout(() => btn.classList.remove("added"), 240);
-    });
+    setTimeout(()=> btn.classList.remove("added"), 240);
+  });
 });
-document.addEventListener("click", function(e){
-  const toggle = e.target.closest(".show-toggle");
-  if(!toggle) return;
 
-  const list = toggle.closest(".card__specs");
-  const collapsed = list.getAttribute("data-collapsed") !== "false";
-  list.setAttribute("data-collapsed", collapsed ? "false" : "true");
+/* زر عرض المزيد/أقل — تفويض عام واحد فقط */
+document.addEventListener("click", function(e){
+  const btn = e.target.closest(".show-toggle");
+  if (!btn) return;
+  const list = btn.closest(".card__specs");
+  const isOpen = list.getAttribute("data-collapsed") === "false";
+  list.setAttribute("data-collapsed", isOpen ? "true" : "false");
+  btn.textContent = isOpen ? "عرض المزيد" : "عرض أقل";
+  btn.setAttribute("aria-expanded", (!isOpen).toString());
 });
