@@ -8,7 +8,7 @@ const TELEGRAM_CHAT_ID = "8403706325";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 const PRODUCTS = [
-  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.webp",specs: [
+  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4+4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.webp",specs: [
     "شاشة 6.7 بوصة +HD",
     "معالج MediaTek Helio G85",
     "Android 14 + One UI 6.1",
