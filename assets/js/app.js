@@ -181,13 +181,13 @@ function cardTemplate(p){
   if (p.specs && p.specs.length) {
     const first3 = p.specs.slice(0,3);
     const rest   = p.specs.slice(3);
-    specsHTML  = `<ul class='card__specs' data-collapsed='true'>`
-               + first3.map(s=>`<li>${s}</li>`).join("");
+    specsHTML = "<ul class='card__specs' data-collapsed='true'>"
+              + first3.map(s=>`<li>${s}</li>`).join("");
     if (rest.length) {
       specsHTML += rest.map(s=>`<li>${s}</li>`).join("")
-                 + `<li class="specs-cta"><button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button></li>`;
+               +  `<li class="specs-cta"><button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button></li>`;
     }
-    specsHTML += `</ul>`;
+    specsHTML += "</ul>";
   }
 
   // المتغيرات (إن وجدت)
@@ -218,9 +218,9 @@ function cardTemplate(p){
 
   // تحديث السعر/الصورة عند تغيير المتغير
   if (hasVariants(p)) {
-    const sel     = el.querySelector(#${p.id}-v);
-    const priceEl = el.querySelector([data-price-for="${p.id}"]);
-    const imgEl   = el.querySelector([data-img-for="${p.id}"]);
+    const sel     = el.querySelector(`#${p.id}-v`);
+    const priceEl = el.querySelector(`[data-price-for="${p.id}"]`);
+    const imgEl   = el.querySelector(`[data-img-for="${p.id}"]`);
     sel.addEventListener("change", ()=>{
       const v = p.variants.find(x=> x.id===sel.value);
       if (v && priceEl) priceEl.textContent = formatPrice(v.price);
@@ -234,7 +234,7 @@ function cardTemplate(p){
     addBtn.onclick = ()=>{
       let payload;
       if (hasVariants(p)) {
-        const sel = el.querySelector(#${p.id}-v);
+        const sel = el.querySelector(`#${p.id}-v`);
         const v   = p.variants.find(x=> x.id===sel.value) || p.variants[0];
         const key = p.id + "|" + v.id;
         payload = { id:key, baseId:p.id, title: variantFullTitle(p,v), price: v.price, image: (v.image || p.image) };
