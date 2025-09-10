@@ -187,7 +187,7 @@ function cardTemplate(p){
       specsHTML += rest.map(s=>`<li>${s}</li>`).join("")
                +  `<li class="specs-cta"><button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button></li>`;
     }
-    specsHTML += "</ul>";
+    specsHTML += `</ul>`;
   }
 
   // المتغيرات (إن وجدت)
