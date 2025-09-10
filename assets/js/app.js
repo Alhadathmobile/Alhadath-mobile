@@ -8,7 +8,17 @@ const TELEGRAM_CHAT_ID = "8403706325";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 const PRODUCTS = [
-  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.webp" },
+  { id:"s-a06-64", title:"Samsung A06 - 64GB / 4GB RAM", brand:"Samsung", price:49, image:"assets/images/samsung-a06.webp",specs: [
+    "شاشة 6.7 بوصة +HD",
+    "معالج MediaTek Helio G85",
+    "Android 14 + One UI 6.1",
+    "ذاكرة 64GB / 4GB RAM",
+    "كاميرا خلفية 50MP + 2MP",
+    "كاميرا أمامية 8MP",
+    "بطارية 5000mAh شحن سريع 25W"
+  ] 
+}, 
+  
   { id:"s-a06-128", title:"Samsung A06 - 128GB / 4GB RAM", brand:"Samsung", price:59, image:"assets/images/samsung-a06.jpg" },
   { id:"s-a16-128", title:"Samsung A16 - 128GB / 4GB RAM", brand:"Samsung", price:99, image:"assets/images/samsung-a06.jpg" },
   { id:"ip-16pm-256", title:"iPhone 16 Pro Max - 256GB", brand:"iPhone", price:900, image:"assets/images/iphone-16-pro-max.jpeg" },
