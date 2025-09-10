@@ -99,32 +99,61 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .dot.active{background:#22c55e}
 
 /* ============ Grid ============ */
+/* 1) شبكة الكروت للموبايل */
 .grid{
   display:grid; gap:14px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;            /* موبايل صغير = عمود واحد */
+}
+@media (min-width: 380px){
+  .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 @media (min-width: 720px){
-  .topbar__inner{height:72px}
-  .badges{display:flex}
-  .slider{height:360px}
-  .grid{grid-template-columns: repeat(3, minmax(0, 1fr))}
+  .grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 @media (min-width: 1024px){
-  .slider{height:420px}
-  .grid{grid-template-columns: repeat(4, minmax(0, 1fr))}
+  .grid{ grid-template-columns: repeat(4, minmax(0,1fr)); }
 }
+
 
 /* ============ Card ============ */
 .card{
   background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0));
   border:1px solid var(--border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;
 }
-.card__img{width:100%; aspect-ratio:1/1; background:#0b1626; display:grid; place-items:center; overflow:hidden}
-.card__img img{width:100%; height:100%; object-fit:cover; display:block}
-.card__body{padding:12px}
-.card__title{margin:0 0 6px; font-weight:700; font-size:15px}
-.card__meta{display:flex; align-items:center; justify-content:space-between}
-.price{font-weight:800}
+.card__img{width:100%; aspect-ratio:4/3; background:#0b1626; display:grid; place-items:center; overflow:hidden}
+.card__img img{width:100%; height:100%; object-fit:contain; display:block}
+.card{border-radius:14px; overflow:hidden;}
+.card__body{padding:12px 12px 14px;}
+.card__title{margin:0 0 8px; font-weight:800; font-size:clamp(14px, 3.6vw, 16px);}
+/* 4) قائمة النسخ (variants) تملىء العرض وتتعامل مع النص الطويل */
+.card select.variant{
+  width:100%;
+  margin:8px 0 10px;
+  font-size:14px;
+  padding:10px 12px;
+  border-radius:10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  direction: ltr;        /* لأرقام النسخ تكون مرتبة */
+}
+/* موبايل: السعر فوق والزر تحت */
+.card__meta{
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap:8px;
+}
+
+/* من عرض 480px وفوق: السعر والزر جنب بعض */
+@media (min-width:480px){
+  .card__meta{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.price{font-weight:900}
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   border:1px solid var(--border); background:#0b1a12; color:#dcfce7;
