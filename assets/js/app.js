@@ -176,19 +176,25 @@ function cardTemplate(p){
   const el=document.createElement("article");
   el.className="card";
 
-  // المواصفات (3 أولى ظاهرة)
-  let specsHTML = "";
-  if (p.specs && p.specs.length) {
-    const first3 = p.specs.slice(0,3);
-    const rest   = p.specs.slice(3);
-    specsHTML = "<ul class='card__specs' data-collapsed='true'>"
-              + first3.map(s=>`<li>${s}</li>`).join("");
-    if (rest.length) {
-      specsHTML += rest.map(s=>`<li>${s}</li>`).join("")
-               +  `<li class="specs-cta"><button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button></li>`;
-    }
-    specsHTML += `</ul>`;
+ // المواصفات (3 أولى ظاهرة) — نسخة تعتمد على class="more"
+let specsHTML = "";
+if (Array.isArray(p.specs) && p.specs.length) {
+  const first3 = p.specs.slice(0, 3);
+  const rest   = p.specs.slice(3);
+
+  specsHTML  = `<ul class="card__specs" data-collapsed="true">`
+             + first3.map(s => `<li>${s}</li>`).join("");
+
+  if (rest.length) {
+    // كل المواصفات الإضافية تحمل class="more"
+    specsHTML += rest.map(s => `<li class="more">${s}</li>`).join("")
+              +  `<li class="specs-cta">
+                    <button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button>
+                  </li>`;
   }
+
+  specsHTML += `</ul>`;
+} 
 
   // المتغيرات (إن وجدت)
   let variantHTML = "";
