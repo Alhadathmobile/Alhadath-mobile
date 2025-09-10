@@ -181,13 +181,13 @@ function cardTemplate(p){
   if (p.specs && p.specs.length) {
     const first3 = p.specs.slice(0,3);
     const rest   = p.specs.slice(3);
-    specsHTML = "<ul class='card__specs' data-collapsed='true'>"
-              + first3.map(s=><li>${s}</li>).join("");
+    specsHTML  = `<ul class='card__specs' data-collapsed='true'>`
+               + first3.map(s=>`<li>${s}</li>`).join("");
     if (rest.length) {
-      specsHTML += rest.map(s=><li>${s}</li>).join("")
-               +  <li class="specs-cta"><button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button></li>;
+      specsHTML += rest.map(s=>`<li>${s}</li>`).join("")
+                 + `<li class="specs-cta"><button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button></li>`;
     }
-    specsHTML += "</ul>";
+    specsHTML += `</ul>`;
   }
 
   // المتغيرات (إن وجدت)
@@ -199,7 +199,7 @@ function cardTemplate(p){
     variantHTML =
       `<label class="muted tiny" for="${p.id}-v">النسخة:</label>
        <select id="${p.id}-v" class="variant" data-pid="${p.id}">
-         ${p.variants.map((v,i)=><option value="${v.id}" ${i===0?"selected":""}>${v.label} — ${formatPrice(v.price)}</option>).join("")}
+         ${p.variants.map((v,i)=>`<option value="${v.id}" ${i===0?"selected":""}>${v.label} — ${formatPrice(v.price)}</option>`).join("")}
        </select>`;
     if (p.variants[0]?.image) initialImage = p.variants[0].image;
   }
