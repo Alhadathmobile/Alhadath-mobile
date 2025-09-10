@@ -291,14 +291,14 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   position: relative;
 }
 
-/* عند الإغلاق: أظهر أول 3 فقط */
-.card__specs[data-collapsed="true"] li:nth-child(n+4) {
-  display: none;
+/* عند الإغلاق: أخفِ العناصر الإضافية فقط */
+.card__specs[data-collapsed="true"] .more { 
+  display: none; 
 }
 
-/* عند الفتح: أظهر الكل */
-.card__specs[data-collapsed="false"] li {
-  display: list-item;
+/* عند الفتح: أظهر العناصر الإضافية */
+.card__specs[data-collapsed="false"] .more { 
+  display: list-item; 
 }
 
 /* زر التحكّم (سهم) */
