@@ -62,7 +62,7 @@ const PRODUCTS = [
     id: "s-a26-5g",
     title: "Samsung A26 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a26.jpg",
+    image: "assets/images/samsung-a26.webp",
     variants: [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
