@@ -83,7 +83,7 @@ const PRODUCTS = [
     id: "s-a36-5g",
     title: "Samsung A36 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a36.jpg",
+    image: "assets/images/samsung-a36.webp",
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
@@ -125,7 +125,7 @@ const PRODUCTS = [
   { id:"s-s25-ultra-12-256", 
    title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM", 
    brand:"Samsung",
-   image:"assets/images/samsung-s25-ultra.jpg",
+   image:"assets/images/samsung-s25-ultra.webp",
    variants: [
       { id: "256-12+12",  label: "256GB / 12+12GB RAM",  price: 720 },
       { id: "1T-12+12",  label: "1TGB / 12+12GB RAM",  price: 1099 }
