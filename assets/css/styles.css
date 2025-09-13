@@ -11,7 +11,7 @@
   --danger:#ef4444;
   --border:#e5e7eb;
   --chip:#f1f5f9;
-  --shadow:0 5px 15px rgba(0,0,0,.05);
+  --shadow:0 8px 20px rgba(0,0,0,.06);
 }
 
 *{box-sizing:border-box}
@@ -19,7 +19,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   margin:0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  background:linear-gradient(180deg, #f9fafb 0%, #ffffff 70%, #e0f2fe 100%);
+  background:#ffffff;
   color:var(--text);
   line-height:1.6;
   min-height:100dvh;
