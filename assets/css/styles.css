@@ -35,7 +35,10 @@ main{contain:layout paint;}
 }
 .section-head h2{margin:0;font-size:20px;font-weight:700}
 .sort label{margin-inline-end:8px}
-select, input, textarea {font-size:16px; color:var(--text); background:var(--card); border:1px solid var(--border); border-radius:10px; padding:10px 12px; outline:none}
+select, input, textarea {
+  font-size:16px; color:var(--text); background:var(--card);
+  border:1px solid var(--border); border-radius:10px; padding:10px 12px; outline:none
+}
 select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) inset}
 
 /* ============ Topbar ============ */
@@ -49,8 +52,8 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .brand__logo{font-size:22px}
 .brand__name{letter-spacing:.5px}
 .brand, .brand_logo, .brand_name {
-  color:var(--text);           /* نفس لون النص الأساسي الغامق */
-  text-shadow:none; /* بدون ظل عشان يكون أنظف */
+  color:var(--text);
+  text-shadow:none;
 }
 .search-wrap{flex:1}
 .search{width:100%}
@@ -58,14 +61,12 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   background:#f9fafb;
   color:#111827;
   border:1px solid #e5e7eb;
-  border-radius: 8px;   /* حواف ناعمه  */
+  border-radius: 8px;
   padding: 12px 18px;
   font-size: 16px;
-  max-width: 500px;       /* علشان ما يصير عريض جدًا */
+  max-width: 500px;
 }
-.topbar .search::placeholder { 
-  color:#6b7280;          /* رمادي للنص */
-}
+.topbar .search::placeholder { color:#6b7280; }
 
 /* ============ Badges ============ */
 .badges{display:none; gap:8px}
@@ -78,13 +79,16 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .tab{
   white-space:nowrap; padding:8px 14px; border-radius:999px;
   background:var(--chip); border:1px solid var(--border); color:var(--text);
-  cursor:pointer; user-select:none; font-size:14px; transition:all 0.25s ease;}
-.tab:hover { background:#e5e7eb;}
+  cursor:pointer; user-select:none; font-size:14px; transition:all 0.25s ease;
 }
+.tab:hover { background:#e5e7eb; }
 .tab.active{background:var(--primary);border-color:var(--primary);color:#fff}
 
 /* ============ Slider ============ */
-.slider{position:relative; margin:16px auto; max-width:1200px; height:260px; overflow:hidden; border-radius:14px; box-shadow:var(--shadow);}
+.slider{
+  position:relative; margin:16px auto; max-width:1200px; height:260px;
+  overflow:hidden; border-radius:14px; box-shadow:var(--shadow);
+}
 .slides{display:flex; height:100%}
 .slide{min-width:100%; height:100%; display:none}
 .slide.active{display:block}
@@ -100,7 +104,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .dot.active{background:#22c55e}
 
 /* ============ Grid ============ */
-/* 1) شبكة الكروت للموبايل */
 .grid{
   display:grid; gap:14px;
   grid-template-columns: 1fr;            /* موبايل صغير = عمود واحد */
@@ -115,7 +118,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   .grid{ grid-template-columns: repeat(4, minmax(0,1fr)); }
 }
 
-
 /* ============ Card ============ */
 .card{
   background:#ffffff;
@@ -125,8 +127,10 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .card__img img{width:100%; height:auto; object-fit:contain; background:#ffffff; border-radius:8px; display:block}
 .card{border-radius:14px; overflow:hidden;}
 .card__body{padding:12px 12px 14px;}
-.card__title{margin-bottom:6px; font-weight:800; color:var(--text); font-size:16px);}
-/* 4) قائمة النسخ (variants) تملىء العرض وتتعامل مع النص الطويل */
+.card__title{
+  margin-bottom:6px; font-weight:800; color:var(--text); font-size:16px;
+}
+/* قائمة النسخ (variants) */
 .card select.variant{
   width:100%;
   margin:8px 0 10px;
@@ -138,15 +142,14 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   overflow: hidden;
   direction: ltr;        /* لأرقام النسخ تكون مرتبة */
 }
-/* موبايل: السعر فوق والزر تحت */
+
+/* ميتا البطاقة */
 .card__meta{
   display:flex;
   flex-direction: column;
   align-items: stretch;
   gap:8px;
 }
-
-/* من عرض 480px وفوق: السعر والزر جنب بعض */
 @media (min-width:480px){
   .card__meta{
     flex-direction: row;
@@ -154,12 +157,13 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
     justify-content: space-between;
   }
 }
+
+/* السعر + الأزرار */
 .price{font-weight:900}
-/* ===== تخصيص السعر ===== */
-.price {
-  font-size: 18px;        /* أكبر من العنوان */
-  font-weight: 900;       /* غامق جدًا */
-  color: #16a34a;         /* أخضر مميز للسعر */
+.price{
+  font-size: 18px;
+  font-weight: 900;
+  color: #16a34a;
 }
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -171,50 +175,31 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .btn--secondary{background:#e5e7eb; color:#111827}
 
 /* ============ Cart FAB ============ */
+/* RTL: أسفل يمين الشاشة = inline-start */
 .cart-fab{
   position: fixed;
   z-index: 60;
   bottom: max(16px, env(safe-area-inset-bottom));
-  inset-inline-end: 16px;    /* يسار الشاشة */
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;          /* دائرة صغيرة */
-  background:var(--accent);         /* الأخضر الداكن */
+  inset-inline-start: 16px;     /* يمين في RTL */
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background:var(--accent);
   color: #fff;
-  display: grid;
-  place-items: center;
+  display: grid; place-items: center;
   box-shadow: 0 6px 16px rgba(0,0,0,.15);
-  border: none;
-  cursor: pointer;
+  border: none; cursor: pointer;
 }
-
-.cart-fab svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
-.cart-fab .badge {
+.cart-fab svg{ width:24px; height:24px; fill: currentColor; }
+.cart-fab .badge{
   position: absolute;
-  top: 2px;                   /* أقرب لفوق */
-  right: 50%;                 /* في منتصف الزر */
-  transform: translateX(50%); /* يعيد الرقم لمركز الأيقونة */
-  background: transparent;    /* بدون خلفية */
-  color: #ffffff;             /* أبيض */
-  font-size: 15px;            /* حجم واضح */
-  font-weight: 700;
-  padding: 0;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* ظل خفيف لزيادة الوضوح */
-  pointer-events: none;       /* يمنع التداخل مع الضغط */
-}
-@keyframes badge-pulse {
-  0%   { transform: translateX(50%) scale(1); }
-  50%  { transform: translateX(50%) scale(1.4); }
-  100% { transform: translateX(50%) scale(1); }
-}
-
-.cart-fab .badge.bump {
-  animation: badge-pulse 0.35s ease-out;
+  top: 2px;
+  right: 50%;
+  transform: translateX(50%);
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px; font-weight: 700;
+  padding: 0; text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  pointer-events: none;
 }
 
 /* ============ Modal (Cart) ============ */
@@ -239,6 +224,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .empty-state{
   text-align:center; padding:40px 10px; border:2px dashed var(--border); border-radius:14px; color:#cbd5e1; background:rgba(255,255,255,.02)
 }
+
 /* ============ Footer ============ */
 .footer {
   margin-top: 24px;
@@ -247,7 +233,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   color: var(--text);
   box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
 }
-
 .footer__inner {
   display: flex;
   flex-direction: column;
@@ -257,51 +242,23 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   padding: 14px 0;
   font-size: 14px;
 }
-
-.footer__brand {
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.footer__social-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.footer__label {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.footer__social {
-  display: flex;
-  gap: 14px;
-}
+.footer__brand { font-weight: 700; font-size: 15px; }
+.footer__social-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.footer__label { font-size: 13px; color: var(--muted); }
+.footer__social { display: flex; gap: 14px; }
 
 /* الأيقونات داخل دوائر بيضاء مع ظل */
 .footer__social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #ffffff;                     /* خلفية بيضاء */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);  /* ظل خفيف */
+  display: flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .footer__social a:hover {
   transform: scale(1.12);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12); /* ظل أقوى عند المرور */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
-
-.footer__social a svg {
-  width: 22px;
-  height: 22px;
-}
+.footer__social a svg { width: 22px; height: 22px; }
 
 /* اهتزاز أيقونة الاتصال */
 @keyframes call-shake {
@@ -322,85 +279,55 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
     align-items: stretch;
     gap: 10px;
   }
-  .footer__social-wrap {
-    text-align: right;
-  }
-{
-/* تأثير Pop عند الضغط على "أضف للسلة" */
+  .footer__social-wrap { text-align: right; }
+}
+
+/* ============ Micro Interactions ============ */
 @keyframes btn-pop {
   0% { transform: scale(1); }
   50% { transform: scale(1.12); }
   100% { transform: scale(1); }
 }
-
-/* تُضاف مؤقتًا من الجافاسكربت */
-.btn.added {
-  animation: btn-pop .22s ease-out;
-}
-
-/* لمسة ضغط طبيعية */
+.btn.added { animation: btn-pop .22s ease-out; }
 .btn:active { transform: scale(0.98); }
 
-/* (اختياري) نبضة سريعة لعداد السلة */
+/* عدّاد السلة (نبضة) */
 @keyframes badge-bump {
   0% { transform: scale(1); }
   30% { transform: scale(1.25); }
   100% { transform: scale(1); }
 }
-.cart-fab .badge.bump {
-  animation: badge-bump .28s ease-out;
-}
+.cart-fab .badge.bump { animation: badge-bump .28s ease-out; }
 
 /* ============ Specs List ============ */
 .card__specs {
   margin: 6px 0 10px;
   padding-inline-start: 18px;   /* مسافة قبل النقاط */
   font-size: 13px;
-  color:var(--muted);               /* رمادي داكن */
+  color: var(--muted);          /* رمادي داكن */
   line-height: 1.5;
   position: relative;
+  list-style: disc;
 }
-
 /* عند الإغلاق: أخفِ العناصر الإضافية فقط */
-.card__specs[data-collapsed="true"] .more { 
-  display: none; 
-}
-
+.card__specs[data-collapsed="true"] .more { display: none; }
 /* عند الفتح: أظهر العناصر الإضافية */
-.card__specs[data-collapsed="false"] .more { 
-  display: list-item; 
-}
-
+.card__specs[data-collapsed="false"] .more { display: list-item; }
 /* زر التحكّم (سهم) */
-.card__specs .specs-cta { 
-  list-style: none; 
-  margin-top: 4px; 
-  padding: 0; 
+.card__specs .specs-cta { list-style: none; margin-top: 4px; padding: 0; }
+.card__specs .show-toggle{
+  background: none; border: none; color: #6b7280;
+  font-size: 15px; cursor: pointer; padding: 0;
+  display: inline-flex; align-items: center; transition: color .3s ease;
 }
-.card__specs .show-toggle {
-  background: none;
-  border: none;
-  color: #6b7280;                /* رمادي هادئ */
-  font-size: 15px;
-  cursor: pointer;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  transition: color .3s ease;
-}
-.card__specs .show-toggle:hover { 
-  color: #374151;                /* يغمق عند الهوفر */
-}
-
+.card__specs .show-toggle:hover { color: #374151; }
 /* السهم: يبدأ لأسفل، ويدور عند الفتح */
-.card__specs .show-toggle::after {
+.card__specs .show-toggle::after{
   content: "▼";
-  margin-inline-start: 6px;
-  font-size: 12px;
-  color: inherit;                /* نفس لون الزر */
-  display: inline-block;
+  margin-inline-start: 6px; font-size: 12px; color: inherit;
+  display: inline-block; transform: translateY(1px);
   transition: transform .3s ease, color .3s ease;
 }
 .card__specs[data-collapsed="false"] .show-toggle::after {
-  transform: rotate(180deg);     /* دوران لأعلى */
+  transform: rotate(180deg) translateY(-1px);
 }
