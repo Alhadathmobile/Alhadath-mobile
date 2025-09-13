@@ -46,10 +46,14 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 135 }
     ],
     specs: [
-      "شاشة 6.7 بوصة +HD",
-      "Android 14 + One UI",
-      "كاميرا 50MP",
-      "بطارية 5000mAh"
+    	"شاشة: 6.7 بوصة Super AMOLED FHD+، 90Hz",
+		"المعالج: MediaTek Helio G99",
+		"الذاكرة والتخزين: 4/6/8 GB RAM + 128/256 GB تخزين",
+		"الكاميرا الخلفية: 50MP رئيسية + 5MP Ultra-wide + 2MP ماكرو",
+		"الكاميرا الأمامية: 13MP",
+		"البطارية: 5000mAh مع شحن سريع 25W",
+		"النظام: Android 14 + One UI 6.1",
+		"الأداء: جيد للتصفح، التطبيقات، ألعاب خفيفة إلى متوسطة"
     ]
   },
 
@@ -62,7 +66,16 @@ const PRODUCTS = [
     variants: [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
-    ]
+    ],
+	 specs: [
+    	"شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+		"المعالج: Exynos 1280",
+		"الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 2MP ماكرو",
+		"الكاميرا الأمامية: 13MP",
+		"البطارية: 5000mAh مع شحن سريع 25W",
+		"النظام: Android 14 + One UI",
+		"الأداء: قوي للألعاب المتوسطة وتعدد المهام"
+    ] 
   },
 
   // A36 5G (نسختان)
@@ -74,7 +87,16 @@ const PRODUCTS = [
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
-    ]
+    ],
+	specs: [
+    	"شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+		"المعالج: Snapdragon 6 Gen 3",
+		"الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 5MP ماكرو",
+		"الكاميرا الأمامية: 12MP",
+		"البطارية: 5000mAh مع شحن سريع 25W",
+		"النظام: Android 14 + One UI",
+		"الأداء: ممتاز للتصفح والألعاب المتوسطة"
+    ]   
   },
 
   // A56 5G (نسختان)
@@ -87,11 +109,37 @@ const PRODUCTS = [
       { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 220 },
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
       { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
-    ]
+    ],
+	 specs: [
+	 	"شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+		"المعالج: Exynos 1580",
+		"الكاميرا الخلفية: 50MP OIS + 12MP Ultra-wide + 5MP ماكرو",
+		"الكاميرا الأمامية: 12MP",
+		"البطارية: 5000mAh مع شحن سريع 45W",
+		"النظام: Android 14 + One UI",
+		"الأداء: قوي للتطبيقات الثقيلة والألعاب"
+    ]    
   },
 
   // S25 Ultra (سعة واحدة)
-  { id:"s-s25-ultra-12-256", title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM", brand:"Samsung", price:720, image:"assets/images/samsung-s25-ultra.jpg" },
+  { id:"s-s25-ultra-12-256", 
+   title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM", 
+   brand:"Samsung",
+   image:"assets/images/samsung-s25-ultra.jpg",
+   variants: [
+      { id: "256-12+12",  label: "256GB / 12+12GB RAM",  price: 720 },
+      { id: "1T-12+12",  label: "1TGB / 12+12GB RAM",  price: 1099 }
+    ],
+   specs: [
+	 	"شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
+		"المعالج: Snapdragon 8 Elite",
+		"الكاميرا الخلفية: 200MP رئيسية + Ultra-wide + Telephoto (تكبير بصري حتى 5x)",
+		"الكاميرا الأمامية: 12MP",
+		"البطارية: 5000mAh مع شحن سريع 45W + شحن لاسلكي",
+		"النظام: Android 15 + One UI",
+		"الأداء: فائق القوة للتصوير والألعاب والمهام الاحترافية"
+    ]    
+  },
 
   // iPhone
   { id:"ip-16pm-256", title:"iPhone 16 Pro Max - 256GB", brand:"iPhone", price:900, image:"assets/images/iphone-16-pro-max.jpeg" },
