@@ -239,61 +239,71 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .empty-state{
   text-align:center; padding:40px 10px; border:2px dashed var(--border); border-radius:14px; color:#cbd5e1; background:rgba(255,255,255,.02)
 }
-/* ============ Footer RTL ============ */
+/* ============ Footer ============ */
 .footer {
   margin-top: 24px;
   border-top: 1px solid var(--border);
   background: #ffffff;
   color: var(--text);
   box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
-  direction: rtl;  /* اتجاه عربي */
-  text-align: center; /* توسيط المحتوى */
 }
 
 .footer__inner {
   display: flex;
-  flex-direction: column;   /* يجعل العناصر فوق بعض */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 10px;
-  padding: 16px;
+  padding: 14px 0;
   font-size: 14px;
 }
 
 .footer__brand {
   font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.footer__social-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 .footer__label {
   font-size: 13px;
   color: var(--muted);
-  margin-bottom: 8px;
 }
 
 .footer__social {
   display: flex;
-  gap: 18px;
-  justify-content: center;   /* أيقونات في المنتصف */
+  gap: 14px;
+}
+
+/* الأيقونات داخل دوائر بيضاء مع ظل */
+.footer__social a {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;                     /* خلفية بيضاء */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);  /* ظل خفيف */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer__social a:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12); /* ظل أقوى عند المرور */
 }
 
 .footer__social a svg {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
+  width: 22px;
+  height: 22px;
 }
 
-.footer__social a:hover svg {
-  transform: scale(1.15);
-}
-
-/* ألوان رسمية */
-.footer__social a[aria-label="Facebook"] svg { fill: #1877F2; }
-.footer__social a[aria-label="Instagram"] svg { fill: #E4405F; }
-.footer__social a[aria-label="WhatsApp"] svg { fill: #25D366; }
-
-/* أيقونة الاتصال بلون أخضر مع هزّة دورية */
-.footer__social a[aria-label="Call"] svg { fill: #25D366; }
+/* اهتزاز أيقونة الاتصال */
 @keyframes call-shake {
   0%, 100% { transform: rotate(0deg); }
   20% { transform: rotate(-12deg); }
@@ -303,7 +313,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 }
 .footer__social a[aria-label="Call"] svg {
   animation: call-shake 1s ease-in-out 5s infinite;
-
+}
 
 /* استجابة للموبايل: ترتيب عمودي ومنع التزاحم مع السلة */
 @media (max-width: 600px) {
