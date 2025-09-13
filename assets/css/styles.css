@@ -266,17 +266,18 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 
 .footer__social {
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
 
-.footer__social a {
-  color: var(--text);
-  font-size: 18px;
-  transition: color 0.2s ease;
+.footer__social a  svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--text);          /* لون افتراضي */
+  transition: fill 0.3s ease;
 }
 
-.footer__social a:hover {
-  color: var(--primary);   /* يتلون عند المرور */
+.footer__social a:hover svg {
+  fill:#25D366;
 }
 /* حركة اهتزاز للأيقونة */
 @keyframes shake {
@@ -352,6 +353,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .cart-fab .badge.bump {
   animation: badge-bump .28s ease-out;
 }
+
 /* ============ Specs List ============ */
 .card__specs {
   margin: 6px 0 10px;
