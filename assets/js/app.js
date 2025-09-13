@@ -24,12 +24,13 @@ const PRODUCTS = [
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpg" }
     ],
     specs: [
-      "شاشة 6.7 بوصة +HD",
-      "معالج MediaTek Helio G85",
-      "Android 14 + One UI 6.1",
-      "كاميرا خلفية 50MP + 2MP",
-      "كاميرا أمامية 8MP",
-      "بطارية 5000mAh شحن سريع 25W"
+      "شاشة: 6.7 بوصة HD+ LCD، 60Hz",  
+		"المعالج: MediaTek Helio G85",  
+   	"الكاميرا الخلفية: 50MP رئيسية + 2MP عمق",
+		"الكاميرا الأمامية: 8MP",  
+		"البطارية: 5000mAh مع شحن سريع 25W",  
+		"النظام: Android 14 + One UI",  
+		"الأداء: مناسب للتصفح، التطبيقات الأساسية، استخدام عادي"
     ]
   },
 
