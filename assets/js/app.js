@@ -18,10 +18,10 @@ const PRODUCTS = [
     id: "s-a06",
     title: "Samsung A06",
     brand: "Samsung",
-    image: "assets/images/samsung-a06.jpg", // صورة عامة للجهاز (يمكن تبديلها)
+    image: "assets/images/samsung-a06.jpeg", // صورة عامة للجهاز (يمكن تبديلها)
     variants: [
-      { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49, image: "assets/images/samsung-a06.jpg" },
-      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpg" }
+      { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49, image: "assets/images/samsung-a06.jpeg" },
+      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpeg" }
     ],
     specs: [
       "شاشة: 6.7 بوصة HD+ LCD، 60Hz",  
