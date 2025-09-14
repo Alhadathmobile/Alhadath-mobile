@@ -1,10 +1,10 @@
 /* ============ Alhadath Mobile (SAFE) ============ */
 const CURRENCY = "JD";
 const WHATSAPP_NUMBER = "";
-const ORDER_ENDPOINT = "";
+const ORDER_ENDPOINT = "https://noisy-firefly-6298.ahmad2120omar.workers.dev/";
 
-const TELEGRAM_BOT_TOKEN = "8400045424:AAF57FN0km9UN3_LNdF87wOGWKfbcbdrkhk";
-const TELEGRAM_CHAT_ID = "8403706325";
+const TELEGRAM_BOT_TOKEN = "";
+const TELEGRAM_CHAT_ID = "";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 
