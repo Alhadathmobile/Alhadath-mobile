@@ -18,7 +18,7 @@ const PRODUCTS = [
     id: "s-a06",
     title: "Samsung A06",
     brand: "Samsung",
-    image: "assets/images/samsung-a06.webp", // صورة عامة للجهاز (يمكن تبديلها)
+    image: "assets/images/samsung-a06.jpeg", // صورة عامة للجهاز (يمكن تبديلها)
     variants: [
       { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49, image: "assets/images/samsung-a06.webp" },
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpg" }
@@ -39,7 +39,7 @@ const PRODUCTS = [
     id: "s-a16",
     title: "Samsung A16",
     brand: "Samsung",
-    image: "assets/images/samsung-a16.jpg",
+    image: "assets/images/samsung-a16.webp",
     variants: [
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 99 },
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 115 },
