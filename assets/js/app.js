@@ -116,7 +116,7 @@ const PRODUCTS = [
     image:"assets/images/samsung-s25-ultra.webp",
     variants: [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 720 },
-      { id: "1T-12+12",   label: "1TGB / 12+12GB RAM",   price: 1099 }
+      { id: "1T-12+12",   label: "1TB / 12+12GB RAM",   price: 1099 }
     ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
@@ -136,8 +136,8 @@ const PRODUCTS = [
    image:"assets/images/iphone-16-pro-max.jpeg",
    variants: [
       { id: "256", label: "256GB ", price: 910 },
-      { id: "512",   label: "512TGB ",   price: 990 },
-     { id: "1T",   label: "1TGB ",   price: 1099 }
+      { id: "512",   label: "512GB ",   price: 990 },
+     { id: "1T",   label: "1TB ",   price: 1099 }
     ],
    specs: [
      "الشاشة: 6.9 بوصة QHD+ Super Retina XDR OLED، 120Hz ProMotion",
@@ -155,8 +155,8 @@ const PRODUCTS = [
    image:"assets/images/iphone-16-pro.jpeg",
    variants: [
       { id: "256", label: "256GB ", price: 850 },
-      { id: "512",   label: "512TGB ",   price: 950 },
-     { id: "1T",   label: "1TGB ",   price: 1050 }
+      { id: "512",   label: "512GB ",   price: 950 },
+     { id: "1T",   label: "1TB ",   price: 1050 }
     ],
    specs: [
     "الشاشة: 6.7 بوصة ProMotion OLED، 120Hz",
@@ -233,7 +233,7 @@ const PRODUCTS = [
     { id: "512", label: "512GB", price:  690 }
   ],
   specs: [
-    "الشاشة: 6.7 بوصة OLED Super Retina XDR، 60Hz"،
+    "الشاشة: 6.7 بوصة OLED Super Retina XDR 60Hz"،
     "الدقة: 2796 × 1290 بكسل، كثافة حوالي 460 ppi"،
     "Dynamic Island بدلاً من النوتش"،
     "المعالج: Apple A16 Bionic"،
