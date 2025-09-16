@@ -124,7 +124,9 @@
         </div>
         <div class="form-row">
           <label for="order-phone">رقم الهاتف</label>
-          <input id="order-phone" name="phone" type="tel" pattern="^[0-9+\\-()\\s]{9,15}$" inputmode="numeric" required />
+          <input id="order-phone" name="phone" type="tel"
+       pattern="^[0-9\u0660-\u0669\u06F0-\u06F9+\-\s()]{8,}$"
+       inputmode="numeric" required />
         </div>
         <div class="form-row">
           <label for="order-address">العنوان</label>
