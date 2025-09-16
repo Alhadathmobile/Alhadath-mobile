@@ -270,7 +270,7 @@ const PRODUCTS = [
     "الأبعاد: 160.9 × 77.8 × 7.8 مم، الوزن حوالي 199 غرام"
   ]
 },
-
+];
 
   // Redmi/MI
   { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
