@@ -1,7 +1,7 @@
 /* ============ Alhadath Mobile (SAFE) ============ */
 const CURRENCY = "JD";
 const WHATSAPP_NUMBER = "";
-const ORDER_ENDPOINT = "https://small-poetry-ea8f.ahmad2120omar.workers.dev/";
+const ORDER_ENDPOINT = "https://sweet-truth-1b2f.ahmad2120omar.workers.dev/";
 
 const TELEGRAM_BOT_TOKEN = "";
 const TELEGRAM_CHAT_ID = "";
