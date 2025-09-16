@@ -223,25 +223,27 @@ const PRODUCTS = [
     "الأداء: مناسب للتطبيقات اليومية، تصوير جيد، شاشة ملوّنة ونقية"
   ]
 },
-  {id: "ip-15-plus",
+  
+{
+  id: "ip-15-plus",
   title: "iPhone 15 Plus",
   brand: "iPhone",
   image: "assets/images/iphone-15-plus.jpeg",
   variants: [
     { id: "128", label: "128GB", price: 520 },
     { id: "256", label: "256GB", price: 610 },
-    { id: "512", label: "512GB", price:  690 }
+    { id: "512", label: "512GB", price: 690 }
   ],
   specs: [
-    "الشاشة: 6.7 بوصة OLED Super Retina XDR 60Hz"،
-    "الدقة: 2796 × 1290 بكسل، كثافة حوالي 460 ppi"،
-    "Dynamic Island بدلاً من النوتش"،
-    "المعالج: Apple A16 Bionic"،
-    "الكاميرات الخلفية: 48MP رئيسية + 12MP Ultra Wide"،
-    "الكاميرا الأمامية: 12MP TrueDepth"،
-    "البطارية: حوالي 4383mAh تقريبًا"،
-    "USB-C بدلاً من Lightning"،
-    "مقاومة للماء والغبار بمعيار IP68 (حتى عمق 6 أمتار لمدة تصل إلى 30 دقيقة)"،
+    "الشاشة: 6.7 بوصة OLED Super Retina XDR، 60Hz",
+    "الدقة: 2796 × 1290 بكسل، كثافة حوالي 460 ppi",
+    "Dynamic Island بدلاً من النوتش",
+    "المعالج: Apple A16 Bionic",
+    "الكاميرات الخلفية: 48MP رئيسية + 12MP Ultra Wide",
+    "الكاميرا الأمامية: 12MP TrueDepth",
+    "البطارية: حوالي 4383mAh تقريبًا",
+    "USB-C بدلاً من Lightning",
+    "مقاومة للماء والغبار بمعيار IP68 (حتى عمق 6 أمتار لمدة تصل إلى 30 دقيقة)",
     "الوزن: تقريبًا 201 غرام، السماكة: حوالي 7.8 مم"
   ]
 },
