@@ -285,6 +285,14 @@ function $all(sel, root){ return Array.from((root||document).querySelectorAll(se
 function formatPrice(v){ v=Number(v)||0; return v.toFixed(2)+" "+CURRENCY; }
 function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 function load(k,fallback){ try{ const v=localStorage.getItem(k); return v? JSON.parse(v): fallback; }catch(e){ return fallback; } }
+function normalizeDigits(str){
+  return String(str || "")
+    // أرقام عربية شرقية ٠١٢٣٤٥٦٧٨٩
+    .replace(/[\u0660-\u0669]/g, d => String.fromCharCode(d.charCodeAt(0) - 0x0660 + 48))
+    // أرقام فارسية ۰۱۲۳۴۵۶۷۸۹
+    .replace(/[\u06F0-\u06F9]/g, d => String.fromCharCode(d.charCodeAt(0) - 0x06F0 + 48))
+    // نظّف أي رموز غريبة
+    .replace(/[^\d+\-\s()]/g, "");
 
 const state = { brand:"الكل", query:"", sort:"popular", cart: load("cart", {}) };
 
@@ -501,8 +509,9 @@ safeAddEvent($("#checkout-form"), "submit", async (e)=>{
 
   // اجمع بيانات الزبون
   const fd=new FormData(e.currentTarget);
-  const buyer={}; fd.forEach((v,k)=> buyer[k]=String(v||"").trim());
-
+  const buyer={}; fd.forEach((v,k)=> {
+  buyer[k] = (k === "phone") ? normalizeDigits(v) : String(v || "").trim();
+});
   // تحقق واجهة
   const errs=[];
   if (!buyer.name || buyer.name.length < 2) errs.push("الاسم مطلوب (على الأقل حرفان).");
