@@ -130,14 +130,147 @@ const PRODUCTS = [
   },
 
   // iPhone
-  { id:"ip-16pm-256", title:"iPhone 16 Pro Max - 256GB", brand:"iPhone", price:900, image:"assets/images/iphone-16-pro-max.jpeg" },
-  { id:"ip-16pm-512", title:"iPhone 16 Pro Max - 512GB", brand:"iPhone", price:999, image:"assets/images/iphone-16-pro-max.jpeg" },
-  { id:"ip-16p-256",  title:"iPhone 16 Pro - 256GB",     brand:"iPhone", price:850, image:"assets/images/iphone-16-pro.jpeg" },
-  { id:"ip-16-128",   title:"iPhone 16 - 128GB",         brand:"iPhone", price:580, image:"assets/images/iphone-16.jpeg" },
-  { id:"ip-16-256",   title:"iPhone 16 - 256GB",         brand:"iPhone", price:610, image:"assets/images/iphone-16.jpeg" },
-  { id:"ip-15-128",   title:"iPhone 15 - 128GB",         brand:"iPhone", price:490, image:"assets/images/iphone-15.jpeg" },
-  { id:"ip-14-128",   title:"iPhone 14 - 128GB",         brand:"iPhone", price:440, image:"assets/images/iphone-14.jpeg" },
-  { id:"ip-13-128",   title:"iPhone 13 - 128GB",         brand:"iPhone", price:360, image:"assets/images/iphone-13.jpeg" },
+  { id:"ip-16pm",
+   title:"iPhone 16 Pro Max",
+   brand:"iPhone",
+   image:"assets/images/iphone-16-pro-max.jpeg",
+   variants: [
+      { id: "256", label: "256GB ", price: 910 },
+      { id: "512",   label: "512TGB ",   price: 990 },
+     { id: "1T",   label: "1TGB ",   price: 1099 }
+    ],
+   specs: [
+     "الشاشة: 6.9 بوصة QHD+ Super Retina XDR OLED، 120Hz ProMotion",
+    "المعالج: Apple A18 Pro",
+    "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide 12MP + Telephoto 12MP (تكبير بصري حتى 5x)",
+    "الكاميرا الأمامية: 12MP TrueDepth",
+    "البطارية: 4500mAh تقريبًا مع شحن سريع 30W + شحن لاسلكي MagSafe",
+    "النظام: iOS 18",
+    "الأداء: فائق القوة للتصوير، الألعاب، والمهام الاحترافية"
+    ]
+  },
+  { id:"ip-16p",
+   title:"iPhone 16 Pro",
+   brand:"iPhone",
+   image:"assets/images/iphone-16-pro.jpeg",
+   variants: [
+      { id: "256", label: "256GB ", price: 850 },
+      { id: "512",   label: "512TGB ",   price: 950 },
+     { id: "1T",   label: "1TGB ",   price: 1050 }
+    ],
+   specs: [
+    "الشاشة: 6.7 بوصة ProMotion OLED، 120Hz",
+    "المعالج: Apple A18 Pro",
+    "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide 12MP + Telephoto 12MP",
+    "الكاميرا الأمامية: 12MP TrueDepth",
+    "البطارية: حوالي 4400mAh مع شحن سريع + MagSafe",
+    "النظام: iOS 18",
+    "الأداء: مثالي للتصوير، الإنتاجية، المهام الثقيلة"
+  ]
+  },
+  {
+  id: "ip-16",
+  title: "iPhone 16",
+  brand: "iPhone",
+  image: "assets/images/iphone-16.jpeg",
+  variants: [
+    { id: "128", label: "128GB", price: 580 },
+    { id: "256", label: "256GB", price: 610 }
+  ],
+  specs: [
+    "الشاشة: حوالي 6.1 بوصة OLED، 60-120Hz",
+    "المعالج: Apple A18",
+    "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide",
+    "الكاميرا الأمامية: 12MP TrueDepth",
+    "البطارية: حوالي 3200-3500mAh مع شحن سريع",
+    "النظام: iOS 18",
+    "الأداء: ممتاز لتطبيقات اليومية، كاميرا متقدّمة، تجربة ممتازة"
+  ]
+},
+  {
+  id: "ip-15",
+  title: "iPhone 15",
+  brand: "iPhone",
+  image: "assets/images/iphone-15.jpeg",
+  variants: [
+    { id: "128", label: "128GB", price: 490 },
+    { id: "256", label: "256GB", price: 540 }
+  ],
+  specs: [
+    "الشاشة: 6.1 بوصة OLED، 60-120Hz",
+    "المعالج: Apple A17",
+    "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide",
+    "الكاميرا الأمامية: 12MP TrueDepth",
+    "البطارية: حوالي 3300-3500mAh مع شحن سريع",
+    "النظام: iOS 17",
+    "الأداء: جيد للتطبيقات، كاميرا قوية، تجربة محسّنة عن الأجيال السابقة"
+  ]
+},
+  {
+  id: "ip-14",
+  title: "iPhone 14",
+  brand: "iPhone",
+  image: "assets/images/iphone-14.jpeg",
+  variants: [
+    { id: "128", label: "128GB", price: 440 },
+    { id: "256", label: "256GB", price: 500 }
+  ],
+  specs: [
+    "الشاشة: 6.1 بوصة OLED، 60Hz",
+    "المعالج: Apple A16",
+    "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide",
+    "الكاميرا الأمامية: 12MP TrueDepth",
+    "البطارية: حوالي 3279-3300mAh مع شحن سريع",
+    "النظام: iOS 16",
+    "الأداء: مناسب للتطبيقات اليومية، تصوير جيد، شاشة ملوّنة ونقية"
+  ]
+},
+  {
+  id: "ip-15-plus",
+  title: "iPhone 15 Plus",
+  brand: "iPhone",
+  image: "assets/images/iphone-15-plus.jpeg",
+  variants: [
+    { id: "128", label: "128GB", price:  ضع السعر المناسب  },
+    { id: "256", label: "256GB", price:  ضع السعر المناسب  },
+    { id: "512", label: "512GB", price:  ضع السعر المناسب  }
+  ],
+  specs: [
+    "الشاشة: 6.7 بوصة OLED Super Retina XDR، 60Hz"،
+    "الدقة: 2796 × 1290 بكسل، كثافة حوالي 460 ppi"،
+    "Dynamic Island بدلاً من النوتش"،
+    "المعالج: Apple A16 Bionic"،
+    "الكاميرات الخلفية: 48MP رئيسية + 12MP Ultra Wide"،
+    "الكاميرا الأمامية: 12MP TrueDepth"،
+    "البطارية: حوالي 4383mAh تقريبًا"،
+    "USB-C بدلاً من Lightning"،
+    "مقاومة للماء والغبار بمعيار IP68 (حتى عمق 6 أمتار لمدة تصل إلى 30 دقيقة)"،
+    "الوزن: تقريبًا 201 غرام، السماكة: حوالي 7.8 مم"
+  ]
+},
+  {
+  id: "ip-16-plus",
+  title: "iPhone 16 Plus",
+  brand: "iPhone",
+  image: "assets/images/iphone-16-plus.jpeg",
+  variants: [
+    { id: "128", label: "128GB", price: 0 },
+    { id: "256", label: "256GB", price: 0 },
+    { id: "512", label: "512GB", price: 0 }
+  ],
+  specs: [
+    "الشاشة: 6.7 بوصة OLED Super Retina XDR، دقة 2796×1290 بكسل، 460 ppi",
+    "الهيكل: واجهة Ceramic Shield، ظهر زجاجي مع إطار من الألومنيوم",
+    "المعالج: Apple A18",
+    "الكاميرا الخلفية: 48MP رئيسية + 12MP Ultra Wide",
+    "الكاميرا الأمامية: 12MP TrueDepth",
+    "البطارية: تشغيل فيديو حتى 27 ساعة تقريبًا",
+    "نظام التشغيل: iOS 18",
+    "الألوان: أسود، أبيض، وردي، Teal، Ultramarine",
+    "الأبعاد: 160.9 × 77.8 × 7.8 مم، الوزن حوالي 199 غرام"
+  ]
+},
+
 
   // Redmi/MI
   { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
