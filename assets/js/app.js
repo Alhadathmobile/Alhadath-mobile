@@ -1,40 +1,35 @@
 /* ============ Alhadath Mobile (SAFE) ============ */
 const CURRENCY = "JD";
-const WHATSAPP_NUMBER = "";
-const ORDER_ENDPOINT = "https://super-salad-3846.ahmad2120omar.workers.dev";
+const WHATSAPP_NUMBER = ""; // احتياطي فقط إن أردت فتح واتساب بدل الإرسال
+const ORDER_ENDPOINT = "https://super-salad-3846.ahmad2120omar.workers.dev"; // Worker
 
+// لا نستخدم أي توكنات في الواجهة
 const TELEGRAM_BOT_TOKEN = "";
 const TELEGRAM_CHAT_ID = "";
 
 const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 
-/* ================= PRODUCTS =================
-   ملاحظة: الأجهزة التي لها أكثر من سعة/رام جُمعت في منتج واحد مع variants
-   حتى لا تتكرر الـ IDs. يمكن تعديل الأسعار/العناوين بحرية.
-*/
+/* ================= PRODUCTS ================= */
 const PRODUCTS = [
-  // A06 (نسختان)
   {
     id: "s-a06",
     title: "Samsung A06",
     brand: "Samsung",
-    image: "assets/images/samsung-a06.jpeg", // صورة عامة للجهاز (يمكن تبديلها)
+    image: "assets/images/samsung-a06.jpeg",
     variants: [
       { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49, image: "assets/images/samsung-a06.jpeg" },
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpeg" }
     ],
     specs: [
-      "شاشة: 6.7 بوصة HD+ LCD، 60Hz",  
-		"المعالج: MediaTek Helio G85",  
-   	"الكاميرا الخلفية: 50MP رئيسية + 2MP عمق",
-		"الكاميرا الأمامية: 8MP",  
-		"البطارية: 5000mAh مع شحن سريع 25W",  
-		"النظام: Android 14 + One UI",  
-		"الأداء: مناسب للتصفح، التطبيقات الأساسية، استخدام عادي"
+      "شاشة: 6.7 بوصة HD+ LCD، 60Hz",
+      "المعالج: MediaTek Helio G85",
+      "الكاميرا الخلفية: 50MP رئيسية + 2MP عمق",
+      "الكاميرا الأمامية: 8MP",
+      "البطارية: 5000mAh مع شحن سريع 25W",
+      "النظام: Android 14 + One UI",
+      "الأداء: مناسب للتصفح، التطبيقات الأساسية، استخدام عادي"
     ]
   },
-
-  // A16 (ثلاث نسخ)
   {
     id: "s-a16",
     title: "Samsung A16",
@@ -46,18 +41,16 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 135 }
     ],
     specs: [
-    	"شاشة: 6.7 بوصة Super AMOLED FHD+، 90Hz",
-		"المعالج: MediaTek Helio G99",
-		"الذاكرة والتخزين: 4/6/8 GB RAM + 128/256 GB تخزين",
-		"الكاميرا الخلفية: 50MP رئيسية + 5MP Ultra-wide + 2MP ماكرو",
-		"الكاميرا الأمامية: 13MP",
-		"البطارية: 5000mAh مع شحن سريع 25W",
-		"النظام: Android 14 + One UI 6.1",
-		"الأداء: جيد للتصفح، التطبيقات، ألعاب خفيفة إلى متوسطة"
+      "شاشة: 6.7 بوصة Super AMOLED FHD+، 90Hz",
+      "المعالج: MediaTek Helio G99",
+      "الذاكرة والتخزين: 4/6/8 GB RAM + 128/256 GB تخزين",
+      "الكاميرا الخلفية: 50MP رئيسية + 5MP Ultra-wide + 2MP ماكرو",
+      "الكاميرا الأمامية: 13MP",
+      "البطارية: 5000mAh مع شحن سريع 25W",
+      "النظام: Android 14 + One UI 6.1",
+      "الأداء: جيد للتصفح، التطبيقات، ألعاب خفيفة إلى متوسطة"
     ]
   },
-
-  // A26 5G (نسختان)
   {
     id: "s-a26-5g",
     title: "Samsung A26 5G",
@@ -67,18 +60,16 @@ const PRODUCTS = [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
     ],
-	 specs: [
-    	"شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
-		"المعالج: Exynos 1280",
-		"الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 2MP ماكرو",
-		"الكاميرا الأمامية: 13MP",
-		"البطارية: 5000mAh مع شحن سريع 25W",
-		"النظام: Android 14 + One UI",
-		"الأداء: قوي للألعاب المتوسطة وتعدد المهام"
-    ] 
+    specs: [
+      "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+      "المعالج: Exynos 1280",
+      "الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 2MP ماكرو",
+      "الكاميرا الأمامية: 13MP",
+      "البطارية: 5000mAh مع شحن سريع 25W",
+      "النظام: Android 14 + One UI",
+      "الأداء: قوي للألعاب المتوسطة وتعدد المهام"
+    ]
   },
-
-  // A36 5G (نسختان)
   {
     id: "s-a36-5g",
     title: "Samsung A36 5G",
@@ -88,18 +79,16 @@ const PRODUCTS = [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
     ],
-	specs: [
-    	"شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
-		"المعالج: Snapdragon 6 Gen 3",
-		"الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 5MP ماكرو",
-		"الكاميرا الأمامية: 12MP",
-		"البطارية: 5000mAh مع شحن سريع 25W",
-		"النظام: Android 14 + One UI",
-		"الأداء: ممتاز للتصفح والألعاب المتوسطة"
-    ]   
+    specs: [
+      "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+      "المعالج: Snapdragon 6 Gen 3",
+      "الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 5MP ماكرو",
+      "الكاميرا الأمامية: 12MP",
+      "البطارية: 5000mAh مع شحن سريع 25W",
+      "النظام: Android 14 + One UI",
+      "الأداء: ممتاز للتصفح والألعاب المتوسطة"
+    ]
   },
-
-  // A56 5G (نسختان)
   {
     id: "s-a56-5g",
     title: "Samsung A56 5G",
@@ -110,35 +99,34 @@ const PRODUCTS = [
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
       { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
     ],
-	 specs: [
-	 	"شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
-		"المعالج: Exynos 1580",
-		"الكاميرا الخلفية: 50MP OIS + 12MP Ultra-wide + 5MP ماكرو",
-		"الكاميرا الأمامية: 12MP",
-		"البطارية: 5000mAh مع شحن سريع 45W",
-		"النظام: Android 14 + One UI",
-		"الأداء: قوي للتطبيقات الثقيلة والألعاب"
-    ]    
+    specs: [
+      "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+      "المعالج: Exynos 1580",
+      "الكاميرا الخلفية: 50MP OIS + 12MP Ultra-wide + 5MP ماكرو",
+      "الكاميرا الأمامية: 12MP",
+      "البطارية: 5000mAh مع شحن سريع 45W",
+      "النظام: Android 14 + One UI",
+      "الأداء: قوي للتطبيقات الثقيلة والألعاب"
+    ]
   },
-
-  // S25 Ultra (سعة واحدة)
-  { id:"s-s25-ultra-12-256", 
-   title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM", 
-   brand:"Samsung",
-   image:"assets/images/samsung-s25-ultra.webp",
-   variants: [
-      { id: "256-12+12",  label: "256GB / 12+12GB RAM",  price: 720 },
-      { id: "1T-12+12",  label: "1TGB / 12+12GB RAM",  price: 1099 }
+  {
+    id:"s-s25-ultra-12-256",
+    title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM",
+    brand:"Samsung",
+    image:"assets/images/samsung-s25-ultra.webp",
+    variants: [
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 720 },
+      { id: "1T-12+12",   label: "1TGB / 12+12GB RAM",   price: 1099 }
     ],
-   specs: [
-	 	"شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
-		"المعالج: Snapdragon 8 Elite",
-		"الكاميرا الخلفية: 200MP رئيسية + Ultra-wide + Telephoto (تكبير بصري حتى 5x)",
-		"الكاميرا الأمامية: 12MP",
-		"البطارية: 5000mAh مع شحن سريع 45W + شحن لاسلكي",
-		"النظام: Android 15 + One UI",
-		"الأداء: فائق القوة للتصوير والألعاب والمهام الاحترافية"
-    ]    
+    specs: [
+      "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
+      "المعالج: Snapdragon 8 Elite",
+      "الكاميرا الخلفية: 200MP رئيسية + Ultra-wide + Telephoto (تكبير بصري حتى 5x)",
+      "الكاميرا الأمامية: 12MP",
+      "البطارية: 5000mAh مع شحن سريع 45W + شحن لاسلكي",
+      "النظام: Android 15 + One UI",
+      "الأداء: فائق القوة للتصوير والألعاب والمهام الاحترافية"
+    ]
   },
 
   // iPhone
@@ -225,25 +213,23 @@ function cardTemplate(p){
   const el=document.createElement("article");
   el.className="card";
 
- // المواصفات (3 أولى ظاهرة) — نسخة تعتمد على class="more"
-let specsHTML = "";
-if (Array.isArray(p.specs) && p.specs.length) {
-  const first3 = p.specs.slice(0, 3);
-  const rest   = p.specs.slice(3);
+  // المواصفات (3 أولى ظاهرة) — class="more" للباقي
+  let specsHTML = "";
+  if (Array.isArray(p.specs) && p.specs.length) {
+    const first3 = p.specs.slice(0, 3);
+    const rest   = p.specs.slice(3);
 
-  specsHTML  = `<ul class="card__specs" data-collapsed="true">`
-             + first3.map(s => `<li>${s}</li>`).join("");
+    specsHTML  = `<ul class="card__specs" data-collapsed="true">`
+               + first3.map(s => `<li>${s}</li>`).join("");
 
-  if (rest.length) {
-    // كل المواصفات الإضافية تحمل class="more"
-    specsHTML += rest.map(s => `<li class="more">${s}</li>`).join("")
-              +  `<li class="specs-cta">
-                    <button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button>
-                  </li>`;
+    if (rest.length) {
+      specsHTML += rest.map(s => `<li class="more">${s}</li>`).join("")
+                +  `<li class="specs-cta">
+                      <button type="button" class="show-toggle" aria-expanded="false">عرض المزيد</button>
+                    </li>`;
+    }
+    specsHTML += `</ul>`;
   }
-
-  specsHTML += `</ul>`;
-} 
 
   // المتغيرات (إن وجدت)
   let variantHTML = "";
@@ -315,7 +301,8 @@ function addToCartWithKey(key, meta){
 
 function updateCartCount(){
   const count = Object.values(state.cart).reduce((s,it)=> s+it.qty, 0);
-  const badge = $("#cartCount");
+  // يدعم كلًا من #cartCount و .cart-badge
+  const badge = $("#cartCount") || $(".cart-badge");
   if (!badge) return;
   badge.textContent = count;
   badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump");
@@ -335,11 +322,11 @@ safeAddEvent($("#clearCart"), "click", ()=>{
   }
 });
 safeAddEvent($("#checkoutBtn"), "click", ()=>{
-  const f=$("#checkoutForm"); if(f) f.hidden=false;
+  const f=$("#checkout-form"); if(f) f.hidden=false;
   const cs=$(".cart-summary"); if(cs && cs.scrollIntoView) cs.scrollIntoView({behavior:"smooth", block:"end"});
 });
 safeAddEvent($("#backToCart"), "click", ()=>{
-  const f=$("#checkoutForm"); if(f) f.hidden=true;
+  const f=$("#checkout-form"); if(f) f.hidden=true;
 });
 
 function openCart(){ renderCart(); disableScroll(true); const m=$("#cartModal"); if(m) m.hidden=false; }
@@ -355,7 +342,7 @@ function renderCart(){
 
   const total=entries.reduce((s,it)=> s + it.product.price*it.qty, 0);
   const ct=$("#cartTotal"); if(ct) ct.textContent=formatPrice(total);
-  const f=$("#checkoutForm"); if(f) f.hidden=true;
+  const f=$("#checkout-form"); if(f) f.hidden=true;
 }
 
 function cartRow(p, qty){
@@ -377,58 +364,97 @@ function cartRow(p, qty){
   return row;
 }
 
-/* ============== Checkout (Telegram/WhatsApp/Endpoint) ============== */
-safeAddEvent($("#checkoutForm"), "submit", async (e)=>{
+/* ============== Checkout (Worker) ============== */
+// ✅ لاحظ: معرّف النموذج المصحّح هنا هو #checkout-form
+safeAddEvent($("#checkout-form"), "submit", async (e)=>{
   e.preventDefault();
+
+  // اجمع بيانات الزبون
   const fd=new FormData(e.currentTarget);
-  const buyer={}; fd.forEach((v,k)=> buyer[k]=v);
+  const buyer={}; fd.forEach((v,k)=> buyer[k]=String(v||"").trim());
 
-  if(!buyer.name || !buyer.phone || !buyer.address){ alert("يرجى تعبئة جميع الحقول المطلوبة"); return; }
-
+  // تحقق واجهة
+  const errs=[];
+  if (!buyer.name || buyer.name.length < 2) errs.push("الاسم مطلوب (على الأقل حرفان).");
+  if (!/^[0-9+\s\-()]{8,}$/.test(buyer.phone||"")) errs.push("رقم الهاتف غير صالح.");
+  if (!buyer.address || buyer.address.length < 5) errs.push("العنوان مطلوب.");
   const entries=Object.values(state.cart);
-  if(entries.length===0){ alert("السلة فارغة"); return; }
-  const items=entries.map(it=> ({ id:it.product.id, title:it.product.title, price:it.product.price, qty:it.qty, subtotal:it.product.price*it.qty }));
-  const total=items.reduce((s,it)=> s+it.subtotal, 0);
-  const payload={ customer:buyer, items, total, currency:CURRENCY, createdAt:new Date().toISOString() };
+  if(entries.length===0) errs.push("السلة فارغة.");
+  if (errs.length){ alert("رجاءً صحح الأخطاء التالية:\n- "+errs.join("\n- ")); return; }
 
+  // ابنِ العناصر المطلوبة للـ Worker
+  const items=entries.map(it=> ({
+    title: it.product.title,
+    qty: Number(it.qty||1),
+    price: Number(it.product.price||0)
+    // يمكن إضافة variant لاحقًا لو حفظته منفصلاً
+  }));
+  const total=items.reduce((s,it)=> s+(it.price*it.qty), 0);
+
+  // شكل الحمولة الذي يتوقعه الـ Worker
+  const payload = {
+    name: buyer.name,
+    phone: buyer.phone,
+    address: buyer.address,
+    notes: buyer.note || "",
+    items,
+    total
+  };
+
+  const submitBtn = e.currentTarget.querySelector('button[type="submit"]');
   try{
-    let ok=false, errMsg="";
-    if(ORDER_ENDPOINT){
-      const res=await fetch(ORDER_ENDPOINT, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload) });
-      const text=await res.text();
-      try{
-        const data=JSON.parse(text);
-        ok = res.ok && (data.ok===true || data.success===true || data.telegram==='sent');
-        if(!ok) errMsg = data.error || data.body || text || ("HTTP "+res.status);
-      }catch(_){
-        ok = res.ok;
-        if(!ok) errMsg = text || ("HTTP "+res.status);
+    submitBtn && (submitBtn.disabled = true);
+
+    if (!ORDER_ENDPOINT) {
+  // احتياطي: افتح واتساب بدل الإرسال
+  if (!WHATSAPP_NUMBER) {
+    alert("لا يوجد ORDER_ENDPOINT ولا رقم واتساب مُعرّف.");
+    return;
+  }
+
+  const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(
+    `طلب جديد
+الاسم: ${payload.name}
+الهاتف: ${payload.phone}
+العنوان: ${payload.address}
+الإجمالي: ${total} ${CURRENCY}`
+  );
+  window.open(wa, "_blank", "noopener");
+  afterSuccess();
+  return;
+}
+
+    const res = await fetch(ORDER_ENDPOINT, {
+      method:"POST",
+      headers: { "Content-Type":"application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json().catch(()=> ({}));
+
+    if (!res.ok || !data.ok) {
+      // التحقق المُفصّل من الـ Worker (422)
+      if (res.status === 422 && Array.isArray(data?.details) && data.details.length) {
+        alert("تعذر إرسال الطلب:\n- " + data.details.join("\n- "));
+      } else {
+        alert("تعذر إرسال الطلب. رجاء المحاولة لاحقًا.\n" + (data?.error || `HTTP ${res.status}`));
       }
-    }else if(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID){
-      const msg=["طلب جديد من متجر الحدث موبايل","الاسم: "+buyer.name,"الهاتف: "+buyer.phone,"العنوان: "+buyer.address];
-      if(buyer.note) msg.push("ملاحظات: "+buyer.note);
-      msg.push("— — —");
-      items.forEach(it=> msg.push("• "+it.title+" × "+it.qty+" = "+it.subtotal+" "+CURRENCY));
-      msg.push("— — —","الإجمالي: "+total+" "+CURRENCY);
-      const tgURL="https://api.telegram.org/bot"+TELEGRAM_BOT_TOKEN+"/sendMessage";
-      const r=await fetch(tgURL, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg.join("\n") }) });
-      ok=r.ok;
-    }else{
-      const wa="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("طلب جديد\nالاسم: "+buyer.name+"\nالهاتف: "+buyer.phone+"\nالعنوان: "+buyer.address+"\nالمجموع: "+total+" "+CURRENCY);
-      window.open(wa, "_blank"); ok=true;
+      return;
     }
 
-    if(ok){
-      alert("تم إرسال الطلب بنجاح. سنتواصل معك قريبًا.");
-      state.cart={}; save("cart", state.cart); renderCart(); updateCartCount(); closeCart();
-    }else{
-      alert("تعذر إرسال الطلب:\n"+(errMsg||"تحقق من الرابط أو الشبكة"));
-    }
+    afterSuccess();
   }catch(err){
     console.error(err);
-    alert("حدث خطأ أثناء الإرسال.");
+    alert("حدث خطأ أثناء الإرسال. حاول مجددًا.");
+  }finally{
+    submitBtn && (submitBtn.disabled = false);
   }
 });
+
+function afterSuccess(){
+  alert("✅ تم إرسال طلبك بنجاح. سنقوم بالتواصل معك قريبًا.");
+  state.cart={}; save("cart", state.cart); renderCart(); updateCartCount(); closeCart();
+}
 
 /* ============== Slider ============== */
 let slideIndex=0;
@@ -455,34 +481,20 @@ setInterval(()=>{ try{ next(); }catch(e){} }, 5000);
 
 /* ============== Init ============== */
 function init(){
-  const y=$("#year"); if(y) y.textContent=(new Date()).getFullYear();
   renderTabs();
   renderDots();
   filterAndRender();
   updateCartCount();
+
+  // منع تكبير شاشة الموبايل بسبب الحقول < 16px
+  document.querySelectorAll('input, select, textarea').forEach(el=>{
+    const cs = getComputedStyle(el);
+    if (parseFloat(cs.fontSize) < 16) el.style.fontSize = "16px";
+  });
 }
+
 document.addEventListener("DOMContentLoaded", ()=>{
   try{ init(); }catch(err){ console.error("Init error:", err); alert("خطأ في التهيئة: "+err); }
-});
-
-/* واتساب العائم */
-document.addEventListener("DOMContentLoaded", ()=>{
-  const whatsappBtn = document.getElementById("whatsappBtn");
-  if (!whatsappBtn) return;
-  let expanded = false, timer;
-  whatsappBtn.addEventListener("click", function(e) {
-    if (!expanded) {
-      e.preventDefault();
-      whatsappBtn.classList.add("expanded");
-      expanded = true;
-      timer = setTimeout(()=>{ whatsappBtn.classList.remove("expanded"); expanded = false; }, 5000);
-    } else {
-      clearTimeout(timer);
-      window.open(whatsappBtn.href, "_blank");
-      whatsappBtn.classList.remove("expanded");
-      expanded = false;
-    }
-  });
 });
 
 /* تأثير Pop على أزرار الإضافة */
