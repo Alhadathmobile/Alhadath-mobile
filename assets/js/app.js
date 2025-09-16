@@ -168,8 +168,7 @@ const PRODUCTS = [
     "الأداء: مثالي للتصوير، الإنتاجية، المهام الثقيلة"
   ]
   },
-  {
-  id: "ip-16",
+    {id: "ip-16",
   title: "iPhone 16",
   brand: "iPhone",
   image: "assets/images/iphone-16.jpeg",
@@ -187,8 +186,8 @@ const PRODUCTS = [
     "الأداء: ممتاز لتطبيقات اليومية، كاميرا متقدّمة، تجربة ممتازة"
   ]
 },
-  {
-  id: "ip-15",
+  
+  { id: "ip-15",
   title: "iPhone 15",
   brand: "iPhone",
   image: "assets/images/iphone-15.jpeg",
@@ -206,8 +205,7 @@ const PRODUCTS = [
     "الأداء: جيد للتطبيقات، كاميرا قوية، تجربة محسّنة عن الأجيال السابقة"
   ]
 },
-  {
-  id: "ip-14",
+  {id: "ip-14",
   title: "iPhone 14",
   brand: "iPhone",
   image: "assets/images/iphone-14.jpeg",
@@ -225,15 +223,14 @@ const PRODUCTS = [
     "الأداء: مناسب للتطبيقات اليومية، تصوير جيد، شاشة ملوّنة ونقية"
   ]
 },
-  {
-  id: "ip-15-plus",
+  {id: "ip-15-plus",
   title: "iPhone 15 Plus",
   brand: "iPhone",
   image: "assets/images/iphone-15-plus.jpeg",
   variants: [
-    { id: "128", label: "128GB", price:  ضع السعر المناسب  },
-    { id: "256", label: "256GB", price:  ضع السعر المناسب  },
-    { id: "512", label: "512GB", price:  ضع السعر المناسب  }
+    { id: "128", label: "128GB", price: 520 },
+    { id: "256", label: "256GB", price: 610 },
+    { id: "512", label: "512GB", price:  690 }
   ],
   specs: [
     "الشاشة: 6.7 بوصة OLED Super Retina XDR، 60Hz"،
@@ -248,15 +245,14 @@ const PRODUCTS = [
     "الوزن: تقريبًا 201 غرام، السماكة: حوالي 7.8 مم"
   ]
 },
-  {
-  id: "ip-16-plus",
+    {id: "ip-16-plus",
   title: "iPhone 16 Plus",
   brand: "iPhone",
   image: "assets/images/iphone-16-plus.jpeg",
   variants: [
-    { id: "128", label: "128GB", price: 0 },
-    { id: "256", label: "256GB", price: 0 },
-    { id: "512", label: "512GB", price: 0 }
+    { id: "128", label: "128GB", price: 560 },
+    { id: "256", label: "256GB", price: 650 },
+    { id: "512", label: "512GB", price: 720 }
   ],
   specs: [
     "الشاشة: 6.7 بوصة OLED Super Retina XDR، دقة 2796×1290 بكسل، 460 ppi",
@@ -270,7 +266,6 @@ const PRODUCTS = [
     "الأبعاد: 160.9 × 77.8 × 7.8 مم، الوزن حوالي 199 غرام"
   ]
 },
-];
 
   // Redmi/MI
   { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
