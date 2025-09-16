@@ -1,7 +1,7 @@
 /* ============ Alhadath Mobile (SAFE) ============ */
 const CURRENCY = "JD";
 const WHATSAPP_NUMBER = ""; // احتياطي فقط إن أردت فتح واتساب بدل الإرسال
-const ORDER_ENDPOINT = "https://alhadath-order.ahmad2120omar.workers.dev/orders"; // Worker
+const ORDER_ENDPOINT = "https://alhadath-order.ahmad2120omar.workers.dev/orders";
 
 // لا نستخدم أي توكنات في الواجهة
 const TELEGRAM_BOT_TOKEN = "";
