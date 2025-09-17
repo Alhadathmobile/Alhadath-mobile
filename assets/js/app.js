@@ -293,7 +293,7 @@ function normalizeDigits(str){
     .replace(/[\u06F0-\u06F9]/g, d => String.fromCharCode(d.charCodeAt(0) - 0x06F0 + 48))
     // نظّف أي رموز غريبة
     .replace(/[^\d+\-\s()]/g, "");
-
+  {
 const state = { brand:"الكل", query:"", sort:"popular", cart: load("cart", {}) };
 
 function hasVariants(p){ return Array.isArray(p.variants) && p.variants.length>0; }
