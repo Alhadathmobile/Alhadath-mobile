@@ -414,6 +414,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .trust-track {
   display: flex;
   justify-content: center;
-  gap: 30px;  /* مسافة بين العناصر */
+  gap: 10px;  /* مسافة بين العناصر */
   white-space: nowrap;
 }
