@@ -413,6 +413,30 @@ function resolveProductImage(pid){
   const color = getSelectedColorObj(pid);
   return (color?.image) || p?.image || "assets/images/placeholder.jpg";
 }
+document.addEventListener("click", (e)=>{
+  const btn = e.target.closest(".color-swatch");
+  if(!btn) return;
+
+  const pid = btn.dataset.pid;
+  const colorId = btn.dataset.colorId;
+
+  // تحديث التحديد بصريًا
+  const picker = btn.closest(".color-picker");
+  picker.querySelectorAll(".color-swatch").forEach(b=>{
+    b.setAttribute("aria-selected", b===btn ? "true" : "false");
+  });
+
+  // خزّن اللون وحدّث النص
+  SELECTED_COLORS[pid] = colorId;
+  const product = PRODUCTS.find(x=>x.id===pid);
+  const color = product?.colors?.find(c=>c.id===colorId);
+  const labelEl = document.querySelector(`.current-color[data-color-label-for="${pid}"]`);
+  if(labelEl && color) labelEl.textContent = color.label;
+
+  // بدّل الصورة
+  const img = document.querySelector(`[data-img-for="${pid}"]`);
+  if (img) img.src = resolveProductImage(pid);
+});
 /* ============== Card Template ============== */
 function cardTemplate(p){
   const el=document.createElement("article");
@@ -439,8 +463,7 @@ function cardTemplate(p){
   // المتغيرات (إن وجدت)
   let variantHTML = "";
   let initialPrice = basePrice(p);
-  let initialImage = getInitialImage(p); // أول صورة من الألوان إن وُجدت
-
+  let initialImage = getInitialImagePreferProduct(p); // صورة المنتج أولاً
   if (hasVariants(p)) {
     variantHTML =
       `<label class="muted tiny" for="${p.id}-v">النسخة:</label>
@@ -454,6 +477,7 @@ function cardTemplate(p){
     `<div class="card__img"><img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}"></div>
      <div class="card__body">
        <h3 class="card__title">${p.title}</h3>
+      ${colorRowHTML(p)}   <!-- ✅ صفّ الألوان -->
        ${specsHTML}
        ${variantHTML}
        <div class="card__meta">
@@ -470,8 +494,8 @@ function cardTemplate(p){
     sel.addEventListener("change", ()=>{
       const v = p.variants.find(x=> x.id===sel.value);
       if (v && priceEl) priceEl.textContent = formatPrice(v.price);
-      if (v && v.image && imgEl) imgEl.src = v.image;
-    });
+      if (imgEl) imgEl.src = resolveProductImage(p.id); // ✅ تبقى حسب اللون
+});
   }
 
   // زر "أضف للسلة"
@@ -483,9 +507,24 @@ function cardTemplate(p){
         const sel = el.querySelector(`#${p.id}-v`);
         const v   = p.variants.find(x=> x.id===sel.value) || p.variants[0];
         const key = p.id + "|" + v.id;
-        payload = { id:key, baseId:p.id, title: variantFullTitle(p,v), price: v.price, image: (v.image || p.image) };
+        payload = {
+  id: key,
+  baseId: p.id,
+  title: variantFullTitle(p,v),
+  price: v.price,
+  image: resolveProductImage(p.id),         // ✅ نفس صورة اللون الحالي
+  color: getSelectedColorObj(p.id) ? { id:getSelectedColorObj(p.id).id, label:getSelectedColorObj(p.id).label } : null
++ };
       } else {
-        payload = { id:p.id, baseId:p.id, title: p.title, price: p.price, image: p.image };
+        payload = {
+   id: p.id,
+   baseId: p.id,
+   title: p.title,
+   price: p.price,
+   image: resolveProductImage(p.id),         // ✅
+   color: getSelectedColorObj(p.id) ? { id:getSelectedColorObj(p.id).id, label:getSelectedColorObj(p.id).label } : null
+ };
+}
       }
       addToCartWithKey(payload.id, payload);
     };
@@ -668,7 +707,8 @@ function showSlide(i){
   const slides=$all(".slide"); if(slides.length===0) return;
   slideIndex=(i+slides.length)%slides.length;
   slides.forEach((s,idx)=> s.classList.toggle("active", idx===slideIndex));
-  const dots=$all(".dot"); dots.forEach((d,idx)=> d.classList.toggle("active", idx===slideIndex));
+  const dots=$all("#dots .slider-dot");
+  dots.forEach((d,idx)=> d.classList.toggle("active", idx===slideIndex));
 }
 function next(){ showSlide(slideIndex+1); }
 function prev(){ showSlide(slideIndex-1); }
@@ -679,7 +719,7 @@ function renderDots(){
   const dots=$("#dots"); const slides=$all(".slide"); if(!dots || slides.length===0) return;
   dots.innerHTML="";
   slides.forEach((_,idx)=>{
-    const b=document.createElement("button"); b.className="dot"+(idx===0?" active":"");
+  const b=document.createElement("button"); b.className="slider-dot"+(idx===0?" active":"");
     b.onclick=()=>{ showSlide(idx); }; dots.appendChild(b);
   });
 }
