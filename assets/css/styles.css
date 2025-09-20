@@ -423,3 +423,10 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   from{ transform: translateX(0); }
   to  { transform: translateX(-50%); }  /* لأننا مكرّرين العناصر */
 }
+.trust-bar{ 
+  width:100%; 
+}
+
+.trust-track{ 
+  align-items:center; 
+}
