@@ -17,8 +17,8 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/samsung-a06.jpeg",
     variants: [
-      { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49, image: "assets/images/samsung-a06.jpeg" },
-      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpeg" }
+      { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49 },
+      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59 }
     ],
     colors: [
     { id:"black", label:"أسود",  hex:"#0f172a", image:"assets/images/a06-black.jpg"  },
@@ -71,6 +71,11 @@ const PRODUCTS = [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
     ],
+    colors: [
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+  ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
       "المعالج: Exynos 1280",
@@ -90,6 +95,11 @@ const PRODUCTS = [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
     ],
+    colors: [
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+  ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
       "المعالج: Snapdragon 6 Gen 3",
@@ -110,6 +120,11 @@ const PRODUCTS = [
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
       { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
     ],
+    colors: [
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+  ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
       "المعالج: Exynos 1580",
@@ -129,6 +144,11 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 720 },
       { id: "1T-12+12",   label: "1TB / 12+12GB RAM",   price: 1099 }
     ],
+    colors: [
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+  ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
       "المعالج: Snapdragon 8 Elite",
