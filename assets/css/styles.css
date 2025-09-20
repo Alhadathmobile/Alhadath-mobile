@@ -402,25 +402,24 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .trust-bar{
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
-  background:#ffffff;
-  overflow:hidden;
+  background:#fff;
+  overflow:hidden;                 /* يخفي الطرفين */
 }
 
 .trust-track{
   display:inline-flex;
   gap:28px;
   padding:8px 12px;
-  white-space:nowrap;
-  animation:trust-scroll 16s linear infinite;
-  will-change: transform;
-}
-.trust-track span{
-  color:#334155;
-  font-size:14px;
+  white-space:nowrap;              /* كل العناصر على سطر واحد */
+  min-width:max-content;           /* يمنع طيّ المحتوى */
+  will-change:transform;
+  animation:trust-scroll 18s linear infinite; /* الحركة */
 }
 
-/* حركة من اليمين إلى اليسار (RTL) */
+/* إيقاف الحركة عند المرور بالماوس (اختياري) */
+.trust-bar:hover .trust-track{ animation-play-state: paused; }
+
 @keyframes trust-scroll{
   from{ transform: translateX(0); }
-  to  { transform: translateX(-50%); }
+  to  { transform: translateX(-50%); }  /* لأننا مكرّرين العناصر */
 }
