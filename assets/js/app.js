@@ -376,7 +376,43 @@ function filterAndRender(){
   grid.appendChild(frag);
   updateCartCount();
 }
+function hasColors(p){ return Array.isArray(p.colors) && p.colors.length>0; }
+function getInitialImagePreferProduct(p){
+  // اعرض صورة المنتج أولاً، ثم أول لون عند عدم توفّرها
+  return p.image || (hasColors(p) && p.colors[0]?.image) || "assets/images/placeholder.jpg";
+}
 
+function colorRowHTML(p){
+  if(!hasColors(p)) return "";
+  return `
+    <div class="color-row">
+      <div class="color-picker" role="listbox" aria-label="الألوان" data-pid="${p.id}">
+        ${p.colors.map((c,i)=>`
+          <button class="color-swatch" type="button" role="option"
+                  aria-label="${c.label}" aria-selected="false"
+                  data-pid="${p.id}" data-color-id="${c.id}">
+            <span class="dot" style="background:${c.hex}"></span>
+          </button>
+        `).join("")}
+      </div>
+      <div class="color-name">
+        <span class="muted">اللون:</span>
+        <strong class="current-color" data-color-label-for="${p.id}">اختر لونًا</strong>
+      </div>
+    </div>
+  `;
+}
+const SELECTED_COLORS = {};
+function getSelectedColorObj(pid){
+  const p = PRODUCTS.find(x=>x.id===pid);
+  const chosen = SELECTED_COLORS[pid]; // قد يكون undefined حتى يضغط الزبون
+  return p?.colors?.find(c=>c.id===chosen) || null;
+}
+function resolveProductImage(pid){
+  const p = PRODUCTS.find(x=>x.id===pid);
+  const color = getSelectedColorObj(pid);
+  return (color?.image) || p?.image || "assets/images/placeholder.jpg";
+}
 /* ============== Card Template ============== */
 function cardTemplate(p){
   const el=document.createElement("article");
@@ -403,7 +439,7 @@ function cardTemplate(p){
   // المتغيرات (إن وجدت)
   let variantHTML = "";
   let initialPrice = basePrice(p);
-  let initialImage = p.image;
+  let initialImage = getInitialImage(p); // أول صورة من الألوان إن وُجدت
 
   if (hasVariants(p)) {
     variantHTML =
@@ -411,7 +447,7 @@ function cardTemplate(p){
        <select id="${p.id}-v" class="variant" data-pid="${p.id}">
          ${p.variants.map((v,i)=>`<option value="${v.id}" ${i===0?"selected":""}>${v.label} — ${formatPrice(v.price)}</option>`).join("")}
        </select>`;
-    if (p.variants[0]?.image) initialImage = p.variants[0].image;
+    
   }
 
   el.innerHTML =
