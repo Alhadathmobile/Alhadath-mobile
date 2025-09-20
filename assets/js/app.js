@@ -514,7 +514,7 @@ function cardTemplate(p){
   price: v.price,
   image: resolveProductImage(p.id),         // ✅ نفس صورة اللون الحالي
   color: getSelectedColorObj(p.id) ? { id:getSelectedColorObj(p.id).id, label:getSelectedColorObj(p.id).label } : null
-+ };
+ };
       } else {
         payload = {
    id: p.id,
