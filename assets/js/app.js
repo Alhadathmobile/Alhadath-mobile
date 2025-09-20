@@ -525,7 +525,7 @@ function cardTemplate(p){
    color: getSelectedColorObj(p.id) ? { id:getSelectedColorObj(p.id).id, label:getSelectedColorObj(p.id).label } : null
  };
 }
-      }
+    
       addToCartWithKey(payload.id, payload);
     };
   }
