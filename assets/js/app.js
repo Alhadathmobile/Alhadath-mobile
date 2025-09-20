@@ -351,37 +351,60 @@ function variantFullTitle(p,v){ return p.title + " - " + v.label; }
 function safeAddEvent(el, ev, fn){ if(el && el.addEventListener){ el.addEventListener(ev, fn); } }
 
 function renderTabs(){
-  const tabs = $("#tabs"); if(!tabs) return;
-  tabs.innerHTML="";
-  // 🔹 زر "الكل"
+  const tabs = $("#tabs");
+  if (!tabs) return;
+  tabs.innerHTML = "";
+
+  // زر "الكل"
   const allBtn = document.createElement("button");
   allBtn.className = "tab active";
   allBtn.textContent = "الكل";
-  allBtn.onclick = ()=>{ state.brand="all"; filterAndRender(); setActiveTab("الكل"); };
+  allBtn.onclick = ()=>{
+    state.category = "all";   // الغِ فلتر النوع
+    state.brand    = "all";   // الغِ فلتر الماركة
+    filterAndRender();
+    setActiveTab("الكل");
+  };
   tabs.appendChild(allBtn);
 
-  // 🔹 زر "الأجهزة الذكية"
+  // زر "الأجهزة الذكية"
   const smartBtn = document.createElement("button");
   smartBtn.className = "tab";
   smartBtn.textContent = "الأجهزة الذكية";
-  smartBtn.onclick = ()=>{ state.category="smart"; filterAndRender(); setActiveTab("الأجهزة الذكية"); };
+  smartBtn.onclick = ()=>{
+    state.category = "smart";
+    state.brand    = "all";   // لا نفلتر بالماركة هنا
+    filterAndRender();
+    setActiveTab("الأجهزة الذكية");
+  };
   tabs.appendChild(smartBtn);
 
-  // 🔹 زر "الأجهزة اللوحية"
+  // زر "الأجهزة اللوحية"
   const tabletBtn = document.createElement("button");
   tabletBtn.className = "tab";
   tabletBtn.textContent = "الأجهزة اللوحية";
-  tabletBtn.onclick = ()=>{ state.category="tablet"; filterAndRender(); setActiveTab("الأجهزة اللوحية"); };
+  tabletBtn.onclick = ()=>{
+    state.category = "tablet";
+    state.brand    = "all";   // لا نفلتر بالماركة هنا
+    filterAndRender();
+    setActiveTab("الأجهزة اللوحية");
+  };
   tabs.appendChild(tabletBtn);
 
-  // 🔹 بعدهم الماركات
+  // بعدهم: الماركات
   BRANDS.forEach((b)=>{
-    const btn=document.createElement("button");
-    btn.className="tab"+(b===state.brand?" active":"");
-    btn.textContent=b;
-    btn.onclick=()=>{ state.brand=b; filterAndRender(); setActiveTab(b); };
+    const btn = document.createElement("button");
+    btn.className = "tab" + (b === state.brand ? " active" : "");
+    btn.textContent = b;
+    btn.onclick = ()=>{
+      state.brand = b;
+      state.category = "all"; // عند اختيار ماركة، نلغي فلتر النوع
+      filterAndRender();
+      setActiveTab(b);
+    };
     tabs.appendChild(btn);
   });
+} // ← هنا إغلاق الدالة فقط
 
 function setActiveTab(label){ $all(".tab").forEach(el=> el.classList.toggle("active", el.textContent===label)); }
 
