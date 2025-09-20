@@ -398,31 +398,29 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   font-weight: 700 !important;
   border: 0 !important;
 }
-/* ==== Trust Bar (شريط الثقة) ==== */
-.trust-bar {
-  overflow: hidden;
-  background: #f9fafb;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 6px 0;
-  white-space: nowrap;
+/* ===== Trust bar (marquee) ===== */
+.trust-bar{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  background:#ffffff;
+  overflow:hidden;
 }
 
-.trust-track {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll-left 18s linear infinite;
+.trust-track{
+  display:inline-flex;
+  gap:28px;
+  padding:8px 12px;
+  white-space:nowrap;
+  animation:trust-scroll 16s linear infinite;
+  will-change: transform;
+}
+.trust-track span{
+  color:#334155;
+  font-size:14px;
 }
 
-.trust-track span {
-  display: inline-block;
-  margin: 0 24px;
-  font-size: 14px;
-  color: var(--text);
-  font-weight: 500;
-}
-
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-100%); }
+/* حركة من اليمين إلى اليسار (RTL) */
+@keyframes trust-scroll{
+  from{ transform: translateX(0); }
+  to  { transform: translateX(-50%); }
 }
