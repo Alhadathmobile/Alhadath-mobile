@@ -367,15 +367,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   border: 0 !important;
   box-shadow: 0 6px 16px rgba(0,0,0,.15) !important;
   cursor: pointer !important;
-}
-
-.cart-fab::before{
-  content: "السلة";
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 1;
-  margin-inline-end: 4px;
-}
 
 .cart-fab svg{ width:22px !important; height:22px !important; fill:#fff !important; }
 
