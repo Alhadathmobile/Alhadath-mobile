@@ -406,7 +406,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   border-bottom: 1px solid #e5e7eb;
   padding: 8px 0;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #111827;
 }
