@@ -399,26 +399,21 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   border: 0 !important;
 }
 /* ===== Trust bar (marquee) ===== */
-.trust-bar{
-  width:100%;                       /* ✅ إضافة */
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  background:#fff;
-  overflow:hidden;                  /* يخفي الطرفين */
+.trust-bar {
+  width: 100%;
+  background: #f9fafb;   /* خلفية فاتحة */
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
 }
 
-.trust-track{
-  display:inline-flex;
-  gap:28px;
-  padding:8px 12px;
-  white-space:nowrap;               /* كل العناصر على سطر واحد */
-  min-width:max-content;            /* يمنع طيّ المحتوى */
-  will-change:transform;
-  animation:trust-scroll 18s linear infinite; /* الحركة */
-  align-items:center;               /* ✅ إضافة */
-}
-
-@keyframes trust-scroll{
-  from{ transform: translateX(0); }
-  to  { transform: translateX(-50%); }  /* لأننا مكرّرين العناصر */
+.trust-track {
+  display: flex;
+  justify-content: center;
+  gap: 30px;  /* مسافة بين العناصر */
+  white-space: nowrap;
 }
