@@ -778,7 +778,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btn.classList.add("added");
     setTimeout(()=> btn.classList.remove("added"), 240);
   });
+  const track = document.querySelector('.trust-track');
+  if (track && !track.dataset.duplicated) {
+    track.innerHTML = track.innerHTML + track.innerHTML; // ← تكرار المحتوى
+    track.dataset.duplicated = "true";                   // لتفادي التكرار مرارًا
+  }
 });
+
 
 /* زر عرض المزيد/أقل — تفويض عام واحد فقط */
 document.addEventListener("click", function(e){
