@@ -418,9 +418,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   align-items:center;               /* ✅ إضافة */
 }
 
-/* إيقاف الحركة عند المرور بالماوس (اختياري) */
-.trust-bar:hover .trust-track{ animation-play-state: paused; }
-
 @keyframes trust-scroll{
   from{ transform: translateX(0); }
   to  { transform: translateX(-50%); }  /* لأننا مكرّرين العناصر */
