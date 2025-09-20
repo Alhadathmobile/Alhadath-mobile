@@ -334,19 +334,44 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .card__specs[data-collapsed="false"] .show-toggle::after {
   transform: rotate(180deg) translateY(-1px);
 }
-/* ====== Color picker ====== */
-.color-row{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:8px}
-.color-picker{display:flex; gap:8px; flex-wrap:wrap}
-.color-swatch{width:26px; height:26px; border-radius:50%; border:2px solid var(--border);
+/* ====== Color picker (تحسين الموبايل) ====== */
+.color-row{
+  display:flex;
+  flex-direction:column;          /* <<< عمودي */
+  align-items:flex-start;
+  gap:6px;
+  margin-top:8px;
+}
+
+.color-picker{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.color-swatch{
+  width:26px; height:26px; border-radius:50%; border:2px solid var(--border);
   outline:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;
-  transition:transform .15s, box-shadow .2s, border-color .2s; background:#fff}
-.color-swatch[aria-selected="true"]{border-color:var(--primary); box-shadow:0 0 0 3px rgba(37,99,235,.15); transform:scale(1.05)}
+  transition:transform .12s, box-shadow .2s, border-color .2s;
+  background:#fff;
+  flex:0 0 auto;                  /* <<< ثابت الحجم لا يتمدّد */
+}
+
+.color-swatch[aria-selected="true"]{
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+  transform:scale(1.03);          /* <<< تصغير التحجيم لتقليل الإزاحة */
+}
+
 .color-swatch .dot{width:14px; height:14px; border-radius:50%}
+
+.color-swatch:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 3px rgba(37,99,235,.25);
+  transform:scale(1.06);
+}
+
 .color-name{display:flex; align-items:center; gap:6px}
 .color-name .muted{color:var(--muted); font-size:12px}
 .color-name .current-color{font-size:12px}
-.color-swatch:focus-visible{
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(37,99,235,.25);
-  transform: scale(1.06);
-}
+
