@@ -632,7 +632,7 @@ safeAddEvent($("#checkout-form"), "submit", async (e)=>{
   if(entries.length===0) errs.push("السلة فارغة.");
   if (errs.length){ alert("رجاءً صحح الأخطاء التالية:\n- "+errs.join("\n- ")); return; }
 
-  // ابنِ العناصر المطلوبة للـ Worker
+  
   // ابنِ العناصر المطلوبة للـ Worker
 const items = entries.map(it => {
   const colorLabel = it.product.color?.label || "";
