@@ -633,13 +633,20 @@ safeAddEvent($("#checkout-form"), "submit", async (e)=>{
   if (errs.length){ alert("رجاءً صحح الأخطاء التالية:\n- "+errs.join("\n- ")); return; }
 
   // ابنِ العناصر المطلوبة للـ Worker
-  const items=entries.map(it=> ({
-    title: it.product.title,
-    qty: Number(it.qty||1),
-    price: Number(it.product.price||0),
-    color: it.product.color?.label || ""     // لن يؤذي الـ Worker إن تجاهله
-    // يمكن إضافة variant لاحقًا لو حفظته منفصلاً
-  }));
+  // ابنِ العناصر المطلوبة للـ Worker
+const items = entries.map(it => {
+  const colorLabel = it.product.color?.label || "";
+  const titleWithColor = colorLabel
+    ? `${it.product.title} — لون: ${colorLabel}`
+    : it.product.title;
+
+  return {
+    title: titleWithColor,                 // ← العنوان صار يحتوي اللون
+    qty: Number(it.qty || 1),
+    price: Number(it.product.price || 0),
+    color: colorLabel                      // ← حقل إضافي احتياطي
+  };
+});
   const total=items.reduce((s,it)=> s+(it.price*it.qty), 0);
 
   // شكل الحمولة الذي يتوقعه الـ Worker
