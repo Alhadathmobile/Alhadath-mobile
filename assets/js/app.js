@@ -636,7 +636,7 @@ safeAddEvent($("#checkout-form"), "submit", async (e)=>{
   const items=entries.map(it=> ({
     title: it.product.title,
     qty: Number(it.qty||1),
-    price: Number(it.product.price||0)
+    price: Number(it.product.price||0),
     color: it.product.color?.label || ""     // لن يؤذي الـ Worker إن تجاهله
     // يمكن إضافة variant لاحقًا لو حفظته منفصلاً
   }));
