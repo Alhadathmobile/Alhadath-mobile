@@ -501,33 +501,42 @@ function cardTemplate(p){
   // زر "أضف للسلة"
   const addBtn = el.querySelector("[data-add]");
   if(addBtn){
-    addBtn.onclick = ()=>{
-      let payload;
-      if (hasVariants(p)) {
-        const sel = el.querySelector(`#${p.id}-v`);
-        const v   = p.variants.find(x=> x.id===sel.value) || p.variants[0];
-        const key = p.id + "|" + v.id;
-        payload = {
-  id: key,
-  baseId: p.id,
-  title: variantFullTitle(p,v),
-  price: v.price,
-  image: resolveProductImage(p.id),         // ✅ نفس صورة اللون الحالي
-  color: getSelectedColorObj(p.id) ? { id:getSelectedColorObj(p.id).id, label:getSelectedColorObj(p.id).label } : null
- };
-      } else {
-        payload = {
-   id: p.id,
-   baseId: p.id,
-   title: p.title,
-   price: p.price,
-   image: resolveProductImage(p.id),         // ✅
-   color: getSelectedColorObj(p.id) ? { id:getSelectedColorObj(p.id).id, label:getSelectedColorObj(p.id).label } : null
- };
-}
-    
-      addToCartWithKey(payload.id, payload);
+   addBtn.onclick = ()=>{
+  const selectedColor = getSelectedColorObj(p.id);
+  const colorId = selectedColor?.id || "no-color";
+
+  let payload, key;
+
+  if (hasVariants(p)) {
+    const sel = el.querySelector(`#${p.id}-v`);
+    const v   = p.variants.find(x=> x.id===sel.value) || p.variants[0];
+
+    key = `${p.id}|${v.id}|${colorId}`;
+
+    payload = {
+      id: key,
+      baseId: p.id,
+      title: variantFullTitle(p, v),
+      price: v.price,
+      image: selectedColor?.image || v.image || p.image,
+      variant: v.label,
+      color: selectedColor ? { id: selectedColor.id, label: selectedColor.label } : null
     };
+  } else {
+    key = `${p.id}|_|${colorId}`;
+
+    payload = {
+      id: key,
+      baseId: p.id,
+      title: p.title,
+      price: p.price,
+      image: selectedColor?.image || p.image,
+      color: selectedColor ? { id: selectedColor.id, label: selectedColor.label } : null
+    };
+  }
+
+  addToCartWithKey(payload.id, payload);
+}; 
   }
 
   return el;
