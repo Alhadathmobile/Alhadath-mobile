@@ -177,32 +177,54 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .btn--primary{background:#14532d}
 .btn--secondary{background:#e5e7eb; color:#111827}
 
-/* ============ Cart FAB ============ */
-/* RTL: أسفل يمين الشاشة = inline-start */
+/* ============ Cart FAB (Pill) ============ */
 .cart-fab{
   position: fixed;
-  z-index: 60;
+  z-index: 1000;
   bottom: max(16px, env(safe-area-inset-bottom));
-  inset-inline-start: 16px;     /* يمين في RTL */
-  width: 50px; height: 50px;
-  border-radius: 50%;
-  background:var(--accent);
+  inset-inline-start: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: var(--primary);     /* الأزرق نفسه تبع التبويب النشط */
   color: #fff;
-  display: grid; place-items: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
   box-shadow: 0 6px 16px rgba(0,0,0,.15);
-  border: none; cursor: pointer;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
 }
-.cart-fab svg{ width:24px; height:24px; fill: currentColor; }
-.cart-fab .badge{
-  position: absolute;
-  top: 2px;
-  right: 50%;
-  transform: translateX(50%);
-  background: transparent;
-  color: #ffffff;
-  font-size: 15px; font-weight: 700;
-  padding: 0; text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  pointer-events: none;
+.cart-fab:hover{ transform: scale(1.04); box-shadow: 0 8px 18px rgba(0,0,0,.22); }
+.cart-fab:active{ transform: scale(0.98); }
+
+.cart-fab svg{
+  width: 22px; height: 22px;
+  fill: #fff;
+}
+
+/* كلمة "السلة" بدون تعديل HTML */
+.cart-fab::before{
+  content: "السلة";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* عدّاد السلة داخل الكبسولة */
+.cart-fab .cart-badge,
+#cartCount.badge{
+  position: static;           /* إلغاء الوضع المطلق القديم */
+  transform: none;
+  background: rgba(255,255,255,.22);
+  color: #fff;
+  text-shadow: none;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 /* ============ Modal (Cart) ============ */
