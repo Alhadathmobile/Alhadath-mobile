@@ -20,6 +20,12 @@ const PRODUCTS = [
       { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49, image: "assets/images/samsung-a06.jpeg" },
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59, image: "assets/images/samsung-a06.jpeg" }
     ],
+    colors: [
+    { id:"black", label:"أسود",  hex:"#0f172a", image:"assets/images/a06-black.jpg"  },
+    { id:"blue",  label:"أزرق",  hex:"#1d4ed8", image:"assets/images/a06-blue.jpg"  },
+    { id:"gold",  label:"ذهبي",  hex:"#c08f3f", image:"assets/images/a06-gold.jpg"  }
+  ],
+
     specs: [
       "شاشة: 6.7 بوصة HD+ LCD، 60Hz",
       "المعالج: MediaTek Helio G85",
@@ -40,6 +46,11 @@ const PRODUCTS = [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 115 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 135 }
     ],
+    colors: [
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+  ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 90Hz",
       "المعالج: MediaTek Helio G99",
