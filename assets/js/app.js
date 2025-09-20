@@ -591,16 +591,21 @@ function renderCart(){
 
 function cartRow(p, qty){
   const row=document.createElement("div");
+  const colorText = p.color?.label ? ` — <span class="tiny muted">اللون: ${p.color.label}</span>` : "";
   row.className="cart-row";
   row.innerHTML =
     `<img src="${p.image}" alt="${p.title}">
-     <div><div style="font-weight:700">${p.title}</div><div class="muted tiny">${formatPrice(p.price)} للوحدة</div></div>
+     <div>
+       <div style="font-weight:700">${p.title}${colorText}</div>
+       <div class="muted tiny">${formatPrice(p.price)} للوحدة</div>
+     </div>
      <div class="qty">
        <button type="button" data-dec>−</button>
        <strong>${qty}</strong>
        <button type="button" data-inc>+</button>
      </div>
      <div style="text-align:end">${formatPrice(p.price*qty)}</div>`;
+
   const inc=row.querySelector("[data-inc]");
   const dec=row.querySelector("[data-dec]");
   if(inc){ inc.onclick=()=>{ state.cart[p.id].qty++; save("cart", state.cart); renderCart(); updateCartCount(); }; }
@@ -632,6 +637,7 @@ safeAddEvent($("#checkout-form"), "submit", async (e)=>{
     title: it.product.title,
     qty: Number(it.qty||1),
     price: Number(it.product.price||0)
+    color: it.product.color?.label || ""     // لن يؤذي الـ Worker إن تجاهله
     // يمكن إضافة variant لاحقًا لو حفظته منفصلاً
   }));
   const total=items.reduce((s,it)=> s+(it.price*it.qty), 0);
