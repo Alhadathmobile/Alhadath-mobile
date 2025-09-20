@@ -7,7 +7,7 @@ const ORDER_ENDPOINT = "https://alhadath-order.ahmad2120omar.workers.dev/orders"
 const TELEGRAM_BOT_TOKEN = "";
 const TELEGRAM_CHAT_ID = "";
 
-const BRANDS = ["الكل","Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
+const BRANDS = ["Samsung","iPhone","Redmi/MI","Tecno","Infinix","Honor","Accessories"];
 
 /* ================= PRODUCTS ================= */
 const PRODUCTS = [
@@ -422,12 +422,17 @@ function filterAndRender(){
   const grid=$("#productsGrid"); if(!grid) return;
   const empty=$("#emptyState");
 
-  let items=PRODUCTS
-    .filter(p => state.brand==="الكل" || p.brand===state.brand)
-    .filter(p => p.title.toLowerCase().includes(state.query));
+  const getCat = (p)=> p.category || "smart";
 
-  if(state.sort==="priceAsc")  items.sort((a,b)=> basePrice(a)-basePrice(b));
-  else if(state.sort==="priceDesc") items.sort((a,b)=> basePrice(b)-basePrice(a));
+  let items = PRODUCTS.filter(p=>{
+    const byBrand = (state.brand === "all") || (p.brand === state.brand);
+    const byCat   = (state.category === "all") || (getCat(p) === state.category);
+    const byQuery = !state.query || p.title.toLowerCase().includes(state.query);
+    return byBrand && byCat && byQuery;
+  });
+
+  if (state.sort==="priceAsc") items.sort((a,b)=> basePrice(a)-basePrice(b));
+  else if (state.sort==="priceDesc") items.sort((a,b)=> basePrice(b)-basePrice(a));
 
   grid.innerHTML="";
   if(items.length===0){ if(empty) empty.hidden=false; return; } else { if(empty) empty.hidden=true; }
