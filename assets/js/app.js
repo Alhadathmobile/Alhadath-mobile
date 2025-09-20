@@ -15,6 +15,7 @@ const PRODUCTS = [
     id: "s-a06",
     title: "Samsung A06",
     brand: "Samsung",
+    category: "smart",
     image: "assets/images/samsung-a06.jpeg",
     variants: [
       { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49 },
@@ -86,6 +87,21 @@ const PRODUCTS = [
       "الأداء: قوي للألعاب المتوسطة وتعدد المهام"
     ]
   },
+  {
+  id: "s-tab-a9",
+  title: "Samsung Tab A9",
+  brand: "Samsung",
+  category: "tablet",   // 👈 يميز إنه تابلت
+  image: "assets/images/samsung-tab-a9.jpeg",
+  variants: [
+    { id: "64-4", label: "64GB / 4GB RAM", price: 129 },
+    { id: "128-8", label: "128GB / 8GB RAM", price: 159 }
+  ],
+  colors: [
+    { id: "gray",  label: "رمادي", hex: "#6b7280", image: "assets/images/tab-a9-gray.jpg" },
+    { id: "silver", label: "فضي", hex: "#d1d5db", image: "assets/images/tab-a9-silver.jpg" }
+  ]
+},
   {
     id: "s-a36-5g",
     title: "Samsung A36 5G",
@@ -337,6 +353,28 @@ function safeAddEvent(el, ev, fn){ if(el && el.addEventListener){ el.addEventLis
 function renderTabs(){
   const tabs = $("#tabs"); if(!tabs) return;
   tabs.innerHTML="";
+  // 🔹 زر "الكل"
+  const allBtn = document.createElement("button");
+  allBtn.className = "tab active";
+  allBtn.textContent = "الكل";
+  allBtn.onclick = ()=>{ state.brand="all"; filterAndRender(); setActiveTab("الكل"); };
+  tabs.appendChild(allBtn);
+
+  // 🔹 زر "الأجهزة الذكية"
+  const smartBtn = document.createElement("button");
+  smartBtn.className = "tab";
+  smartBtn.textContent = "الأجهزة الذكية";
+  smartBtn.onclick = ()=>{ state.category="smart"; filterAndRender(); setActiveTab("الأجهزة الذكية"); };
+  tabs.appendChild(smartBtn);
+
+  // 🔹 زر "الأجهزة اللوحية"
+  const tabletBtn = document.createElement("button");
+  tabletBtn.className = "tab";
+  tabletBtn.textContent = "الأجهزة اللوحية";
+  tabletBtn.onclick = ()=>{ state.category="tablet"; filterAndRender(); setActiveTab("الأجهزة اللوحية"); };
+  tabs.appendChild(tabletBtn);
+
+  // 🔹 بعدهم الماركات
   BRANDS.forEach((b)=>{
     const btn=document.createElement("button");
     btn.className="tab"+(b===state.brand?" active":"");
@@ -344,7 +382,7 @@ function renderTabs(){
     btn.onclick=()=>{ state.brand=b; filterAndRender(); setActiveTab(b); };
     tabs.appendChild(btn);
   });
-}
+
 function setActiveTab(label){ $all(".tab").forEach(el=> el.classList.toggle("active", el.textContent===label)); }
 
 safeAddEvent($("#searchInput"), "input", (e)=>{
