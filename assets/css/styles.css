@@ -126,9 +126,25 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   background:#ffffff;
   border:1px solid var(--border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;
 }
-.card__img{width:100%; aspect-ratio:4/3; background:#ffffff; display:grid; place-items:center; overflow:hidden}
-.card__img img{width:100%; height:auto; object-fit:contain; background:#ffffff; border-radius:8px; display:block}
-.card{border-radius:14px; overflow:hidden;}
+.card__img {
+  width:100%;
+  max-width:1000px;   /* أقصى عرض */
+  height:1000px;      /* ارتفاع ثابت */
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.card__img img {
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;   /* يحافظ على شكل الصورة */
+  background:#ffffff;
+  border-radius:8px;
+  display:block;
+}
 .card__body{padding:12px 12px 14px;}
 .card__title{
   margin-bottom:6px; font-weight:800; color:var(--text); font-size:16px;
