@@ -128,8 +128,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 }
 .card__img {
   width:100%;
-  max-width:1000px;   /* أقصى عرض */
-  height:1000px;      /* ارتفاع ثابت */
+  aspect-ratio:1/1
   background:#ffffff;
   display:flex;
   align-items:center;
