@@ -16,15 +16,15 @@ const PRODUCTS = [
     title: "Samsung A06",
     brand: "Samsung",
     category: "smart",
-    image: "assets/images/samsung-a06.jpeg",
+    image: "assets/images/samsung-a06.webp",
     variants: [
       { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49 },
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59 }
     ],
     colors: [
-    { id:"black", label:"أسود",  hex:"#0f172a", image:"assets/images/a06-black.jpg"  },
-    { id:"blue",  label:"أزرق",  hex:"#1d4ed8", image:"assets/images/a06-blue.jpg"  },
-    { id:"gold",  label:"ذهبي",  hex:"#c08f3f", image:"assets/images/a06-gold.jpg"  }
+    { id:"black", label:"أسود",  hex:"#0f172a", image:"assets/images/a06-black.jpeg"  },
+    { id:"blue",  label:"أزرق",  hex:"#1d4ed8", image:"assets/images/a06-blue.jpeg"  },
+    { id:"gold",  label:"ذهبي",  hex:"#c08f3f", image:"assets/images/a06-gold.jpeg"  }
   ],
 
     specs: [
