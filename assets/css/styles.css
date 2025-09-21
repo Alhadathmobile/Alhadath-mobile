@@ -178,7 +178,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 }
 
 /* السعر + الأزرار */
-.price{font-weight:900}
 .price{
   font-size: 18px;
   font-weight: 900;
