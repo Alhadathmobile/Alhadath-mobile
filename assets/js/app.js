@@ -577,14 +577,6 @@ function cardTemplate(p){
 
   el.innerHTML =
     `<div class="card__img"><img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}"></div>
-    // ✅ تطبيق fallback على الصورة الابتدائية
-{
-  const imgEl = el.querySelector(`[data-img-for="${p.id}"]`);
-  if (imgEl) {
-    const baseNoExt = stripExt(resolveProductImage(p.id));
-    tryImageFallback(imgEl, baseNoExt);
-  }
-}
      <div class="card__body">
        <h3 class="card__title">${p.title}</h3>
       ${colorRowHTML(p)}   <!-- ✅ صفّ الألوان -->
@@ -595,6 +587,15 @@ function cardTemplate(p){
          <button class="btn btn--primary" data-add="${p.id}">أضف للسلة</button>
        </div>
      </div>`;
+  
+    // ✅ تطبيق fallback على الصورة الابتدائية
+{
+  const imgEl = el.querySelector(`[data-img-for="${p.id}"]`);
+  if (imgEl) {
+    const baseNoExt = stripExt(resolveProductImage(p.id));
+    tryImageFallback(imgEl, baseNoExt);
+  }
+}
 
   // تحديث السعر/الصورة عند تغيير المتغير
   if (hasVariants(p)) {
