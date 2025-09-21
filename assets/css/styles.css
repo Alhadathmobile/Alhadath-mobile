@@ -433,18 +433,3 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   gap: 10px;  /* مسافة بين العناصر */
   white-space: nowrap;
 }
-/* ================== حجم الصور حسب الشاشة ================== */
-/* شاشة موبايل صغيرة */
-@media (max-width:480px){
-  .card__img { height:400px; }
-}
-
-/* شاشة متوسطة (تابلت) */
-@media (min-width:481px) and (max-width:1024px){
-  .card__img { height:600px; }
-}
-
-/* شاشة كبيرة (كمبيوتر) */
-@media (min-width:1025px){
-  .card__img { height:1000px; }
-}
