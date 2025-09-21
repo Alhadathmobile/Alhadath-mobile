@@ -325,6 +325,23 @@ const PRODUCTS = [
   { id:"hon-x9",     title:"Honor X9",       brand:"Honor",    price:199, image:"assets/images/honor-x9.jpg" },
   { id:"acc-charger",title:"شاحن أصلي سريع", brand:"Accessories", price:12, image:"assets/images/accessory-charger.jpg" },
 ];
+/* ============== Image Fallback Helpers ============== */
+// يحاول التحميل بالتسلسل (webp -> jpg -> jpeg -> png)
+function tryImageFallback(imgEl, basePathNoExt, exts = ["webp","jpg","jpeg","png"]) {
+  let i = 0;
+  function tryNext() {
+    if (i >= exts.length) return;
+    const src = `${basePathNoExt}.${exts[i++]}`;
+    imgEl.src = src;
+  }
+  imgEl.onerror = tryNext; // إذا فشل الامتداد الحالي، جرّب اللي بعده
+  tryNext();
+}
+
+// يحذف الامتداد من أي مسار صورة
+function stripExt(path) {
+  return String(path || "").replace(/\.(webp|jpg|jpeg|png)$/i, "");
+}
 
 /* ============== Helpers ============== */
 function $(sel, root){ return (root||document).querySelector(sel); }
@@ -515,8 +532,12 @@ document.addEventListener("click", (e)=>{
   if(labelEl && color) labelEl.textContent = color.label;
 
   // بدّل الصورة
-  const img = document.querySelector(`[data-img-for="${pid}"]`);
-  if (img) img.src = resolveProductImage(pid);
+ // بدّل الصورة (مع fallback للامتدادات)
+const img = document.querySelector(`[data-img-for="${pid}"]`);
+if (img) {
+  const baseNoExt = stripExt(resolveProductImage(pid));
+  tryImageFallback(img, baseNoExt);
+}
 });
 /* ============== Card Template ============== */
 function cardTemplate(p){
@@ -556,6 +577,14 @@ function cardTemplate(p){
 
   el.innerHTML =
     `<div class="card__img"><img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}"></div>
+    // ✅ تطبيق fallback على الصورة الابتدائية
+{
+  const imgEl = el.querySelector(`[data-img-for="${p.id}"]`);
+  if (imgEl) {
+    const baseNoExt = stripExt(resolveProductImage(p.id));
+    tryImageFallback(imgEl, baseNoExt);
+  }
+}
      <div class="card__body">
        <h3 class="card__title">${p.title}</h3>
       ${colorRowHTML(p)}   <!-- ✅ صفّ الألوان -->
@@ -575,7 +604,10 @@ function cardTemplate(p){
     sel.addEventListener("change", ()=>{
       const v = p.variants.find(x=> x.id===sel.value);
       if (v && priceEl) priceEl.textContent = formatPrice(v.price);
-      if (imgEl) imgEl.src = resolveProductImage(p.id); // ✅ تبقى حسب اللون
+      if (imgEl) {
+  const baseNoExt = stripExt(resolveProductImage(p.id));
+  tryImageFallback(imgEl, baseNoExt);
+}
 });
   }
 
