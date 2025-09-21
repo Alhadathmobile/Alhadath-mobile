@@ -433,3 +433,10 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   gap: 10px;  /* مسافة بين العناصر */
   white-space: nowrap;
 }
+/* على الموبايل (شاشات صغيرة) */
+@media (max-width:480px){
+  .card__img {
+    max-width: 320px;   /* أقصى عرض للصورة */
+    margin-inline: auto; /* يخليها تتوسّط */
+  }
+}
