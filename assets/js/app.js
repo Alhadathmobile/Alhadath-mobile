@@ -48,8 +48,8 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 135 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.webp"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.webp" },
     { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
   ],
     specs: [
