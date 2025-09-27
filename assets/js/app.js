@@ -23,7 +23,7 @@ const PRODUCTS = [
     ],
     colors: [
     { id:"black", label:"أسود",  hex:"#0f172a", image:"assets/images/a06-black.jpeg"  },
-    { id:"blue",  label:"أزرق",  hex:"#1d4ed8", image:"assets/images/a06-blue.jpeg"  },
+    { id:"blue",  label:"أزرق فاتح",  hex:"#EOFFFF", image:"assets/images/a06-blue.jpeg"  },
     { id:"gold",  label:"ذهبي",  hex:"#c08f3f", image:"assets/images/a06-gold.jpeg"  }
   ],
 
@@ -75,7 +75,7 @@ const PRODUCTS = [
     colors: [
     { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a26-black.jpeg"  },
     { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a26-mint.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a26-white.jpg"}
+    { id:"silver", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/a26-white.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -130,7 +130,7 @@ const PRODUCTS = [
     id: "s-a56-5g",
     title: "Samsung A56 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a56.jpg",
+    image: "assets/images/samsung-a56.wepb",
     variants: [
       { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 220 },
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
@@ -138,8 +138,8 @@ const PRODUCTS = [
     ],
     colors: [
     { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a56-green.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a56-silver.jpg"}
+    { id:"green",  label:".زهر",  hex:"#FFC0CB", image:"assets/images/a56-pink.wepb" },
+    { id:"silver", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/a56-white.webp"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
