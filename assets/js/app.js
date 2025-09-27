@@ -73,9 +73,9 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a26-black.jpeg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a26-mint.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a26-white.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -112,9 +112,9 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a36-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a36-silver.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -137,9 +137,9 @@ const PRODUCTS = [
       { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a56-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a56-silver.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -161,9 +161,9 @@ const PRODUCTS = [
       { id: "1T-12+12",   label: "1TB / 12+12GB RAM",   price: 1099 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/s25-black.jpg"  },
+    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/s25-green.jpg" },
+    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/s25-silver.jpg"}
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
