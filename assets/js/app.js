@@ -186,6 +186,11 @@ const PRODUCTS = [
       { id: "512",   label: "512GB ",   price: 990 },
      { id: "1T",   label: "1TB ",   price: 1099 }
     ],
+   colors: [
+    { id:"gold", label:"صحراوي",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
+    { id:"natural",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg"  },
+    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-pro-max-black-titanium.jpg"  }
+  ],
    specs: [
      "الشاشة: 6.9 بوصة QHD+ Super Retina XDR OLED، 120Hz ProMotion",
     "المعالج: Apple A18 Pro",
