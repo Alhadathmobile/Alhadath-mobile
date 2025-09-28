@@ -161,9 +161,9 @@ const PRODUCTS = [
       { id: "1T-12+12",   label: "1TB / 12+12GB RAM",   price: 1099 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/s25-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/s25-green.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/s25-silver.jpg"}
+    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/s25-titanium-black.jpg"  },
+    { id:"green",  label:"رمادي",  hex:"#878681", image:"assets/images/s25-titanium-gray.jpg" },
+    { id:"silver", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/s25-titanium-white.jpg"}
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
