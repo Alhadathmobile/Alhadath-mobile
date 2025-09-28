@@ -113,8 +113,8 @@ const PRODUCTS = [
     ],
     colors: [
     { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a36-green.jpg" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a36-silver.jpg"}
+    { id:"green",  label:"بنفسجي",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg" },
+    { id:"silver", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -139,7 +139,7 @@ const PRODUCTS = [
     colors: [
     { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
     { id:"green",  label:".زهر",  hex:"#FFC0CB", image:"assets/images/a56-pink.jpg" },
-    { id:"silver", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/a56-white.webp"}
+    { id:"silver", label:"رمادي",   hex:"#D3D3D3", image:"assets/images/a56-awesome-lightgray.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
