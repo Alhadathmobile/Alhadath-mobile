@@ -138,7 +138,7 @@ const PRODUCTS = [
     ],
     colors: [
     { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
-    { id:"green",  label:".زهر",  hex:"#FFC0CB", image:"assets/images/a56-pink.wepb" },
+    { id:"green",  label:".زهر",  hex:"#FFC0CB", image:"assets/images/a56-pink.jpg" },
     { id:"silver", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/a56-white.webp"}
   ],
     specs: [
