@@ -67,7 +67,7 @@ const PRODUCTS = [
     id: "s-a26-5g",
     title: "Samsung A26 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a26.webp",
+    image: "assets/images/samsung-a26.jpg",
     variants: [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
@@ -106,7 +106,7 @@ const PRODUCTS = [
     id: "s-a36-5g",
     title: "Samsung A36 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a36.webp",
+    image: "assets/images/samsung-a36.jpg",
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
@@ -130,7 +130,7 @@ const PRODUCTS = [
     id: "s-a56-5g",
     title: "Samsung A56 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a56.wepb",
+    image: "assets/images/samsung-a56.jpg",
     variants: [
       { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 220 },
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
