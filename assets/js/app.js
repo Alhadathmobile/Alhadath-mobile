@@ -16,7 +16,7 @@ const PRODUCTS = [
     title: "Samsung A06",
     brand: "Samsung",
     category: "smart",
-    image: "assets/images/samsung-a06.webp",
+    image: "assets/images/a06-blue.jpeg",
     variants: [
       { id: "64-4+4",  label: "64GB / 4+4GB RAM", price: 49 },
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59 }
@@ -41,7 +41,7 @@ const PRODUCTS = [
     id: "s-a16",
     title: "Samsung A16",
     brand: "Samsung",
-    image: "assets/images/samsung-a16.webp",
+    image: "assets/images/a16-green.webp",
     variants: [
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 99 },
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 115 },
@@ -67,7 +67,7 @@ const PRODUCTS = [
     id: "s-a26-5g",
     title: "Samsung A26 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a26.jpg",
+    image: "assets/images/a26-mint.jpg",
     variants: [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
@@ -106,7 +106,7 @@ const PRODUCTS = [
     id: "s-a36-5g",
     title: "Samsung A36 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a36.jpg",
+    image: "assets/images/a36-awesome-violet.jpg",
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
@@ -130,7 +130,7 @@ const PRODUCTS = [
     id: "s-a56-5g",
     title: "Samsung A56 5G",
     brand: "Samsung",
-    image: "assets/images/samsung-a56.jpg",
+    image: "assets/images/a56-pink.jpg",
     variants: [
       { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 220 },
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
@@ -155,7 +155,7 @@ const PRODUCTS = [
     id:"s-s25-ultra-12-256",
     title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM",
     brand:"Samsung",
-    image:"assets/images/samsung-s25-ultra.webp",
+    image:"assets/images/s25-titanium-gray.jpg",
     variants: [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 720 },
       { id: "1T-12+12",   label: "1TB / 12+12GB RAM",   price: 1099 }
@@ -180,7 +180,7 @@ const PRODUCTS = [
   { id:"ip-16pm",
    title:"iPhone 16 Pro Max",
    brand:"iPhone",
-   image:"assets/images/iphone-16-pro-max.jpg",
+   image:"assets/images/16-pro-max-desert-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 910 },
       { id: "512",   label: "512GB ",   price: 990 },
