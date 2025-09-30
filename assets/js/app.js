@@ -191,8 +191,8 @@ const PRODUCTS = [
   id: "iphone-17-pro-max",
   title: "iPhone 17 Pro Max",
   brand: "Apple",
-  category: "phones",
-  image: "assets/images/iphone-17-pro-max-deep-blue.jpg",
+  category: "phone",
+  image: "assets/images/17-pro-max-deep-blue.jpg",
   variants: [
     { id: "256", label: "256GB / 12GB RAM", price: 1199 },
     { id: "512", label: "512GB / 12GB RAM", price: 1399 },
@@ -220,7 +220,7 @@ const PRODUCTS = [
   id: "iphone-17",
   title: "iPhone 17",
   brand: "Apple",
-  category: "phones",
+  category: "phone",
   image: "assets/images/17-white.jpg",
   variants: [
     { id: "128", label: "128GB / 8GB RAM", price: 899 },
@@ -276,7 +276,7 @@ const PRODUCTS = [
   { id:"ip-16p",
    title:"iPhone 16 Pro",
    brand:"iPhone",
-   image:"assets/images/iphone-16-pro-natural-titanium.jpg",
+   image:"assets/images/16-pro-natural-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 850 },
       { id: "512",   label: "512GB ",   price: 950 },
@@ -346,7 +346,7 @@ const PRODUCTS = [
   {id: "ip-14",
   title: "iPhone 14",
   brand: "iPhone",
-  image: "assets/images/iphone-14.jpeg",
+  image: "assets/images/14-starlight.jpeg",
   variants: [
     { id: "128", label: "128GB", price: 440 },
     { id: "256", label: "256GB", price: 500 }
@@ -368,7 +368,7 @@ const PRODUCTS = [
   id: "iphone-13",
   title: "iPhone 13",
   brand: "Apple",
-  category: "phones",
+  category: "phone",
   image: "assets/images/13-starlight.jpg",
   variants: [
     { id: "128", label: "128GB / 4GB RAM", price: 430 },
