@@ -278,30 +278,36 @@ const PRODUCTS = [
     "الأداء: مناسب للتطبيقات اليومية، تصوير جيد، شاشة ملوّنة ونقية"
   ]
 },
-  
-{
-  id: "ip-15-plus",
-  title: "iPhone 15 Plus",
-  brand: "iPhone",
-  image: "assets/images/iphone-15-plus.jpeg",
+ {
+  id: "iphone-13",
+  title: "iPhone 13",
+  brand: "Apple",
+  category: "phones",
+  image: "assets/images/iphone-13.jpg",
   variants: [
-    { id: "128", label: "128GB", price: 520 },
-    { id: "256", label: "256GB", price: 610 },
-    { id: "512", label: "512GB", price: 690 }
+    { id: "128", label: "128GB / 4GB RAM", price: 430 },
+    { id: "256", label: "256GB / 4GB RAM", price: 480 },
+    { id: "512", label: "512GB / 4GB RAM", price: 550 }
+  ],
+  colors: [
+    { id: "midnight", label: "Midnight (أسود)", hex: "#1C1C1E", image: "assets/images/iphone-13-midnight.jpg" },
+    { id: "starlight", label: "Starlight (أبيض لؤلؤي)", hex: "#F9F6EF", image: "assets/images/iphone-13-starlight.jpg" }
   ],
   specs: [
-    "الشاشة: 6.7 بوصة OLED Super Retina XDR، 60Hz",
-    "الدقة: 2796 × 1290 بكسل، كثافة حوالي 460 ppi",
-    "Dynamic Island بدلاً من النوتش",
-    "المعالج: Apple A16 Bionic",
-    "الكاميرات الخلفية: 48MP رئيسية + 12MP Ultra Wide",
+    "الشاشة: 6.1 بوصة Super Retina XDR OLED بدقة 2532×1170 بكسل",
+    "المعالج: Apple A15 Bionic سداسي النواة",
+    "الكاميرا الخلفية: مزدوجة 12MP (واسعة + فائقة الاتساع)",
     "الكاميرا الأمامية: 12MP TrueDepth",
-    "البطارية: حوالي 4383mAh تقريبًا",
-    "USB-C بدلاً من Lightning",
-    "مقاومة للماء والغبار بمعيار IP68 (حتى عمق 6 أمتار لمدة تصل إلى 30 دقيقة)",
-    "الوزن: تقريبًا 201 غرام، السماكة: حوالي 7.8 مم"
-  ]
-},
+    "التخزين: 128/256/512GB",
+    "الذاكرة: 4GB RAM",
+    "النظام: iOS 15 (قابل للتحديث حتى iOS 18)",
+    "البطارية: 3240mAh تدعم شحن سريع 20W و MagSafe",
+    "مقاومة الماء/الغبار: IP68",
+    "الأبعاد: 146.7 × 71.5 × 7.65 مم",
+    "الوزن: 174 غرام"
+  ],
+}, 
+
     {id: "ip-16-plus",
   title: "iPhone 16 Plus",
   brand: "iPhone",
