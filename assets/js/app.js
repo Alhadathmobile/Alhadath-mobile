@@ -173,9 +173,9 @@ const PRODUCTS = [
      { id: "1T",   label: "1TB ",   price: 1099 }
     ],
    colors: [
-    { id:"gold", label:"صحراوي",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
-    { id:"natural",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg"  },
-    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-pro-max-black-titanium.jpg"  }
+    { id:"gold", label:"Deser titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
+    { id:"natural",  label:"Natural titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg"  },
+    { id:"black",  label:"black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-max-black-titanium.jpg"  }
   ],
    specs: [
      "الشاشة: 6.9 بوصة QHD+ Super Retina XDR OLED، 120Hz ProMotion",
@@ -200,9 +200,9 @@ const PRODUCTS = [
     { id: "2TB", label: "2TB / 12GB RAM", price: 1999 }
   ],
   colors: [
-    { id: "cosmic-orange", label: "Cosmic Orange", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
-    { id: "deep-blue", label: "Deep Blue", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
-    { id: "silver", label: "Silver", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
+    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
+    { id: "deep-blue", label: "Deep Blue(أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
+    { id: "silver", label: "Silver(سلفر)", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
   ],
   specs: [
     "شاشة 6.9 بوصة Super Retina XDR OLED، 120Hz",
@@ -228,9 +228,9 @@ const PRODUCTS = [
     { id: "512", label: "512GB / 8GB RAM", price: 1099 }
   ],
   colors: [
-    { id: "black", label: "Black", hex: "#1C1C1E", image: "assets/images/17-black.jpg" },
-    { id: "white", label: "White", hex: "#FFFFFF", image: "assets/images/17-white.jpg" },
-    { id: "blue", label: "Blue", hex: "#215EBC", image: "assets/images/17-blue.jpg" }
+    { id: "black", label: "Black (أسود)", hex: "#1C1C1E", image: "assets/images/17-black.jpg" },
+    { id: "white", label: "White (أبيض)", hex: "#FFFFFF", image: "assets/images/17-white.jpg" },
+    { id: "blue", label: "Blue (أزرق)", hex: "#215EBC", image: "assets/images/17-blue.jpg" }
   ],
   specs: [
     "شاشة 6.1 بوصة Super Retina XDR OLED، 120Hz",
@@ -256,9 +256,9 @@ const PRODUCTS = [
     { id: "1TB", label: "1TB / 12GB RAM", price: 1449 }
   ],
   colors: [
-    { id: "cosmic-orange", label: "Cosmic Orange", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg" },
-    { id: "dark-blue", label: "Dark Blue", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" },
-    { id: "silver", label: "Silver", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg" }
+    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg" },
+    { id: "dark-blue", label: "Dark Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" },
+    { id: "silver", label: "Silver (سلفر)", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg" }
   ],
   specs: [
     "شاشة 6.3 بوصة Super Retina XDR OLED، 120Hz",
@@ -283,7 +283,7 @@ const PRODUCTS = [
      { id: "1T",   label: "1TB ",   price: 1050 }
     ],
       colors: [
-    { id:"gold", label:"صحراوي",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg"  },
+    { id:"gold", label:"(صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg"  },
     { id:"natural",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg"  },
     { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg"  }
   ],
