@@ -313,6 +313,7 @@ const PRODUCTS = [
   id: "redmi-pad-2",
   title: "Redmi Pad 2",
   brand: "Xiaomi",
+  category: "tablets",
   image: "assets/images/redmi-pad-2.jpg",
   variants: [
     { id: "4-128", label: "128GB / 4GB RAM", price: 160 },
