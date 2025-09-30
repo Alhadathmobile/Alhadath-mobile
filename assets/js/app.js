@@ -190,15 +190,15 @@ const PRODUCTS = [
   { id:"ip-16p",
    title:"iPhone 16 Pro",
    brand:"iPhone",
-   image:"assets/images/iphone-16-pro.jpeg",
+   image:"assets/images/iphone-16-pro-natural-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 850 },
       { id: "512",   label: "512GB ",   price: 950 },
      { id: "1T",   label: "1TB ",   price: 1050 }
     ],
       colors: [
-    { id:"gold", label:"صحراوي",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
-    { id:"natural",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg"  },
+    { id:"gold", label:"صحراوي",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg"  },
+    { id:"natural",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg"  },
     { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg"  }
   ],
    specs: [
@@ -214,10 +214,15 @@ const PRODUCTS = [
     {id: "ip-16",
   title: "iPhone 16",
   brand: "iPhone",
-  image: "assets/images/iphone-16.jpeg",
+  image: "assets/images/16-blue.jpeg",
   variants: [
     { id: "128", label: "128GB", price: 580 },
     { id: "256", label: "256GB", price: 610 }
+  ],
+        colors: [
+    { id:"pink", label:"صحراوي",  hex:"#C2B280", image:"assets/images/16-pink.jpg"  },
+    { id:"blue",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-blue.jpg"  },
+    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-black.jpg"  }
   ],
   specs: [
     "الشاشة: حوالي 6.1 بوصة OLED، 60-120Hz",
