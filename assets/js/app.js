@@ -187,6 +187,92 @@ const PRODUCTS = [
     "الأداء: فائق القوة للتصوير، الألعاب، والمهام الاحترافية"
     ]
   },
+  {
+  id: "iphone-17-pro-max",
+  title: "iPhone 17 Pro Max",
+  brand: "Apple",
+  category: "phones",
+  image: "assets/images/iphone-17-pro-max-deep-blue.jpg",
+  variants: [
+    { id: "256", label: "256GB / 12GB RAM", price: 1199 },
+    { id: "512", label: "512GB / 12GB RAM", price: 1399 },
+    { id: "1TB", label: "1TB / 12GB RAM", price: 1599 },
+    { id: "2TB", label: "2TB / 12GB RAM", price: 1999 }
+  ],
+  colors: [
+    { id: "cosmic-orange", label: "Cosmic Orange", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
+    { id: "deep-blue", label: "Deep Blue", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
+    { id: "silver", label: "Silver", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
+  ],
+  specs: [
+    "شاشة 6.9 بوصة Super Retina XDR OLED، 120Hz",
+    "المعالج: Apple A19 Pro",
+    "الذاكرة: 12GB RAM",
+    "الكاميرا الخلفية: ثلاثية 48MP",
+    "الكاميرا الأمامية: 18MP",
+    "البطارية: حوالي 5000mAh، شحن سريع 40W",
+    "الشحن اللاسلكي: MagSafe و Qi2",
+    "مقاومة الماء/الغبار: IP68",
+    "النظام: iOS 26"
+  ]
+},
+  {
+  id: "iphone-17",
+  title: "iPhone 17",
+  brand: "Apple",
+  category: "phones",
+  image: "assets/images/17-white.jpg",
+  variants: [
+    { id: "128", label: "128GB / 8GB RAM", price: 899 },
+    { id: "256", label: "256GB / 8GB RAM", price: 999 },
+    { id: "512", label: "512GB / 8GB RAM", price: 1099 }
+  ],
+  colors: [
+    { id: "black", label: "Black", hex: "#1C1C1E", image: "assets/images/17-black.jpg" },
+    { id: "white", label: "White", hex: "#FFFFFF", image: "assets/images/17-white.jpg" },
+    { id: "blue", label: "Blue", hex: "#215EBC", image: "assets/images/17-blue.jpg" }
+  ],
+  specs: [
+    "شاشة 6.1 بوصة Super Retina XDR OLED، 120Hz",
+    "المعالج: Apple A18",
+    "الذاكرة: 8GB RAM",
+    "التخزين: 128GB / 256GB / 512GB",
+    "الكاميرا الخلفية: مزدوجة 48MP",
+    "الكاميرا الأمامية: 12MP",
+    "البطارية: حوالي 3500mAh، شحن سريع 25W",
+    "مقاومة الماء/الغبار: IP68",
+    "النظام: iOS 26"
+  ]
+},
+{
+  id: "iphone-17-pro",
+  title: "iPhone 17 Pro",
+  brand: "Apple",
+  category: "phones",
+  image: "assets/images/17-pro-orange.jpg",
+  variants: [
+    { id: "256", label: "256GB / 12GB RAM", price: 1099 },
+    { id: "512", label: "512GB / 12GB RAM", price: 1249 },
+    { id: "1TB", label: "1TB / 12GB RAM", price: 1449 }
+  ],
+  colors: [
+    { id: "cosmic-orange", label: "Cosmic Orange", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg" },
+    { id: "dark-blue", label: "Dark Blue", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" },
+    { id: "silver", label: "Silver", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg" }
+  ],
+  specs: [
+    "شاشة 6.3 بوصة Super Retina XDR OLED، 120Hz",
+    "المعالج: Apple A19 Pro",
+    "الذاكرة: 12GB RAM",
+    "التخزين: 256GB / 512GB / 1TB",
+    "الكاميرا الخلفية: ثلاثية 48MP",
+    "الكاميرا الأمامية: 18MP",
+    "البطارية: حوالي 4300mAh، شحن سريع 30W",
+    "مقاومة الماء/الغبار: IP68",
+    "النظام: iOS 26"
+  ]
+},
+
   { id:"ip-16p",
    title:"iPhone 16 Pro",
    brand:"iPhone",
@@ -283,15 +369,15 @@ const PRODUCTS = [
   title: "iPhone 13",
   brand: "Apple",
   category: "phones",
-  image: "assets/images/iphone-13.jpg",
+  image: "assets/images/13-starlight.jpg",
   variants: [
     { id: "128", label: "128GB / 4GB RAM", price: 430 },
     { id: "256", label: "256GB / 4GB RAM", price: 480 },
     { id: "512", label: "512GB / 4GB RAM", price: 550 }
   ],
   colors: [
-    { id: "midnight", label: "Midnight (أسود)", hex: "#1C1C1E", image: "assets/images/iphone-13-midnight.jpg" },
-    { id: "starlight", label: "Starlight (أبيض لؤلؤي)", hex: "#F9F6EF", image: "assets/images/iphone-13-starlight.jpg" }
+    { id: "midnight", label: "Midnight (أسود)", hex: "#1C1C1E", image: "assets/images/13-black.jpg" },
+    { id: "starlight", label: "Starlight (أبيض لؤلؤي)", hex: "#F9F6EF", image: "assets/images/13-starlight.jpg" }
   ],
   specs: [
     "الشاشة: 6.1 بوصة Super Retina XDR OLED بدقة 2532×1170 بكسل",
@@ -305,7 +391,7 @@ const PRODUCTS = [
     "مقاومة الماء/الغبار: IP68",
     "الأبعاد: 146.7 × 71.5 × 7.65 مم",
     "الوزن: 174 غرام"
-  ],
+  ]
 }, 
 
     {id: "ip-16-plus",
