@@ -22,9 +22,9 @@ const PRODUCTS = [
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 59 }
     ],
     colors: [
-    { id:"black", label:"أسود",  hex:"#0f172a", image:"assets/images/a06-black.jpeg"  },
-    { id:"blue",  label:"أزرق فاتح",  hex:"#EOFFFF", image:"assets/images/a06-blue.jpeg"  },
-    { id:"gold",  label:"ذهبي",  hex:"#c08f3f", image:"assets/images/a06-gold.jpeg"  }
+    { id:"black", label:"Black (أسود)",  hex:"#0f172a", image:"assets/images/a06-black.jpeg"  },
+    { id:"blue",  label:"Light Blue(أزرق فاتح)",  hex:"#EOFFFF", image:"assets/images/a06-blue.jpeg"  },
+    { id:"gold",  label:"Gold (ذهبي)",  hex:"#c08f3f", image:"assets/images/a06-gold.jpeg"  }
   ],
 
     specs: [
@@ -48,9 +48,9 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 135 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a16-black.webp"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a16-green.webp" },
-    { id:"silver", label:"فضي",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a16-black.webp"  },
+    { id:"green",  label:"Light Green (أخضر)",  hex:"#86efac", image:"assets/images/a16-green.webp" },
+    { id:"silver", label:"Gray (رمادي)",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 90Hz",
@@ -73,9 +73,9 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a26-black.jpeg"  },
-    { id:"green",  label:"أخضر",  hex:"#86efac", image:"assets/images/a26-mint.jpg" },
-    { id:"white", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/a26-white.jpg"}
+    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a26-black.jpeg"  },
+    { id:"green",  label:"Mint (أخضر)",  hex:"#86efac", image:"assets/images/a26-mint.jpg" },
+    { id:"white", label:"White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a26-white.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -98,9 +98,9 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
-    { id:"violet",  label:"بنفسجي",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg" },
-    { id:"white", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg"}
+    { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
+    { id:"violet",  label:"Awesome Lavender (اللافندر)",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg" },
+    { id:"white", label:"Awesome White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -123,9 +123,9 @@ const PRODUCTS = [
       { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
-    { id:"pink",  label:".زهر",  hex:"#FFC0CB", image:"assets/images/a56-pink.jpg" },
-    { id:"gray", label:"رمادي",   hex:"#D3D3D3", image:"assets/images/a56-awesome-lightgray.jpg"}
+    { id:"black",  label:"Awesome Graphite (الرصاصي)",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
+    { id:"pink",  label:"Awesome Pink (زهر)",  hex:"#FFC0CB", image:"assets/images/a56-pink.jpg" },
+    { id:"gray", label:"Awesome Lighte (رمادي)",   hex:"#D3D3D3", image:"assets/images/a56-awesome-lightgray.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -147,9 +147,9 @@ const PRODUCTS = [
       { id: "1T-12+12",   label: "1TB / 12+12GB RAM",   price: 1099 }
     ],
     colors: [
-    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/s25-titanium-black.jpg"  },
-    { id:"gray",  label:"رمادي",  hex:"#878681", image:"assets/images/s25-titanium-gray.jpg" },
-    { id:"white", label:"أبيض",   hex:"#FFFFFF", image:"assets/images/s25-titanium-white.jpg"}
+    { id:"black",  label:"Titanium Jetblack (أسود)",  hex:"#0F0F0F", image:"assets/images/s25-titanium-black.jpg"  },
+    { id:"gray",  label:"Titanium Gray (رمادي)",  hex:"#878681", image:"assets/images/s25-titanium-gray.jpg" },
+    { id:"white", label:"Titanium Whitesilver (أبيض)",   hex:"#FFFFFF", image:"assets/images/s25-titanium-white.jpg"}
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
@@ -173,9 +173,9 @@ const PRODUCTS = [
      { id: "1T",   label: "1TB ",   price: 1099 }
     ],
    colors: [
-    { id:"gold", label:"Deser titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
-    { id:"natural",  label:"Natural titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg"  },
-    { id:"black",  label:"black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-max-black-titanium.jpg"  }
+    { id:"gold", label:"Deser Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
+    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg"  },
+    { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-max-black-titanium.jpg"  }
   ],
    specs: [
      "الشاشة: 6.9 بوصة QHD+ Super Retina XDR OLED، 120Hz ProMotion",
@@ -201,8 +201,8 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
-    { id: "deep-blue", label: "Deep Blue(أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
-    { id: "silver", label: "Silver(سلفر)", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
+    { id: "deep-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
+    { id: "silver", label: "Cosmic Silver (فضي)", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
   ],
   specs: [
     "شاشة 6.9 بوصة Super Retina XDR OLED، 120Hz",
@@ -230,7 +230,7 @@ const PRODUCTS = [
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#1C1C1E", image: "assets/images/17-black.jpg" },
     { id: "white", label: "White (أبيض)", hex: "#FFFFFF", image: "assets/images/17-white.jpg" },
-    { id: "blue", label: "Blue (أزرق)", hex: "#215EBC", image: "assets/images/17-blue.jpg" }
+    { id: "blue", label: "Mist Blue (أزرق)", hex: "#215EBC", image: "assets/images/17-blue.jpg" }
   ],
   specs: [
     "شاشة 6.1 بوصة Super Retina XDR OLED، 120Hz",
@@ -257,8 +257,8 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg" },
-    { id: "dark-blue", label: "Dark Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" },
-    { id: "silver", label: "Silver (سلفر)", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg" }
+    { id: "dark-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" },
+    { id: "silver", label: "Silver (الفضي)", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg" }
   ],
   specs: [
     "شاشة 6.3 بوصة Super Retina XDR OLED، 120Hz",
@@ -283,9 +283,9 @@ const PRODUCTS = [
      { id: "1T",   label: "1TB ",   price: 1050 }
     ],
       colors: [
-    { id:"gold", label:"(صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg"  },
-    { id:"natural",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg"  },
-    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg"  }
+    { id:"gold", label:"Desert Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg"  },
+    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg"  },
+    { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg"  }
   ],
    specs: [
     "الشاشة: 6.7 بوصة ProMotion OLED، 120Hz",
@@ -306,9 +306,9 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 610 }
   ],
         colors: [
-    { id:"pink", label:"االزهري",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg"  },
-    { id:"blue",  label:"أزرق",  hex:"#0000FF", image:"assets/images/16-blue.jpg"  },
-    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-black.jpg"  }
+    { id:"pink", label:"Pink (االزهري)",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg"  },
+    { id:"blue",  label:"Ultramarina (أزرق)",  hex:"#0000FF", image:"assets/images/16-blue.jpg"  },
+    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-black.jpg"  }
   ],
   specs: [
     "الشاشة: حوالي 6.1 بوصة OLED، 60-120Hz",
@@ -330,7 +330,7 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 540 }
   ],
    colors: [
-    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/15-black.jpg"  }
+    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/15-black.jpg"  }
   ],
    
   specs: [
@@ -352,7 +352,7 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 500 }
   ],
    colors: [
-    { id:"starlight",  label:"أبيض",  hex:"#FFFFFF", image:"assets/images/14-starlight.jpg"  }
+    { id:"starlight",  label:"Starlight (أبيض لؤلؤي)",  hex:"#FFFFFF", image:"assets/images/14-starlight.jpg"  }
   ],
   specs: [
     "الشاشة: 6.1 بوصة OLED، 60Hz",
@@ -404,9 +404,9 @@ const PRODUCTS = [
     { id: "512", label: "512GB", price: 720 }
   ],
      colors: [
-    { id:"white", label:"أبيض",  hex:"#FFFFFF", image:"assets/images/16-plus-white.jpg"  },
-    { id:"blue",  label:"أزرق",  hex:"#0000FF", image:"assets/images/16-plus-blue.jpg"  },
-    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-plus-black.jpg"  }
+    { id:"white", label:"White (أبيض)",  hex:"#FFFFFF", image:"assets/images/16-plus-white.jpg"  },
+    { id:"blue",  label:"Ultramarine (أزرق)",  hex:"#0000FF", image:"assets/images/16-plus-blue.jpg"  },
+    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-plus-black.jpg"  }
   ], 
   specs: [
     "الشاشة: 6.7 بوصة OLED Super Retina XDR، دقة 2796×1290 بكسل، 460 ppi",
