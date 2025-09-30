@@ -214,14 +214,14 @@ const PRODUCTS = [
     {id: "ip-16",
   title: "iPhone 16",
   brand: "iPhone",
-  image: "assets/images/16-blue.jpeg",
+  image: "assets/images/16-blue.jpg",
   variants: [
     { id: "128", label: "128GB", price: 580 },
     { id: "256", label: "256GB", price: 610 }
   ],
         colors: [
-    { id:"pink", label:"صحراوي",  hex:"#C2B280", image:"assets/images/16-pink.jpg"  },
-    { id:"blue",  label:"سلفر",  hex:"#D9D9D9", image:"assets/images/16-blue.jpg"  },
+    { id:"pink", label:"االزهري",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg"  },
+    { id:"blue",  label:"أزرق",  hex:"#0000FF", image:"assets/images/16-blue.jpg"  },
     { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-black.jpg"  }
   ],
   specs: [
@@ -238,11 +238,15 @@ const PRODUCTS = [
   { id: "ip-15",
   title: "iPhone 15",
   brand: "iPhone",
-  image: "assets/images/iphone-15.jpeg",
+  image: "assets/images/15-black.jpg",
   variants: [
     { id: "128", label: "128GB", price: 490 },
     { id: "256", label: "256GB", price: 540 }
   ],
+   colors: [
+    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/15-black.jpg"  }
+  ],
+   
   specs: [
     "الشاشة: 6.1 بوصة OLED، 60-120Hz",
     "المعالج: Apple A17",
@@ -260,6 +264,9 @@ const PRODUCTS = [
   variants: [
     { id: "128", label: "128GB", price: 440 },
     { id: "256", label: "256GB", price: 500 }
+  ],
+   colors: [
+    { id:"starlight",  label:"أبيض",  hex:"#FFFFFF", image:"assets/images/14-starlight.jpg"  }
   ],
   specs: [
     "الشاشة: 6.1 بوصة OLED، 60Hz",
@@ -298,12 +305,17 @@ const PRODUCTS = [
     {id: "ip-16-plus",
   title: "iPhone 16 Plus",
   brand: "iPhone",
-  image: "assets/images/iphone-16-plus.jpeg",
+  image: "assets/images/16-plus-blue.jpg",
   variants: [
     { id: "128", label: "128GB", price: 560 },
     { id: "256", label: "256GB", price: 650 },
     { id: "512", label: "512GB", price: 720 }
   ],
+     colors: [
+    { id:"white", label:"أبيض",  hex:"#FFFFFF", image:"assets/images/16-plus-white.jpg"  },
+    { id:"blue",  label:"أزرق",  hex:"#0000FF", image:"assets/images/16-plus-blue.jpg"  },
+    { id:"black",  label:"أسود",  hex:"#0F0F0F", image:"assets/images/16-plus-black.jpg"  }
+  ], 
   specs: [
     "الشاشة: 6.7 بوصة OLED Super Retina XDR، دقة 2796×1290 بكسل، 460 ppi",
     "الهيكل: واجهة Ceramic Shield، ظهر زجاجي مع إطار من الألومنيوم",
