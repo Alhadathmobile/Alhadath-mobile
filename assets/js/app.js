@@ -422,22 +422,44 @@ const PRODUCTS = [
 },
 
   // Redmi/MI
-  { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
   {
-  id: "redmi-pad-2",
-  title: "Redmi Pad 2",
+  id: "redmi-note-14-4g",
+  title: "Redmi Note 14 4G",
+  brand: "Xiaomi",
+  category: "phones",
+  image: "assets/images/redmi-note-14-4g.jpg",
+  variants: [
+    { id: "256", label: "256GB / 8+8 GB RAM", price: 309 }
+  ],
+  colors: [
+    { id: "midnight-black", label: "Midnight Black", hex: "#000000", image: "assets/images/redmi-note-14-4g-midnight-black.jpg" },
+    { id: "ocean-blue", label: "Ocean Blue", hex: "#0077B6", image: "assets/images/redmi-note-14-4g-ocean-blue.jpg" },
+  ],
+  specs: [
+    "شاشة 6.6 بوصة AMOLED، 90Hz",
+    "المعالج: MediaTek Helio G99",
+    "الذاكرة: 4GB / 6GB / 8GB RAM",
+    "التخزين: 64GB / 128GB / 256GB",
+    "الكاميرا الخلفية: مزدوجة 50MP + 2MP",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: حوالي 5000mAh، شحن سريع 18W",
+    "النظام: Android 14 + MIUI 16"
+  ]
+},
+  {
+  id: "redmi-pad-2-wifi",
+  title: "Redmi Pad 2 Wifi",
   brand: "Xiaomi",
   category: "tablet",
   image: "assets/images/redmi-pad-2.jpg",
   variants: [
-    { id: "4-128", label: "128GB / 4GB RAM", price: 160 },
-    { id: "8-256", label: "256GB / 8GB RAM", price: 210 }
+    { id: "4-128", label: "128GB / 4GB RAM", price: 125 },
+    { id: "8-256", label: "256GB / 8GB RAM", price: 159 }
   ],
   colors: [
-    { id: "gray", label: "رمادي غرافيت", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.jpg" },
-    { id: "green", label: "أخضر نعناع", hex: "#A8E6CF", image: "assets/images/redmi-pad-2-green.jpg" },
-    { id: "purple", label: "بنفسجي", hex: "#9B59B6", image: "assets/images/redmi-pad-2-purple.jpg" },
-    { id: "blue", label: "أزرق سماوي", hex: "#5DADE2", image: "assets/images/redmi-pad-2-blue.jpg" }
+    { id: "gray", label: "Graphite Gray (رمادي)", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.jpg" },
+    { id: "green", label: "Mint Green (أخضر)", hex: "#A8E6CF", image: "assets/images/redmi-pad-2-green.jpg" },
+    { id: "purple", label: "Lavender Purple (بنفسجي)", hex: "#9B59B6", image: "assets/images/redmi-pad-2-purple.jpg" }
   ],
   specs: [
     "شاشة 11 بوصة، دقة 2.5K (2560×1600)، معدل تحديث 90Hz",
