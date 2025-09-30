@@ -87,21 +87,7 @@ const PRODUCTS = [
       "الأداء: قوي للألعاب المتوسطة وتعدد المهام"
     ]
   },
-  {
-  id: "s-tab-a9",
-  title: "Samsung Tab A9",
-  brand: "Samsung",
-  category: "tablet",   // 👈 يميز إنه تابلت
-  image: "assets/images/samsung-tab-a9.jpeg",
-  variants: [
-    { id: "64-4", label: "64GB / 4GB RAM", price: 129 },
-    { id: "128-8", label: "128GB / 8GB RAM", price: 159 }
-  ],
-  colors: [
-    { id: "gray",  label: "رمادي", hex: "#6b7280", image: "assets/images/tab-a9-gray.jpg" },
-    { id: "silver", label: "فضي", hex: "#d1d5db", image: "assets/images/tab-a9-silver.jpg" }
-  ]
-},
+  
   {
     id: "s-a36-5g",
     title: "Samsung A36 5G",
@@ -323,6 +309,37 @@ const PRODUCTS = [
 
   // Redmi/MI
   { id:"mi-note-14-256", title:"Xiaomi Redmi Note 14 - 256GB / 8GB RAM", brand:"Redmi/MI", price:149, image:"assets/images/xiaomi-redmi-note.jpg" },
+  {
+  id: "redmi-pad-2",
+  title: "Redmi Pad 2",
+  brand: "Xiaomi",
+  image: "assets/images/redmi-pad-2.jpg",
+  variants: [
+    { id: "4-128", label: "128GB / 4GB RAM", price: 160 },
+    { id: "8-256", label: "256GB / 8GB RAM", price: 210 }
+  ],
+  colors: [
+    { id: "gray", label: "رمادي غرافيت", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.jpg" },
+    { id: "green", label: "أخضر نعناع", hex: "#A8E6CF", image: "assets/images/redmi-pad-2-green.jpg" },
+    { id: "purple", label: "بنفسجي", hex: "#9B59B6", image: "assets/images/redmi-pad-2-purple.jpg" },
+    { id: "blue", label: "أزرق سماوي", hex: "#5DADE2", image: "assets/images/redmi-pad-2-blue.jpg" }
+  ],
+  specs: [
+    "شاشة 11 بوصة، دقة 2.5K (2560×1600)، معدل تحديث 90Hz",
+    "المعالج: MediaTek Helio G100-Ultra (6nm)",
+    "المعالج الرسومي: Mali-G57 MC2",
+    "الكاميرا الخلفية: 8MP",
+    "الكاميرا الأمامية: 5MP",
+    "البطارية: 9000mAh مع شحن سريع 18W (شاحن 15W مرفق)",
+    "النظام: HyperOS 2 (Android 15)",
+    "التخزين: 128GB أو 256GB (UFS 2.2) + دعم microSD حتى 2TB",
+    "الصوت: 4 سماعات مع Dolby Atmos",
+    "الأبعاد: 254.6 × 166 × 7.36 مم",
+    "الوزن: 510غ (WiFi) / 518غ (4G)",
+    "مقاومة الماء/الغبار: IP52",
+    "ملاحظات: يدعم قلم Redmi Smart Pen (اختياري)"
+  ],
+},
 
   // Tecno / Infinix / Honor / Accessories
   { id:"tec-spark",  title:"Tecno Spark",    brand:"Tecno",    price:115, image:"assets/images/tecno-spark.jpg" },
