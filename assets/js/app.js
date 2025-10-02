@@ -191,7 +191,7 @@ const PRODUCTS = [
   id: "iphone-17-pro-max",
   title: "iPhone 17 Pro Max",
   brand: "Apple",
-  category: "phone",
+  category: "smart",
   image: "assets/images/17-pro-max-deep-blue.jpg",
   variants: [
     { id: "256", label: "256GB / 12GB RAM", price: 1199 },
@@ -220,7 +220,7 @@ const PRODUCTS = [
   id: "iphone-17",
   title: "iPhone 17",
   brand: "Apple",
-  category: "phone",
+  category: "smart",
   image: "assets/images/17-white.jpg",
   variants: [
     { id: "128", label: "128GB / 8GB RAM", price: 899 },
@@ -248,7 +248,7 @@ const PRODUCTS = [
   id: "iphone-17-pro",
   title: "iPhone 17 Pro",
   brand: "Apple",
-  category: "phones",
+  category: "smart",
   image: "assets/images/17-pro-orange.jpg",
   variants: [
     { id: "256", label: "256GB / 12GB RAM", price: 1099 },
@@ -426,7 +426,7 @@ const PRODUCTS = [
   id: "redmi-note-14-4g",
   title: "Redmi Note 14 4G",
   brand: "Xiaomi",
-  category: "phones",
+  category: "smart",
   image: "assets/images/redmi-note-14-4g.jpg",
   variants: [
     { id: "256", label: "256GB / 8+8 GB RAM", price: 309 }
