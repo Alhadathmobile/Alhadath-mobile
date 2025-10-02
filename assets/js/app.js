@@ -38,6 +38,65 @@ const PRODUCTS = [
     ]
   },
   {
+  id: "samsung-galaxy-a07",
+  title: "Samsung Galaxy A07",
+  brand: "Samsung",
+  category: "smart",
+  image: "assets/images/samsung-galaxy-a07.jpg",
+  variants: [
+    { id: "64-4", label: "64GB / 4+4 GB RAM", price: 60 },
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 70 },
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 80 }
+  ],
+  colors: [
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/samsung-galaxy-a07-black.jpg" },
+    { id: "green", label: "Green (أخضر)", hex: "#4CAF50", image: "assets/images/samsung-galaxy-a07-green.jpg" },
+    { id: "blue", label: "Blue (أزرق)", hex: "#2196F3", image: "assets/images/samsung-galaxy-a07-blue.jpg" },
+    { id: "light-violet", label: "Light Violet (بنفسجي فاتح)", hex: "#9B5DE5", image: "assets/images/samsung-galaxy-a07-light-violet.jpg" }
+  ],
+  specs: [
+    "شاشة 6.7 بوصة PLS LCD، دقة HD+، معدل تحديث 90Hz",
+    "المعالج: MediaTek Helio G99",
+    "الذاكرة: 4GB / 6GB / 8GB RAM",
+    "التخزين: 64GB / 128GB / 256GB",
+    "الكاميرا الخلفية: مزدوجة 50MP + 2MP",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 5000mAh، شحن سريع 15W",
+    "النظام: Android 15 + One UI 7",
+    "مقاومة الماء والغبار: IP54"
+  ],
+  badge: "وصل حديثًا"
+},
+{
+  id: "samsung-galaxy-a17",
+  title: "Samsung Galaxy A17",
+  brand: "Samsung",
+  category: "smart",
+  image: "assets/images/samsung-galaxy-a17.jpg",
+  variants: [
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 105 },
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 120 },
+    { id: "256-8", label: "128GB / 8+8 GB RAM", price: 140 }
+  ],
+  colors: [
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/samsung-galaxy-a17-black.jpg" },
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/samsung-galaxy-a17-gray.jpg" },
+    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/samsung-galaxy-a17-blue.jpg" }
+  ],
+  specs: [
+    "شاشة 6.7 بوصة Super AMOLED، دقة FHD+، معدل تحديث 90Hz",
+    "المعالج: Exynos 1330",
+    "الذاكرة: 4GB / 6GB / 8GB RAM",
+    "التخزين: 128GB / 256GB",
+    "الكاميرا الخلفية: ثلاثية 50MP + 5MP + 2MP",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: 5000mAh، شحن سريع 25W",
+    "النظام: Android 15 + One UI 7",
+    "مقاومة الماء والغبار: IP54"
+  ],
+  badge: "وصل حديثًا"
+},
+  {
     id: "s-a16",
     title: "Samsung A16",
     brand: "Samsung",
@@ -143,7 +202,7 @@ const PRODUCTS = [
     brand:"Samsung",
     image:"assets/images/s25-titanium-gray.jpg",
     variants: [
-      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 720 },
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 760 },
       { id: "1T-12+12",   label: "1TB / 12+12GB RAM",   price: 1099 }
     ],
     colors: [
@@ -161,6 +220,69 @@ const PRODUCTS = [
       "الأداء: فائق القوة للتصوير والألعاب والمهام الاحترافية"
     ]
   },
+    {
+  id: "samsung-galaxy-z-fold7",
+  title: "Samsung Galaxy Z Fold7",
+  brand: "Samsung",
+  category: "phones",
+  image: "assets/images/samsung-galaxy-z-fold7.jpg",
+  variants: [
+    { id: "256-12", label: "256GB / 12 GB RAM", price: 1399 }
+  ],
+  colors: [
+    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/samsung-galaxy-z-fold7-blue.jpg" },
+    { id: "silver-shadow", label: "Silver Shadow (فضي)", hex: "#C0C0C0", image: "assets/images/samsung-galaxy-z-fold7-silver.jpg" },
+    { id: "jetblack", label: "Mint (أخضر فاتح)", hex: "#98FF98", image: "assets/images/samsung-galaxy-z-fold7-mint.jpg" }
+  ],
+  specs: [
+    "شاشة رئيسية 8.0 بوصة Dynamic AMOLED 2X، دقة 1968×2184، معدل تحديث 120Hz",
+    "شاشة ثانوية 6.5 بوصة Dynamic AMOLED 2X، دقة 1080×2326، معدل تحديث 120Hz",
+    "المعالج: Qualcomm Snapdragon 8 Elite for Galaxy",
+    "الذاكرة: 12GB RAM",
+    "التخزين: 256GB / 512GB / 1TB",
+    "الكاميرا الخلفية: 200MP + 12MP + 10MP",
+    "الكاميرا الأمامية: 10MP",
+    "البطارية: 4400mAh، شحن سريع 25W، شحن لاسلكي 15W، شحن عكسي 4.5W",
+    "النظام: Android 16 + One UI 8",
+    "الوزن: 215 جرام",
+    "الأبعاد مفتوح: 158.4 × 143.1 × 4.2 ملم، مغلق: 158.4 × 72.8 × 8.9 ملم",
+    "المواد: إطار ألومنيوم، زجاج Gorilla Glass Ceramic 2",
+    "المقاومة: IPX4"
+  ],
+  badge: "وصل حديثًا"
+},
+{
+  id: "samsung-galaxy-z-flip7",
+  title: "Samsung Galaxy Z Flip7",
+  brand: "Samsung",
+  category: "phones",
+  image: "assets/images/samsung-galaxy-z-flip7.jpg",
+  variants: [
+    { id: "256-12", label: "256GB / 12 GB RAM", price: 799 }
+  ],
+  colors: [
+    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/samsung-galaxy-z-flip7-blue.jpg" },
+    { id: "jetblack", label: "Jetblack (أسود )", hex: "#000000", image: "assets/images/samsung-galaxy-z-flip7-black.jpg" },
+    { id: "coralred", label: "Coral Red (أحمر مرجاني)", hex: "#FF4040", image: "assets/images/samsung-galaxy-z-flip7-red.jpg" },
+    { id: "mint", label: "Mint (أخضر فاتح)", hex: "#98FF98", image: "assets/images/samsung-galaxy-z-flip7-mint.jpg" }
+  ],
+  specs: [
+    "شاشة رئيسية 6.9 بوصة Dynamic AMOLED 2X، دقة 1080×2520، معدل تحديث 120Hz",
+    "شاشة ثانوية 4.1 بوصة Super AMOLED، دقة 720×748",
+    "المعالج: Qualcomm Snapdragon 8 Gen 3",
+    "الذاكرة: 8GB RAM",
+    "التخزين: 256GB / 512GB",
+    "الكاميرا الخلفية: 50MP + 12MP",
+    "الكاميرا الأمامية: 10MP",
+    "البطارية: 3700mAh، شحن سريع 25W، شحن لاسلكي 15W، شحن عكسي 4.5W",
+    "النظام: Android 16 + One UI 8",
+    "الوزن: 188 جرام",
+    "الأبعاد مفتوح: 166.7 × 75.2 × 6.5 ملم، مغلق: 85.5 × 75.2 × 13.7 ملم",
+    "المواد: إطار ألومنيوم، زجاج Gorilla Glass 5",
+    "المقاومة: IPX8"
+  ],
+  badge: "وصل حديثًا"
+},
 
   // iPhone
   { id:"ip-16pm",
@@ -427,13 +549,13 @@ const PRODUCTS = [
   title: "Redmi Note 14 4G",
   brand: "Xiaomi",
   category: "smart",
-  image: "assets/images/redmi-note-14-4g.jpg",
+  image: "assets/images/redmi-note-14-black.jpg",
   variants: [
-    { id: "256", label: "256GB / 8+8 GB RAM", price: 309 }
+    { id: "256", label: "256GB / 8+8 GB RAM", price: 140 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black", hex: "#000000", image: "assets/images/redmi-note-14-4g-midnight-black.jpg" },
-    { id: "ocean-blue", label: "Ocean Blue", hex: "#0077B6", image: "assets/images/redmi-note-14-4g-ocean-blue.jpg" },
+    { id: "midnight-black", label: "Midnight Black", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg" },
+    { id: "ocean-blue", label: "Ocean Blue", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.jpg" },
   ],
   specs: [
     "شاشة 6.6 بوصة AMOLED، 90Hz",
@@ -444,6 +566,34 @@ const PRODUCTS = [
     "الكاميرا الأمامية: 13MP",
     "البطارية: حوالي 5000mAh، شحن سريع 18W",
     "النظام: Android 14 + MIUI 16"
+  ]
+},
+  {
+  id: "redmi-a5",
+  title: "Redmi A5",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/redmi-a5.jpg",
+  variants: [
+    { id: "64", label: "64 GB / 3+3 GB RAM", price: 55 },
+    { id: "128", label: "128 GB / 4+4 GB RAM", price: 65 }
+  ],
+  colors: [
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-a5-midnight-black.jpg" },
+    { id: "lake-green", label: "Lake Green (أخضر)", hex: "#4CAF50", image: "assets/images/redmi-a5-lake-green.jpg" },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق )", hex: "#2196F3", image: "assets/images/redmi-a5-ocean-blue.jpg" },
+    { id: "sandy-gold", label: "Sandy Gold (ذهبي)", hex: "#D4AF37", image: "assets/images/redmi-a5-sandy-gold.jpg" }
+  ],
+  specs: [
+    "شاشة 6.88 بوصة، تدعم معدل تحديث حتى 120 Hz",
+    "المعالج: Unisoc T7250",
+    "الذاكرة: 3 GB / 4 GB RAM",
+    "التخزين: 64 GB / 128 GB",
+    "الكاميرا الخلفية: 32 MP + عدسة ثانوية",
+    "الكاميرا الأمامية: 8 MP",
+    "البطارية: حوالي 5200 mAh، دعم شحن سريع 15 W",
+    "الأبعاد: 171.7 × 77.8 × 8.26 مم، الوزن ~193 جرام",
+    "النظام: Android مع واجهة MIUI"
   ]
 },
   {
@@ -475,6 +625,217 @@ const PRODUCTS = [
     "الوزن: 510غ (WiFi) / 518غ (4G)",
     "مقاومة الماء/الغبار: IP52",
     "ملاحظات: يدعم قلم Redmi Smart Pen (اختياري)"
+  ]
+},
+  {
+  id: "redmi-note-14-pro-4g",
+  title: "Redmi Note 14 Pro 4G",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/redmi-note-14-pro-4g.jpg",
+  variants: [
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 179 }
+  ],
+  colors: [
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-4g-black.jpg" },
+    { id: "aurora-purple", label: "Aurora Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/redmi-note-14-pro-4g-purple.jpg" },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-pro-4g-blue.jpg" }
+  ],
+  specs: [
+    "شاشة 6.67 بوصة AMOLED، معدل تحديث 120Hz",
+    "المعالج: MediaTek Helio G100 Ultra",
+    "الكاميرا الخلفية: ثلاثية 200MP + 8MP + 2MP",
+    "الكاميرا الأمامية: 16MP",
+    "البطارية: 5500mAh، شحن سريع 45W",
+    "النظام: Android 14 + MIUI 16",
+    "مقاومة الماء والغبار: IP64"
+  ]
+},
+{
+  id: "redmi-note-14-pro-5g",
+  title: "Redmi Note 14 Pro 5G",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/redmi-note-14-pro-5g.jpg",
+  variants: [
+    { id: "512-12", label: "512GB / 12+8 GB RAM", price: 245 }
+  ],
+  colors: [
+    { id: "coral-green", label: "Coral Green (أخضر)", hex: "#2E8B57", image: "assets/images/redmi-note-14-pro-5g-green.jpg" },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-5g-black.jpg" }
+  ],
+  specs: [
+    "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
+    "المعالج: MediaTek Dimensity 7300 Ultra",
+    "الكاميرا الخلفية: 200MP + 8MP + 2MP",
+    "الكاميرا الأمامية: 16MP",
+    "البطارية: 5110mAh، شحن سريع 67W",
+    "النظام: Android 14 + MIUI 16",
+    "مقاومة الماء والغبار: IP68"
+  ]
+},
+{
+  id: "redmi-note-14-pro-plus-5g",
+  title: "Redmi Note 14 Pro+ 5G",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/redmi-note-14-pro-plus-5g.jpg",
+  variants: [
+    { id: "256-12", label: "256GB / 12+8 GB RAM", price: 345 }
+  ],
+  colors: [
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-plus-5g-black.jpg" },
+    { id: "mist-purple", label: "Mist Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/redmi-note-14-pro-plus-5g-purple.jpg" }
+  ],
+  specs: [
+    "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
+    "المعالج: Snapdragon 7s Gen 3",
+    "الكاميرا الخلفية: 200MP + 8MP + 2MP (OIS)",
+    "الكاميرا الأمامية: 16MP",
+    "البطارية: 5000mAh، شحن سريع 120W HyperCharge",
+    "النظام: Android 14 + MIUI 16",
+    "مقاومة الماء والغبار: IP68"
+  ]
+},
+{
+  id: "redmi-15c",
+  title: "Redmi 15C",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/redmi-15c.jpg",
+  variants: [
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 75 },
+    { id: "256-6", label: "256GB / 8+8 GB RAM", price: 95 }
+  ],
+  colors: [
+    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.jpg" },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.jpg" },
+    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.jpg" },
+    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.jpg" }
+  ],
+  specs: [
+    "شاشة 6.79 بوصة IPS LCD، معدل تحديث 120Hz",
+    "المعالج: MediaTek Helio G81 Ultra",
+    "الكاميرا الخلفية: 50MP + 2MP",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 6000mAh، شحن سريع 33W",
+    "النظام: Android 14 + MIUI 16",
+    "مقاومة الماء والغبار: IP64"
+  ]
+},
+{
+  id: "redmi-15",
+  title: "Redmi 15",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/redmi-15.jpg",
+  variants: [
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 125 }
+  ],
+  colors: [
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/redmi-15-black.jpg" },
+    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15-blue.jpg" },
+    { id: "green", label: "Green (أخضر)", hex: "#32CD32", image: "assets/images/redmi-15-green.jpg" }
+  ],
+  specs: [
+    "شاشة 6.67 بوصة AMOLED، معدل تحديث 120Hz",
+    "المعالج: Snapdragon 7s Gen 2",
+    "الكاميرا الخلفية: 64MP + 8MP + 2MP",
+    "الكاميرا الأمامية: 16MP",
+    "البطارية: 5000mAh، شحن سريع 33W",
+    "النظام: Android 14 + MIUI 16"
+  ]
+},
+{
+  id: "xiaomi-15t",
+  title: "Xiaomi 15T",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/xiaomi-15t.jpg",
+  variants: [
+    { id: "512-12", label: "512GB / 12+8 GB RAM", price: 399 }
+  ],
+  colors: [
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/xiaomi-15t-black.jpg" },
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/xiaomi-15t-gray.jpg" }
+  ],
+  specs: [
+    "شاشة 6.83 بوصة AMOLED، معدل تحديث 120Hz",
+    "المعالج: Snapdragon 8s Gen 3",
+    "الكاميرا الخلفية: 50MP + 12MP + 10MP",
+    "الكاميرا الأمامية: 32MP",
+    "البطارية: 5500mAh، شحن سريع 67W",
+    "النظام: Android 15 + HyperOS"
+  ]
+},
+{
+  id: "xiaomi-15t-pro",
+  title: "Xiaomi 15T Pro",
+  brand: "Xiaomi",
+  category: "smart",
+  image: "assets/images/xiaomi-15t-pro.jpg",
+  variants: [
+    { id: "1T-12", label: "1TGB / 12+8 GB RAM", price: 539 }
+  ],
+  colors: [
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/xiaomi-15t-pro-black.jpg" },
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/xiaomi-15t-pro-gray.jpg" }
+  ],
+  specs: [
+    "شاشة 6.83 بوصة AMOLED، معدل تحديث 144Hz",
+    "المعالج: Snapdragon 8 Gen 4",
+    "الكاميرا الخلفية: 50MP + 50MP + 64MP",
+    "الكاميرا الأمامية: 32MP",
+    "البطارية: 5500mAh، شحن سريع 120W",
+    "النظام: Android 15 + HyperOS"
+  ]
+},
+{
+  id: "redmi-pad-pro",
+  title: "Redmi Pad Pro",
+  brand: "Xiaomi",
+  category: "tablet",
+  image: "assets/images/redmi-pad-pro.jpg",
+  variants: [
+    { id: "256-8", label: "256GB / 8GB RAM", price: 249 }
+  ],
+  colors: [
+    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-pad-pro-blue.jpg" },
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-gray.jpg" },
+    { id: "green", label: "Green (أخضر)", hex: "#228B22", image: "assets/images/redmi-pad-pro-green.jpg" }
+  ],
+  specs: [
+    "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
+    "المعالج: Snapdragon 7s Gen 2",
+    "الكاميرا الخلفية: 13MP",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 10000mAh، شحن سريع 33W",
+    "النظام: Android 14 + MIUI Pad",
+    "أربع سماعات Dolby Atmos"
+  ]
+},
+{
+  id: "redmi-pad-pro-5g",
+  title: "Redmi Pad Pro 5G",
+  brand: "Xiaomi",
+  category: "tablet",
+  image: "assets/images/redmi-pad-pro-5g.jpg",
+  variants: [
+    { id: "256-8", label: "256GB / 8GB RAM", price: 289 }
+  ],
+  colors: [
+    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-pad-pro-5g-blue.jpg" },
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-5g-gray.jpg" },
+    { id: "green", label: "Green (أخضر)", hex: "#228B22", image: "assets/images/redmi-pad-pro-5g-green.jpg" }
+  ],
+  specs: [
+    "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
+    "المعالج: Snapdragon 7s Gen 2 مع دعم 5G",
+    "الكاميرا الخلفية: 13MP",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 10000mAh، شحن سريع 33W",
+    "النظام: Android 14 + MIUI Pad",
+    "أربع سماعات Dolby Atmos، دعم القلم والكيبورد"
   ],
 },
 
