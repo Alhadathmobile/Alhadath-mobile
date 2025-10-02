@@ -550,8 +550,8 @@ const PRODUCTS = [
     { id: "256", label: "256GB / 8+8 GB RAM", price: 140 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg" },
-    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.jpg" },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-black.webp" },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.webp" },
   ],
   specs: [
     "شاشة 6.6 بوصة AMOLED، 90Hz",
@@ -656,7 +656,7 @@ const PRODUCTS = [
     { id: "512-12", label: "512GB / 12+8 GB RAM", price: 245 }
   ],
   colors: [
-    { id: "coral-green", label: "Coral Green (أخضر)", hex: "#2E8B57", image: "assets/images/redmi-note-14-pro-5g-green.jpg" },
+    { id: "coral-green", label: "Coral Green (أخضر)", hex: "#2E8B57", image: "assets/images/redmi-note-14-5g-green.webp" },
     { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-black.webp" }
   ],
   specs: [
