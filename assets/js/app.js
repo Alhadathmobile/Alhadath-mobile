@@ -51,7 +51,6 @@ const PRODUCTS = [
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/samsung-galaxy-a07-black.jpg" },
     { id: "green", label: "Green (أخضر)", hex: "#4CAF50", image: "assets/images/samsung-galaxy-a07-green.jpg" },
-    { id: "blue", label: "Blue (أزرق)", hex: "#2196F3", image: "assets/images/samsung-galaxy-a07-blue.jpg" },
     { id: "light-violet", label: "Light Violet (بنفسجي فاتح)", hex: "#9B5DE5", image: "assets/images/samsung-galaxy-a07-light-violet.jpg" }
   ],
   specs: [
