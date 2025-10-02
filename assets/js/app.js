@@ -554,8 +554,8 @@ const PRODUCTS = [
     { id: "256", label: "256GB / 8+8 GB RAM", price: 140 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg" },
-    { id: "ocean-blue", label: "Ocean Blue", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.jpg" },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg" },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.jpg" },
   ],
   specs: [
     "شاشة 6.6 بوصة AMOLED، 90Hz",
