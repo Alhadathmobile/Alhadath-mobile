@@ -341,7 +341,7 @@ const PRODUCTS = [
   {
   id: "iphone-17",
   title: "iPhone 17",
-  brand: "Apple",
+  brand: "iphone",
   category: "smart",
   image: "assets/images/17-white.jpg",
   variants: [
@@ -369,7 +369,7 @@ const PRODUCTS = [
 {
   id: "iphone-17-pro",
   title: "iPhone 17 Pro",
-  brand: "Apple",
+  brand: "iphone",
   category: "smart",
   image: "assets/images/17-pro-orange.jpg",
   variants: [
@@ -489,7 +489,7 @@ const PRODUCTS = [
  {
   id: "iphone-13",
   title: "iPhone 13",
-  brand: "Apple",
+  brand: "iphone",
   category: "phone",
   image: "assets/images/13-starlight.jpg",
   variants: [
