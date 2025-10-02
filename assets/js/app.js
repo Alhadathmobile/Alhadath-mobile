@@ -547,7 +547,7 @@ const PRODUCTS = [
   {
   id: "redmi-note-14-4g",
   title: "Redmi Note 14 4G",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-note-14-black.jpg",
   variants: [
@@ -571,7 +571,7 @@ const PRODUCTS = [
   {
   id: "redmi-a5",
   title: "Redmi A5",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-a5.jpg",
   variants: [
@@ -599,7 +599,7 @@ const PRODUCTS = [
   {
   id: "redmi-pad-2-wifi",
   title: "Redmi Pad 2 Wifi",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "tablet",
   image: "assets/images/redmi-pad-2-gray.jpg",
   variants: [
@@ -630,7 +630,7 @@ const PRODUCTS = [
   {
   id: "redmi-note-14-pro-4g",
   title: "Redmi Note 14 Pro 4G",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-note-14-pro-4g.jpg",
   variants: [
@@ -654,7 +654,7 @@ const PRODUCTS = [
 {
   id: "redmi-note-14-pro-5g",
   title: "Redmi Note 14 Pro 5G",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-note-14-pro-5g.jpg",
   variants: [
@@ -677,7 +677,7 @@ const PRODUCTS = [
 {
   id: "redmi-note-14-pro-plus-5g",
   title: "Redmi Note 14 Pro+ 5G",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-note-14-pro-plus-5g.jpg",
   variants: [
@@ -700,7 +700,7 @@ const PRODUCTS = [
 {
   id: "redmi-15c",
   title: "Redmi 15C",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-15c.jpg",
   variants: [
@@ -726,7 +726,7 @@ const PRODUCTS = [
 {
   id: "redmi-15",
   title: "Redmi 15",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-15.jpg",
   variants: [
@@ -749,7 +749,7 @@ const PRODUCTS = [
 {
   id: "xiaomi-15t",
   title: "Xiaomi 15T",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/xiaomi-15t.jpg",
   variants: [
@@ -771,7 +771,7 @@ const PRODUCTS = [
 {
   id: "xiaomi-15t-pro",
   title: "Xiaomi 15T Pro",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/xiaomi-15t-pro.jpg",
   variants: [
@@ -793,7 +793,7 @@ const PRODUCTS = [
 {
   id: "redmi-pad-pro",
   title: "Redmi Pad Pro",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "tablet",
   image: "assets/images/redmi-pad-pro.jpg",
   variants: [
@@ -817,7 +817,7 @@ const PRODUCTS = [
 {
   id: "redmi-pad-pro-5g",
   title: "Redmi Pad Pro 5G",
-  brand: "Xiaomi",
+  brand: "Redmi/MI",
   category: "tablet",
   image: "assets/images/redmi-pad-pro-5g.jpg",
   variants: [
