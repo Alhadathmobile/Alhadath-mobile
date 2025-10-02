@@ -569,7 +569,7 @@ const PRODUCTS = [
   title: "Redmi A5",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-a5-golg.webp",
+  image: "assets/images/redmi-a5-blue.webp",
   variants: [
     { id: "64", label: "64 GB / 3+3 GB RAM", price: 55 },
     { id: "128", label: "128 GB / 4+4 GB RAM", price: 65 }
