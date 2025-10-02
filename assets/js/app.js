@@ -42,7 +42,7 @@ const PRODUCTS = [
   title: "Samsung Galaxy A07",
   brand: "Samsung",
   category: "smart",
-  image: "assets/images/a07-green.webpg",
+  image: "assets/images/a07-green.webp",
   variants: [
     { id: "64-4", label: "64GB / 4+4 GB RAM", price: 60 },
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 70 },
