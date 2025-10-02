@@ -674,13 +674,13 @@ const PRODUCTS = [
   title: "Redmi Note 14 Pro+ 5G",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-note-14-pro-plus-5g.jpg",
+  image: "assets/images/note-14-pro-5g-plus-black.webp",
   variants: [
     { id: "256-12", label: "256GB / 12+8 GB RAM", price: 345 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-plus-5g-black.jpg" },
-    { id: "mist-purple", label: "Mist Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/redmi-note-14-pro-plus-5g-purple.jpg" }
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/note-14-pro-5g-plus-black.webp" },
+    { id: "mist-purple", label: "Mist Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/note-14-pro-5g-plus-purple.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
