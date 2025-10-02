@@ -741,50 +741,7 @@ const PRODUCTS = [
     "النظام: Android 14 + MIUI 16"
   ]
 },
-{
-  id: "xiaomi-15t",
-  title: "Xiaomi 15T",
-  brand: "Redmi/MI",
-  category: "smart",
-  image: "assets/images/xiaomi-15t.jpg",
-  variants: [
-    { id: "512-12", label: "512GB / 12+8 GB RAM", price: 399 }
-  ],
-  colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/xiaomi-15t-black.jpg" },
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/xiaomi-15t-gray.jpg" }
-  ],
-  specs: [
-    "شاشة 6.83 بوصة AMOLED، معدل تحديث 120Hz",
-    "المعالج: Snapdragon 8s Gen 3",
-    "الكاميرا الخلفية: 50MP + 12MP + 10MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 5500mAh، شحن سريع 67W",
-    "النظام: Android 15 + HyperOS"
-  ]
-},
-{
-  id: "xiaomi-15t-pro",
-  title: "Xiaomi 15T Pro",
-  brand: "Redmi/MI",
-  category: "smart",
-  image: "assets/images/xiaomi-15t-pro.jpg",
-  variants: [
-    { id: "1T-12", label: "1TGB / 12+8 GB RAM", price: 539 }
-  ],
-  colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/xiaomi-15t-pro-black.jpg" },
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/xiaomi-15t-pro-gray.jpg" }
-  ],
-  specs: [
-    "شاشة 6.83 بوصة AMOLED، معدل تحديث 144Hz",
-    "المعالج: Snapdragon 8 Gen 4",
-    "الكاميرا الخلفية: 50MP + 50MP + 64MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 5500mAh، شحن سريع 120W",
-    "النظام: Android 15 + HyperOS"
-  ]
-},
+  
 {
   id: "redmi-pad-pro",
   title: "Redmi Pad Pro",
