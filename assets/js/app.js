@@ -627,14 +627,14 @@ const PRODUCTS = [
   title: "Redmi Note 14 Pro 4G",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-note-14-pro-4g.jpg",
+  image: "assets/images/redmi-note-14-pro-purpul.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-4g-black.jpg" },
-    { id: "aurora-purple", label: "Aurora Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/redmi-note-14-pro-4g-purple.jpg" },
-    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-pro-4g-blue.jpg" }
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-black.webp" },
+    { id: "aurora-purple", label: "Aurora Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/redmi-note-14-pro-purpul.webp" },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-pro-blue.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED، معدل تحديث 120Hz",
@@ -651,13 +651,13 @@ const PRODUCTS = [
   title: "Redmi Note 14 Pro 5G",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-note-14-pro-5g.jpg",
+  image: "assets/images/redmi-note-14-pro-black.webp",
   variants: [
     { id: "512-12", label: "512GB / 12+8 GB RAM", price: 245 }
   ],
   colors: [
     { id: "coral-green", label: "Coral Green (أخضر)", hex: "#2E8B57", image: "assets/images/redmi-note-14-pro-5g-green.jpg" },
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-5g-black.jpg" }
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-black.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
