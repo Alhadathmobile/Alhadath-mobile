@@ -697,16 +697,16 @@ const PRODUCTS = [
   title: "Redmi 15C",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-15c.jpg",
+  image: "assets/images/redmi-15c-orange.webp",
   variants: [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 75 },
     { id: "256-6", label: "256GB / 8+8 GB RAM", price: 95 }
   ],
   colors: [
-    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.jpg" },
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.jpg" },
-    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.jpg" },
-    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.jpg" }
+    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.webp" },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.webp" },
+    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.webp" },
+    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.webp" }
   ],
   specs: [
     "شاشة 6.79 بوصة IPS LCD، معدل تحديث 120Hz",
@@ -723,14 +723,12 @@ const PRODUCTS = [
   title: "Redmi 15",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-15.jpg",
+  image: "assets/images/redmi-15-black.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 125 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/redmi-15-black.jpg" },
-    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15-blue.jpg" },
-    { id: "green", label: "Green (أخضر)", hex: "#32CD32", image: "assets/images/redmi-15-green.jpg" }
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/redmi-15-black.jpg" }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED، معدل تحديث 120Hz",
@@ -747,14 +745,12 @@ const PRODUCTS = [
   title: "Redmi Pad Pro",
   brand: "Redmi/MI",
   category: "tablet",
-  image: "assets/images/redmi-pad-pro.jpg",
+  image: "assets/images/redmi-pad-pro-gray.webp",
   variants: [
     { id: "256-8", label: "256GB / 8GB RAM", price: 249 }
   ],
   colors: [
-    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-pad-pro-blue.jpg" },
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-gray.jpg" },
-    { id: "green", label: "Green (أخضر)", hex: "#228B22", image: "assets/images/redmi-pad-pro-green.jpg" }
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-gray.webp" }
   ],
   specs: [
     "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
@@ -771,14 +767,12 @@ const PRODUCTS = [
   title: "Redmi Pad Pro 5G",
   brand: "Redmi/MI",
   category: "tablet",
-  image: "assets/images/redmi-pad-pro-5g.jpg",
+  image: "assets/images/redmi-pad-pro-5g-gray.webp",
   variants: [
     { id: "256-8", label: "256GB / 8GB RAM", price: 289 }
   ],
   colors: [
-    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-pad-pro-5g-blue.jpg" },
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-5g-gray.jpg" },
-    { id: "green", label: "Green (أخضر)", hex: "#228B22", image: "assets/images/redmi-pad-pro-5g-green.jpg" }
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-5g-gray.webp" }
   ],
   specs: [
     "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
