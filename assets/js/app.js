@@ -487,7 +487,7 @@ const PRODUCTS = [
   title: "iPhone 13",
   brand: "iphone",
   category: "phone",
-  image: "assets/images/13-starlight.jpg",
+  image: "assets/images/13-black.jpg",
   variants: [
     { id: "128", label: "128GB / 4GB RAM", price: 430 },
     { id: "256", label: "256GB / 4GB RAM", price: 480 },
