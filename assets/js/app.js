@@ -42,16 +42,16 @@ const PRODUCTS = [
   title: "Samsung Galaxy A07",
   brand: "Samsung",
   category: "smart",
-  image: "assets/images/samsung-galaxy-a07.jpg",
+  image: "assets/images/a07-green.webpg",
   variants: [
     { id: "64-4", label: "64GB / 4+4 GB RAM", price: 60 },
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 70 },
     { id: "128-6", label: "128GB / 6+6 GB RAM", price: 80 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/samsung-galaxy-a07-black.jpg" },
-    { id: "green", label: "Green (أخضر)", hex: "#4CAF50", image: "assets/images/samsung-galaxy-a07-green.jpg" },
-    { id: "light-violet", label: "Light Violet (بنفسجي فاتح)", hex: "#9B5DE5", image: "assets/images/samsung-galaxy-a07-light-violet.jpg" }
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a07-black.jpg" },
+    { id: "green", label: "Green (أخضر)", hex: "#4CAF50", image: "assets/images/a07-green.webp" },
+    { id: "light-violet", label: "Light Violet (بنفسجي فاتح)", hex: "#9B5DE5", image: "assets/images/a07-purple.webp" }
   ],
   specs: [
     "شاشة 6.7 بوصة PLS LCD، دقة HD+، معدل تحديث 90Hz",
@@ -71,16 +71,16 @@ const PRODUCTS = [
   title: "Samsung Galaxy A17",
   brand: "Samsung",
   category: "smart",
-  image: "assets/images/samsung-galaxy-a17.jpg",
+  image: "assets/images/a17-gray.webp",
   variants: [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 105 },
     { id: "128-6", label: "128GB / 6+6 GB RAM", price: 120 },
     { id: "256-8", label: "128GB / 8+8 GB RAM", price: 140 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/samsung-galaxy-a17-black.jpg" },
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/samsung-galaxy-a17-gray.jpg" },
-    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/samsung-galaxy-a17-blue.jpg" }
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a17-black.webp" },
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/a17-gray.webp" },
+    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/a17-blue.webp" }
   ],
   specs: [
     "شاشة 6.7 بوصة Super AMOLED، دقة FHD+، معدل تحديث 90Hz",
@@ -224,15 +224,14 @@ const PRODUCTS = [
   title: "Samsung Galaxy Z Fold7",
   brand: "Samsung",
   category: "phones",
-  image: "assets/images/samsung-galaxy-z-fold7.jpg",
+  image: "assets/images/z-fold-7-blue.webp",
   variants: [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 1399 }
   ],
   colors: [
-    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/samsung-galaxy-z-fold7-blue.jpg" },
-    { id: "silver-shadow", label: "Silver Shadow (فضي)", hex: "#C0C0C0", image: "assets/images/samsung-galaxy-z-fold7-silver.jpg" },
-    { id: "jetblack", label: "Mint (أخضر فاتح)", hex: "#98FF98", image: "assets/images/samsung-galaxy-z-fold7-mint.jpg" }
-  ],
+    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/z-fold-7-blue.webp" },
+    { id: "silver-shadow", label: "Silver Shadow (فضي)", hex: "#C0C0C0", image: "assets/images/z-fold-7-silver.webp" }
+    ],
   specs: [
     "شاشة رئيسية 8.0 بوصة Dynamic AMOLED 2X، دقة 1968×2184، معدل تحديث 120Hz",
     "شاشة ثانوية 6.5 بوصة Dynamic AMOLED 2X، دقة 1080×2326، معدل تحديث 120Hz",
@@ -255,15 +254,13 @@ const PRODUCTS = [
   title: "Samsung Galaxy Z Flip7",
   brand: "Samsung",
   category: "phones",
-  image: "assets/images/samsung-galaxy-z-flip7.jpg",
+  image: "assets/images/z-flip-7-black.webp",
   variants: [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 799 }
   ],
   colors: [
-    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/samsung-galaxy-z-flip7-blue.jpg" },
-    { id: "jetblack", label: "Jetblack (أسود )", hex: "#000000", image: "assets/images/samsung-galaxy-z-flip7-black.jpg" },
-    { id: "coralred", label: "Coral Red (أحمر مرجاني)", hex: "#FF4040", image: "assets/images/samsung-galaxy-z-flip7-red.jpg" },
-    { id: "mint", label: "Mint (أخضر فاتح)", hex: "#98FF98", image: "assets/images/samsung-galaxy-z-flip7-mint.jpg" }
+    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/z-flip-7-blue.webp" },
+    { id: "jetblack", label: "Jetblack (أسود )", hex: "#000000", image: "assets/images/z-flip-7-black.webp" }
   ],
   specs: [
     "شاشة رئيسية 6.9 بوصة Dynamic AMOLED 2X، دقة 1080×2520، معدل تحديث 120Hz",
