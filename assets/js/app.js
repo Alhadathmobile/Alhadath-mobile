@@ -569,16 +569,15 @@ const PRODUCTS = [
   title: "Redmi A5",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-a5.jpg",
+  image: "assets/images/redmi-a5-golg.webp",
   variants: [
     { id: "64", label: "64 GB / 3+3 GB RAM", price: 55 },
     { id: "128", label: "128 GB / 4+4 GB RAM", price: 65 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-a5-midnight-black.jpg" },
-    { id: "lake-green", label: "Lake Green (أخضر)", hex: "#4CAF50", image: "assets/images/redmi-a5-lake-green.jpg" },
-    { id: "ocean-blue", label: "Ocean Blue (أزرق )", hex: "#2196F3", image: "assets/images/redmi-a5-ocean-blue.jpg" },
-    { id: "sandy-gold", label: "Sandy Gold (ذهبي)", hex: "#D4AF37", image: "assets/images/redmi-a5-sandy-gold.jpg" }
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-a5-black.webp" },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق )", hex: "#2196F3", image: "assets/images/redmi-a5-blue.webp" },
+    { id: "sandy-gold", label: "Sandy Gold (ذهبي)", hex: "#D4AF37", image: "assets/images/redmi-a5-gold.webp" }
   ],
   specs: [
     "شاشة 6.88 بوصة، تدعم معدل تحديث حتى 120 Hz",
