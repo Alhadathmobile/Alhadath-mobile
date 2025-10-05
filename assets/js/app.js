@@ -280,10 +280,10 @@ const PRODUCTS = [
   badge: "وصل حديثًا"
 },
 
-  // iPhone
+  // Iphone
   { id:"ip-16pm",
-   title:"iPhone 16 Pro Max",
-   brand:"iPhone",
+   title:"Iphone 16 Pro Max",
+   brand:"Iphone",
    image:"assets/images/16-pro-max-desert-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 910 },
@@ -306,9 +306,9 @@ const PRODUCTS = [
     ]
   },
   {
-  id: "iphone-17-pro-max",
-  title: "iPhone 17 Pro Max",
-  brand: "Apple",
+  id: "Iphone-17-pro-max",
+  title: "Iphone 17 Pro Max",
+  brand: "Iphone",
   category: "smart",
   image: "assets/images/17-pro-max-deep-blue.jpg",
   variants: [
@@ -335,9 +335,9 @@ const PRODUCTS = [
   ]
 },
   {
-  id: "iphone-17",
-  title: "iPhone 17",
-  brand: "iphone",
+  id: "Iphone-17",
+  title: "Iphone 17",
+  brand: "Iphone",
   category: "smart",
   image: "assets/images/17-white.jpg",
   variants: [
@@ -363,9 +363,9 @@ const PRODUCTS = [
   ]
 },
 {
-  id: "iphone-17-pro",
-  title: "iPhone 17 Pro",
-  brand: "iphone",
+  id: "Iphone-17-pro",
+  title: "Iphone 17 Pro",
+  brand: "Iphone",
   category: "smart",
   image: "assets/images/17-pro-orange.jpg",
   variants: [
@@ -391,9 +391,9 @@ const PRODUCTS = [
   ]
 },
 
-  { id:"ip-16p",
-   title:"iPhone 16 Pro",
-   brand:"iPhone",
+  { id:"Iphone-16p",
+   title:"Iphone 16 Pro",
+   brand:"Iphone",
    image:"assets/images/16-pro-natural-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 850 },
@@ -415,9 +415,9 @@ const PRODUCTS = [
     "الأداء: مثالي للتصوير، الإنتاجية، المهام الثقيلة"
   ]
   },
-    {id: "ip-16",
-  title: "iPhone 16",
-  brand: "iPhone",
+    {id: "Iphone-16",
+  title: "Iphone 16",
+  brand: "Iphone",
   image: "assets/images/16-blue.jpg",
   variants: [
     { id: "128", label: "128GB", price: 580 },
@@ -439,9 +439,9 @@ const PRODUCTS = [
   ]
 },
   
-  { id: "ip-15",
-  title: "iPhone 15",
-  brand: "iPhone",
+  { id: "Iphone-15",
+  title: "Iphone 15",
+  brand: "Iphone",
   image: "assets/images/15-black.jpg",
   variants: [
     { id: "128", label: "128GB", price: 490 },
@@ -461,9 +461,9 @@ const PRODUCTS = [
     "الأداء: جيد للتطبيقات، كاميرا قوية، تجربة محسّنة عن الأجيال السابقة"
   ]
 },
-  {id: "ip-14",
-  title: "iPhone 14",
-  brand: "iPhone",
+  {id: "Iphone-14",
+  title: "Iphone 14",
+  brand: "Iphone",
   image: "assets/images/14-starlight.jpeg",
   variants: [
     { id: "128", label: "128GB", price: 440 },
@@ -483,10 +483,10 @@ const PRODUCTS = [
   ]
 },
  {
-  id: "iphone-13",
-  title: "iPhone 13",
-  brand: "iphone",
-  category: "phone",
+  id: "Iphone-13",
+  title: "Iphone 13",
+  brand: "Iphone",
+  category: "smart",
   image: "assets/images/13-black.jpg",
   variants: [
     { id: "128", label: "128GB / 4GB RAM", price: 430 },
@@ -512,9 +512,9 @@ const PRODUCTS = [
   ]
 }, 
 
-    {id: "ip-16-plus",
-  title: "iPhone 16 Plus",
-  brand: "iPhone",
+    {id: "Iphone-16-plus",
+  title: "Iphone 16 Plus",
+  brand: "Iphone",
   image: "assets/images/16-plus-blue.jpg",
   variants: [
     { id: "128", label: "128GB", price: 560 },
