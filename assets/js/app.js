@@ -1689,7 +1689,7 @@ const PRODUCTS = [
   id: "samsung-original-earphones",
   title: "Samsung Original Earphones – سماعات سامسونج أصلية",
   brand: "Samsung",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/samsung-original-earphones.jpg",
   variants: [
     { id: "wired", label: "Wired – سلكية", price: 25 },
@@ -1710,7 +1710,7 @@ const PRODUCTS = [
   id: "samsung-original-powerbank",
   title: "Samsung Original Powerbank – باوربانك سامسونج أصلي",
   brand: "Samsung",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/samsung-original-powerbank.jpg",
   variants: [
     { id: "10000mah", label: "10000mAh", price: 50 },
@@ -1731,7 +1731,7 @@ const PRODUCTS = [
   id: "apple-original-airpods",
   title: "Apple AirPods – سماعات آبل أصلية",
   brand: "Apple",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/apple-airpods.jpg",
   variants: [
     { id: "2nd-gen", label: "2nd Gen", price: 150 },
@@ -1751,7 +1751,7 @@ const PRODUCTS = [
   id: "apple-original-powerbank",
   title: "Apple Original Powerbank – باوربانك آبل أصلي",
   brand: "Apple",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/apple-powerbank.jpg",
   variants: [
     { id: "10000mah", label: "10000mAh", price: 80 },
@@ -1771,7 +1771,7 @@ const PRODUCTS = [
   id: "samsung-original-adapter",
   title: "Samsung Original Adapter – محول سامسونج أصلي",
   brand: "Samsung",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/samsung-original-adapter.jpg",
   variants: [
     { id: "usb-c", label: "USB-C", price: 20 },
@@ -1791,7 +1791,7 @@ const PRODUCTS = [
   id: "apple-original-adapter",
   title: "Apple Original Adapter – محول آبل أصلي",
   brand: "Apple",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/apple-original-adapter.jpg",
   variants: [
     { id: "usb-c-20w", label: "USB-C 20W", price: 30 },
@@ -1811,7 +1811,7 @@ const PRODUCTS = [
   id: "golf-original-charger",
   title: "Golf Original Charger – شاحن جولف أصلي",
   brand: "Golf",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/golf-original-charger.jpg",
   variants: [
     { id: "18w", label: "18W Fast Charging", price: 20 },
@@ -1833,7 +1833,7 @@ const PRODUCTS = [
   id: "golf-original-cable",
   title: "Golf Original Cable – كابل جولف أصلي",
   brand: "Golf",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/golf-original-cable.jpg",
   variants: [
     { id: "1m", label: "1 Meter", price: 10 },
@@ -1854,7 +1854,7 @@ const PRODUCTS = [
   id: "glico-original-charger",
   title: "Glico Original Charger – شاحن جليكو أصلي",
   brand: "Glico",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/glico-original-charger.jpg",
   variants: [
     { id: "18w", label: "18W Fast Charging", price: 20 },
@@ -1875,7 +1875,7 @@ const PRODUCTS = [
   id: "glico-original-cable",
   title: "Glico Original Cable – كابل جليكو أصلي",
   brand: "Glico",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/glico-original-cable.jpg",
   variants: [
     { id: "1m", label: "1 Meter", price: 10 },
@@ -1896,7 +1896,7 @@ const PRODUCTS = [
   id: "glico-powerbank-10000",
   title: "Glico Powerbank 10000mAh – باور بانك جليكو 10000مللي أمبير",
   brand: "Glico",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/glico-powerbank-10000.jpg",
   variants: [
     { id: "10000-white", label: "10000mAh White – أبيض", price: 35 },
@@ -1917,7 +1917,7 @@ const PRODUCTS = [
   id: "glico-powerbank-20000",
   title: "Glico Powerbank 20000mAh – باور بانك جليكو 20000مللي أمبير",
   brand: "Glico",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/glico-powerbank-20000.jpg",
   variants: [
     { id: "20000-white", label: "20000mAh White – أبيض", price: 60 },
@@ -1938,7 +1938,7 @@ const PRODUCTS = [
   id: "glico-powerbank-30000",
   title: "Glico Powerbank 30000mAh – باور بانك جليكو 30000مللي أمبير",
   brand: "Glico",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/glico-powerbank-30000.jpg",
   variants: [
     { id: "30000-black", label: "30000mAh Black – أسود", price: 90 },
@@ -1959,7 +1959,7 @@ const PRODUCTS = [
   id: "glico-powerbank-compact",
   title: "Glico Powerbank Compact 5000mAh – باور بانك جليكو صغير 5000مللي أمبير",
   brand: "Glico",
-  category: "accessory",
+  category: "Accessories",
   image: "assets/images/glico-powerbank-compact.jpg",
   variants: [
     { id: "5000-white", label: "5000mAh White – أبيض", price: 25 },
