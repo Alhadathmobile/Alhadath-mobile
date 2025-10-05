@@ -797,8 +797,7 @@ const PRODUCTS = [
     { id: "128-6", label: "128GB / 6GB RAM", price: 140 }
   ],
   colors: [
-    { id: "space-gray", label: "Space Gray – رمادي فضائي", hex: "#7D7D7D", image: "assets/images/honor-pad-10-space-gray.jpg" },
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-10-silver.jpg" }
+    { id: "space-gray", label: "Space Gray – رمادي فضائي", hex: "#7D7D7D", image: "assets/images/honor-pad-10-space-gray.jpg" }
   ],
   specs: [
     "شاشة 10.1 بوصة IPS LCD",
@@ -814,33 +813,6 @@ const PRODUCTS = [
   ],
 },
 {
-  id: "honor-pad-9-wifi",
-  title: "HONOR Pad 9 WiFi",
-  brand: "HONOR",
-  category: "tablet",
-  image: "assets/images/honor-pad-9-wifi.jpg",
-  variants: [
-    { id: "64-3", label: "64GB / 3GB RAM", price: 85 },
-    { id: "128-4", label: "128GB / 4GB RAM", price: 105 }
-  ],
-  colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-pad-9-midnight-black.jpg" },
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-9-silver.jpg" }
-  ],
-  specs: [
-    "شاشة 9.7 بوصة IPS LCD",
-    "المعالج: Snapdragon 662",
-    "الذاكرة: 3GB / 4GB RAM",
-    "التخزين: 64GB / 128GB",
-    "الكاميرا الخلفية: 8MP",
-    "الكاميرا الأمامية: 5MP",
-    "البطارية: 6000mAh",
-    "الشحن: 18W",
-    "النظام: MagicOS (Android)",
-    "الأداء: متوسط – مناسب للتصفح والمشاهدة والدراسة"
-  ],
-},
-{
   id: "honor-pad-x9a-lte",
   title: "HONOR Pad X9a LTE",
   brand: "HONOR",
@@ -851,7 +823,6 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8GB RAM", price: 200 }
   ],
   colors: [
-    { id: "jade-green", label: "Jade Green – أخضر اليشم", hex: "#00A86B", image: "assets/images/honor-pad-x9a-jade-green.jpg" },
     { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-mystic-silver.jpg" }
   ],
   specs: [
@@ -878,7 +849,6 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8GB RAM", price: 190 }
   ],
   colors: [
-    { id: "jade-green", label: "Jade Green – أخضر اليشم", hex: "#00A86B", image: "assets/images/honor-pad-x9a-jade-green.jpg" },
     { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-mystic-silver.jpg" }
   ],
   specs: [
@@ -905,8 +875,7 @@ const PRODUCTS = [
     { id: "256-6", label: "256GB / 6GB RAM", price: 170 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-pad-x9-midnight-black.jpg" },
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x9-silver.jpg" }
+    { id: "gray", label: "gray – رمادي", hex: "#000000", image: "assets/images/honor-pad-x9-gray.jpg" },
   ],
   specs: [
     "شاشة 10.1 بوصة IPS LCD",
@@ -1014,8 +983,7 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-pro-midnight-black.jpg" },
-    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-pro-crystal-silver.jpg" },
-    { id: "sunrise-gold", label: "Sunrise Gold – ذهبي شروق الشمس", hex: "#FFD700", image: "assets/images/honor-400-pro-sunrise-gold.jpg" }
+    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-pro-crystal-silver.jpg" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
