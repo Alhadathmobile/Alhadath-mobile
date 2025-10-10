@@ -766,20 +766,20 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-10-wifi.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8GB RAM", price: 239 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 239 }
   ],
   colors: [
     { id: "space-gray", label: "Space Gray – رمادي فضائي", hex: "#7D7D7D", image: "assets/images/honor-pad-10-space-gray.jpg" }
   ],
   specs: [
-    "شاشة 10.1 بوصة IPS LCD",
-    "المعالج: Snapdragon 680",
+    "شاشة 12.1 بوصة IPS LCD",
+    "المعالج: Snapdragon 7 Gen3",
     "الكاميرا الخلفية: 8MP",
-    "الكاميرا الأمامية: 5MP",
-    "البطارية: 7250mAh",
-    "الشحن: 22.5W",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 10100mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
-    "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
+    "الأداء: قوي – مناسب للدراسة والألعاب المتوسطة والاستخدام اليومي"
   ],
 },
 {
@@ -789,18 +789,18 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-x9a-lte.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8GB RAM", price: 179 }
+    { id: "128-8", label: "128GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
     { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-mystic-silver.jpg" }
   ],
   specs: [
-    "شاشة 10.95 بوصة IPS LCD",
-    "المعالج: Snapdragon 680",
-    "الكاميرا الخلفية: 13MP",
-    "الكاميرا الأمامية: 8MP",
-    "البطارية: 7250mAh",
-    "الشحن: 22.5W",
+    "شاشة 11.5 بوصة IPS LCD",
+    "المعالج: Qualcomm 685",
+    "الكاميرا الخلفية: 8MP",
+    "الكاميرا الأمامية: 5MP",
+    "البطارية: 8300mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: قوي – مناسب للدراسة والألعاب الخفيفة والمتوسطة"
   ],
@@ -812,21 +812,18 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-x9a-wifi.jpg",
   variants: [
-    { id: "128-6", label: "128GB / 6GB RAM", price: 150 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 190 }
+    { id: "128-6", label: "128GB / 8+8 GB RAM", price: 159 }
   ],
   colors: [
     { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-mystic-silver.jpg" }
   ],
   specs: [
-    "شاشة 10.95 بوصة IPS LCD",
-    "المعالج: Snapdragon 680",
-    "الذاكرة: 6GB / 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 13MP",
-    "الكاميرا الأمامية: 8MP",
-    "البطارية: 7250mAh",
-    "الشحن: 22.5W",
+    "شاشة 11.5 بوصة IPS LCD",
+    "المعالج: Qualcomm 685",
+    "الكاميرا الخلفية: 8MP",
+    "الكاميرا الأمامية: 5MP",
+    "البطارية: 8300mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: قوي – مناسب للدراسة والألعاب الخفيفة والمتوسطة"
   ],
@@ -838,45 +835,15 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-x9-lte.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 135 },
-    { id: "256-6", label: "256GB / 6GB RAM", price: 170 }
+    { id: "128-4", label: "128GB / 4+3 GB RAM", price: 159 }
   ],
   colors: [
     { id: "gray", label: "gray – رمادي", hex: "#000000", image: "assets/images/honor-pad-x9-gray.jpg" },
   ],
   specs: [
-    "شاشة 10.1 بوصة IPS LCD",
+    "شاشة 11.5 بوصة IPS LCD",
     "المعالج: Snapdragon 680",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 8MP",
-    "الكاميرا الأمامية: 5MP",
-    "البطارية: 7250mAh",
-    "الشحن: 22.5W",
-    "النظام: MagicOS (Android)",
-    "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
-  ],
-},
-{
-  id: "honor-pad-x9-wifi",
-  title: "HONOR Pad X9 WiFi",
-  brand: "HONOR",
-  category: "tablet",
-  image: "assets/images/honor-pad-x9-wifi.jpg",
-  variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 125 },
-    { id: "256-6", label: "256GB / 6GB RAM", price: 160 }
-  ],
-  colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-pad-x9-midnight-black.jpg" },
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x9-silver.jpg" }
-  ],
-  specs: [
-    "شاشة 10.1 بوصة IPS LCD",
-    "المعالج: Snapdragon 680",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 8MP",
+    "الكاميرا الخلفية: 5MP",
     "الكاميرا الأمامية: 5MP",
     "البطارية: 7250mAh",
     "الشحن: 22.5W",
@@ -891,24 +858,21 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-x8a-wifi.jpg",
   variants: [
-    { id: "64-3", label: "64GB / 3GB RAM", price: 95 },
-    { id: "128-4", label: "128GB / 4GB RAM", price: 120 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 109 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-pad-x8a-midnight-black.jpg" },
     { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-silver.jpg" }
   ],
   specs: [
-    "شاشة 10.1 بوصة IPS LCD",
-    "المعالج: Snapdragon 662",
-    "الذاكرة: 3GB / 4GB RAM",
-    "التخزين: 64GB / 128GB",
-    "الكاميرا الخلفية: 8MP",
+    "شاشة 11 بوصة IPS LCD",
+    "المعالج: Snapdragon 680",
+    "الكاميرا الخلفية: 5MP",
     "الكاميرا الأمامية: 5MP",
-    "البطارية: 6000mAh",
-    "الشحن: 18W",
+    "البطارية: 8300mAh",
+    "الشحن: 10W",
     "النظام: MagicOS (Android)",
-    "الأداء: متوسط – مناسب للتصفح والمشاهدة اليومية"
+    "الأداء: متوسط – مناسب للدراسة والتصفح والمشاهدة اليومية"
   ],
 },
 {
@@ -918,22 +882,19 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-x7-wifi.jpg",
   variants: [
-    { id: "32-3", label: "32GB / 3GB RAM", price: 75 },
-    { id: "64-4", label: "64GB / 4GB RAM", price: 95 }
+    { id: "128-4", label: "64GB / 4+4 GB RAM", price: 69 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-pad-x7-midnight-black.jpg" },
     { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x7-silver.jpg" }
   ],
   specs: [
-    "شاشة 9.7 بوصة IPS LCD",
-    "المعالج: MediaTek MT8768",
-    "الذاكرة: 3GB / 4GB RAM",
-    "التخزين: 32GB / 64GB",
-    "الكاميرا الخلفية: 5MP",
-    "الكاميرا الأمامية: 2MP",
-    "البطارية: 5000mAh",
-    "الشحن: 18W",
+    "شاشة 8.7 بوصة IPS LCD",
+    "المعالج: Snapdragon 680",
+    "الكاميرا الخلفية: 8MP",
+    "الكاميرا الأمامية: 5MP",
+    "البطارية: 7020mAh",
+    "الشحن: 10W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للتصفح والاستخدام الخفيف"
   ],
@@ -945,22 +906,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-400-pro.jpg",
   variants: [
-    { id: "128-6", label: "128GB / 6GB RAM", price: 220 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 260 }
+    { id: "512-12", label: "512GB / 12+12 GB RAM", price: 459 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-pro-midnight-black.jpg" },
     { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-pro-crystal-silver.jpg" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 920",
-    "الذاكرة: 6GB / 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 64MP + 8MP + 2MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 4500mAh",
-    "الشحن: 66W",
+    "شاشة 6.70 بوصة AMOLED",
+    "المعالج: Snapdragon 8 Gen3",
+    "الكاميرا الخلفية: 200MP + 12MP + 2MP",
+    "الكاميرا الأمامية: 50MP",
+    "البطارية: 6000mAh",
+    "الشحن: 100W",
     "النظام: MagicOS (Android)",
     "الأداء: قوي – ممتاز للألعاب والاستخدام اليومي"
   ],
@@ -972,8 +930,8 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-400.jpg",
   variants: [
-    { id: "128-6", label: "128GB / 6GB RAM", price: 200 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 240 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 },
+    { id: "512-12", label: "512GB / 12+12 GB RAM", price: 299 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-midnight-black.jpg" },
@@ -981,12 +939,10 @@ const PRODUCTS = [
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 920",
-    "الذاكرة: 6GB / 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 64MP + 8MP + 2MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 4500mAh",
+    "المعالج: Snapdragon 7 Gen3",
+    "الكاميرا الخلفية: 200MP + 12MP + 2MP",
+    "الكاميرا الأمامية: 50MP",
+    "البطارية: 6000mAh",
     "الشحن: 66W",
     "النظام: MagicOS (Android)",
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
@@ -999,8 +955,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x9c-5g.jpg",
   variants: [
-    { id: "128-6", label: "128GB / 6GB RAM", price: 190 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 230 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 229 }
   ],
   colors: [
     { id: "jade-green", label: "Jade Green – أخضر اليشم", hex: "#00A86B", image: "assets/images/honor-x9c-5g-jade-green.jpg" },
@@ -1008,13 +963,11 @@ const PRODUCTS = [
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 6100+",
-    "الذاكرة: 6GB / 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 64MP + 2MP",
+    "المعالج: Snapdragon 6 Gen1",
+    "الكاميرا الخلفية: 108MP + 5MP",
     "الكاميرا الأمامية: 16MP",
-    "البطارية: 4800mAh",
-    "الشحن: 22.5W",
+    "البطارية: 6600mAh",
+    "الشحن: 66W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للتصفح والألعاب الخفيفة"
   ],
@@ -1026,22 +979,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x9c-smart.jpg",
   variants: [
-    { id: "128-6", label: "128GB / 6GB RAM", price: 185 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 220 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 179 }
   ],
   colors: [
     { id: "jade-green", label: "Jade Green – أخضر اليشم", hex: "#00A86B", image: "assets/images/honor-x9c-smart-jade-green.jpg" },
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x9c-smart-midnight-black.jpg" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 6100+",
-    "الذاكرة: 6GB / 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 64MP + 2MP",
+    "شاشة 6.8 بوصة TFT LCD",
+    "المعالج: MediaTek 7025 Ultra",
+    "108 :الكاميرا الخلفية MP + 5MP",
     "الكاميرا الأمامية: 16MP",
-    "البطارية: 4800mAh",
-    "الشحن: 22.5W",
+    "البطارية: 5800mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للتصفح والألعاب الخفيفة"
   ],
@@ -1053,8 +1003,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-400lite-5g.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 170 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 190 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400lite-5g-midnight-black.jpg" },
@@ -1062,13 +1011,11 @@ const PRODUCTS = [
   ],
   specs: [
     "شاشة 6.7 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 6020",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
-    "الكاميرا الخلفية: 48MP + 2MP",
+    "المعالج: MediaTek 7025 ",
+    "الكاميرا الخلفية: 108MP + 2MP",
     "الكاميرا الأمامية: 16MP",
-    "البطارية: 4300mAh",
-    "الشحن: 22.5W",
+    "البطارية: 5230mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للاستخدام اليومي"
   ],
@@ -1080,8 +1027,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x8c.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 150 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 170 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 149}
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x8c-midnight-black.jpg" },
@@ -1089,13 +1035,11 @@ const PRODUCTS = [
   ],
   specs: [
     "شاشة 6.7 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 6050",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
-    "الكاميرا الخلفية: 48MP + 2MP",
-    "الكاميرا الأمامية: 16MP",
-    "البطارية: 4300mAh",
-    "الشحن: 22.5W",
+    "المعالج: Snapdragon 685 4G",
+    "الكاميرا الخلفية: 108MP + 5MP",
+    "الكاميرا الأمامية: 50MP",
+    "البطارية: 5000mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
@@ -1107,22 +1051,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-5g.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 140 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 160 }
+    { id: "256-86", label: "256GB / 8+8 GB RAM", price: 139}
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x7d-5g-midnight-black.jpg" },
     { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-crystal-silver.jpg" }
   ],
   specs: [
-    "شاشة 6.6 بوصة IPS LCD",
-    "المعالج: MediaTek Dimensity 6100",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
-    "الكاميرا الخلفية: 48MP + 2MP",
-    "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh",
-    "الشحن: 22.5W",
+    "شاشة 6.77 بوصة TFT LCD",
+    "المعالج: Snapdragon 6s Gen3",
+    "الكاميرا الخلفية: 50MP + 2MP",
+    "الكاميرا الأمامية: 5MP",
+    "البطارية: 6500mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
@@ -1134,22 +1075,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-4g.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 130 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 150 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 115 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x7d-4g-midnight-black.jpg" },
     { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-x7d-4g-crystal-silver.jpg" }
   ],
   specs: [
-    "شاشة 6.6 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G88",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
-    "الكاميرا الخلفية: 48MP + 2MP",
+    "شاشة 6.77 بوصة IPS LCD",
+    "المعالج: Snapdragon 685 4G",
+    "الكاميرا الخلفية: 108MP + 5MP",
     "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh",
-    "الشحن: 22.5W",
+    "البطارية: 6500mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
@@ -1161,22 +1099,20 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x6c.jpg",
   variants: [
-    { id: "64-3", label: "64GB / 3GB RAM", price: 110 },
-    { id: "128-4", label: "128GB / 4GB RAM", price: 130 }
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 69 },
+    { id: "256-6", label: "256GB / 6+6 GB RAM", price: 79 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x6c-midnight-black.jpg" },
     { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/honor-x6c-crystal-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.6 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G25",
-    "الذاكرة: 3GB / 4GB RAM",
-    "التخزين: 64GB / 128GB",
-    "الكاميرا الخلفية: 13MP",
+    "شاشة 6.61 بوصة IPS LCD",
+    "المعالج: MediaTek Helio G81",
+    "الكاميرا الخلفية: 50MP",
     "الكاميرا الأمامية: 5MP",
-    "البطارية: 5000mAh",
-    "الشحن: 18W",
+    "البطارية: 5300mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للاستخدام الخفيف والتصفح"
   ],
@@ -1188,8 +1124,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/camon-40-pro-5g.jpg",
   variants: [
-    { id: "128-8", label: "128GB / 8GB RAM", price: 230 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 270 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 235 }
   ],
   colors: [
     { id: "phantom-black", label: "Phantom Black – أسود شبح", hex: "#000000", image: "assets/images/camon-40-pro-5g-phantom-black.jpg" },
@@ -1197,14 +1132,12 @@ const PRODUCTS = [
     { id: "sunrise-gold", label: "Sunrise Gold – ذهبي شروق الشمس", hex: "#FFD700", image: "assets/images/camon-40-pro-5g-sunrise-gold.jpg" }
   ],
   specs: [
-    "شاشة 6.8 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 920",
-    "الذاكرة: 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 64MP + 8MP + 2MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 5000mAh",
-    "الشحن: 33W",
+    "شاشة 6.78 بوصة AMOLED",
+    "المعالج: MediaTek Dimensity 7300",
+    "الكاميرا الخلفية: 50MP + 8MP",
+    "الكاميرا الأمامية: 50MP",
+    "البطارية: 5200mAh",
+    "الشحن: 45W",
     "النظام: Android 13 HIOS",
     "الأداء: قوي – ممتاز للألعاب والاستخدام اليومي"
   ],
@@ -1216,8 +1149,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/camon-40-pro.jpg",
   variants: [
-    { id: "128-8", label: "128GB / 8GB RAM", price: 210 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 250 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
     { id: "phantom-black", label: "Phantom Black – أسود شبح", hex: "#000000", image: "assets/images/camon-40-pro-phantom-black.jpg" },
@@ -1225,14 +1157,12 @@ const PRODUCTS = [
     { id: "sunrise-gold", label: "Sunrise Gold – ذهبي شروق الشمس", hex: "#FFD700", image: "assets/images/camon-40-pro-sunrise-gold.jpg" }
   ],
   specs: [
-    "شاشة 6.8 بوصة AMOLED",
-    "المعالج: MediaTek Helio G96",
-    "الذاكرة: 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 64MP + 8MP + 2MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 5000mAh",
-    "الشحن: 33W",
+    "شاشة 6.78 بوصة AMOLED",
+    "المعالج: MediaTek Helio G100",
+    "الكاميرا الخلفية: 50MP + 8MP",
+    "الكاميرا الأمامية: 50MP",
+    "البطارية: 5200mAh",
+    "الشحن: 45W",
     "النظام: Android 13 HIOS",
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة"
   ],
@@ -1244,22 +1174,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/pova-7-ultra-5g.jpg",
   variants: [
-    { id: "128-8", label: "128GB / 8GB RAM", price: 180 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 220 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 }
   ],
   colors: [
     { id: "black-magic", label: "Black Magic – أسود ساحر", hex: "#000000", image: "assets/images/pova-7-ultra-5g-black-magic.jpg" },
     { id: "ice-blue", label: "Ice Blue – أزرق جليدي", hex: "#ADD8E6", image: "assets/images/pova-7-ultra-5g-ice-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.9 بوصة IPS LCD",
+    "شاشة 6.67 بوصة AMOLED",
     "المعالج: MediaTek Dimensity 6100+",
-    "الذاكرة: 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 50MP + 2MP",
-    "الكاميرا الأمامية: 16MP",
-    "البطارية: 5000mAh",
-    "الشحن: 18W",
+    "الكاميرا الخلفية: 108MP + 8MP",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: 6000mAh",
+    "الشحن: 70W",
     "النظام: Android 13 HIOS",
     "الأداء: قوي – ممتاز للتصفح والألعاب الخفيفة والمتوسطة"
   ],
@@ -1271,22 +1198,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/pova-7-5g.jpg",
   variants: [
-    { id: "128-6", label: "128GB / 6GB RAM", price: 160 },
-    { id: "128-8", label: "128GB / 8GB RAM", price: 180 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
   colors: [
     { id: "black-magic", label: "Black Magic – أسود ساحر", hex: "#000000", image: "assets/images/pova-7-5g-black-magic.jpg" },
     { id: "ice-blue", label: "Ice Blue – أزرق جليدي", hex: "#ADD8E6", image: "assets/images/pova-7-5g-ice-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.8 بوصة IPS LCD",
-    "المعالج: MediaTek Dimensity 6100+",
-    "الذاكرة: 6GB / 8GB RAM",
-    "التخزين: 128GB",
+    "شاشة 6.78 بوصة FHD+",
+    "المعالج: MediaTek Dimensity 7300+",
     "الكاميرا الخلفية: 50MP + 2MP",
-    "الكاميرا الأمامية: 16MP",
-    "البطارية: 5000mAh",
-    "الشحن: 18W",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: 6000mAh",
+    "الشحن: 45W",
     "النظام: Android 13 HIOS",
     "الأداء: متوسط – مناسب للتصفح والألعاب الخفيفة"
   ],
@@ -1298,22 +1222,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/pova-7.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 140 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 160 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 115 }
   ],
   colors: [
     { id: "black-magic", label: "Black Magic – أسود ساحر", hex: "#000000", image: "assets/images/pova-7-black-magic.jpg" },
     { id: "ice-blue", label: "Ice Blue – أزرق جليدي", hex: "#ADD8E6", image: "assets/images/pova-7-ice-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.8 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G88",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
+    "شاشة 6.78 بوصة FHD+",
+    "المعالج: MediaTek Helio G100",
     "الكاميرا الخلفية: 50MP + 2MP",
-    "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh",
-    "الشحن: 18W",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: 5200mAh",
+    "الشحن: 45W",
     "النظام: Android 13 HIOS",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
@@ -1325,24 +1246,21 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/spark-slim.jpg",
   variants: [
-    { id: "64-3", label: "64GB / 3GB RAM", price: 90 },
-    { id: "128-4", label: "128GB / 4GB RAM", price: 110 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 149 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-slim-midnight-black.jpg" },
     { id: "sky-blue", label: "Sky Blue – أزرق سماوي", hex: "#87CEEB", image: "assets/images/spark-slim-sky-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.5 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G37",
-    "الذاكرة: 3GB / 4GB RAM",
-    "التخزين: 64GB / 128GB",
-    "الكاميرا الخلفية: 13MP + 2MP",
-    "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh",
-    "الشحن: 18W",
+    "شاشة 6.78 بوصة AMOLED",
+    "المعالج: MediaTek Helio G200",
+    "الكاميرا الخلفية: 50MP + 2MP",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: 5200mAh",
+    "الشحن: 45W",
     "النظام: Android 13 HIOS",
-    "الأداء: متوسط – مناسب للاستخدام الخفيف والتصفح"
+    "الأداء: متوسط – مناسب للاستخدام اليومي والالعاب المتوسطة"
   ],
 },
 {
@@ -1352,21 +1270,18 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/spark-40c.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 120 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 140 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 91 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-40c-midnight-black.jpg" },
     { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/spark-40c-crystal-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.6 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G85",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
-    "الكاميرا الخلفية: 50MP + 2MP",
+    "شاشة 6.67 بوصة Hole Screen",
+    "المعالج: MediaTek Helio G81",
+    "الكاميرا الخلفية: 13MP + 2MP",
     "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh",
+    "البطارية: 6000mAh",
     "الشحن: 18W",
     "النظام: Android 13 HIOS",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
@@ -1379,18 +1294,15 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/spark-30c-5g.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 140 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 160 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 95 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-30c-5g-midnight-black.jpg" },
     { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/spark-30c-5g-crystal-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.5 بوصة IPS LCD",
-    "المعالج: MediaTek Dimensity 610",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
+    "شاشة 6.67 بوصة Hole Secreen HD+ ",
+    "المعالج: MediaTek Dimensity 6300 ",
     "الكاميرا الخلفية: 48MP + 2MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 5000mAh",
@@ -1406,22 +1318,20 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/spark-go-2.jpg",
   variants: [
-    { id: "32-2", label: "32GB / 2GB RAM", price: 70 },
-    { id: "64-3", label: "64GB / 3GB RAM", price: 90 }
+    { id: "64-3", label: "64GB / 3+3 GB RAM", price: 55 },
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 60 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-go-2-midnight-black.jpg" },
     { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/spark-go-2-crystal-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.1 بوصة IPS LCD",
-    "المعالج: MediaTek Helio A22",
-    "الذاكرة: 2GB / 3GB RAM",
-    "التخزين: 32GB / 64GB",
-    "الكاميرا الخلفية: 8MP",
-    "الكاميرا الأمامية: 5MP",
-    "البطارية: 4000mAh",
-    "الشحن: 10W",
+    "شاشة 6.67 بوصة Hole Secreen",
+    "المعالج: Octa-Core Processor",
+    "الكاميرا الخلفية: 13MP",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 5000mAh",
+    "الشحن: 15W",
     "النظام: Android 13 HIOS",
     "الأداء: ضعيف – مناسب للاستخدام الخفيف والتصفح فقط"
   ],
@@ -1433,22 +1343,19 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/smart-10.jpg",
   variants: [
-    { id: "64-3", label: "64GB / 3GB RAM", price: 90 },
-    { id: "128-4", label: "128GB / 4GB RAM", price: 110 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 65 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/smart-10-midnight-black.jpg" },
     { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/smart-10-crystal-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.5 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G25",
-    "الذاكرة: 3GB / 4GB RAM",
-    "التخزين: 64GB / 128GB",
-    "الكاميرا الخلفية: 13MP",
+    "شاشة 6.67 بوصة IPS LCD",
+    "المعالج: Unisoc T7250",
+    "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 5000mAh",
-    "الشحن: 10W",
+    "الشحن: 15W",
     "النظام: Android 13 XOS",
     "الأداء: متوسط – مناسب للاستخدام الخفيف والتصفح"
   ],
@@ -1460,21 +1367,18 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/smart-10-plus.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 120 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 140 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 75 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/smart-10-plus-midnight-black.jpg" },
     { id: "sunset-gold", label: "Sunset Gold – ذهبي الغروب", hex: "#FFD580", image: "assets/images/smart-10-plus-sunset-gold.jpg" }
   ],
   specs: [
-    "شاشة 6.78 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G37",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
-    "الكاميرا الخلفية: 50MP + 2MP",
+    "شاشة 6.67 بوصة IPS LCD",
+    "المعالج: Unisoc T7250",
+    "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh",
+    "البطارية: 6000mAh",
     "الشحن: 18W",
     "النظام: Android 13 XOS",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
@@ -1487,8 +1391,8 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/hot-60i.jpg",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 110 },
-    { id: "128-6", label: "128GB / 6GB RAM", price: 130 }
+    { id: "256-4", label: "256GB / 4+4 GB RAM", price: 90 },
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 105 }
   ],
   colors: [
     { id: "timber-black", label: "Timber Black – أسود خشبي", hex: "#1C1C1C", image: "assets/images/hot-60i-timber-black.jpg" },
@@ -1496,13 +1400,11 @@ const PRODUCTS = [
     { id: "crystal-green", label: "Crystal Green – أخضر كريستالي", hex: "#00FF7F", image: "assets/images/hot-60i-crystal-green.jpg" }
   ],
   specs: [
-    "شاشة 6.6 بوصة IPS LCD 90Hz",
-    "المعالج: Unisoc T606",
-    "الذاكرة: 4GB / 6GB RAM",
-    "التخزين: 128GB",
+    "شاشة 6.7 بوصة IPS LCD 90Hz",
+    "المعالج: MediaTek G81 ",
     "الكاميرا الخلفية: 50MP",
     "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh",
+    "البطارية: 5160mAh",
     "الشحن: 18W",
     "النظام: Android 13 XOS",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
@@ -1515,8 +1417,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/hot-60-pro.jpg",
   variants: [
-    { id: "128-8", label: "128GB / 8GB RAM", price: 150 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 170 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 130 }
   ],
   colors: [
     { id: "timber-black", label: "Timber Black – أسود خشبي", hex: "#1C1C1C", image: "assets/images/hot-60-pro-timber-black.jpg" },
@@ -1524,14 +1425,12 @@ const PRODUCTS = [
     { id: "pearl-white", label: "Pearl White – أبيض لؤلؤي", hex: "#F8F8FF", image: "assets/images/hot-60-pro-pearl-white.jpg" }
   ],
   specs: [
-    "شاشة 6.78 بوصة IPS LCD 120Hz",
-    "المعالج: MediaTek Helio G99",
-    "الذاكرة: 8GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 108MP + 2MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 5000mAh",
-    "الشحن: 33W",
+    "شاشة 6.78 بوصة AMOLED 144Hz",
+    "المعالج: MediaTek Helio G200",
+    "الكاميرا الخلفية: 50MP",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: 5160mAh",
+    "الشحن: 45W",
     "النظام: Android 13 XOS",
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب المتوسطة"
   ],
@@ -1543,8 +1442,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/hot-60-pro-plus.jpg",
   variants: [
-    { id: "128-8", label: "128GB / 8GB RAM", price: 180 },
-    { id: "256-12", label: "256GB / 12GB RAM", price: 220 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 150 }
   ],
   colors: [
     { id: "timber-black", label: "Timber Black – أسود خشبي", hex: "#1C1C1C", image: "assets/images/hot-60-pro-plus-timber-black.jpg" },
@@ -1552,14 +1450,12 @@ const PRODUCTS = [
     { id: "pearl-white", label: "Pearl White – أبيض لؤلؤي", hex: "#F8F8FF", image: "assets/images/hot-60-pro-plus-pearl-white.jpg" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED 120Hz",
-    "المعالج: MediaTek Helio G99",
-    "الذاكرة: 8GB / 12GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 108MP + 2MP",
-    "الكاميرا الأمامية: 32MP",
-    "البطارية: 5000mAh",
-    "الشحن: 33W",
+    "شاشة 6.78 بوصة AMOLED 144Hz",
+    "المعالج: MediaTek Helio G200",
+    "الكاميرا الخلفية: 50MP ",
+    "الكاميرا الأمامية: 13MP",
+    "البطارية: 5160mAh",
+    "الشحن: 45W",
     "النظام: Android 13 XOS",
     "الأداء: قوي جداً – ممتاز للألعاب والاستخدام اليومي المتقدم"
   ],
@@ -1571,8 +1467,8 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/note-50-pro.jpg",
   variants: [
-    { id: "128-8", label: "128GB / 8GB RAM", price: 200 },
-    { id: "256-12", label: "256GB / 12GB RAM", price: 240 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 179 },
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 195 }
   ],
   colors: [
     { id: "cosmic-black", label: "Cosmic Black – أسود كوني", hex: "#000000", image: "assets/images/note-50-pro-cosmic-black.jpg" },
@@ -1580,14 +1476,12 @@ const PRODUCTS = [
     { id: "sunrise-gold", label: "Sunrise Gold – ذهبي شروق الشمس", hex: "#FFD700", image: "assets/images/note-50-pro-sunrise-gold.jpg" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED 120Hz",
-    "المعالج: MediaTek Helio G99",
-    "الذاكرة: 8GB / 12GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 108MP + 2MP",
+    "شاشة 6.78 بوصة AMOLED 144Hz",
+    "المعالج: MediaTek Helio G100",
+    "الكاميرا الخلفية: 50MP + 8MP",
     "الكاميرا الأمامية: 32MP",
-    "البطارية: 5000mAh",
-    "الشحن: 33W",
+    "البطارية: 5200mAh",
+    "الشحن: 90W",
     "النظام: Android 13 XOS",
     "الأداء: قوي جداً – ممتاز للألعاب والاستخدام المتقدم"
   ],
@@ -1599,8 +1493,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/note-50-pro-plus-5g.jpg",
   variants: [
-    { id: "128-8", label: "128GB / 8GB RAM", price: 220 },
-    { id: "256-12", label: "256GB / 12GB RAM", price: 260 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 285 }
   ],
   colors: [
     { id: "cosmic-black", label: "Cosmic Black – أسود كوني", hex: "#000000", image: "assets/images/note-50-pro-plus-5g-cosmic-black.jpg" },
@@ -1608,14 +1501,12 @@ const PRODUCTS = [
     { id: "sunrise-gold", label: "Sunrise Gold – ذهبي شروق الشمس", hex: "#FFD700", image: "assets/images/note-50-pro-plus-5g-sunrise-gold.jpg" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED 120Hz",
-    "المعالج: MediaTek Dimensity 920 5G",
-    "الذاكرة: 8GB / 12GB RAM",
-    "التخزين: 128GB / 256GB",
-    "الكاميرا الخلفية: 108MP + 2MP",
+    "شاشة 6.78 بوصة AMOLED 144Hz",
+    "المعالج: MediaTek Dimensity 8350 5G",
+    "الكاميرا الخلفية: 50MP + 8MP",
     "الكاميرا الأمامية: 32MP",
-    "البطارية: 5000mAh",
-    "الشحن: 33W",
+    "البطارية: 5200mAh",
+    "الشحن: 100W",
     "النظام: Android 13 XOS",
     "الأداء: ممتاز – قوي جداً للألعاب والاستخدام المتقدم مع دعم 5G"
   ],
