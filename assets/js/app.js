@@ -764,12 +764,12 @@ const PRODUCTS = [
   title: "HONOR Pad 10 WiFi",
   brand: "HONOR",
   category: "tablet",
-  image: "assets/images/honor-pad-10-wifi.jpg",
+  image: "assets/images/honor-pad-10-wifi-gray.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 239 }
   ],
   colors: [
-    { id: "space-gray", label: "Space Gray – رمادي فضائي", hex: "#7D7D7D", image: "assets/images/honor-pad-10-space-gray.jpg" }
+    { id: "space-gray", label: "Space Gray – رمادي فضائي", hex: "#7D7D7D", image: "assets/images/honor-pad-10-gray.jpg" }
   ],
   specs: [
     "شاشة 12.1 بوصة IPS LCD",
@@ -787,12 +787,12 @@ const PRODUCTS = [
   title: "HONOR Pad X9a LTE",
   brand: "HONOR",
   category: "tablet",
-  image: "assets/images/honor-pad-x9a-lte.jpg",
+  image: "assets/images/honor-pad-x9a-lte-gray.webp",
   variants: [
     { id: "128-8", label: "128GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-mystic-silver.jpg" }
+    { id: "mystic-silver", label: "Mystic Silver –  فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-lte-gray.webp" }
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD",
@@ -810,12 +810,12 @@ const PRODUCTS = [
   title: "HONOR Pad X9a WiFi",
   brand: "HONOR",
   category: "tablet",
-  image: "assets/images/honor-pad-x9a-wifi.jpg",
+  image: "assets/images/honor-pad-x9a-wifi-gray.webp",
   variants: [
     { id: "128-6", label: "128GB / 8+8 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-mystic-silver.jpg" }
+    { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-wifi-gray.webp" }
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD",
@@ -833,12 +833,12 @@ const PRODUCTS = [
   title: "HONOR Pad X9 LTE",
   brand: "HONOR",
   category: "tablet",
-  image: "assets/images/honor-pad-x9-lte.jpg",
+  image: "assets/images/honor-pad-x9-lte-gray.webp",
   variants: [
     { id: "128-4", label: "128GB / 4+3 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "gray", label: "gray – رمادي", hex: "#000000", image: "assets/images/honor-pad-x9-gray.jpg" },
+    { id: "gray", label: "gray – رمادي", hex: "#000000", image: "assets/images/honor-pad-x9-lte-gray.webp" },
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD",
@@ -856,13 +856,12 @@ const PRODUCTS = [
   title: "HONOR Pad X8a WiFi",
   brand: "HONOR",
   category: "tablet",
-  image: "assets/images/honor-pad-x8a-wifi.jpg",
+  image: "assets/images/honor-pad-x8a-gray.webp",
   variants: [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 109 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-pad-x8a-midnight-black.jpg" },
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-silver.jpg" }
+    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-gray.webp" }
   ],
   specs: [
     "شاشة 11 بوصة IPS LCD",
@@ -880,13 +879,12 @@ const PRODUCTS = [
   title: "HONOR Pad X7 WiFi",
   brand: "HONOR",
   category: "tablet",
-  image: "assets/images/honor-pad-x7-wifi.jpg",
+  image: "assets/images/honor-pad-x7-gray.webp",
   variants: [
     { id: "128-4", label: "64GB / 4+4 GB RAM", price: 69 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-pad-x7-midnight-black.jpg" },
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x7-silver.jpg" }
+    { id: "Gray", label: "Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x7-gray.webp" }
   ],
   specs: [
     "شاشة 8.7 بوصة IPS LCD",
