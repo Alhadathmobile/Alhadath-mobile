@@ -58,7 +58,7 @@ const PRODUCTS = [
     "المعالج: MediaTek Helio G99",
     "الكاميرا الخلفية: مزدوجة 50MP + 2MP",
     "الكاميرا الأمامية: 8MP",
-    "البطارية: 5000mAh، شحن سريع 15W",
+    "البطارية: 5000mAh، شحن سريع 25W",
     "النظام: Android 15 + One UI 7",
     "مقاومة الماء والغبار: IP54"
   ],
@@ -73,7 +73,7 @@ const PRODUCTS = [
   variants: [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 105 },
     { id: "128-6", label: "128GB / 6+6 GB RAM", price: 120 },
-    { id: "256-8", label: "128GB / 8+8 GB RAM", price: 140 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 140 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a17-black.webp" },
@@ -171,7 +171,7 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/a56-pink.jpg",
     variants: [
-      { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 220 },
+      { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 235 },
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
       { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
     ],
