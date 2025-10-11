@@ -902,13 +902,13 @@ const PRODUCTS = [
   title: "HONOR 400 Pro",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-400-pro.jpg",
+  image: "assets/images/honor-400-pro-gray.jpg",
   variants: [
     { id: "512-12", label: "512GB / 12+12 GB RAM", price: 459 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-pro-midnight-black.jpg" },
-    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-pro-crystal-silver.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-pro-black.webp" },
+    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-pro-gray.jpg" }
   ],
   specs: [
     "شاشة 6.70 بوصة AMOLED",
@@ -926,14 +926,14 @@ const PRODUCTS = [
   title: "HONOR 400",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-400.jpg",
+  image: "assets/images/honor-400-black.webp",
   variants: [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 },
     { id: "512-12", label: "512GB / 12+12 GB RAM", price: 299 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-midnight-black.jpg" },
-    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-crystal-silver.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-black.webp" },
+    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
@@ -999,13 +999,14 @@ const PRODUCTS = [
   title: "HONOR 400Lite 5G",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-400lite-5g.jpg",
+  image: "assets/images/honor-400-lite-green.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400lite-5g-midnight-black.jpg" },
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-400lite-5g-silver.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-lite-black.jpg" },
+    { id: "green", label: "green – أخضر  ", hex: "#008000", image: "assets/images/honor-400-lite-green.jpg" },
+    { id: "gray", label: "grey – رمادي", hex: "#C0C0C0", image: "assets/images/honor-400-lite-gray.jpg" }
   ],
   specs: [
     "شاشة 6.7 بوصة AMOLED",
