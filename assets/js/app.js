@@ -983,7 +983,7 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "Ocean Cyan", label: "Ocean Cyan – أزرق محيطي ", hex: "#00B8D4", image: "assets/images/honor-x9c-smart-jade-green.jpg" },
-    { id: "Moonlight White", label: "Moonlight White – أبيض ", hex: "#F8F8F8", image: "assets/images/honor-x9c-smart-midnight-black.jpg" }
+    { id: "Moonlight White", label: "Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x9c-smart-midnight-black.jpg" }
   ],
   specs: [
     "شاشة 6.8 بوصة TFT LCD",
@@ -1026,13 +1026,13 @@ const PRODUCTS = [
   title: "HONOR X8c",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-x8c.jpg",
+  image: "assets/images/honor-x8c-green.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 149}
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x8c-midnight-black.jpg" },
-    { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/honor-x8c-crystal-blue.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-x8c-black.jpg" },
+    { id: "marrs-green", label: "Marrs Green – أخضر ", hex: "#006400", image: "assets/images/honor-x8c-green.jpg" }
   ],
   specs: [
     "شاشة 6.7 بوصة AMOLED",
@@ -1050,13 +1050,14 @@ const PRODUCTS = [
   title: "HONOR X7d 5G",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-x7d-5g.jpg",
+  image: "assets/images/honor-x7d-5g-black.jpg",
   variants: [
     { id: "256-86", label: "256GB / 8+8 GB RAM", price: 139}
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x7d-5g-midnight-black.jpg" },
-    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-crystal-silver.jpg" }
+    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg" },
+    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-5g-gold.jpg" },
+    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-silver.jpg" }
   ],
   specs: [
     "شاشة 6.77 بوصة TFT LCD",
@@ -1074,13 +1075,14 @@ const PRODUCTS = [
   title: "HONOR X7d 4G",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-x7d-4g.jpg",
+  image: "assets/images/honor-x7d-gold.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 115 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x7d-4g-midnight-black.jpg" },
-    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-x7d-4g-crystal-silver.jpg" }
+    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg" },
+    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-gold.jpg" },
+    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-silver.jpg" }
   ],
   specs: [
     "شاشة 6.77 بوصة IPS LCD",
@@ -1104,8 +1106,9 @@ const PRODUCTS = [
     { id: "256-6", label: "256GB / 6+6 GB RAM", price: 79 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x6c-midnight-black.jpg" },
-    { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/honor-x6c-crystal-blue.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/honor-x6c-black.jpg" },
+    { id: "ocean-cyan", label: "Ocean Cyan – أخضر  ", hex: "#00CED1", image: "assets/images/honor-x6c-green.jpg" },
+    { id: "moonlight-white", label: " Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x6c-white.jpg" }
   ],
   specs: [
     "شاشة 6.61 بوصة IPS LCD",
