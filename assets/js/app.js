@@ -951,13 +951,15 @@ const PRODUCTS = [
   title: "HONOR X9c 5G",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-x9c-5g.jpg",
+  image: "assets/images/honor-x9c-5g-purple.jpeg",
   variants: [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 229 }
   ],
   colors: [
-    { id: "jade-green", label: "Jade Green – أخضر اليشم", hex: "#00A86B", image: "assets/images/honor-x9c-5g-jade-green.jpg" },
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x9c-5g-midnight-black.jpg" }
+    { id: "orange", label: "orange – البرتقالي ", hex: "#FF8C00", image: "assets/images/honor-x9c-5g-orange.jpeg" },
+    { id: "cyan", label: "Jade cyan – أخضر ", hex: "#00FFFF", image: "assets/images/honor-x9c-5g-cyan.png" },
+    { id: "purple", label: "titanium purple –  بنفسجي", hex: "#EE82EE", image: "assets/images/honor-x9c-5g-purple.jpeg" },
+    { id: "midnight-black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/honor-x9c-5g-black.jpeg" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
