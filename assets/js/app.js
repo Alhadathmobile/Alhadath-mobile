@@ -769,7 +769,7 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 239 }
   ],
   colors: [
-    { id: "space-gray", label: "Space Gray – رمادي فضائي", hex: "#7D7D7D", image: "assets/images/honor-pad-10-gray.jpg" }
+    { id: "gray", label: " Gray – رمادي ", hex: "#7D7D7D", image: "assets/images/honor-pad-10-gray.jpg" }
   ],
   specs: [
     "شاشة 12.1 بوصة IPS LCD",
@@ -792,7 +792,7 @@ const PRODUCTS = [
     { id: "128-8", label: "128GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "mystic-silver", label: "Mystic Silver –  فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-lte-gray.webp" }
+    { id: "space-gray", label: " Space Gray –  رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-lte-gray.webp" }
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD",
@@ -815,7 +815,7 @@ const PRODUCTS = [
     { id: "128-6", label: "128GB / 8+8 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "mystic-silver", label: "Mystic Silver – فضي غامض", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-wifi-gray.webp" }
+    { id: "space-gray", label: "Space Gray – رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-wifi-gray.webp" }
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD",
@@ -838,7 +838,7 @@ const PRODUCTS = [
     { id: "128-4", label: "128GB / 4+3 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "gray", label: "gray – رمادي", hex: "#000000", image: "assets/images/honor-pad-x9-lte-gray.webp" },
+    { id: "space-gray", label: "Space-Gray – رمادي", hex: "#000000", image: "assets/images/honor-pad-x9-lte-gray.webp" },
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD",
@@ -861,7 +861,7 @@ const PRODUCTS = [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 109 }
   ],
   colors: [
-    { id: "silver", label: "Silver – فضي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-gray.webp" }
+    { id: "Space-Gray", label: "Space Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-gray.webp" }
   ],
   specs: [
     "شاشة 11 بوصة IPS LCD",
@@ -907,8 +907,8 @@ const PRODUCTS = [
     { id: "512-12", label: "512GB / 12+12 GB RAM", price: 459 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-pro-black.webp" },
-    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-pro-gray.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-pro-black.webp" },
+    { id: "luner-gray", label: " Lunar Gray – رمادي ", hex: "#C0C0C0", image: "assets/images/honor-400-pro-gray.jpg" }
   ],
   specs: [
     "شاشة 6.70 بوصة AMOLED",
@@ -932,8 +932,8 @@ const PRODUCTS = [
     { id: "512-12", label: "512GB / 12+12 GB RAM", price: 299 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-400-black.webp" },
-    { id: "crystal-silver", label: "Crystal Silver – فضي كريستالي", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-black.webp" },
+    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
@@ -956,10 +956,10 @@ const PRODUCTS = [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 229 }
   ],
   colors: [
-    { id: "orange", label: "orange – البرتقالي ", hex: "#FF8C00", image: "assets/images/honor-x9c-5g-orange.jpeg" },
-    { id: "cyan", label: "Jade cyan – أخضر ", hex: "#00FFFF", image: "assets/images/honor-x9c-5g-cyan.png" },
-    { id: "purple", label: "titanium purple –  بنفسجي", hex: "#EE82EE", image: "assets/images/honor-x9c-5g-purple.jpeg" },
-    { id: "midnight-black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/honor-x9c-5g-black.jpeg" }
+    { id: "Orange", label: "Sunrise Orange – البرتقالي ", hex: "#FF8C00", image: "assets/images/honor-x9c-5g-orange.jpeg" },
+    { id: "Cyan", label: "Jade Cyan – أخضر ", hex: "#00FFFF", image: "assets/images/honor-x9c-5g-cyan.png" },
+    { id: "Purple", label: "Titanium Purple –  بنفسجي", hex: "#EE82EE", image: "assets/images/honor-x9c-5g-purple.jpeg" },
+    { id: "Titanium-black", label: "Titanium Black – أسود  ", hex: "#000000", image: "assets/images/honor-x9c-5g-black.jpeg" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
@@ -982,8 +982,8 @@ const PRODUCTS = [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "jade-green", label: "Jade Green – أخضر اليشم", hex: "#00A86B", image: "assets/images/honor-x9c-smart-jade-green.jpg" },
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/honor-x9c-smart-midnight-black.jpg" }
+    { id: "Ocean Cyan", label: "Ocean Cyan – أزرق محيطي ", hex: "#00B8D4", image: "assets/images/honor-x9c-smart-jade-green.jpg" },
+    { id: "Moonlight White", label: "Moonlight White – أبيض ", hex: "#F8F8F8", image: "assets/images/honor-x9c-smart-midnight-black.jpg" }
   ],
   specs: [
     "شاشة 6.8 بوصة TFT LCD",
@@ -1007,8 +1007,8 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-lite-black.jpg" },
-    { id: "green", label: "green – أخضر  ", hex: "#008000", image: "assets/images/honor-400-lite-green.jpg" },
-    { id: "gray", label: "grey – رمادي", hex: "#C0C0C0", image: "assets/images/honor-400-lite-gray.jpg" }
+    { id: "marrs-green", label: "Marrs Green – أخضر  ", hex: "#008000", image: "assets/images/honor-400-lite-green.jpg" },
+    { id: "velvet-gray", label: "Velvet Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-400-lite-gray.jpg" }
   ],
   specs: [
     "شاشة 6.7 بوصة AMOLED",
