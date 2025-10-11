@@ -1100,7 +1100,7 @@ const PRODUCTS = [
   title: "HONOR X6c",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-x6c.jpg",
+  image: "assets/images/honor-x6c-white.jpg",
   variants: [
     { id: "128-6", label: "128GB / 6+6 GB RAM", price: 69 },
     { id: "256-6", label: "256GB / 6+6 GB RAM", price: 79 }
