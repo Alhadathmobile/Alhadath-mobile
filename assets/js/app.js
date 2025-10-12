@@ -977,13 +977,13 @@ const PRODUCTS = [
   title: "HONOR X9c Smart",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-x9c-smart.jpg",
+  image: "assets/images/honor-x9c-smart-white.webp",
   variants: [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "Ocean Cyan", label: "Ocean Cyan – أزرق محيطي ", hex: "#00B8D4", image: "assets/images/honor-x9c-smart-green.jpg" },
-    { id: "Moonlight White", label: "Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x9c-smart-black.jpg" }
+    { id: "Ocean Cyan", label: "Ocean Cyan – أخضر  ", hex: "#008000", image: "assets/images/honor-x9c-smart-green.jpg" },
+    { id: "Moonlight White", label: "Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x9c-smart-white.webp" }
   ],
   specs: [
     "شاشة 6.8 بوصة TFT LCD",
