@@ -959,7 +959,7 @@ const PRODUCTS = [
     { id: "Orange", label: "Sunrise Orange – البرتقالي ", hex: "#FF8C00", image: "assets/images/Honor-x9c-5g-orange.jpeg" },
     { id: "Cyan", label: "Jade Cyan – أخضر ", hex: "#00FFFF", image: "assets/images/honor-x9c-5g-cyan.png" },
     { id: "Purple", label: "Titanium Purple –  بنفسجي", hex: "#EE82EE", image: "assets/images/honor-x9c-5g-purple.jpeg" },
-    { id: "Titanium-black", label: "Titanium Black – أسود  ", hex: "#000000", image: "assets/images/Honor-x9c-5g-black.jpeg" }
+    { id: "Titanium-black", label: "Titanium Black – أسود  ", hex: "#000000", image: "assets/images/honor-x9c-5g-black.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
