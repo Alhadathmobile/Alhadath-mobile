@@ -1126,14 +1126,14 @@ const PRODUCTS = [
   title: "CAMON 40 Pro 5G",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/camon-40-pro-5g.jpg",
+  image: "assets/images/tecno-cammon-40pro-black.webp",
   variants: [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 235 }
   ],
   colors: [
-    { id: "phantom-black", label: "Phantom Black – أسود شبح", hex: "#000000", image: "assets/images/camon-40-pro-5g-phantom-black.jpg" },
-    { id: "sky-blue", label: "Sky Blue – أزرق سماوي", hex: "#87CEEB", image: "assets/images/camon-40-pro-5g-sky-blue.jpg" },
-    { id: "sunrise-gold", label: "Sunrise Gold – ذهبي شروق الشمس", hex: "#FFD700", image: "assets/images/camon-40-pro-5g-sunrise-gold.jpg" }
+    { id: "Glaxy-black", label: "Galaxy Black – أسود ", hex: "#000000", image: "assets/images/tecno-cammon-40pro-black.webp" },
+    { id: "Glacier-White", label: "Glacier White  – أبيض جليدي", hex: "#87CEEB", image: "assets/images/tecno-cammon-40pro-blue.jpg" },
+    { id: "Green", label: " Green – أخضر ", hex: "#2CA58D", image: "assets/images/tecno-cammon-40pro-green.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
@@ -1151,14 +1151,14 @@ const PRODUCTS = [
   title: "CAMON 40 Pro",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/camon-40-pro.jpg",
+  image: "assets/images/tecno-cammon-40pro-4g-white.webp",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "phantom-black", label: "Phantom Black – أسود شبح", hex: "#000000", image: "assets/images/camon-40-pro-phantom-black.jpg" },
-    { id: "sky-blue", label: "Sky Blue – أزرق سماوي", hex: "#87CEEB", image: "assets/images/camon-40-pro-sky-blue.jpg" },
-    { id: "sunrise-gold", label: "Sunrise Gold – ذهبي شروق الشمس", hex: "#FFD700", image: "assets/images/camon-40-pro-sunrise-gold.jpg" }
+    { id: "galaxy-black", label: "Galaxy Black – أسود ", hex: "#000000", image: "assets/images/tecno-cammon-40pro-4g-black.webp" },
+    { id: "glacier-white", label: "Glacier White – أبيض جليدي ", hex: "#87CEEB", image: "assets/images/tecno-cammon-40pro-4g-white.webp" },
+    { id: "green", label: "Sunrise Gold – أخضر ", hex: "#2CA58D", image: "assets/images/tecno-cammon-40pro-4g-green.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
