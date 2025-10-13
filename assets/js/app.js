@@ -956,7 +956,7 @@ const PRODUCTS = [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 229 }
   ],
   colors: [
-    { id: "Orange", label: "Sunrise Orange – البرتقالي ", hex: "#FF8C00", image: "assets/images/Honor-x9c-5g-orange.jpeg" },
+    { id: "Orange", label: "Sunrise Orange – البرتقالي ", hex: "#FF8C00", image: "assets/images/honor-x9c-5g-orange.webp" },
     { id: "Cyan", label: "Jade Cyan – أخضر ", hex: "#00FFFF", image: "assets/images/honor-x9c-5g-cyan.png" },
     { id: "Purple", label: "Titanium Purple –  بنفسجي", hex: "#EE82EE", image: "assets/images/honor-x9c-5g-purple.jpeg" },
     { id: "Titanium-black", label: "Titanium Black – أسود  ", hex: "#000000", image: "assets/images/honor-x9c-5g-black.webp" }
