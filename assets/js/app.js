@@ -1176,13 +1176,13 @@ const PRODUCTS = [
   title: "POVA 7 Ultra 5G",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/pova-7-ultra-5g.jpg",
+  image: "assets/images/tecno-pova7-ultra-black.webp",
   variants: [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 }
   ],
   colors: [
-    { id: "black-magic", label: "Black Magic – أسود ساحر", hex: "#000000", image: "assets/images/pova-7-ultra-5g-black-magic.jpg" },
-    { id: "ice-blue", label: "Ice Blue – أزرق جليدي", hex: "#ADD8E6", image: "assets/images/pova-7-ultra-5g-ice-blue.jpg" }
+    { id: "Geek-White", label: "Geek White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-pova7-ultra-white.webp" },
+    { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-ultra-black.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED",
@@ -1200,13 +1200,14 @@ const PRODUCTS = [
   title: "POVA 7 5G",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/pova-7-5g.jpg",
+  image: "assets/images/tecno-pova7-5g-green.webp",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
   colors: [
-    { id: "black-magic", label: "Black Magic – أسود ساحر", hex: "#000000", image: "assets/images/pova-7-5g-black-magic.jpg" },
-    { id: "ice-blue", label: "Ice Blue – أزرق جليدي", hex: "#ADD8E6", image: "assets/images/pova-7-5g-ice-blue.jpg" }
+    { id: "Geek-Black", label: "Geek Black  – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-5g-black.webp" },
+    { id: "Qasis-Green", label: "Qasis Green – أخضر ", hex: "#228B22", image: "assets/images/tecno-pova7-5g-green.webp" },
+    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-5g-white.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة FHD+",
@@ -1224,13 +1225,14 @@ const PRODUCTS = [
   title: "POVA 7",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/pova-7.jpg",
+  image: "assets/images/tecno-pova7-silver.webp",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 115 }
   ],
   colors: [
-    { id: "black-magic", label: "Black Magic – أسود ساحر", hex: "#000000", image: "assets/images/pova-7-black-magic.jpg" },
-    { id: "ice-blue", label: "Ice Blue – أزرق جليدي", hex: "#ADD8E6", image: "assets/images/pova-7-ice-blue.jpg" }
+    { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-black.webp" },
+    { id: "Hyper-Titanium", label: "Hyper Titanium – رمادي فاتح ", hex: "#808080", image: "assets/images/tecno-pova7-titanium.webp" },
+    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-silver.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة FHD+",
@@ -1248,13 +1250,13 @@ const PRODUCTS = [
   title: "SPARK Slim",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/spark-slim.jpg",
+  image: "assets/images/tecno-slim-blue.png",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 149 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-slim-midnight-black.jpg" },
-    { id: "sky-blue", label: "Sky Blue – أزرق سماوي", hex: "#87CEEB", image: "assets/images/spark-slim-sky-blue.jpg" }
+    { id: "Cool-Black", label: "Cool Black – أسود ", hex: "#000000", image: "assets/images/tecno-slim-black.png" },
+    { id: "Slim-White", label: "Slim White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-slim-blue.png" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
@@ -1272,13 +1274,15 @@ const PRODUCTS = [
   title: "SPARK 40C",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/spark-40c.jpg",
+  image: "assets/images/tecno-spark40c-titanum.webp",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 91 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-40c-midnight-black.jpg" },
-    { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/spark-40c-crystal-blue.jpg" }
+    { id: "Veil-White", label: "Veil White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-spark40c-white.webp" },
+    { id: "Ink-Black", label: "Ink Black – أسود  ", hex: "#000000", image: "assets/images/tecno-spark40c-black.webp" },
+    { id: "Titanium-Grey", label: "Titanium Grey – رمادي  ", hex: "#808080", image: "assets/images/tecno-spark40c-titanum.webp" },
+    { id: "Ripple-Blue", label: "Ripple Blue – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-spark40c-blue.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة Hole Screen",
@@ -1296,13 +1300,13 @@ const PRODUCTS = [
   title: "SPARK 30C 5G",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/spark-30c-5g.jpg",
+  image: "assets/images/tecno-spark30c-blue.webp",
   variants: [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 95 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-30c-5g-midnight-black.jpg" },
-    { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/spark-30c-5g-crystal-blue.jpg" }
+    { id: "Midnight-Black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/tecno-spark30c-black.webp" },
+    { id: "Azure-Sky", label: "Azure Sky – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-spark30c-blue.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة Hole Secreen HD+ ",
@@ -1320,14 +1324,16 @@ const PRODUCTS = [
   title: "SPARK GO 2",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/spark-go-2.jpg",
+  image: "assets/images/tecno-spark-go2-blue.webp",
   variants: [
     { id: "64-3", label: "64GB / 3+3 GB RAM", price: 55 },
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 60 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/spark-go-2-midnight-black.jpg" },
-    { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/spark-go-2-crystal-blue.jpg" }
+    { id: "Veil-White", label: "Veil White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-spark-go2-white.webp" },
+    { id: "Ink-Black", label: "Ink Black – أسود  ", hex: "#000000", image: "assets/images/tecno-spark-go2-black.webp" },
+    { id: "Titanium-Grey", label: "Titanium Grey – رمادي  ", hex: "#808080", image: "assets/images/tecno-spark-go2-titanum.webp" },
+    { id: "Turquois-Green", label: "Turquois Green – أخضر تركوازي ", hex: "#40E0D0", image: "assets/images/tecno-spark-go2-blue.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة Hole Secreen",
