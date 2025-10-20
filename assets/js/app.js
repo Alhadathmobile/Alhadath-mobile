@@ -1225,13 +1225,13 @@ const PRODUCTS = [
   title: "POVA 7",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/tecno-pova7-silver.webp",
+  image: "assets/images/tecno-pova7-gold.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 115 }
   ],
   colors: [
     { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-black.webp" },
-    { id: "Hyper-Titanium", label: "Hyper Titanium – رمادي فاتح ", hex: "#808080", image: "assets/images/tecno-pova7-titanium.webp" },
+    { id: "Hyper-Titanium", label: "Hyper Titanium –  ذهبي ", hex: "#D4AF37", image: "assets/images/tecno-pova7-gold.jpg" },
     { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-silver.webp" }
   ],
   specs: [
