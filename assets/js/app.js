@@ -1207,7 +1207,7 @@ const PRODUCTS = [
   colors: [
     { id: "Geek-Black", label: "Geek Black  – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-5g-black.webp" },
     { id: "Qasis-Green", label: "Qasis Green – أخضر ", hex: "#228B22", image: "assets/images/tecno-pova7-5g-green.webp" },
-    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-5g-white.webp" }
+    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-5g-silver.webp" }
   ],
   specs: [
     "شاشة 6.78 بوصة FHD+",
