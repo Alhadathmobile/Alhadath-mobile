@@ -1300,7 +1300,7 @@ const PRODUCTS = [
   title: "TECNO SPARK 30C 5G",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/tecno-spark30c-blue.webp",
+  image: "assets/images/tecno-spark30c-black.webp",
   variants: [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 95 }
   ],
@@ -1324,7 +1324,7 @@ const PRODUCTS = [
   title: "TECNO SPARK GO 2",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/tecno-spark-go2-blue.webp",
+  image: "assets/images/tecno-go2-green.webp",
   variants: [
     { id: "64-3", label: "64GB / 3+3 GB RAM", price: 55 },
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 60 }
