@@ -42,7 +42,7 @@ const PRODUCTS = [
   title: "Samsung Galaxy A07",
   brand: "Samsung",
   category: "smart",
-  image: "assets/images/a07-green.webp",
+  image: "assets/images/a07-black.jpg",
   variants: [
     { id: "64-4", label: "64GB / 4+4 GB RAM", price: 60 },
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 70 },
@@ -565,7 +565,7 @@ const PRODUCTS = [
   title: "Redmi Pad 2 Wifi",
   brand: "Redmi/MI",
   category: "tablet",
-  image: "assets/images/redmi-pad-2-gray.png",
+  image: "assets/images/redmi-pad-2-mint.jpg",
   variants: [
     { id: "4-128", label: "128GB / 4GB RAM", price: 125 },
     { id: "8-256", label: "256GB / 8GB RAM", price: 159 }
@@ -769,7 +769,7 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 239 }
   ],
   colors: [
-    { id: "gray", label: " Gray – رمادي ", hex: "#7D7D7D", image: "assets/images/honor-pad-10-gray.jpg" }
+    { id: "gray", label: " Gray – رمادي ", hex: "#7D7D7D", image: "assets/images/honor-pad-10-wifi-gray.jpg" }
   ],
   specs: [
     "شاشة 12.1 بوصة IPS LCD",
@@ -1001,7 +1001,7 @@ const PRODUCTS = [
   title: "HONOR 400Lite 5G",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-400-lite-green.jpg",
+  image: "assets/images/honor-400-lite-gray.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
@@ -1123,7 +1123,7 @@ const PRODUCTS = [
 },
   {
   id: "camon-40-pro-5g",
-  title: "CAMON 40 Pro 5G",
+  title: "TECNO CAMON 40 Pro 5G",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-cammon-40pro-black.webp",
@@ -1148,7 +1148,7 @@ const PRODUCTS = [
 },
 {
   id: "camon-40-pro",
-  title: "CAMON 40 Pro",
+  title: "TECNO CAMON 40 Pro",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-cammon-40pro-4g-white.webp",
@@ -1173,7 +1173,7 @@ const PRODUCTS = [
 },
 {
   id: "pova-7-ultra-5g",
-  title: "POVA 7 Ultra 5G",
+  title: "TECNO POVA 7 Ultra 5G",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-pova7-ultra-black.webp",
@@ -1197,10 +1197,10 @@ const PRODUCTS = [
 },
 {
   id: "pova-7-5g",
-  title: "POVA 7 5G",
+  title: "TECNO POVA 7 5G",
   brand: "TECNO",
   category: "smart",
-  image: "assets/images/tecno-pova7-5g-green.webp",
+  image: "assets/images/tecno-pova7-5g-silver.webp",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
@@ -1222,7 +1222,7 @@ const PRODUCTS = [
 },
   {
   id: "pova-7",
-  title: "POVA 7",
+  title: "TECNO POVA 7",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-pova7-gold.jpg",
@@ -1247,7 +1247,7 @@ const PRODUCTS = [
 },
 {
   id: "spark-slim",
-  title: "SPARK Slim",
+  title: "TECNO SPARK Slim",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-slim-blue.png",
@@ -1256,7 +1256,7 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "Cool-Black", label: "Cool Black – أسود ", hex: "#000000", image: "assets/images/tecno-slim-black.png" },
-    { id: "Slim-White", label: "Slim White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-slim-blue.png" }
+    { id: "Slim-Blue", label: "Slim Blue – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-slim-blue.png" }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED",
@@ -1271,7 +1271,7 @@ const PRODUCTS = [
 },
 {
   id: "spark-40c",
-  title: "SPARK 40C",
+  title: "TECNO SPARK 40C",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-spark40c-titanum.webp",
@@ -1297,7 +1297,7 @@ const PRODUCTS = [
 },
 {
   id: "spark-30c-5g",
-  title: "SPARK 30C 5G",
+  title: "TECNO SPARK 30C 5G",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-spark30c-blue.webp",
@@ -1321,7 +1321,7 @@ const PRODUCTS = [
 },
 {
   id: "spark-go-2",
-  title: "SPARK GO 2",
+  title: "TECNO SPARK GO 2",
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-spark-go2-blue.webp",
@@ -1348,7 +1348,7 @@ const PRODUCTS = [
 },
   {
   id: "smart-10",
-  title: "SMART 10",
+  title: "INFINIX SMART 10",
   brand: "Infinix",
   category: "smart",
   image: "assets/images/smart-10.jpg",
