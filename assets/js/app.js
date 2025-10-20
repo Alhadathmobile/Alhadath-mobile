@@ -1306,7 +1306,7 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "Midnight-Black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/tecno-spark30c-black.webp" },
-    { id: "Azure-Sky", label: "Azure Sky – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-spark30c-blue.webp" }
+    { id: "White", label: "White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-spark30c-white.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة Hole Secreen HD+ ",
@@ -1332,7 +1332,7 @@ const PRODUCTS = [
   colors: [
     { id: "Veil-White", label: "Veil White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-spark-go2-white.webp" },
     { id: "Ink-Black", label: "Ink Black – أسود  ", hex: "#000000", image: "assets/images/tecno-spark-go2-black.webp" },
-    { id: "Titanium-Grey", label: "Titanium Grey – رمادي  ", hex: "#808080", image: "assets/images/tecno-spark-go2-titanum.webp" },
+    { id: "Titanium-Grey", label: "Titanium Grey – رمادي  ", hex: "#808080", image: "assets/images/tecno-go2-titanum.webp" },
     { id: "Turquois-Green", label: "Turquois Green – أخضر تركوازي ", hex: "#40E0D0", image: "assets/images/tecno-spark-go2-blue.webp" }
   ],
   specs: [
