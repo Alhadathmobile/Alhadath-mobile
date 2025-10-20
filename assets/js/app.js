@@ -565,13 +565,13 @@ const PRODUCTS = [
   title: "Redmi Pad 2 Wifi",
   brand: "Redmi/MI",
   category: "tablet",
-  image: "assets/images/redmi-pad-2-gray.jpg",
+  image: "assets/images/redmi-pad-2-gray.png",
   variants: [
     { id: "4-128", label: "128GB / 4GB RAM", price: 125 },
     { id: "8-256", label: "256GB / 8GB RAM", price: 159 }
   ],
   colors: [
-    { id: "gray", label: "Graphite Gray (رمادي)", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.webp" },
+    { id: "gray", label: "Graphite Gray (رمادي)", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.png" },
     { id: "green", label: "Mint Green (أخضر)", hex: "#A8E6CF", image: "assets/images/redmi-pad-2-mint.jpg" },
     { id: "purple", label: "Lavender Purple (بنفسجي)", hex: "#9B59B6", image: "assets/images/redmi-pad-2-lavender.webp" }
   ],
