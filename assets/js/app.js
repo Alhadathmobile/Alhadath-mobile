@@ -540,7 +540,7 @@ const PRODUCTS = [
   title: "Redmi A5",
   brand: "Redmi/MI",
   category: "smart",
-  image: "assets/images/redmi-a5-blue.webp",
+  image: "assets/images/redmi-a5-gold.webp",
   variants: [
     { id: "64", label: "64 GB / 3+3 GB RAM", price: 55 },
     { id: "128", label: "128 GB / 4+4 GB RAM", price: 65 }
@@ -1132,7 +1132,7 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "Glaxy-black", label: "Galaxy Black – أسود ", hex: "#000000", image: "assets/images/tecno-cammon-40pro-black.webp" },
-    { id: "Glacier-White", label: "Glacier White  – أبيض جليدي", hex: "#87CEEB", image: "assets/images/tecno-cammon-40pro-blue.jpg" },
+    { id: "Glacier-White", label: "Glacier White  – أبيض ", hex: "#87CEEB", image: "assets/images/tecno-cammon-40pro-blue.jpg" },
     { id: "Green", label: " Green – أخضر ", hex: "#2CA58D", image: "assets/images/tecno-cammon-40pro-green.webp" }
   ],
   specs: [
@@ -1157,7 +1157,7 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "galaxy-black", label: "Galaxy Black – أسود ", hex: "#000000", image: "assets/images/tecno-cammon-40pro-4g-black.webp" },
-    { id: "glacier-white", label: "Glacier White – أبيض جليدي ", hex: "#87CEEB", image: "assets/images/tecno-cammon-40pro-4g-white.webp" },
+    { id: "glacier-white", label: "Glacier White – أبيض  ", hex: "#87CEEB", image: "assets/images/tecno-cammon-40pro-4g-white.webp" },
     { id: "green", label: "Sunrise Gold – أخضر ", hex: "#2CA58D", image: "assets/images/tecno-cammon-40pro-4g-green.webp" }
   ],
   specs: [
@@ -1330,10 +1330,10 @@ const PRODUCTS = [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 60 }
   ],
   colors: [
-    { id: "Veil-White", label: "Veil White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-spark-go2-white.webp" },
+    { id: "Veil-White", label: "Veil White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-go2-white.webp" },
     { id: "Ink-Black", label: "Ink Black – أسود  ", hex: "#000000", image: "assets/images/tecno-spark-go2-black.webp" },
     { id: "Titanium-Grey", label: "Titanium Grey – رمادي  ", hex: "#808080", image: "assets/images/tecno-go2-titanum.webp" },
-    { id: "Turquois-Green", label: "Turquois Green – أخضر تركوازي ", hex: "#40E0D0", image: "assets/images/tecno-spark-go2-blue.webp" }
+    { id: "Turquois-Green", label: "Turquois Green – أخضر تركوازي ", hex: "#40E0D0", image: "assets/images/tecno-go2-green.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة Hole Secreen",
@@ -1351,13 +1351,13 @@ const PRODUCTS = [
   title: "INFINIX SMART 10",
   brand: "Infinix",
   category: "smart",
-  image: "assets/images/smart-10.jpg",
+  image: "assets/images/infinix-smart10-blue.webp",
   variants: [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 65 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود منتصف الليل", hex: "#000000", image: "assets/images/smart-10-midnight-black.jpg" },
-    { id: "crystal-blue", label: "Crystal Blue – أزرق كريستالي", hex: "#1E90FF", image: "assets/images/smart-10-crystal-blue.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/infinix-smart10-black.webp" },
+    { id: "crystal-blue", label: "Crystal Blue – أزرق ", hex: "#1E90FF", image: "assets/images/infinix-smart10-blue.webp" }
   ],
   specs: [
     "شاشة 6.67 بوصة IPS LCD",
