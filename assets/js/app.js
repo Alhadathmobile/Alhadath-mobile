@@ -1372,42 +1372,64 @@ const PRODUCTS = [
 },
 {
   id: "samsung-original-adapter",
-  title: "Samsung Original Adapter – محول سامسونج أصلي",
+  title: "Samsung Original Adapter – أدابتر سامسونج أصلي",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/samsung-original-adapter.jpg",
   variants: [
-    { id: "usb-c", label: "USB-C", price: 20 },
-    { id: "usb-a", label: "USB-A", price: 18 }
+    { id: "power-adapter-25W", label: "Power Adapter 25W", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-original-adapter-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-original-adapter-white.jpg" },
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-original-adapter-black.jpg" }
   ],
   specs: [
-    "نوع المحول: USB-C / USB-A",
-    "دعم الشحن السريع: نعم",
+    "كفالة 6 أشهر ",
+    "نوع المحول: Power Adapter",
+    "دعم الشحن السريع: 25Wنعم",
     "التوافق: أجهزة سامسونج الحديثة",
-    "الأداء: ممتاز – شحن سريع وآمن"
+    "25W الأداء: ممتاز – شحن سريع وآمن"
+  ],
+},
+  {
+  id: "samsung-original-adapter",
+  title: "Samsung Original USB-C – شاحن سامسونج أصلي",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/samsung-original-adapter.jpg",
+  variants: [
+    { id: "usb-c-25W", label: "USB-C 25W", price: 19 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-original-adapter-white.jpg" },
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-original-adapter-black.jpg" }
+  ],
+  specs: [
+    "كفالة 6 أشهر ",
+    "نوع المحول: USB-C",
+    "دعم الشحن السريع: 25Wنعم",
+    "التوافق: أجهزة سامسونج الحديثة",
+    "25W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
 {
   id: "apple-original-adapter",
-  title: "Apple Original Adapter – محول آبل أصلي",
+  title: "Apple Original Adapter – أدابتر آبل أصلي",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/apple-original-adapter.jpg",
   variants: [
-    { id: "usb-c-20w", label: "USB-C 20W", price: 30 },
-    { id: "usb-c-30w", label: "USB-C 30W", price: 45 }
+    { id: "usb-c-20w", label: "USB-C 20W", price: 29 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/apple-original-adapter-white.jpg" }
   ],
   specs: [
+    "كفالة 12 شهر ",
     "نوع المحول: USB-C Power Adapter",
-    "دعم الشحن السريع: نعم، حتى 30W",
+    "دعم الشحن السريع: نعم 20W",
     "التوافق: أجهزة iPhone و iPad الحديثة",
-    "الأداء: ممتاز – شحن سريع وآمن"
+    "20W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
   {
@@ -1417,19 +1439,18 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/golf-original-charger.jpg",
   variants: [
-    { id: "18w", label: "18W Fast Charging", price: 20 },
-    { id: "30w", label: "30W Fast Charging", price: 30 },
-    { id: "45w", label: "45W Super Fast Charging", price: 45 }
+    { id: "20w-samsung", label: "20w Fast Charging Samsung", price: 15 },
+    { id: "20w-iphone", label: "20w Fast Charging Iphone", price: 15 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-charger-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/golf-original-charger-black.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-charger-white.jpg" }
   ],
   specs: [
-    "نوع الشاحن: USB-C / USB-A",
-    "دعم الشحن السريع: نعم حتى 45W",
+    "كفالة 12 شهر ",
+    "نوع الشاحن: USB-C",
+    "دعم الشحن السريع: نعم حتى 20W",
     "التوافق: الهواتف الذكية الحديثة",
-    "الأداء: ممتاز – شحن سريع وآمن"
+    "20W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
 {
@@ -1439,12 +1460,10 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/golf-original-cable.jpg",
   variants: [
-    { id: "1m", label: "1 Meter", price: 10 },
-    { id: "2m", label: "2 Meter", price: 15 }
+    { id: "1m", label: "1 Meter", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-cable-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/golf-original-cable-black.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-cable-white.jpg" }
   ],
   specs: [
     "نوع الكابل: USB-C / USB-A",
