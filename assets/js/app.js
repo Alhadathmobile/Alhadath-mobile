@@ -82,7 +82,7 @@ const PRODUCTS = [
   ],
   specs: [
     "شاشة 6.7 بوصة Super AMOLED، دقة FHD+، معدل تحديث 90Hz",
-    "المعالج: Exynos 1330",
+    "المعالج: Helio G99",
     "الكاميرا الخلفية: ثلاثية 50MP + 5MP + 2MP",
     "الكاميرا الأمامية: 13MP",
     "البطارية: 5000mAh، شحن سريع 25W",
@@ -132,7 +132,7 @@ const PRODUCTS = [
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
-      "المعالج: Exynos 1280",
+      "المعالج: Exynos 1380",
       "الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 2MP ماكرو",
       "الكاميرا الأمامية: 13MP",
       "البطارية: 5000mAh مع شحن سريع 25W",
@@ -160,7 +160,7 @@ const PRODUCTS = [
       "المعالج: Snapdragon 6 Gen 3",
       "الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 5MP ماكرو",
       "الكاميرا الأمامية: 12MP",
-      "البطارية: 5000mAh مع شحن سريع 25W",
+      "البطارية: 5000mAh مع شحن سريع 45W",
       "النظام: Android 14 + One UI",
       "الأداء: ممتاز للتصفح والألعاب المتوسطة"
     ]
@@ -209,7 +209,7 @@ const PRODUCTS = [
       "المعالج: Snapdragon 8 Elite",
       "الكاميرا الخلفية: 200MP رئيسية + Ultra-wide + Telephoto (تكبير بصري حتى 5x)",
       "الكاميرا الأمامية: 12MP",
-      "البطارية: 5000mAh مع شحن سريع 45W + شحن لاسلكي",
+      "البطارية: 5000mAh مع شحن سريع 45W",
       "النظام: Android 15 + One UI",
       "الأداء: فائق القوة للتصوير والألعاب والمهام الاحترافية"
     ]
@@ -228,8 +228,8 @@ const PRODUCTS = [
     { id: "silver-shadow", label: "Silver Shadow (فضي)", hex: "#C0C0C0", image: "assets/images/z-fold-7-silver.webp" }
     ],
   specs: [
-    "شاشة رئيسية 8.0 بوصة Dynamic AMOLED 2X، دقة 1968×2184، معدل تحديث 120Hz",
-    "شاشة ثانوية 6.5 بوصة Dynamic AMOLED 2X، دقة 1080×2326، معدل تحديث 120Hz",
+    "شاشة رئيسية 8.0 بوصة Dynamic AMOLED 2X، دقة 1856×2160، معدل تحديث 120Hz",
+    "شاشة ثانوية 6.5 بوصة Dynamic AMOLED 2X، دقة 1080×2520، معدل تحديث 120Hz",
     "المعالج: Qualcomm Snapdragon 8 Elite for Galaxy",
     "الكاميرا الخلفية: 200MP + 12MP + 10MP",
     "الكاميرا الأمامية: 10MP",
@@ -253,11 +253,11 @@ const PRODUCTS = [
   ],
   specs: [
     "شاشة رئيسية 6.9 بوصة Dynamic AMOLED 2X، دقة 1080×2520، معدل تحديث 120Hz",
-    "شاشة ثانوية 4.1 بوصة Super AMOLED، دقة 720×748",
-    "المعالج: Qualcomm Snapdragon 8 Gen 3",
+    "شاشة ثانوية 4.1 بوصة Super AMOLED، دقة 1048×948",
+    "المعالج:  Exynos 2500",
     "الكاميرا الخلفية: 50MP + 12MP",
     "الكاميرا الأمامية: 10MP",
-    "البطارية: 3700mAh، شحن سريع 25W، شحن لاسلكي 15W، شحن عكسي 4.5W",
+    "البطارية: 4300mAh، شحن سريع 25W، شحن لاسلكي 15W، شحن عكسي 4.5W",
     "النظام: Android 16 + One UI 8"
   ],
   badge: "وصل حديثًا"
@@ -281,9 +281,9 @@ const PRODUCTS = [
    specs: [
      "الشاشة: 6.9 بوصة QHD+ Super Retina XDR OLED، 120Hz ProMotion",
     "المعالج: Apple A18 Pro",
-    "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide 12MP + Telephoto 12MP (تكبير بصري حتى 5x)",
+    "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide 12MP + Telephoto 48MP (تكبير بصري حتى 5x)",
     "الكاميرا الأمامية: 12MP TrueDepth",
-    "البطارية: 4500mAh تقريبًا مع شحن سريع 30W + شحن لاسلكي MagSafe",
+    "البطارية: 4685mAh تقريبًا مع شحن سريع 30W + شحن لاسلكي MagSafe",
     "النظام: iOS 18",
     "الأداء: فائق القوة للتصوير، الألعاب، والمهام الاحترافية"
     ]
@@ -310,7 +310,7 @@ const PRODUCTS = [
     "المعالج: Apple A19 Pro",
     "الكاميرا الخلفية: ثلاثية 48MP",
     "الكاميرا الأمامية: 18MP",
-    "البطارية: حوالي 5000mAh، شحن سريع 40W",
+    "البطارية:  4832mAh، شحن سريع 40W",
     "الشحن اللاسلكي: MagSafe و Qi2",
     "مقاومة الماء/الغبار: IP68",
     "النظام: iOS 26"
@@ -333,11 +333,11 @@ const PRODUCTS = [
     { id: "blue", label: "Mist Blue (أزرق)", hex: "#215EBC", image: "assets/images/17-blue.jpg" }
   ],
   specs: [
-    "شاشة 6.1 بوصة Super Retina XDR OLED، 120Hz",
-    "المعالج: Apple A18",
+    "شاشة 6.3 بوصة Super Retina XDR OLED، 120Hz",
+    "المعالج: Apple A19",
     "الكاميرا الخلفية: مزدوجة 48MP",
-    "الكاميرا الأمامية: 12MP",
-    "البطارية: حوالي 3500mAh، شحن سريع 25W",
+    "الكاميرا الأمامية: 18MP",
+    "البطارية:  3692mAh، شحن سريع 25W",
     "مقاومة الماء/الغبار: IP68",
     "النظام: iOS 26"
   ]
@@ -363,7 +363,7 @@ const PRODUCTS = [
     "المعالج: Apple A19 Pro",
     "الكاميرا الخلفية: ثلاثية 48MP",
     "الكاميرا الأمامية: 18MP",
-    "البطارية: حوالي 4300mAh، شحن سريع 30W",
+    "البطارية:  3988mAh، شحن سريع 30W",
     "مقاومة الماء/الغبار: IP68",
     "النظام: iOS 26"
   ]
@@ -384,11 +384,11 @@ const PRODUCTS = [
     { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg"  }
   ],
    specs: [
-    "الشاشة: 6.7 بوصة ProMotion OLED، 120Hz",
+    "الشاشة: 6.3 بوصة ProMotion OLED، 120Hz",
     "المعالج: Apple A18 Pro",
     "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide 12MP + Telephoto 12MP",
     "الكاميرا الأمامية: 12MP TrueDepth",
-    "البطارية: حوالي 4400mAh مع شحن سريع + MagSafe",
+    "البطارية:  3582mAh مع شحن سريع + MagSafe",
     "النظام: iOS 18",
     "الأداء: مثالي للتصوير، الإنتاجية، المهام الثقيلة"
   ]
@@ -411,7 +411,7 @@ const PRODUCTS = [
     "المعالج: Apple A18",
     "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide",
     "الكاميرا الأمامية: 12MP TrueDepth",
-    "البطارية: حوالي 3200-3500mAh مع شحن سريع",
+    "البطارية: 3561mAh مع شحن سريع",
     "النظام: iOS 18",
     "الأداء: ممتاز لتطبيقات اليومية، كاميرا متقدّمة، تجربة ممتازة"
   ]
@@ -431,10 +431,10 @@ const PRODUCTS = [
    
   specs: [
     "الشاشة: 6.1 بوصة OLED، 60-120Hz",
-    "المعالج: Apple A17",
+    "المعالج: Apple Bionic A16",
     "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide",
-    "الكاميرا الأمامية: 12MP TrueDepth",
-    "البطارية: حوالي 3300-3500mAh مع شحن سريع",
+    "الكاميرا الأمامية: 48MP TrueDepth",
+    "البطارية: 3349mAh مع شحن سريع",
     "النظام: iOS 17",
     "الأداء: جيد للتطبيقات، كاميرا قوية، تجربة محسّنة عن الأجيال السابقة"
   ]
@@ -452,10 +452,10 @@ const PRODUCTS = [
   ],
   specs: [
     "الشاشة: 6.1 بوصة OLED، 60Hz",
-    "المعالج: Apple A16",
+    "المعالج: Apple Bionic A15",
     "الكاميرا الخلفية: 48MP رئيسية + Ultra Wide",
     "الكاميرا الأمامية: 12MP TrueDepth",
-    "البطارية: حوالي 3279-3300mAh مع شحن سريع",
+    "البطارية: 3279mAh مع شحن سريع",
     "النظام: iOS 16",
     "الأداء: مناسب للتطبيقات اليومية، تصوير جيد، شاشة ملوّنة ونقية"
   ]
@@ -479,7 +479,7 @@ const PRODUCTS = [
     "الشاشة: 6.1 بوصة Super Retina XDR OLED بدقة 2532×1170 بكسل",
     "المعالج: Apple A15 Bionic سداسي النواة",
     "الكاميرا الخلفية: مزدوجة 12MP (واسعة + فائقة الاتساع)",
-    "الكاميرا الأمامية: 12MP TrueDepth",
+    "الكاميرا الأمامية: 12+12MP TrueDepth",
     "النظام: iOS 15 (قابل للتحديث حتى iOS 18)",
     "البطارية: 3240mAh تدعم شحن سريع 20W و MagSafe",
     "مقاومة الماء/الغبار: IP68",
@@ -526,11 +526,11 @@ const PRODUCTS = [
     { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.webp" },
   ],
   specs: [
-    "شاشة 6.6 بوصة AMOLED، 90Hz",
-    "المعالج: MediaTek Helio G99",
-    "الكاميرا الخلفية: مزدوجة 50MP + 2MP",
-    "الكاميرا الأمامية: 13MP",
-    "البطارية: حوالي 5000mAh، شحن سريع 18W",
+    "شاشة 6.67 بوصة AMOLED، 120Hz",
+    "المعالج: MediaTek Ultra G99",
+    "الكاميرا الخلفية: مزدوجة 108+MP 2MP + 2MP",
+    "الكاميرا الأمامية: 20MP",
+    "البطارية: حوالي 5500mAh، شحن سريع 18W",
     "النظام: Android 14 + MIUI 16",
     "الأداء: جيد – مناسب للتصفح والاستخدام اليومي"
   ]
@@ -568,7 +568,7 @@ const PRODUCTS = [
   image: "assets/images/redmi-pad-2-mint.jpg",
   variants: [
     { id: "4-128", label: "128GB / 4GB RAM", price: 125 },
-    { id: "8-256", label: "256GB / 8GB RAM", price: 159 }
+    { id: "8-256", label: "256GB / 8GB RAM", price: 169 }
   ],
   colors: [
     { id: "gray", label: "Graphite Gray (رمادي)", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.png" },
@@ -620,7 +620,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/redmi-note-14-pro-black.webp",
   variants: [
-    { id: "512-12", label: "512GB / 12+8 GB RAM", price: 245 }
+    { id: "256-12", label: "256GB / 12+8 GB RAM", price: 245 }
   ],
   colors: [
     { id: "coral-green", label: "Coral Green (أخضر)", hex: "#2E8B57", image: "assets/images/redmi-note-14-5g-green.webp" },
@@ -630,8 +630,8 @@ const PRODUCTS = [
     "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
     "المعالج: MediaTek Dimensity 7300 Ultra",
     "الكاميرا الخلفية: 200MP + 8MP + 2MP",
-    "الكاميرا الأمامية: 16MP",
-    "البطارية: 5110mAh، شحن سريع 67W",
+    "الكاميرا الأمامية: 20MP",
+    "البطارية: 5110mAh، شحن سريع 45W",
     "النظام: Android 14 + MIUI 16",
     "مقاومة الماء والغبار: IP68",
     "الأداء: ممتاز – مناسب للتطبيقات والألعاب والاستخدام اليومي"
@@ -644,7 +644,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/note-14-pro-5g-plus-black.webp",
   variants: [
-    { id: "256-12", label: "256GB / 12+8 GB RAM", price: 345 }
+    { id: "512-12", label: "512GB / 12+8 GB RAM", price: 345 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/note-14-pro-5g-plus-black.webp" },
@@ -655,7 +655,7 @@ const PRODUCTS = [
     "المعالج: Snapdragon 7s Gen 3",
     "الكاميرا الخلفية: 200MP + 8MP + 2MP (OIS)",
     "الكاميرا الأمامية: 16MP",
-    "البطارية: 5000mAh، شحن سريع 120W HyperCharge",
+    "البطارية: 5110mAh، شحن سريع 120W HyperCharge",
     "النظام: Android 14 + MIUI 16",
     "مقاومة الماء والغبار: IP68",
    "الأداء: ممتاز – سلس للتطبيقات والألعاب والاستخدام اليومي"
@@ -678,7 +678,7 @@ const PRODUCTS = [
     { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.webp" }
   ],
   specs: [
-    "شاشة 6.79 بوصة IPS LCD، معدل تحديث 120Hz",
+    "شاشة 6.9 بوصة IPS LCD، معدل تحديث 120Hz",
     "المعالج: MediaTek Helio G81 Ultra",
     "الكاميرا الخلفية: 50MP + 2MP",
     "الكاميرا الأمامية: 8MP",
@@ -701,11 +701,11 @@ const PRODUCTS = [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/redmi-15-black.jpg" }
   ],
   specs: [
-    "شاشة 6.67 بوصة AMOLED، معدل تحديث 120Hz",
-    "المعالج: Snapdragon 7s Gen 2",
-    "الكاميرا الخلفية: 64MP + 8MP + 2MP",
-    "الكاميرا الأمامية: 16MP",
-    "البطارية: 5000mAh، شحن سريع 33W",
+    "شاشة 6.9 بوصة AMOLED، معدل تحديث 144Hz",
+    "المعالج: Snapdragon 685 ",
+    "الكاميرا الخلفية: 8MP + 8MP + 2MP",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 7000mAh، شحن سريع 33W",
     "النظام: Android 14 + MIUI 16",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ]
@@ -726,7 +726,7 @@ const PRODUCTS = [
   specs: [
     "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
     "المعالج: Snapdragon 7s Gen 2",
-    "الكاميرا الخلفية: 13MP",
+    "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 10000mAh، شحن سريع 33W",
     "النظام: Android 14 + MIUI Pad",
@@ -749,7 +749,7 @@ const PRODUCTS = [
   specs: [
     "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
     "المعالج: Snapdragon 7s Gen 2 مع دعم 5G",
-    "الكاميرا الخلفية: 13MP",
+    "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 10000mAh، شحن سريع 33W",
     "النظام: Android 14 + MIUI Pad",
@@ -772,7 +772,7 @@ const PRODUCTS = [
     { id: "gray", label: " Gray – رمادي ", hex: "#7D7D7D", image: "assets/images/honor-pad-10-wifi-gray.jpg" }
   ],
   specs: [
-    "شاشة 12.1 بوصة IPS LCD",
+    "شاشة 12.1 بوصة IPS LCD 120Hz",
     "المعالج: Snapdragon 7 Gen3",
     "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 8MP",
@@ -795,8 +795,8 @@ const PRODUCTS = [
     { id: "space-gray", label: " Space Gray –  رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-lte-gray.webp" }
   ],
   specs: [
-    "شاشة 11.5 بوصة IPS LCD",
-    "المعالج: Qualcomm 685",
+    "شاشة 11.5 بوصة IPS LCD 120Hz",
+    "المعالج: Snapdragon 685",
     "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 5MP",
     "البطارية: 8300mAh",
@@ -818,8 +818,8 @@ const PRODUCTS = [
     { id: "space-gray", label: "Space Gray – رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-wifi-gray.webp" }
   ],
   specs: [
-    "شاشة 11.5 بوصة IPS LCD",
-    "المعالج: Qualcomm 685",
+    "شاشة 11.5 بوصة IPS LCD 120Hz",
+    "المعالج: Snapdragon 685",
     "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 5MP",
     "البطارية: 8300mAh",
@@ -841,8 +841,8 @@ const PRODUCTS = [
     { id: "space-gray", label: "Space-Gray – رمادي", hex: "#000000", image: "assets/images/honor-pad-x9-lte-gray.webp" },
   ],
   specs: [
-    "شاشة 11.5 بوصة IPS LCD",
-    "المعالج: Snapdragon 680",
+    "شاشة 11.5 بوصة IPS LCD 120Hz",
+    "المعالج: Snapdragon 685",
     "الكاميرا الخلفية: 5MP",
     "الكاميرا الأمامية: 5MP",
     "البطارية: 7250mAh",
@@ -864,7 +864,7 @@ const PRODUCTS = [
     { id: "Space-Gray", label: "Space Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-gray.webp" }
   ],
   specs: [
-    "شاشة 11 بوصة IPS LCD",
+    "شاشة 11 بوصة IPS LCD 90Hz",
     "المعالج: Snapdragon 680",
     "الكاميرا الخلفية: 5MP",
     "الكاميرا الأمامية: 5MP",
@@ -887,7 +887,7 @@ const PRODUCTS = [
     { id: "Gray", label: "Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x7-gray.webp" }
   ],
   specs: [
-    "شاشة 8.7 بوصة IPS LCD",
+    "شاشة 8.7 بوصة IPS LCD 90Hz",
     "المعالج: Snapdragon 680",
     "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 5MP",
@@ -911,9 +911,9 @@ const PRODUCTS = [
     { id: "luner-gray", label: " Lunar Gray – رمادي ", hex: "#C0C0C0", image: "assets/images/honor-400-pro-gray.jpg" }
   ],
   specs: [
-    "شاشة 6.70 بوصة AMOLED",
+    "شاشة 6.70 بوصة AMOLED 120Hz",
     "المعالج: Snapdragon 8 Gen3",
-    "الكاميرا الخلفية: 200MP + 12MP + 2MP",
+    "الكاميرا الخلفية: 200MP + 50MP + 12MP",
     "الكاميرا الأمامية: 50MP",
     "البطارية: 6000mAh",
     "الشحن: 100W",
@@ -936,12 +936,12 @@ const PRODUCTS = [
     { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED",
+    "شاشة 6.55 بوصة AMOLED",
     "المعالج: Snapdragon 7 Gen3",
     "الكاميرا الخلفية: 200MP + 12MP + 2MP",
     "الكاميرا الأمامية: 50MP",
     "البطارية: 6000mAh",
-    "الشحن: 66W",
+    "الشحن: 80W",
     "النظام: MagicOS (Android)",
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
   ],
@@ -962,7 +962,7 @@ const PRODUCTS = [
     { id: "Titanium-black", label: "Titanium Black – أسود  ", hex: "#000000", image: "assets/images/honor-x9c-5g-black.webp" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED",
+    "شاشة 6.78 بوصة AMOLED 120Hz",
     "المعالج: Snapdragon 6 Gen1",
     "الكاميرا الخلفية: 108MP + 5MP",
     "الكاميرا الأمامية: 16MP",
@@ -986,7 +986,7 @@ const PRODUCTS = [
     { id: "Moonlight White", label: "Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x9c-smart-white.webp" }
   ],
   specs: [
-    "شاشة 6.8 بوصة TFT LCD",
+    "شاشة 6.8 بوصة TFT LCD 120Hz",
     "المعالج: MediaTek 7025 Ultra",
     "108 :الكاميرا الخلفية MP + 5MP",
     "الكاميرا الأمامية: 16MP",
@@ -1011,9 +1011,9 @@ const PRODUCTS = [
     { id: "velvet-gray", label: "Velvet Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-400-lite-gray.jpg" }
   ],
   specs: [
-    "شاشة 6.7 بوصة AMOLED",
+    "شاشة 6.7 بوصة AMOLED 120Hz",
     "المعالج: MediaTek 7025 ",
-    "الكاميرا الخلفية: 108MP + 2MP",
+    "الكاميرا الخلفية: 108MP + 5MP",
     "الكاميرا الأمامية: 16MP",
     "البطارية: 5230mAh",
     "الشحن: 35W",
@@ -1035,7 +1035,7 @@ const PRODUCTS = [
     { id: "marrs-green", label: "Marrs Green – أخضر ", hex: "#006400", image: "assets/images/honor-x8c-green.jpg" }
   ],
   specs: [
-    "شاشة 6.7 بوصة AMOLED",
+    "شاشة 6.7 بوصة AMOLED 120Hz",
     "المعالج: Snapdragon 685 4G",
     "الكاميرا الخلفية: 108MP + 5MP",
     "الكاميرا الأمامية: 50MP",
@@ -1060,7 +1060,7 @@ const PRODUCTS = [
     { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-silver.jpg" }
   ],
   specs: [
-    "شاشة 6.77 بوصة TFT LCD",
+    "شاشة 6.77 بوصة TFT LCD 120Hz",
     "المعالج: Snapdragon 6s Gen3",
     "الكاميرا الخلفية: 50MP + 2MP",
     "الكاميرا الأمامية: 5MP",
@@ -1085,10 +1085,10 @@ const PRODUCTS = [
     { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-silver.jpg" }
   ],
   specs: [
-    "شاشة 6.77 بوصة IPS LCD",
+    "شاشة 6.77 بوصة TFT Lcd 120Hz",
     "المعالج: Snapdragon 685 4G",
     "الكاميرا الخلفية: 108MP + 5MP",
-    "الكاميرا الأمامية: 8MP",
+    "الكاميرا الأمامية: 2MP",
     "البطارية: 6500mAh",
     "الشحن: 35W",
     "النظام: MagicOS (Android)",
@@ -1111,8 +1111,8 @@ const PRODUCTS = [
     { id: "moonlight-white", label: " Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x6c-white.jpg" }
   ],
   specs: [
-    "شاشة 6.61 بوصة IPS LCD",
-    "المعالج: MediaTek Helio G81",
+    "شاشة 6.61 بوصة IPS LCD 120Hz",
+    "المعالج: MediaTek Helio G81 Ultra",
     "الكاميرا الخلفية: 50MP",
     "الكاميرا الأمامية: 5MP",
     "البطارية: 5300mAh",
@@ -1136,7 +1136,7 @@ const PRODUCTS = [
     { id: "Green", label: " Green – أخضر ", hex: "#2CA58D", image: "assets/images/tecno-cammon-40pro-green.webp" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED",
+    "شاشة 6.78 بوصة AMOLED 144Hz",
     "المعالج: MediaTek Dimensity 7300",
     "الكاميرا الخلفية: 50MP + 8MP",
     "الكاميرا الأمامية: 50MP",
@@ -1161,13 +1161,13 @@ const PRODUCTS = [
     { id: "green", label: "Sunrise Gold – أخضر ", hex: "#2CA58D", image: "assets/images/tecno-cammon-40pro-4g-green.webp" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED",
+    "شاشة 6.78 بوصة AMOLED 120Hz",
     "المعالج: MediaTek Helio G100",
     "الكاميرا الخلفية: 50MP + 8MP",
     "الكاميرا الأمامية: 50MP",
     "البطارية: 5200mAh",
     "الشحن: 45W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 15 HIOS",
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة"
   ],
 },
@@ -1185,13 +1185,13 @@ const PRODUCTS = [
     { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-ultra-black.webp" }
   ],
   specs: [
-    "شاشة 6.67 بوصة AMOLED",
-    "المعالج: MediaTek Dimensity 6100+",
+    "شاشة 6.67 بوصة AMOLED 144Hz",
+    "المعالج: MediaTek Dimensity 8350",
     "الكاميرا الخلفية: 108MP + 8MP",
     "الكاميرا الأمامية: 13MP",
     "البطارية: 6000mAh",
     "الشحن: 70W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 15 HIOS",
     "الأداء: قوي – ممتاز للتصفح والألعاب الخفيفة والمتوسطة"
   ],
 },
@@ -1210,13 +1210,13 @@ const PRODUCTS = [
     { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-5g-silver.webp" }
   ],
   specs: [
-    "شاشة 6.78 بوصة FHD+",
+    "شاشة 6.78 بوصة FHD+ 144Hz",
     "المعالج: MediaTek Dimensity 7300+",
     "الكاميرا الخلفية: 50MP + 2MP",
     "الكاميرا الأمامية: 13MP",
     "البطارية: 6000mAh",
     "الشحن: 45W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 15 HIOS",
     "الأداء: متوسط – مناسب للتصفح والألعاب الخفيفة"
   ],
 },
@@ -1235,13 +1235,13 @@ const PRODUCTS = [
     { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-silver.webp" }
   ],
   specs: [
-    "شاشة 6.78 بوصة FHD+",
+    "شاشة 6.78 بوصة FHD+ 120Hz",
     "المعالج: MediaTek Helio G100",
     "الكاميرا الخلفية: 50MP + 2MP",
     "الكاميرا الأمامية: 13MP",
-    "البطارية: 5200mAh",
+    "البطارية: 7000mAh",
     "الشحن: 45W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 15 HIOS",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
 },
@@ -1259,13 +1259,13 @@ const PRODUCTS = [
     { id: "Slim-Blue", label: "Slim Blue – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-slim-blue.png" }
   ],
   specs: [
-    "شاشة 6.78 بوصة AMOLED",
+    "شاشة 6.78 بوصة AMOLED 144Hz",
     "المعالج: MediaTek Helio G200",
     "الكاميرا الخلفية: 50MP + 2MP",
     "الكاميرا الأمامية: 13MP",
-    "البطارية: 5200mAh",
+    "البطارية: 5160mAh",
     "الشحن: 45W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 15 HIOS",
     "الأداء: متوسط – مناسب للاستخدام اليومي والالعاب المتوسطة"
   ],
 },
@@ -1285,13 +1285,13 @@ const PRODUCTS = [
     { id: "Ripple-Blue", label: "Ripple Blue – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-spark40c-blue.webp" }
   ],
   specs: [
-    "شاشة 6.67 بوصة Hole Screen",
+    "شاشة 6.67 بوصة Hole Screen 120Hz",
     "المعالج: MediaTek Helio G81",
-    "الكاميرا الخلفية: 13MP + 2MP",
+    "الكاميرا الخلفية: 13MP  ",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 6000mAh",
     "الشحن: 18W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 15 HIOS",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
 },
@@ -1309,13 +1309,13 @@ const PRODUCTS = [
     { id: "White", label: "White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-spark30c-white.webp" }
   ],
   specs: [
-    "شاشة 6.67 بوصة Hole Secreen HD+ ",
+    "شاشة 6.67 بوصة IPS LCD 120Hz ",
     "المعالج: MediaTek Dimensity 6300 ",
     "الكاميرا الخلفية: 48MP + 2MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 5000mAh",
     "الشحن: 18W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 14 HIOS",
     "الأداء: متوسط – مناسب للتصفح والألعاب الخفيفة"
   ],
 },
@@ -1327,7 +1327,7 @@ const PRODUCTS = [
   image: "assets/images/tecno-go2-green.webp",
   variants: [
     { id: "64-3", label: "64GB / 3+3 GB RAM", price: 55 },
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 60 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 65 }
   ],
   colors: [
     { id: "Veil-White", label: "Veil White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-go2-white.webp" },
@@ -1336,13 +1336,13 @@ const PRODUCTS = [
     { id: "Turquois-Green", label: "Turquois Green – أخضر تركوازي ", hex: "#40E0D0", image: "assets/images/tecno-go2-green.webp" }
   ],
   specs: [
-    "شاشة 6.67 بوصة Hole Secreen",
-    "المعالج: Octa-Core Processor",
+    "شاشة 6.67 بوصة IPS LCD 120Hz",
+    "المعالج: Unisoc t7250",
     "الكاميرا الخلفية: 13MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 5000mAh",
     "الشحن: 15W",
-    "النظام: Android 13 HIOS",
+    "النظام: Android 15 HIOS",
     "الأداء: ضعيف – مناسب للاستخدام الخفيف والتصفح فقط"
   ],
 },
@@ -1360,13 +1360,13 @@ const PRODUCTS = [
     { id: "crystal-blue", label: "Crystal Blue – أزرق ", hex: "#1E90FF", image: "assets/images/infinix-smart10-blue.webp" }
   ],
   specs: [
-    "شاشة 6.67 بوصة IPS LCD",
+    "شاشة 6.67 بوصة IPS LCD 120Hz",
     "المعالج: Unisoc T7250",
     "الكاميرا الخلفية: 8MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 5000mAh",
     "الشحن: 15W",
-    "النظام: Android 13 XOS",
+    "النظام: Android 15 XOS",
     "الأداء: متوسط – مناسب للاستخدام الخفيف والتصفح"
   ],
 },
