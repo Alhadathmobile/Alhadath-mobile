@@ -1396,13 +1396,13 @@ const PRODUCTS = [
   title: "Samsung Original USB-C – شاحن سامسونج أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/samsung-original-adapter.jpg",
+  image: "assets/images/samsung-charger-full-black1.webp",
   variants: [
     { id: "usb-c-25W", label: "USB-C 25W", price: 19 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-original-adapter-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-original-adapter-black.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-charger-full-white1.webp" },
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-full-black.webp" }
   ],
   specs: [
     "كفالة 6 أشهر ",
