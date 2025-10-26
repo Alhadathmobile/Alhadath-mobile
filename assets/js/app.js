@@ -1380,7 +1380,7 @@ const PRODUCTS = [
     { id: "power-adapter-25W", label: "Power Adapter 25W", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-charger-25w-white.jpg" },
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/Samsung-charger-25w-white.jpg" },
     { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-25w-black.jpg" }
   ],
   specs: [
