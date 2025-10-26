@@ -1375,13 +1375,13 @@ const PRODUCTS = [
   title: "Samsung Original Adapter – أدابتر سامسونج أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/samsung-original-adapter.jpg",
+  image: "assets/images/samsung-charger-25w-b.jpg",
   variants: [
     { id: "power-adapter-25W", label: "Power Adapter 25W", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-original-adapter-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-original-adapter-black.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-charger-25w-white.jpg" },
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-25w-black.jpg" }
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1417,12 +1417,12 @@ const PRODUCTS = [
   title: "Apple Original Adapter – أدابتر آبل أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/apple-original-adapter.jpg",
+  image: "assets/images/Iphone-adapter-20w.webp",
   variants: [
     { id: "usb-c-20w", label: "USB-C 20W", price: 29 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/apple-original-adapter-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
