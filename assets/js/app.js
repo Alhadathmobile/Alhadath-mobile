@@ -1392,7 +1392,7 @@ const PRODUCTS = [
   ],
 },
   {
-  id: "samsung-original-adapter",
+  id: "samsung-original-charge",
   title: "Samsung Original USB-C – شاحن سامسونج أصلي",
   brand: "Accessories",
   category: "smart",
