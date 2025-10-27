@@ -1433,14 +1433,33 @@ const PRODUCTS = [
   ],
 },
   {
-  id: "golf-original-charger",
-  title: "Golf Original Charger – شاحن جولف أصلي",
+  id: "jellico-original-charger-Lightning-White",
+  title: "Jellico Original Charger Lightning White– شاحن جيليكو أصلي أيفون",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/golf-original-charger.jpg",
   variants: [
-    { id: "20w-samsung", label: "20w Fast Charging Samsung", price: 15 },
-    { id: "20w-iphone", label: "20w Fast Charging Iphone", price: 15 }
+    { id: "lightining-20w", label: "20w Fast Charging Samsung", price: 15 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-charger-white.jpg" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "نوع الشاحن: USB-C",
+    "دعم الشحن السريع: نعم حتى 20W",
+    "التوافق: الهواتف الذكية الحديثة",
+    "20W الأداء: ممتاز – شحن سريع وآمن"
+  ],
+},
+  {
+  id: "jellico-original-charger-usb-c-usb-c",
+  title: "Jellico Original Charger usb-c to usb-c – شاحن جيليكو أصلي تايب سي",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/golf-original-charger.jpg",
+  variants: [
+    { id: "usb-c-20w", label: "20w Fast Charging Samsung", price: 15 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-charger-white.jpg" }
