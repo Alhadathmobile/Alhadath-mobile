@@ -1457,12 +1457,12 @@ const PRODUCTS = [
   title: "Jellico Original Charger usb-c to usb-c – شاحن جيليكو أصلي تايب سي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/golf-original-charger.jpg",
+  image: "assets/images/charger-20w-jellico-usb-c-to-usb-c1.webp",
   variants: [
     { id: "usb-c-20w", label: "20w Fast Charging Samsung", price: 15 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-charger-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-usb-c-to-usb-c.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
