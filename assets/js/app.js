@@ -1377,7 +1377,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/samsung-charger-25w-b.jpg",
   variants: [
-    { id: "power-adapter-25W", label: "Power Adapter 25W", price: 12 }
+    { id: "samsung-adapter-25W", label: "Power Adapter 25W", price: 12 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/Samsung-charger-25w-white.jpg" },
@@ -1385,7 +1385,6 @@ const PRODUCTS = [
   ],
   specs: [
     "كفالة 6 أشهر ",
-    "نوع المحول: Power Adapter",
     "دعم الشحن السريع: 25Wنعم",
     "التوافق: أجهزة سامسونج الحديثة",
     "25W الأداء: ممتاز – شحن سريع وآمن"
@@ -1398,7 +1397,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/samsung-charger-full-black1.webp",
   variants: [
-    { id: "usb-c-25W", label: "USB-C 25W", price: 19 }
+    { id: "samsung-charger-c-25W", label: "USB-C 25W", price: 19 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-charger-full-white1.webp" },
@@ -1406,7 +1405,6 @@ const PRODUCTS = [
   ],
   specs: [
     "كفالة 6 أشهر ",
-    "نوع المحول: USB-C",
     "دعم الشحن السريع: 25Wنعم",
     "التوافق: أجهزة سامسونج الحديثة",
     "25W الأداء: ممتاز – شحن سريع وآمن"
@@ -1419,22 +1417,21 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/Iphone-adapter-20w.webp",
   variants: [
-    { id: "usb-c-20w", label: "USB-C 20W", price: 29 }
+    { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
-    "نوع المحول: USB-C Power Adapter",
     "دعم الشحن السريع: نعم 20W",
     "التوافق: أجهزة iPhone و iPad الحديثة",
     "20W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
   {
-  id: "jellico-original-charger-Lightning-White",
-  title: "Jellico Original Charger Lightning White– شاحن جيليكو أصلي أيفون",
+  id: "jellico-original-charger-AK-180-C-TO-L",
+  title: "Jellico Lightning – شاحن جيليكو أصلي أيفون",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/charger-20w-jellico-lightning.webp",
@@ -1446,91 +1443,190 @@ const PRODUCTS = [
   ],
   specs: [
     "كفالة 12 شهر ",
-    "نوع الشاحن: USB-C",
     "دعم الشحن السريع: نعم حتى 20W",
-    "التوافق: الهواتف الذكية الحديثة",
+    "التوافق: أجهزة iPhone و iPad الحديثة",
     "20W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
   {
-  id: "jellico-original-charger-usb-c-usb-c",
-  title: "Jellico Original Charger usb-c to usb-c – شاحن جيليكو أصلي تايب سي",
+  id: "jellico-original-charger-AK-180-C-TO-C",
+  title: "Jellico Original Charger C TO C– شاحن جيليكو أصلي تايب سي",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/charger-20w-jellico-usb-c-to-usb-c1.webp",
   variants: [
-    { id: "usb-c-20w", label: "20w Fast Charging Samsung", price: 15 }
+    { id: "usb-c-20w", label: "20w Fast Charging ", price: 15 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-usb-c-to-usb-c.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
-    "نوع الشاحن: USB-C",
     "دعم الشحن السريع: نعم حتى 20W",
-    "التوافق: الهواتف الذكية الحديثة",
+    " التوافق: الهواتف الذكية الحديثة",
     "20W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
 {
-  id: "golf-original-cable",
-  title: "Golf Original Cable – كابل جولف أصلي",
+  id: "golf-original-cable-GC-119i",
+  title: "Golf Original Cable GC-119i – كابل جولف أصلي",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/golf-original-cable.jpg",
   variants: [
-    { id: "1m", label: "1 Meter", price: 10 }
+    { id: "golf-original-cable-GC-119i", label: "cable lightning", price: 10 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-cable-white.jpg" }
   ],
   specs: [
-    "نوع الكابل: USB-C / USB-A",
-    "دعم الشحن السريع",
-    "طول الكابل: 1 متر / 2 متر",
+    "كفالة 12 شهر ",
+    "نوع الكابل: type-C to Lightning ",
+    "20W 3A Fast Charging:دعم الشحن السريع",
+    "طول الكابل: 1 متر /100 cm ",
+    "Material: Real Silicone + Fabric Braided",
+    "الأداء: ممتاز – شحن ونقل بيانات سريع"
+  ],
+},
+  {
+  id: "golf-original-cable-GC-119",
+  title: "Golf Original Cable GC-119 – كابل جولف أصلي",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/golf-original-cable.jpg",
+  variants: [
+    { id: "golf-original-cable-GC-119", label: "cable type-c", price: 10 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-cable-white.jpg" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "نوع الكابل: type-C to type-C",
+    "65W 5A Fast Charging:دعم الشحن السريع",
+    "طول الكابل: 1 متر / 100 cm ",
+    "Material: Real Silicone + Fabric Braided",
     "الأداء: ممتاز – شحن ونقل بيانات سريع"
   ],
 },
 {
-  id: "glico-original-charger",
-  title: "Glico Original Charger – شاحن جليكو أصلي",
+  id: "yookie-original-charger-PC18",
+  title: "Yookie Original Charger PC18",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/glico-original-charger.jpg",
   variants: [
-    { id: "18w", label: "18W Fast Charging", price: 20 },
-    { id: "30w", label: "30W Fast Charging", price: 35 }
+    { id: "yookie-original-charger-PC18", label: "48W Fast Charging", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-charger-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/glico-original-charger-black.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-charger-white.jpg" }
   ],
   specs: [
-    "نوع الشاحن: USB-C",
-    "دعم الشحن السريع: نعم حتى 30W",
+    "كفالة 6 أشهر ",
+    "دعم الشحن السريع: A+C 30W+18W FAST CAR CHARGER ",
     "التوافق: الهواتف الذكية الحديثة",
     "الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
 {
-  id: "glico-original-cable",
-  title: "Glico Original Cable – كابل جليكو أصلي",
+  id: "golf-original-cable-GC-81P",
+  title: "Golf Original Cable GC-81P – كابل جولف أصلي",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/glico-original-cable.jpg",
   variants: [
-    { id: "1m", label: "1 Meter", price: 10 },
-    { id: "2m", label: "2 Meter", price: 15 }
+    { id: "golf-original-cable-GC-81P", label: "cable iPhone ", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-cable-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/glico-original-cable-black.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-cable-white.jpg" }
   ],
   specs: [
-    "نوع الكابل: USB-C",
-    "دعم الشحن السريع",
-    "طول الكابل: 1 متر / 2 متر",
+    "كفالة 12 شهر ",
+    "نوع الكابل: type-C to Lightning ",
+    "20W Fast Charging :دعم الشحن السريع",
+    "طول الكابل: 1 متر / 100 cm",
+    "Material:TPE",
     "الأداء: ممتاز – شحن ونقل بيانات سريع"
+  ],
+},
+  {
+  id: "golf-original-cable-GC-77",
+  title: "Golf Original Cable GC-77 – كابل جولف أصلي ",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/glico-original-cable.jpg",
+  variants: [
+    { id: "golf-original-cable-GC-77", label: "cable type-c", price: 5 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-cable-white.jpg" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "نوع الكابل: Type-C Smart Phones",
+    "5A Fast Charging :دعم الشحن السريع",
+    "طول الكابل: 1 متر / 100 cm",
+    "Material:PVC",
+    "الأداء: ممتاز – شحن ونقل بيانات سريع"
+  ],
+},
+  {
+  id: "golf-original-cable-GC-79",
+  title: "Golf Original Cable GC-79 – كابل جولف أصلي أيفون",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/glico-original-cable.jpg",
+  variants: [
+    { id: "golf-original-cable-GC-79", label: "cable iPhone", price: 5 }
+  ],
+  colors: [
+    { id: "Green", label: "Green – أخضر", hex: "#008000", image: "assets/images/glico-original-cable-white.jpg" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "نوع الكابل: usb cable lightning",
+    "3A Fast Charging :دعم الشحن السريع",
+    "طول الكابل: 1 متر / 100 cm",
+    "Material:Liquid Silicone",
+    "الأداء: ممتاز – شحن ونقل بيانات سريع"
+  ],
+},
+  {
+  id: "jellico-original-cable-A1",
+  title: "Jellico Lightning A1 – كابل جيليكو أصلي أيفون",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/charger-20w-jellico-lightning.webp",
+  variants: [
+    { id: "jellico-original-cable-A1", label: "3.1A Fast Charging iPhone", price: 5 }
+  ],
+  colors: [
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/charger-20w-jellico-lightning1.webp" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "3.1 A Fast Charging :دعم الشحن السريع",
+    "التوافق: أجهزة iPhone و iPad الحديثة",
+    " الأداء: ممتاز – شحن ونقل بيانات سريع"
+  ],
+},
+    {
+  id: "jellico-original-cable-A1",
+  title: "Jellico Lightning A1 – كابل جيليكو أصلي ",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/charger-20w-jellico-lightning.webp",
+  variants: [
+    { id: "Samsung-3.1A", label: "3.1A Fast Charging Samsung", price: 5 }
+  ],
+  colors: [
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/charger-20w-jellico-lightning1.webp" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "3.1 A Fast Charging :دعم الشحن السريع",
+    "التوافق: أجهزة Samsung & iPhone الحديثة",
+    "الأداء: ممتاز – شحن ونقل بيانات سريع "
   ],
 },
   {
