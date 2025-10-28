@@ -1415,7 +1415,7 @@ const PRODUCTS = [
   title: "Apple Original Adapter – أدابتر آبل أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/Iphone-adapter-20w.webp",
+  image: "assets/images/iphone-adapter.webp",
   variants: [
     { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
   ],
@@ -1650,7 +1650,7 @@ const PRODUCTS = [
 },
     {
   id: "jellico-original-cable-A1",
-  title: "Jellico Lightning A1 – كابل جيليكو أصلي ",
+  title: "Jellico Type-c A1 – كابل جيليكو أصلي ",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/jellico-A1-type-c.webp",
