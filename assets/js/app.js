@@ -1467,6 +1467,25 @@ const PRODUCTS = [
     "20W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
+  {
+  id: "jellico-original-adapter-AK180",
+  title: "Jellico Original Adapter – أدابتر جيليكو أصلي",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/Iphone-adapter-20w.webp",
+  variants: [
+    { id: "jellico-original-adapter-AK180", label: "adapter-C 20W", price: 10 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "دعم الشحن السريع: نعم 20W",
+    "التوافق: أجهزة iPhone و iPad الحديثة",
+    "20W الأداء: ممتاز – شحن سريع وآمن"
+  ],
+},
 {
   id: "golf-original-cable-GC-119i",
   title: "Golf Original Cable GC-119i – كابل جولف أصلي",
