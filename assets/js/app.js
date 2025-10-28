@@ -1453,12 +1453,12 @@ const PRODUCTS = [
   title: "Jellico Original Charger C TO C– شاحن جيليكو أصلي تايب سي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/charger-20w-jellico-usb-c-to-usb-c1.webp",
+  image: "assets/images/charger-20w-jellico-usb-c-to-usb-c.webp",
   variants: [
     { id: "usb-c-20w", label: "20w Fast Charging ", price: 15 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-usb-c-to-usb-c.webp" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-usb-c-to-usb-c1.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
