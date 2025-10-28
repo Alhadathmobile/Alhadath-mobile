@@ -1472,12 +1472,12 @@ const PRODUCTS = [
   title: "Golf Original Cable GC-119i – كابل جولف أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/golf-original-cable.jpg",
+  image: "assets/images/golf-GC-119i.jpg",
   variants: [
     { id: "golf-original-cable-GC-119i", label: "cable lightning", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-cable-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-119i.jpg" }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1493,12 +1493,12 @@ const PRODUCTS = [
   title: "Golf Original Cable GC-119 – كابل جولف أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/golf-original-cable.jpg",
+  image: "assets/images/golf-GC-119.jpg",
   variants: [
     { id: "golf-original-cable-GC-119", label: "cable type-c", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-original-cable-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-119.jpg" }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1514,12 +1514,12 @@ const PRODUCTS = [
   title: "Yookie Original Charger PC18 to type-c",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-original-charger.jpg",
+  image: "assets/images/charger-yookie-pc18.jpg",
   variants: [
     { id: "yookie-original-charger-PC18", label: "48W Fast Charging type-c", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-charger-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-yookie-pc18.jpg" }
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1533,12 +1533,12 @@ const PRODUCTS = [
   title: "Yookie Original Charger PC18 to iPhone",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-original-charger.jpg",
+  image: "assets/images/charger-yookie-pc18-ip.jpg",
   variants: [
     { id: "yookie-original-charger-PC18", label: "48W Fast Charging iPhone", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-charger-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-yookie-pc18-ip.jpg" }
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1552,12 +1552,12 @@ const PRODUCTS = [
   title: "Golf Original Cable GC-81P – كابل جولف أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-original-cable.jpg",
+  image: "assets/images/golf-GC-81P.jpg",
   variants: [
     { id: "golf-original-cable-GC-81P", label: "cable iPhone ", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-cable-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-81P.jpg" }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1573,12 +1573,12 @@ const PRODUCTS = [
   title: "Golf Original Cable GC-77 – كابل جولف أصلي ",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-original-cable.jpg",
+  image: "assets/images/golf-GC-77.jpg",
   variants: [
     { id: "golf-original-cable-GC-77", label: "cable type-c", price: 5 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-cable-white.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-77.jpg" }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1594,12 +1594,12 @@ const PRODUCTS = [
   title: "Golf Original Cable GC-79 – كابل جولف أصلي أيفون",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-original-cable.jpg",
+  image: "assets/images/golf-GC-79.jpg",
   variants: [
     { id: "golf-original-cable-GC-79", label: "cable iPhone", price: 5 }
   ],
   colors: [
-    { id: "Green", label: "Green – أخضر", hex: "#008000", image: "assets/images/glico-original-cable-white.jpg" }
+    { id: "Green", label: "Green – أخضر", hex: "#008000", image: "assets/images/golf-GC-79.jpg" }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1615,12 +1615,12 @@ const PRODUCTS = [
   title: "Jellico Lightning A1 – كابل جيليكو أصلي أيفون",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/charger-20w-jellico-lightning.webp",
+  image: "assets/images/jellico-A1-ip.webp",
   variants: [
     { id: "jellico-original-cable-A1", label: "3.1A Fast Charging iPhone", price: 5 }
   ],
   colors: [
-    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/charger-20w-jellico-lightning1.webp" }
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-ip.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1634,12 +1634,12 @@ const PRODUCTS = [
   title: "Jellico Lightning A1 – كابل جيليكو أصلي ",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/charger-20w-jellico-lightning.webp",
+  image: "assets/images/jellico-A1-type-c.webp",
   variants: [
     { id: "Samsung-3.1A", label: "3.1A Fast Charging Samsung", price: 5 }
   ],
   colors: [
-    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/charger-20w-jellico-lightning1.webp" }
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-type-c.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
