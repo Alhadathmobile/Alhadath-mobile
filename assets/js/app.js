@@ -1472,12 +1472,12 @@ const PRODUCTS = [
   title: "Jellico Original Adapter – أدابتر جيليكو أصلي",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/Iphone-adapter-20w.webp",
+  image: "assets/images/jellico-AK180-adapter.webp",
   variants: [
     { id: "jellico-original-adapter-AK180", label: "adapter-C 20W", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/jellico-AK180-adapter.webp" }
   ],
   specs: [
     "كفالة 12 شهر ",
