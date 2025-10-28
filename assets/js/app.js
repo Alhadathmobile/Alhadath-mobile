@@ -1510,13 +1510,32 @@ const PRODUCTS = [
   ],
 },
 {
-  id: "yookie-original-charger-PC18",
-  title: "Yookie Original Charger PC18",
+  id: "yookie-original-charger-PC18-type-c",
+  title: "Yookie Original Charger PC18 to type-c",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/glico-original-charger.jpg",
   variants: [
-    { id: "yookie-original-charger-PC18", label: "48W Fast Charging", price: 10 }
+    { id: "yookie-original-charger-PC18", label: "48W Fast Charging type-c", price: 10 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-charger-white.jpg" }
+  ],
+  specs: [
+    "كفالة 6 أشهر ",
+    "دعم الشحن السريع: A+C 30W+18W FAST CAR CHARGER ",
+    "التوافق: الهواتف الذكية الحديثة",
+    "الأداء: ممتاز – شحن سريع وآمن"
+  ],
+},
+  {
+  id: "yookie-original-charger-PC18-iPhone",
+  title: "Yookie Original Charger PC18 to iPhone",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/glico-original-charger.jpg",
+  variants: [
+    { id: "yookie-original-charger-PC18", label: "48W Fast Charging iPhone", price: 10 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-original-charger-white.jpg" }
