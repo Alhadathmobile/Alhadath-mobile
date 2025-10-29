@@ -7,7 +7,7 @@ const ORDER_ENDPOINT = "https://alhadath-order.ahmad2120omar.workers.dev/orders"
 const TELEGRAM_BOT_TOKEN = "";
 const TELEGRAM_CHAT_ID = "";
 
-const BRANDS = ["Samsung","iPhone","Redmi/MI","TECNO","Infinix","HONOR","Accessories"];
+const BRANDS = ["Samsung","iPhone","Redmi/MI","TECNO","Huawei","Infinix","HONOR","Accessories"];
 
 /* ================= PRODUCTS ================= */
 const PRODUCTS = [
