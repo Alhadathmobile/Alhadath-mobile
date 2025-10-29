@@ -1752,8 +1752,8 @@ const PRODUCTS = [
   ],
 },
    {
-  id: "h-matepad-11.5-b10100",
-  title: "Huawei MatePad 11.5 b10100",
+  id: "h-matepad-11.5",
+  title: "Huawei MatePad 11.5",
   brand: "Huawei",
   category: "tablet",
   image: "assets/images/matepad115-gray.jpeg",
