@@ -1772,8 +1772,15 @@ const PRODUCTS = [
     "النظام: HarmonyOS 4",
     "الصوت: 4 سماعات ستيريو بتقنية Histen 8.1",
     "الاستخدام: ممتاز للدراسة، الترفيه، مشاهدة الفيديوهات، وتعدد المهام"
+    ],
+    gifts: {
+  physical: [
+    "قلم Huawei M-Pencil (الجيل الثاني)",
+    "غطاء لوحة مفاتيح مغناطيسي (Keyboard Cover)"
   ],
 },
+  },  
+    
   {
   id: "h-matepad-se11-6ram-128",
   title: "Huawei MatePad SE 11 6/128",
