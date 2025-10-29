@@ -23,7 +23,7 @@ const PRODUCTS = [
     ],
     colors: [
     { id:"black", label:"Black (أسود)",  hex:"#0f172a", image:"assets/images/a06-black.jpeg"  },
-    { id:"blue",  label:"Light Blue(أزرق فاتح)",  hex:"#EOFFFF", image:"assets/images/a06-blue.jpeg"  },
+    { id:"blue",  label:"Light Blue(أزرق فاتح)",  hex:"#E0FFFF", image:"assets/images/a06-blue.jpeg"  },
     { id:"gold",  label:"Gold (ذهبي)",  hex:"#c08f3f", image:"assets/images/a06-gold.jpeg"  }
   ],
 
@@ -1751,6 +1751,83 @@ const PRODUCTS = [
     "الأداء: ممتاز – باور بانك صغير محمول وسهل الاستخدام للشحن السريع أثناء التنقل"
   ],
 },
+   {
+  id: "h-matepad-11.5-b10100",
+  title: "Huawei MatePad 11.5 b10100″",
+  brand: "Huawei",
+  category: "tablet",
+  image: "assets/images/matepad115-gray.jpeg",
+  variants: [
+    { id: "256-8",  label: "256GB / 8GB RAM", price: 279 }
+  ],
+  colors: [
+    { id: "gray",  label: "Space Gray (رمادي فضائي)", hex: "#8a8d91", image: "assets/images/matepad115-gray.jpeg" }
+  ],
+  specs: [
+    "شاشة: 11.5 بوصة TFT LCD بدقة 2K (120Hz)",
+    "المعالج:  Kirin 820",
+    "الكاميرا الخلفية: 13MP",
+    "الكاميرا الأمامية: 8MP بزاوية واسعة",
+    "البطارية: 10100mAh مع شحن سريع40 W",
+    "النظام: HarmonyOS 4",
+    "الصوت: 4 سماعات ستيريو بتقنية Histen 8.1",
+    "الاستخدام: ممتاز للدراسة، الترفيه، مشاهدة الفيديوهات، وتعدد المهام"
+  ]
+},
+  {
+  id: "h-matepad-se11-6ram-128",
+  title: "Huawei MatePad SE 11″ 6/128",
+  brand: "Huawei",
+  category: "tablet",
+  image: "assets/images/matepadSE11-gray.jpeg",
+  variants: [
+    { id: "128-6",  label: "128GB / 6GB RAM",  price: 119 }
+  ],
+  colors: [
+    { id:"gray",  label:" Gray (رمادي )", hex:"#4a4a4a",   image:"assets/images/matepadSE11-gray.jpeg" }
+  ],
+  specs: [
+    "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 pixel",  
+    "المعالج: ‎HiSilicon Kirin 710A ثُماني النوى", 
+    "الكاميرا الخلفية: ‎8 MP، f/2.0 ", 
+    "الكاميرا الأمامية: ‎5 MP، f/2.2", 
+    "الصوت: 4 سماعات ستيريو، صوت مخصص بتقنية HUAWEI Histen", 
+    "البطارية: ‎7700 mAh ، مع شحن سلكي سريع حتى ‎30 W ", 
+    "النظام: ‎HarmonyOS 2.0",
+    " مناسب للدراسة والتعلم الإلكتروني"
+
+  ]
+},
+  {
+  id: "h-matepad-se11-8ram",
+  title: "Huawei MatePad SE 11″ 8/128",
+  brand: "Huawei",
+  category: "tablet",
+  image: "assets/images/matepadSE11-gray.jpeg",
+  variants: [
+    { id: "128-8",  label: "128GB / 8GB RAM",  price: 139 }
+  ],
+  colors: [
+    { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/matepadSE11-gray.jpeg" },
+    { id:"crystal_blue", label:"Crystal Blue (أزرق بلّوري)",    hex:"#6ca9e2",   image:"assets/images/matepadSE11-blue.jpeg" }
+  ],
+  specs: [
+    "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 بكسل، نسبة شاشة إلى جسم ≈ 85% ‎، سطوع ~400 nits", 
+    "الأبعاد / الوزن: ‎252.3 × 163.8 × 6.9 مم، الوزن ≈ 475 غرام", 
+    "المعالج: ‎HiSilicon Kirin 710A ثُماني النوى", 
+    "الكاميرا الخلفية: ‎8 MP، f/2.0 مع التركيز التلقائي (Auto Focus)", 
+    "الكاميرا الأمامية: ‎5 MP، f/2.2", 
+    "الصوت: 4 سماعات ستيريو، صوت مخصص بتقنية HUAWEI Histen", 
+    "البطارية: ‎7700 mAh ، مع شحن سلكي سريع حتى ‎30 W ", 
+    "النظام: ‎HarmonyOS 2.0", 
+    "✅ مناسب جدًا للدراسة والتعلم الإلكتروني بفضل شاشة 11 بوصة 2K تدعم تعدد النوافذ.",
+    "✅ يدعم تعدد المهام Multi-Window لتشغيل تطبيقين في نفس الوقت.",
+    "✅ مزود بوضع الأطفال Kids Corner لمحتوى آمن ومراقبة الاستخدام.",
+    "✅ مناسب جدًا للدراسة والتعلم الإلكتروني"
+  ]
+},
+
+ 
   
 ];
 /* ============== Image Fallback Helpers ============== */
