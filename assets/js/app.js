@@ -1672,14 +1672,12 @@ const PRODUCTS = [
   title: "Glico Powerbank 10000mAh – باور بانك جليكو 10000مللي أمبير",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-powerbank-10000.jpg",
+  image: "assets/images/jellco-p28.jpg",
   variants: [
-    { id: "10000-white", label: "10000mAh White – أبيض", price: 35 },
-    { id: "10000-black", label: "10000mAh Black – أسود", price: 35 }
+    { id: "10000-black", label: "10000mAh Black – أسود", price: 15 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-powerbank-10000-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/glico-powerbank-10000-black.jpg" }
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellco-p28.jpg" }
   ],
   specs: [
     "القدرة: 10000mAh",
@@ -1693,62 +1691,38 @@ const PRODUCTS = [
   title: "Glico Powerbank 20000mAh – باور بانك جليكو 20000مللي أمبير",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-powerbank-20000.jpg",
+  image: "assets/images/Jellico-p29.jpg",
   variants: [
-    { id: "20000-white", label: "20000mAh White – أبيض", price: 60 },
-    { id: "20000-black", label: "20000mAh Black – أسود", price: 60 }
+    { id: "20000-black", label: "20000mAh Black – أسود", price: 25 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-powerbank-20000-white.jpg" },
     { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/glico-powerbank-20000-black.jpg" }
   ],
   specs: [
     "القدرة: 20000mAh",
     "عدد المنافذ: 2 منافذ USB / 1 USB-C",
     "دعم الشحن السريع: نعم",
-    "الأداء: ممتاز – شحن آمن وسريع للهواتف والأجهزة اللوحية والأجهزة الكبيرة"
-  ],
-},
-{
-  id: "glico-powerbank-30000",
-  title: "Glico Powerbank 30000mAh – باور بانك جليكو 30000مللي أمبير",
-  brand: "Accessories",
-  category: "smart",
-  image: "assets/images/glico-powerbank-30000.jpg",
-  variants: [
-    { id: "30000-black", label: "30000mAh Black – أسود", price: 90 },
-    { id: "30000-gray", label: "30000mAh Gray – رمادي", price: 90 }
-  ],
-  colors: [
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/glico-powerbank-30000-black.jpg" },
-    { id: "gray", label: "Gray – رمادي", hex: "#808080", image: "assets/images/glico-powerbank-30000-gray.jpg" }
-  ],
-  specs: [
-    "القدرة: 30000mAh",
-    "عدد المنافذ: 3 منافذ USB / 2 USB-C",
-    "دعم الشحن السريع: نعم",
     "الأداء: ممتاز – شحن طويل المدى للهواتف والأجهزة اللوحية والأجهزة الكبيرة"
   ],
 },
 {
-  id: "glico-powerbank-compact",
-  title: "Glico Powerbank Compact 5000mAh – باور بانك جليكو صغير 5000مللي أمبير",
+  id: "glico-powerbank-10000-zp1",
+  title: "Glico Powerbank 10000mAh – باور بانك جليكو 10000مللي أمبير",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/glico-powerbank-compact.jpg",
+  image: "assets/images/jellico-zp1.jpg",
   variants: [
-    { id: "5000-white", label: "5000mAh White – أبيض", price: 25 },
-    { id: "5000-black", label: "5000mAh Black – أسود", price: 25 }
+    { id: "10000-Beige", label: "10000mAh Beige – كريمي", price: 15 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/glico-powerbank-compact-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/glico-powerbank-compact-black.jpg" }
+    { id: "Beige", label: "Beige – كريمي", hex: "#F5F5DC", image: "assets/images/jellico-zp1.jpg" }
   ],
   specs: [
-    "القدرة: 5000mAh",
-    "عدد المنافذ: 1 منفذ USB / 1 USB-C",
+    "القدرة: 10000mAh",
+    "عدد المنافذ: 1 منافذ USB / 1 USB-C",
+    "يحتوي على منافذ داخلية عدد 2",
     "دعم الشحن السريع: نعم",
-    "الأداء: ممتاز – باور بانك صغير محمول وسهل الاستخدام للشحن السريع أثناء التنقل"
+    "الأداء: ممتاز – شحن آمن وسريع للهواتف والأجهزة الحديثة"
   ],
 },
   {
