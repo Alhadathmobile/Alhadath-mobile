@@ -1630,7 +1630,7 @@ const PRODUCTS = [
   ],
 },
   {
-  id: "jellico-original-cable-A1",
+  id: "jellico-original-cable-A1-ip",
   title: "Jellico Lightning A1 – كابل جيليكو أصلي أيفون",
   brand: "Accessories",
   category: "smart",
@@ -1649,7 +1649,7 @@ const PRODUCTS = [
   ],
 },
     {
-  id: "jellico-original-cable-A1",
+  id: "jellico-original-cable-A1-type-c",
   title: "Jellico Type-c A1 – كابل جيليكو أصلي ",
   brand: "Accessories",
   category: "smart",
