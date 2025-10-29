@@ -1756,12 +1756,12 @@ const PRODUCTS = [
   title: "Huawei MatePad 11.5",
   brand: "Huawei",
   category: "tablet",
-  image: "assets/images/matepad115-gray.jpeg",
+  image: "assets/images/mate-pad-11.5-jpg",
   variants: [
     { id: "256-8", label: "256GB / 8GB RAM", price: 279 }
   ],
   colors: [
-    { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/matepad115-gray.jpeg" }
+    { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/mate-pad-11.5-jpg" }
   ],
   specs: [
     "شاشة: 11.5 بوصة TFT LCD بدقة 2K (120Hz)",
@@ -1786,12 +1786,12 @@ const PRODUCTS = [
   title: "Huawei MatePad SE 11 6/128",
   brand: "Huawei",
   category: "tablet",
-  image: "assets/images/matepadSE11-gray.jpeg",
+  image: "assets/images/mate-pad-11.jpg",
   variants: [
     { id: "128-6",  label: "128GB / 6GB RAM",  price: 119 }
   ],
   colors: [
-    { id:"gray",  label:" Gray (رمادي )", hex:"#4a4a4a",   image:"assets/images/matepadSE11-gray.jpeg" }
+    { id:"gray",  label:" Gray (رمادي )", hex:"#4a4a4a",   image:"assets/images/mate-pad-11.jpg" }
   ],
   specs: [
     "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 pixel",  
@@ -1810,13 +1810,12 @@ const PRODUCTS = [
   title: "Huawei MatePad SE 11″ 8/128",
   brand: "Huawei",
   category: "tablet",
-  image: "assets/images/matepadSE11-gray.jpeg",
+  image: "assets/images/mate-pad-11-pin.webp",
   variants: [
     { id: "128-8",  label: "128GB / 8GB RAM",  price: 139 }
   ],
   colors: [
-    { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/matepadSE11-gray.jpeg" },
-    { id:"crystal_blue", label:"Crystal Blue (أزرق بلّوري)",    hex:"#6ca9e2",   image:"assets/images/matepadSE11-blue.jpeg" }
+    { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp" },
   ],
   specs: [
     "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 بكسل، نسبة شاشة إلى جسم ≈ 85% ‎، سطوع ~400 nits", 
