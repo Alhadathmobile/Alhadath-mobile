@@ -2035,8 +2035,8 @@ function cardTemplate(p){
   // المواصفات (3 أولى ظاهرة) — class="more" للباقي
   let specsHTML = "";
   if (Array.isArray(p.specs) && p.specs.length) {
-    const first3 = p.specs.slice(0, 3);
-    const rest   = p.specs.slice(3);
+    const first3 = p.specs.slice(0, 1);
+    const rest   = p.specs.slice(1);
 
     specsHTML  = `<ul class="card__specs" data-collapsed="true">`
                + first3.map(s => `<li>${s}</li>`).join("");
