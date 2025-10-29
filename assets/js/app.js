@@ -1672,14 +1672,15 @@ const PRODUCTS = [
   title: "Jellico Power Bank 10000mAh – باور بانك جيليكو 10000مللي أمبير",
   brand: "Accessories",
   category: "smart",
-  image: "assets/images/jellco-p28.jpg",
+  image: "assets/images/jellico-p28.jpg",
   variants: [
     { id: "10000-black", label: "10000mAh Black – أسود", price: 15 }
   ],
   colors: [
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellco-p28.jpg" }
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-p28.jpg" }
   ],
   specs: [
+    "كفالة 12 شهر ",
     "القدرة: 10000mAh",
     "عدد المنافذ: 2 منافذ USB / 1 USB-C",
     "دعم الشحن السريع: نعم",
@@ -1696,9 +1697,10 @@ const PRODUCTS = [
     { id: "20000-black", label: "20000mAh Black – أسود", price: 25 }
   ],
   colors: [
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/glico-powerbank-20000-black.jpg" }
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/Jellico-p29.jpg" }
   ],
   specs: [
+    "كفالة 12 شهر ",
     "القدرة: 20000mAh",
     "عدد المنافذ: 2 منافذ USB / 1 USB-C",
     "دعم الشحن السريع: نعم",
@@ -1718,6 +1720,7 @@ const PRODUCTS = [
     { id: "Beige", label: "Beige – كريمي", hex: "#F5F5DC", image: "assets/images/jellico-zp1.jpg" }
   ],
   specs: [
+    "كفالة 12 شهر ",
     "القدرة: 10000mAh",
     "عدد المنافذ: 1 منافذ USB / 1 USB-C",
     "يحتوي على منافذ داخلية عدد 2",
