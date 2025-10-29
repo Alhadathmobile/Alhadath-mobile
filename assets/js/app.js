@@ -1668,8 +1668,8 @@ const PRODUCTS = [
   ],
 },
   {
-  id: "glico-powerbank-10000",
-  title: "Glico Powerbank 10000mAh – باور بانك جليكو 10000مللي أمبير",
+  id: "jellico-powerbank-10000",
+  title: "Jellico Power Bank 10000mAh – باور بانك جيليكو 10000مللي أمبير",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/jellco-p28.jpg",
@@ -1687,8 +1687,8 @@ const PRODUCTS = [
   ],
 },
 {
-  id: "glico-powerbank-20000",
-  title: "Glico Powerbank 20000mAh – باور بانك جليكو 20000مللي أمبير",
+  id: "jellico-powerbank-20000",
+  title: "Jellico Power Bank 20000mAh – باور بانك جيليكو 20000مللي أمبير",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/Jellico-p29.jpg",
@@ -1706,8 +1706,8 @@ const PRODUCTS = [
   ],
 },
 {
-  id: "glico-powerbank-10000-zp1",
-  title: "Glico Powerbank 10000mAh – باور بانك جليكو 10000مللي أمبير",
+  id: "jellico-powerbank-10000-zp1",
+  title: "Jellico Power Bank 10000mAh – باور بانك جيليكو 10000مللي أمبير",
   brand: "Accessories",
   category: "smart",
   image: "assets/images/jellico-zp1.jpg",
