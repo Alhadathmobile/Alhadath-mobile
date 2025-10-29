@@ -1753,7 +1753,7 @@ const PRODUCTS = [
 },
    {
   id: "h-matepad-11.5-b10100",
-  title: "Huawei MatePad 11.5 b10100″",
+  title: "Huawei MatePad 11.5 b10100",
   brand: "Huawei",
   category: "tablet",
   image: "assets/images/matepad115-gray.jpeg",
@@ -1776,7 +1776,7 @@ const PRODUCTS = [
 },
   {
   id: "h-matepad-se11-6ram-128",
-  title: "Huawei MatePad SE 11″ 6/128",
+  title: "Huawei MatePad SE 11 6/128",
   brand: "Huawei",
   category: "tablet",
   image: "assets/images/matepadSE11-gray.jpeg",
