@@ -1761,7 +1761,7 @@ const PRODUCTS = [
     { id: "256-8",  label: "256GB / 8GB RAM", price: 279 }
   ],
   colors: [
-    { id: "gray",  label: "Space Gray (رمادي فضائي)", hex: "#8a8d91", image: "assets/images/matepad115-gray.jpeg" }
+    { id: "gray",  label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/matepad115-gray.jpeg" }
   ],
   specs: [
     "شاشة: 11.5 بوصة TFT LCD بدقة 2K (120Hz)",
@@ -1772,7 +1772,7 @@ const PRODUCTS = [
     "النظام: HarmonyOS 4",
     "الصوت: 4 سماعات ستيريو بتقنية Histen 8.1",
     "الاستخدام: ممتاز للدراسة، الترفيه، مشاهدة الفيديوهات، وتعدد المهام"
-  ]
+  ],
 },
   {
   id: "h-matepad-se11-6ram-128",
@@ -1796,7 +1796,7 @@ const PRODUCTS = [
     "النظام: ‎HarmonyOS 2.0",
     " مناسب للدراسة والتعلم الإلكتروني"
 
-  ]
+  ],
 },
   {
   id: "h-matepad-se11-8ram",
@@ -1824,7 +1824,7 @@ const PRODUCTS = [
     "✅ يدعم تعدد المهام Multi-Window لتشغيل تطبيقين في نفس الوقت.",
     "✅ مزود بوضع الأطفال Kids Corner لمحتوى آمن ومراقبة الاستخدام.",
     "✅ مناسب جدًا للدراسة والتعلم الإلكتروني"
-  ]
+  ],
 },
 
  
