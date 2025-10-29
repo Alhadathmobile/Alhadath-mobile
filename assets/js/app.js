@@ -1756,12 +1756,12 @@ const PRODUCTS = [
   title: "Huawei MatePad 11.5",
   brand: "Huawei",
   category: "tablet",
-  image: "assets/images/mate-pad-11.5-jpg",
+  image: "assets/images/mate-pad-115.jpg",
   variants: [
     { id: "256-8", label: "256GB / 8GB RAM", price: 279 }
   ],
   colors: [
-    { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/mate-pad-11.5-jpg" }
+    { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/mate-pad-115.jpg" }
   ],
   specs: [
     "شاشة: 11.5 بوصة TFT LCD بدقة 2K (120Hz)",
