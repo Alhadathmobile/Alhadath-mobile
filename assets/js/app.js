@@ -1751,21 +1751,21 @@ const PRODUCTS = [
     "الأداء: ممتاز – باور بانك صغير محمول وسهل الاستخدام للشحن السريع أثناء التنقل"
   ],
 },
-   { 
+  {
   id: "h-matepad-115",
   title: "Huawei MatePad 11.5",
   brand: "Huawei",
   category: "tablet",
   image: "assets/images/matepad115-gray.jpeg",
   variants: [
-    { id: "256-8",  label: "256GB / 8GB RAM", price: 279 }
+    { id: "256-8", label: "256GB / 8GB RAM", price: 279 }
   ],
   colors: [
-    { id: "gray",  label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/matepad115-gray.jpeg" }
+    { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/matepad115-gray.jpeg" }
   ],
   specs: [
     "شاشة: 11.5 بوصة TFT LCD بدقة 2K (120Hz)",
-    "المعالج:  Kirin 820",
+    "المعالج:  Kirin 820 ",
     "الكاميرا الخلفية: 13MP",
     "الكاميرا الأمامية: 8MP بزاوية واسعة",
     "البطارية: 10100mAh مع شحن سريع40 W",
