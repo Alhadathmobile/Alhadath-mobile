@@ -323,7 +323,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/17-white.jpg",
   variants: [
-    { id: "128", label: "128GB / 8GB RAM", price: 899 },
+    { id: "128", label: "128GB / 8GB RAM", price: 810 },
     { id: "256", label: "256GB / 8GB RAM", price: 999 },
     { id: "512", label: "512GB / 8GB RAM", price: 1099 }
   ],
@@ -444,7 +444,7 @@ const PRODUCTS = [
   brand: "iPhone",
   image: "assets/images/14-starlight.jpeg",
   variants: [
-    { id: "128", label: "128GB", price: 440 },
+    { id: "128", label: "128GB", price: 430 },
     { id: "256", label: "256GB", price: 500 }
   ],
    colors: [
@@ -467,9 +467,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/13-black.jpg",
   variants: [
-    { id: "128", label: "128GB / 4GB RAM", price: 430 },
-    { id: "256", label: "256GB / 4GB RAM", price: 480 },
-    { id: "512", label: "512GB / 4GB RAM", price: 550 }
+    { id: "128", label: "128GB / 4GB RAM", price: 360 }
   ],
   colors: [
     { id: "midnight", label: "Midnight (أسود)", hex: "#1C1C1E", image: "assets/images/13-black.jpg" },
