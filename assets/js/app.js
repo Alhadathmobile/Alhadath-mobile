@@ -265,8 +265,8 @@ const PRODUCTS = [
 
   // Iphone
   { id:"ip-16pm",
-   title:"Iphone 16 Pro Max",
-   brand:"Iphone",
+   title:"iPhone 16 Pro Max",
+   brand:"iPhone",
    image:"assets/images/16-pro-max-desert-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 910 },
