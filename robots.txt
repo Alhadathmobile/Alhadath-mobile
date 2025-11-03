@@ -1,0 +1,7 @@
+# Alhadath Mobile - robots.txt
+# هذا الملف يسمح لمحركات البحث بفهرسة الموقع بالكامل
+
+User-agent: *
+Allow: /
+
+Sitemap: https://alhadathmobile.github.io/Alhadath-mobile/sitemap.xml
