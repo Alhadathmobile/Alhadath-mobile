@@ -211,7 +211,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 }
 
 /* ===== استجابة للموبايل ===== */
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .slider {
     height: 220px;
   }
