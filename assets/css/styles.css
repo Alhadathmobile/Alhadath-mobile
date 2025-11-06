@@ -89,7 +89,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   position: relative;
   margin: 16px auto;
   max-width: 1200px;
-  height: 160px;
+  height: 120px;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: var(--shadow);
