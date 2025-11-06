@@ -228,7 +228,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 /* ===== استجابة للتابلت ===== */
 @media (min-width: 801px) and (max-width: 1200px) {
   .slider {
-    height: 50vh;
+    height: 60vh;
   }
   .slide img {
     object-position: center top;
