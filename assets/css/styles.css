@@ -86,7 +86,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 
 /* ============ Slider ============ */
 .slider{
-  position:relative; margin:16px auto; max-width:1200px; height:260px;
+  position:relative; margin:16px auto; max-width:1200px; height:420px;
   overflow:hidden; border-radius:14px; box-shadow:var(--shadow);
 }
 .slides{display:flex; height:100%}
