@@ -84,15 +84,15 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .tab:hover { background:#e5e7eb; }
 .tab.active{background:var(--primary);border-color:var(--primary);color:#fff}
 
-/* ============ Slider ============ */
+/* ============ Slider كامل العرض ومتجاوب ============ */
 .slider {
   position: relative;
-  margin: 0;           /* إزالة الفراغ الجانبي */
-  width: 100vw;        /* عرض كامل النافذة */
-  max-width: 100vw;    /* للتأكد من عدم تحديد أقصى عرض */
-  height: 400px;       /* أو height: auto + استخدام object-fit */
+  margin: 0;              /* إزالة الفراغ الجانبي */
+  width: 100vw;           /* عرض كامل نافذة المتصفح */
+  max-width: 100vw;       /* لا يتجاوز عرض النافذة */
+  height: 60vh;           /* ارتفاع السلايدر 60% من ارتفاع الشاشة */
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 0;       /* بدون زوايا مدورة للعرض الكامل */
   box-shadow: var(--shadow);
 }
 
@@ -112,15 +112,16 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   display: block;
 }
 
-/* ===== الصور داخل السلايدر ===== */
+/* الصور داخل السلايدر */
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: object-position 0.3s ease;
 }
 
-/* ===== أزرار التنقل ===== */
+/* أزرار التنقل */
 .nav {
   position: absolute;
   top: 50%;
@@ -138,20 +139,21 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 }
 
 .prev {
-  inset-inline-start: 8px;
+  left: 16px;
 }
 
 .next {
-  inset-inline-end: 8px;
+  right: 16px;
 }
 
+/* نقاط السلايدر */
 .dots {
   position: absolute;
-  bottom: 8px;
-  inset-inline: 0;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 6px;
-  justify-content: center;
 }
 
 #dots .slider-dot {
@@ -169,7 +171,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   opacity: 1;
 }
 
-/* ===== النص فوق الصورة ===== */
+/* نصوص فوق الصور */
 .slide-text {
   position: absolute;
   top: 50%;
@@ -211,9 +213,9 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 }
 
 /* ===== استجابة للموبايل ===== */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .slider {
-    height: 220px;
+    height: 40vh; /* ارتفاع أصغر على الهواتف */
   }
   .slide-text h2 {
     font-size: 1.4rem;
@@ -223,20 +225,17 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   }
 }
 
-/* ===== استجابة ذكية للتابلت واللابتوب ===== */
-@media (max-width: 768px) {
-  .slide img {
-    object-fit: cover;
-    object-position: center;
+/* ===== استجابة للتابلت ===== */
+@media (min-width: 801px) and (max-width: 1200px) {
+  .slider {
+    height: 50vh;
   }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
   .slide img {
     object-position: center top;
   }
 }
 
+/* ===== شاشات كبيرة ===== */
 @media (min-width: 1201px) {
   .slide img {
     object-position: center 25%;
