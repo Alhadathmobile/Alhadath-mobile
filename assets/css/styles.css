@@ -92,7 +92,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .slides{display:flex; height:100%}
 .slide{min-width:100%; height:100%; display:none}
 .slide.active{display:block}
-.slide img{width:100%; height:100%; object-fit:cover}}
+.slide img{width:100%; height:100%; object-fit:cover}
 
 /* ====== نصوص فوق الصور (Slide Text) ====== */
 .slide-text {
@@ -107,6 +107,15 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   border-radius: 10px;
 }
 
+.slide-text h2 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.slide-text p {
+  font-size: 1.2rem;
+  margin: 0;
+}
 .slide-text h2 {
   font-size: 2rem;
   margin: 0 0 10px 0;
