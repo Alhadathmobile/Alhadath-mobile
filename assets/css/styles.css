@@ -87,11 +87,12 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 /* ============ Slider ============ */
 .slider {
   position: relative;
-  margin: 16px auto;
-  max-width: 1350px;
-  height: 400px;
+  margin: 0;           /* إزالة الفراغ الجانبي */
+  width: 100vw;        /* عرض كامل النافذة */
+  max-width: 100vw;    /* للتأكد من عدم تحديد أقصى عرض */
+  height: 400px;       /* أو height: auto + استخدام object-fit */
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 0;
   box-shadow: var(--shadow);
 }
 
@@ -117,7 +118,6 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: object-position 0.3s ease;
 }
 
 /* ===== أزرار التنقل ===== */
