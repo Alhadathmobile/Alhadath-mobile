@@ -88,7 +88,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 .slider {
   position: relative;
   margin: 16px auto;
-  max-width: 1250px;
+  max-width: 1350px;
   height: 400px;
   overflow: hidden;
   border-radius: 14px;
