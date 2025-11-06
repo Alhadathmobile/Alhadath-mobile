@@ -213,7 +213,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 }
 
 /* ===== استجابة للموبايل ===== */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .slider {
     height: 40vh; /* ارتفاع أصغر على الهواتف */
   }
@@ -228,7 +228,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 /* ===== استجابة للتابلت ===== */
 @media (min-width: 801px) and (max-width: 1200px) {
   .slider {
-    height: 60vh;
+    height: 80vh;
   }
   .slide img {
     object-position: center top;
