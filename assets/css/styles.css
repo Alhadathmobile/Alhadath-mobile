@@ -147,7 +147,7 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
 
 .dots {
   position: absolute;
-  bottom: 5px;
+  bottom: 8px;
   inset-inline: 0;
   display: flex;
   gap: 6px;
