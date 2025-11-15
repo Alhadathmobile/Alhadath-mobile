@@ -12,6 +12,31 @@ const BRANDS = ["Samsung","iPhone","Redmi/MI","TECNO","Huawei","Infinix","HONOR"
 /* ================= PRODUCTS ================= */
 const PRODUCTS = [
   {
+  id: "honor-400",
+  title: "HONOR 400",
+  brand: "HONOR",
+  category: "smart",
+  image: "assets/images/honor-400-black.webp",
+  variants: [
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 },
+    { id: "512-12", label: "512GB / 12+12 GB RAM", price: 299 }
+  ],
+  colors: [
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-black.webp" },
+    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
+  ],
+  specs: [
+    "شاشة 6.55 بوصة AMOLED",
+    "المعالج: Snapdragon 7 Gen3",
+    "الكاميرا الخلفية: 200MP + 12MP + 2MP",
+    "الكاميرا الأمامية: 50MP",
+    "البطارية: 6000mAh",
+    "الشحن: 80W",
+    "النظام: MagicOS (Android)",
+    "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
+  ],
+},
+  {
   id: "redmi-a5",
   title: "Redmi A5",
   brand: "Redmi/MI",
@@ -108,6 +133,30 @@ const PRODUCTS = [
     "الأداء: ممتاز – شحن ونقل بيانات سريع "
   ],
 },
+  {
+  id: "h-matepad-se11-6ram-128",
+  title: "Huawei MatePad SE 11 6/128",
+  brand: "Huawei",
+  category: "tablet",
+  image: "assets/images/mate-pad-11.jpg",
+  variants: [
+    { id: "128-6",  label: "128GB / 6GB RAM",  price: 119 }
+  ],
+  colors: [
+    { id:"gray",  label:" Gray (رمادي )", hex:"#4a4a4a",   image:"assets/images/mate-pad-11.jpg" }
+  ],
+  specs: [
+    "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 pixel",  
+    "المعالج: ‎HiSilicon Kirin 710A ثُماني النوى", 
+    "الكاميرا الخلفية: ‎8 MP، f/2.0 ", 
+    "الكاميرا الأمامية: ‎5 MP، f/2.2", 
+    "الصوت: 4 سماعات ستيريو، صوت مخصص بتقنية HUAWEI Histen", 
+    "البطارية: ‎7700 mAh ، مع شحن سلكي سريع حتى ‎30 W ", 
+    "النظام: ‎HarmonyOS 2.0",
+    " مناسب للدراسة والتعلم الإلكتروني"
+
+  ],
+},
 {
   id: "samsung-galaxy-a17",
   title: "Samsung Galaxy A17",
@@ -160,6 +209,25 @@ const PRODUCTS = [
       "الأداء: جيد للتصفح، التطبيقات، ألعاب خفيفة إلى متوسطة"
     ],
   },
+  {
+  id: "apple-original-adapter",
+  title: "Apple Original Adapter – أدابتر آبل أصلي",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/iphone-adapter.webp",
+  variants: [
+    { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "دعم الشحن السريع: نعم 20W",
+    "التوافق: أجهزة iPhone و iPad الحديثة",
+    "20W الأداء: ممتاز – شحن سريع وآمن"
+  ],
+},
    {
   id: "iPhone-17-pro-max",
   title: "iPhone 17 Pro Max",
@@ -529,6 +597,30 @@ const PRODUCTS = [
     "الأداء: مناسب للتطبيقات اليومية، تصوير جيد، شاشة ملوّنة ونقية"
   ],
 }, 
+  {
+  id: "redmi-note-14-pro-plus-5g",
+  title: "Redmi Note 14 Pro+ 5G",
+  brand: "Redmi/MI",
+  category: "smart",
+  image: "assets/images/note-14-pro-5g-plus-black.webp",
+  variants: [
+    { id: "512-12", label: "512GB / 12+8 GB RAM", price: 345 }
+  ],
+  colors: [
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/note-14-pro-5g-plus-black.webp" },
+    { id: "mist-purple", label: "Mist Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/note-14-pro-5g-plus-purple.webp" }
+  ],
+  specs: [
+    "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
+    "المعالج: Snapdragon 7s Gen 3",
+    "الكاميرا الخلفية: 200MP + 8MP + 2MP (OIS)",
+    "الكاميرا الأمامية: 16MP",
+    "البطارية: 5110mAh، شحن سريع 120W HyperCharge",
+    "النظام: Android 14 + MIUI 16",
+    "مقاومة الماء والغبار: IP68",
+   "الأداء: ممتاز – سلس للتطبيقات والألعاب والاستخدام اليومي"
+  ],
+},
 
     {id: "iPhone-16-plus",
   title: "iPhone 16 Plus",
@@ -655,30 +747,7 @@ const PRODUCTS = [
     "الأداء: ممتاز – مناسب للتطبيقات والألعاب والاستخدام اليومي"
   ],
 },
-{
-  id: "redmi-note-14-pro-plus-5g",
-  title: "Redmi Note 14 Pro+ 5G",
-  brand: "Redmi/MI",
-  category: "smart",
-  image: "assets/images/note-14-pro-5g-plus-black.webp",
-  variants: [
-    { id: "512-12", label: "512GB / 12+8 GB RAM", price: 345 }
-  ],
-  colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/note-14-pro-5g-plus-black.webp" },
-    { id: "mist-purple", label: "Mist Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/note-14-pro-5g-plus-purple.webp" }
-  ],
-  specs: [
-    "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
-    "المعالج: Snapdragon 7s Gen 3",
-    "الكاميرا الخلفية: 200MP + 8MP + 2MP (OIS)",
-    "الكاميرا الأمامية: 16MP",
-    "البطارية: 5110mAh، شحن سريع 120W HyperCharge",
-    "النظام: Android 14 + MIUI 16",
-    "مقاومة الماء والغبار: IP68",
-   "الأداء: ممتاز – سلس للتطبيقات والألعاب والاستخدام اليومي"
-  ],
-},
+
 {
   id: "redmi-15c",
   title: "Redmi 15C",
@@ -939,31 +1008,7 @@ const PRODUCTS = [
     "الأداء: قوي – ممتاز للألعاب والاستخدام اليومي"
   ],
 },
-{
-  id: "honor-400",
-  title: "HONOR 400",
-  brand: "HONOR",
-  category: "smart",
-  image: "assets/images/honor-400-black.webp",
-  variants: [
-    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 },
-    { id: "512-12", label: "512GB / 12+12 GB RAM", price: 299 }
-  ],
-  colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-black.webp" },
-    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
-  ],
-  specs: [
-    "شاشة 6.55 بوصة AMOLED",
-    "المعالج: Snapdragon 7 Gen3",
-    "الكاميرا الخلفية: 200MP + 12MP + 2MP",
-    "الكاميرا الأمامية: 50MP",
-    "البطارية: 6000mAh",
-    "الشحن: 80W",
-    "النظام: MagicOS (Android)",
-    "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
-  ],
-},
+
 {
   id: "honor-x9c-5g",
   title: "HONOR X9c 5G",
@@ -1287,6 +1332,27 @@ const PRODUCTS = [
     "الأداء: متوسط – مناسب للاستخدام اليومي والالعاب المتوسطة"
   ],
 },
+   {
+  id: "golf-original-cable-GC-77",
+  title: "Golf Original Cable GC-77 – كابل جولف أصلي ",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/golf-GC-77.jpg",
+  variants: [
+    { id: "golf-original-cable-GC-77", label: "cable type-c", price: 5 }
+  ],
+  colors: [
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-77.jpg" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "نوع الكابل: Type-C Smart Phones",
+    "5A Fast Charging :دعم الشحن السريع",
+    "طول الكابل: 1 متر / 100 cm",
+    "Material:PVC",
+    "الأداء: ممتاز – شحن ونقل بيانات سريع"
+  ],
+},
 {
   id: "spark-40c",
   title: "TECNO SPARK 40C",
@@ -1311,6 +1377,27 @@ const PRODUCTS = [
     "الشحن: 18W",
     "النظام: Android 15 HIOS",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
+  ],
+},
+  {
+  id: "golf-original-cable-GC-79",
+  title: "Golf Original Cable GC-79 – كابل جولف أصلي أيفون",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/golf-GC-79.jpg",
+  variants: [
+    { id: "golf-original-cable-GC-79", label: "cable iPhone", price: 5 }
+  ],
+  colors: [
+    { id: "Green", label: "Green – أخضر", hex: "#008000", image: "assets/images/golf-GC-79.jpg" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "نوع الكابل: usb cable lightning",
+    "3A Fast Charging :دعم الشحن السريع",
+    "طول الكابل: 1 متر / 100 cm",
+    "Material:Liquid Silicone",
+    "الأداء: ممتاز – شحن ونقل بيانات سريع"
   ],
 },
 {
@@ -1428,25 +1515,7 @@ const PRODUCTS = [
     "25W الأداء: ممتاز – شحن سريع وآمن"
   ],
 },
-{
-  id: "apple-original-adapter",
-  title: "Apple Original Adapter – أدابتر آبل أصلي",
-  brand: "Accessories",
-  category: "smart",
-  image: "assets/images/iphone-adapter.webp",
-  variants: [
-    { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
-  ],
-  colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp" }
-  ],
-  specs: [
-    "كفالة 12 شهر ",
-    "دعم الشحن السريع: نعم 20W",
-    "التوافق: أجهزة iPhone و iPad الحديثة",
-    "20W الأداء: ممتاز – شحن سريع وآمن"
-  ],
-},
+
   {
   id: "jellico-original-charger-AK-180-C-TO-L",
   title: "Jellico Lightning – شاحن جيليكو أصلي أيفون",
@@ -1605,48 +1674,8 @@ const PRODUCTS = [
     "الأداء: ممتاز – شحن ونقل بيانات سريع"
   ],
 },
-  {
-  id: "golf-original-cable-GC-77",
-  title: "Golf Original Cable GC-77 – كابل جولف أصلي ",
-  brand: "Accessories",
-  category: "smart",
-  image: "assets/images/golf-GC-77.jpg",
-  variants: [
-    { id: "golf-original-cable-GC-77", label: "cable type-c", price: 5 }
-  ],
-  colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-77.jpg" }
-  ],
-  specs: [
-    "كفالة 12 شهر ",
-    "نوع الكابل: Type-C Smart Phones",
-    "5A Fast Charging :دعم الشحن السريع",
-    "طول الكابل: 1 متر / 100 cm",
-    "Material:PVC",
-    "الأداء: ممتاز – شحن ونقل بيانات سريع"
-  ],
-},
-  {
-  id: "golf-original-cable-GC-79",
-  title: "Golf Original Cable GC-79 – كابل جولف أصلي أيفون",
-  brand: "Accessories",
-  category: "smart",
-  image: "assets/images/golf-GC-79.jpg",
-  variants: [
-    { id: "golf-original-cable-GC-79", label: "cable iPhone", price: 5 }
-  ],
-  colors: [
-    { id: "Green", label: "Green – أخضر", hex: "#008000", image: "assets/images/golf-GC-79.jpg" }
-  ],
-  specs: [
-    "كفالة 12 شهر ",
-    "نوع الكابل: usb cable lightning",
-    "3A Fast Charging :دعم الشحن السريع",
-    "طول الكابل: 1 متر / 100 cm",
-    "Material:Liquid Silicone",
-    "الأداء: ممتاز – شحن ونقل بيانات سريع"
-  ],
-},
+ 
+  
   {
   id: "jellico-original-cable-A1-ip",
   title: "Jellico Lightning A1 – كابل جيليكو أصلي أيفون",
@@ -1758,30 +1787,7 @@ const PRODUCTS = [
 },
   },  
     
-  {
-  id: "h-matepad-se11-6ram-128",
-  title: "Huawei MatePad SE 11 6/128",
-  brand: "Huawei",
-  category: "tablet",
-  image: "assets/images/mate-pad-11.jpg",
-  variants: [
-    { id: "128-6",  label: "128GB / 6GB RAM",  price: 119 }
-  ],
-  colors: [
-    { id:"gray",  label:" Gray (رمادي )", hex:"#4a4a4a",   image:"assets/images/mate-pad-11.jpg" }
-  ],
-  specs: [
-    "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 pixel",  
-    "المعالج: ‎HiSilicon Kirin 710A ثُماني النوى", 
-    "الكاميرا الخلفية: ‎8 MP، f/2.0 ", 
-    "الكاميرا الأمامية: ‎5 MP، f/2.2", 
-    "الصوت: 4 سماعات ستيريو، صوت مخصص بتقنية HUAWEI Histen", 
-    "البطارية: ‎7700 mAh ، مع شحن سلكي سريع حتى ‎30 W ", 
-    "النظام: ‎HarmonyOS 2.0",
-    " مناسب للدراسة والتعلم الإلكتروني"
-
-  ],
-},
+  
   {
   id: "h-matepad-se11-8ram",
   title: "Huawei MatePad SE 11″ 8/128",
