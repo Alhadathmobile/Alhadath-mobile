@@ -12,6 +12,31 @@ const BRANDS = ["Samsung","iPhone","Redmi/MI","TECNO","Huawei","Infinix","HONOR"
 /* ================= PRODUCTS ================= */
 const PRODUCTS = [
   {
+  id: "redmi-a5",
+  title: "Redmi A5",
+  brand: "Redmi/MI",
+  category: "smart",
+  image: "assets/images/redmi-a5-gold.webp",
+  variants: [
+    { id: "64", label: "64 GB / 3+3 GB RAM", price: 55 },
+    { id: "128", label: "128 GB / 4+4 GB RAM", price: 65 }
+  ],
+  colors: [
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-a5-black.webp" },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق )", hex: "#2196F3", image: "assets/images/redmi-a5-blue.webp" },
+    { id: "sandy-gold", label: "Sandy Gold (ذهبي)", hex: "#D4AF37", image: "assets/images/redmi-a5-gold.webp" }
+  ],
+  specs: [
+    "شاشة 6.88 بوصة، تدعم معدل تحديث حتى 120 Hz",
+    "المعالج: Unisoc T7250",
+    "الكاميرا الخلفية: 32 MP + عدسة ثانوية",
+    "الكاميرا الأمامية: 8 MP",
+    "البطارية: حوالي 5200 mAh، دعم شحن سريع 15 W",
+    "النظام: Android مع واجهة MIUI",
+    "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
+  ],
+},
+  {
     id: "s-a06",
     title: "Samsung A06",
     brand: "Samsung",
@@ -63,6 +88,25 @@ const PRODUCTS = [
     "مقاومة الماء والغبار: IP54"
   ],
   badge: "وصل حديثًا"
+},
+  {
+  id: "jellico-original-cable-A1-type-c",
+  title: "Jellico Type-c A1 – كابل جيليكو أصلي ",
+  brand: "Accessories",
+  category: "smart",
+  image: "assets/images/jellico-A1-type-c.webp",
+  variants: [
+    { id: "Samsung-3.1A", label: "3.1A Fast Charging Samsung", price: 5 }
+  ],
+  colors: [
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-type-c.webp" }
+  ],
+  specs: [
+    "كفالة 12 شهر ",
+    "3.1 A Fast Charging :دعم الشحن السريع",
+    "التوافق: أجهزة Samsung & iPhone الحديثة",
+    "الأداء: ممتاز – شحن ونقل بيانات سريع "
+  ],
 },
 {
   id: "samsung-galaxy-a17",
@@ -116,6 +160,34 @@ const PRODUCTS = [
       "الأداء: جيد للتصفح، التطبيقات، ألعاب خفيفة إلى متوسطة"
     ],
   },
+   {
+  id: "iPhone-17-pro-max",
+  title: "iPhone 17 Pro Max",
+  brand: "iPhone",
+  category: "smart",
+  image: "assets/images/17-pro-max-deep-blue.jpg",
+  variants: [
+    { id: "256", label: "256GB / 12GB RAM", price: 1199 },
+    { id: "512", label: "512GB / 12GB RAM", price: 1399 },
+    { id: "1TB", label: "1TB / 12GB RAM", price: 1599 },
+    { id: "2TB", label: "2TB / 12GB RAM", price: 1999 }
+  ],
+  colors: [
+    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
+    { id: "deep-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
+    { id: "silver", label: "Cosmic Silver (فضي)", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
+  ],
+  specs: [
+    "شاشة 6.9 بوصة Super Retina XDR OLED، 120Hz",
+    "المعالج: Apple A19 Pro",
+    "الكاميرا الخلفية: ثلاثية 48MP",
+    "الكاميرا الأمامية: 18MP",
+    "البطارية:  4832mAh، شحن سريع 40W",
+    "الشحن اللاسلكي: MagSafe و Qi2",
+    "مقاومة الماء/الغبار: IP68",
+    "النظام: iOS 26"
+  ],
+},
   {
     id: "s-a26-5g",
     title: "Samsung A26 5G",
@@ -288,34 +360,7 @@ const PRODUCTS = [
     "الأداء: فائق القوة للتصوير، الألعاب، والمهام الاحترافية"
     ],
   },
-  {
-  id: "iPhone-17-pro-max",
-  title: "iPhone 17 Pro Max",
-  brand: "iPhone",
-  category: "smart",
-  image: "assets/images/17-pro-max-deep-blue.jpg",
-  variants: [
-    { id: "256", label: "256GB / 12GB RAM", price: 1199 },
-    { id: "512", label: "512GB / 12GB RAM", price: 1399 },
-    { id: "1TB", label: "1TB / 12GB RAM", price: 1599 },
-    { id: "2TB", label: "2TB / 12GB RAM", price: 1999 }
-  ],
-  colors: [
-    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
-    { id: "deep-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
-    { id: "silver", label: "Cosmic Silver (فضي)", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
-  ],
-  specs: [
-    "شاشة 6.9 بوصة Super Retina XDR OLED، 120Hz",
-    "المعالج: Apple A19 Pro",
-    "الكاميرا الخلفية: ثلاثية 48MP",
-    "الكاميرا الأمامية: 18MP",
-    "البطارية:  4832mAh، شحن سريع 40W",
-    "الشحن اللاسلكي: MagSafe و Qi2",
-    "مقاومة الماء/الغبار: IP68",
-    "النظام: iOS 26"
-  ],
-},
+ 
   {
   id: "iPhone-17",
   title: "iPhone 17",
@@ -533,31 +578,7 @@ const PRODUCTS = [
     "الأداء: جيد – مناسب للتصفح والاستخدام اليومي"
   ],
 },
-  {
-  id: "redmi-a5",
-  title: "Redmi A5",
-  brand: "Redmi/MI",
-  category: "smart",
-  image: "assets/images/redmi-a5-gold.webp",
-  variants: [
-    { id: "64", label: "64 GB / 3+3 GB RAM", price: 55 },
-    { id: "128", label: "128 GB / 4+4 GB RAM", price: 65 }
-  ],
-  colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-a5-black.webp" },
-    { id: "ocean-blue", label: "Ocean Blue (أزرق )", hex: "#2196F3", image: "assets/images/redmi-a5-blue.webp" },
-    { id: "sandy-gold", label: "Sandy Gold (ذهبي)", hex: "#D4AF37", image: "assets/images/redmi-a5-gold.webp" }
-  ],
-  specs: [
-    "شاشة 6.88 بوصة، تدعم معدل تحديث حتى 120 Hz",
-    "المعالج: Unisoc T7250",
-    "الكاميرا الخلفية: 32 MP + عدسة ثانوية",
-    "الكاميرا الأمامية: 8 MP",
-    "البطارية: حوالي 5200 mAh، دعم شحن سريع 15 W",
-    "النظام: Android مع واجهة MIUI",
-    "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
-  ],
-},
+  
   {
   id: "redmi-pad-2-wifi",
   title: "Redmi Pad 2 Wifi",
@@ -565,7 +586,6 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/redmi-pad-2-mint.jpg",
   variants: [
-    { id: "4-128", label: "128GB / 4GB RAM", price: 125 },
     { id: "8-256", label: "256GB / 8GB RAM", price: 169 }
   ],
   colors: [
@@ -1646,25 +1666,7 @@ const PRODUCTS = [
     " الأداء: ممتاز – شحن ونقل بيانات سريع"
   ],
 },
-    {
-  id: "jellico-original-cable-A1-type-c",
-  title: "Jellico Type-c A1 – كابل جيليكو أصلي ",
-  brand: "Accessories",
-  category: "smart",
-  image: "assets/images/jellico-A1-type-c.webp",
-  variants: [
-    { id: "Samsung-3.1A", label: "3.1A Fast Charging Samsung", price: 5 }
-  ],
-  colors: [
-    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-type-c.webp" }
-  ],
-  specs: [
-    "كفالة 12 شهر ",
-    "3.1 A Fast Charging :دعم الشحن السريع",
-    "التوافق: أجهزة Samsung & iPhone الحديثة",
-    "الأداء: ممتاز – شحن ونقل بيانات سريع "
-  ],
-},
+    
   {
   id: "jellico-powerbank-10000",
   title: "Jellico Power Bank 10000mAh – باور بانك جيليكو 10000مللي أمبير",
