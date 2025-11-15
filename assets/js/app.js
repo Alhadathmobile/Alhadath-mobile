@@ -12,6 +12,52 @@ const BRANDS = ["Samsung","iPhone","Redmi/MI","TECNO","Huawei","Infinix","HONOR"
 /* ================= PRODUCTS ================= */
 const PRODUCTS = [
   {
+  id: "honor-x9d",
+  title: "HONOR X9d",
+  brand: "HONOR",
+  category: "smart",
+  image: "assets/images/honor-x9d-all.webp",
+  variants: [
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 249 }
+  ],
+  colors: [
+    { 
+      id: "midnight-black", 
+      label: "Midnight Black – أسود ", 
+      hex: "#000000", 
+      image: "assets/images/honor-x9d-black.webp"
+    },
+    { 
+      id: "forest-green", 
+      label: "Forest Green – أخضر ", 
+      hex: "#0F4F2A", 
+      image: "assets/images/honor-x9d-green.webp"
+    },
+    { 
+      id: "reddish-brown", 
+      label: "Reddish Brown – بني ", 
+      hex: "#5A2E1A", 
+      image: "assets/images/honor-x9d-brown.webp"
+    },
+    { 
+      id: "sunrise-gold", 
+      label: "Sunrise Gold – ذهبي ", 
+      hex: "#E6C878", 
+      image: "assets/images/honor-x9d-gold.webp"
+    }
+  ],
+  specs: [
+    "شاشة AMOLED منحنية 6.79 بوصة",
+    "المعالج: Snapdragon 6 Gen 4",
+    "الكاميرا الخلفية: 108MP + 5MP + 2MP",
+    "الكاميرا الأمامية: 16MP",
+    "البطارية: 5300mAh",
+    "الشحن السريع: 66W",
+    "النظام: MagicOS (Android)",
+    "الأداء: جيد جدًا – مناسب للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
+  ],
+},
+  {
   id: "honor-400",
   title: "HONOR 400",
   brand: "HONOR",
