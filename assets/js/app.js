@@ -16,7 +16,7 @@ const PRODUCTS = [
   title: "HONOR X9d",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-x9d-all.webp",
+  image: "assets/images/honor-x9d-all.jpeg",
   variants: [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 249 }
   ],
