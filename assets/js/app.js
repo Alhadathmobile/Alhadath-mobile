@@ -59,25 +59,25 @@ const PRODUCTS = [
   ],
 },
   {
-  id: "honor-400",
-  title: "HONOR 400",
+  id: "honor-600",
+  title: "HONOR 600",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-400-black.webp",
+  image: "assets/images/honor-600-black.webp",
   variants: [
-    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 },
-    { id: "512-12", label: "512GB / 12+12 GB RAM", price: 299 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 349 },
+    { id: "512-12", label: "512GB / 12+12 GB RAM", price: 379 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-black.webp" },
     { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
   ],
   specs: [
-    "شاشة 6.55 بوصة AMOLED",
-    "المعالج: Snapdragon 7 Gen3",
+    "شاشة 6.57 بوصة AMOLED",
+    "المعالج: Snapdragon 7 Gen4",
     "الكاميرا الخلفية: 200MP + 12MP + 2MP",
     "الكاميرا الأمامية: 50MP",
-    "البطارية: 6000mAh",
+    "البطارية: 7000mAh",
     "الشحن: 80W",
     "النظام: MagicOS (Android)",
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
