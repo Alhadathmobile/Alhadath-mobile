@@ -241,7 +241,7 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 199 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a26-black.jpeg"  },
+    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a26-black.jpeg" },
     { id:"green",  label:"Mint (أخضر)",  hex:"#86efac", image:"assets/images/a26-mint.jpg" },
     { id:"white", label:"White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a26-white.jpg"}
   ],
@@ -606,7 +606,7 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/redmi-pad-2-mint.jpg",
   variants: [
-    { id: "8-256", label: "256GB / 8GB RAM", price: 185 }
+    { id: "8-256", label: "256GB / 8GB RAM", price: 185 },
     { id: "4-128", label: "128GB / 4GB RAM", price: 155 }
   ],
   colors: [
