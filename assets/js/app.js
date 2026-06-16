@@ -737,7 +737,7 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-10-wifi-gray.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 239 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 269 }
   ],
   colors: [
     { id: "gray", label: " Gray – رمادي ", hex: "#7D7D7D", image: "assets/images/honor-pad-10-wifi-gray.jpg" }
@@ -801,8 +801,8 @@ const PRODUCTS = [
 },
 
 {
-  id: "honor-pad-x8a-wifi",
-  title: "HONOR Pad X8a WiFi",
+  id: "honor-pad-x8b-wifi",
+  title: "HONOR Pad X8b WiFi",
   brand: "HONOR",
   category: "tablet",
   image: "assets/images/honor-pad-x8a-gray.webp",
@@ -817,35 +817,13 @@ const PRODUCTS = [
     "المعالج: Snapdragon 680",
     "الكاميرا الخلفية: 5MP",
     "الكاميرا الأمامية: 5MP",
-    "البطارية: 8300mAh",
-    "الشحن: 10W",
+    "البطارية: 10100mAh",
+    "الشحن: 35W",
     "النظام: MagicOS (Android)",
     "الأداء: متوسط – مناسب للدراسة والتصفح والمشاهدة اليومية"
   ],
 },
-{
-  id: "honor-pad-x7-wifi",
-  title: "HONOR Pad X7 WiFi",
-  brand: "HONOR",
-  category: "tablet",
-  image: "assets/images/honor-pad-x7-gray.webp",
-  variants: [
-    { id: "128-4", label: "64GB / 4+4 GB RAM", price: 69 }
-  ],
-  colors: [
-    { id: "Gray", label: "Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x7-gray.webp" }
-  ],
-  specs: [
-    "شاشة 8.7 بوصة IPS LCD 90Hz",
-    "المعالج: Snapdragon 680",
-    "الكاميرا الخلفية: 8MP",
-    "الكاميرا الأمامية: 5MP",
-    "البطارية: 7020mAh",
-    "الشحن: 10W",
-    "النظام: MagicOS (Android)",
-    "الأداء: متوسط – مناسب للتصفح والاستخدام الخفيف"
-  ],
-},
+
 
 {
   id: "honor-400lite-5g",
