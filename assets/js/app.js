@@ -237,8 +237,8 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/a26-mint.jpg",
     variants: [
-      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 140 },
-      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 160 }
+      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 155 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 199 }
     ],
     colors: [
     { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a26-black.jpeg"  },
@@ -436,8 +436,8 @@ const PRODUCTS = [
   image: "assets/images/17-pro-orange.jpg",
   variants: [
     { id: "256", label: "256GB / 12GB RAM", price: 950 },
-    { id: "512", label: "512GB / 12GB RAM", price: 1249 },
-    { id: "1TB", label: "1TB / 12GB RAM", price: 1449 }
+    { id: "512", label: "512GB / 12GB RAM", price: 1150 },
+    { id: "1TB", label: "1TB / 12GB RAM", price: 1299 }
   ],
   colors: [
     { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg" },
@@ -484,8 +484,8 @@ const PRODUCTS = [
   brand: "iPhone",
   image: "assets/images/16-blue.jpg",
   variants: [
-    { id: "128", label: "128GB", price: 580 },
-    { id: "256", label: "256GB", price: 610 }
+    { id: "128", label: "128GB", price: 510 },
+    { id: "256", label: "256GB", price: 560 }
   ],
         colors: [
     { id:"pink", label:"Pink (االزهري)",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg"  },
@@ -508,8 +508,8 @@ const PRODUCTS = [
   brand: "iPhone",
   image: "assets/images/15-black.jpg",
   variants: [
-    { id: "128", label: "128GB", price: 490 },
-    { id: "256", label: "256GB", price: 540 }
+    { id: "128", label: "128GB", price: 460 },
+    { id: "256", label: "256GB", price: 520 }
   ],
    colors: [
     { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/15-black.jpg"  }
@@ -556,9 +556,8 @@ const PRODUCTS = [
   brand: "iPhone",
   image: "assets/images/16-plus-blue.jpg",
   variants: [
-    { id: "128", label: "128GB", price: 560 },
-    { id: "256", label: "256GB", price: 650 },
-    { id: "512", label: "512GB", price: 720 }
+    { id: "128", label: "128GB", price: 520 },
+    { id: "256", label: "256GB", price: 580 }
   ],
      colors: [
     { id:"white", label:"White (أبيض)",  hex:"#FFFFFF", image:"assets/images/16-plus-white.jpg"  },
@@ -607,7 +606,8 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/redmi-pad-2-mint.jpg",
   variants: [
-    { id: "8-256", label: "256GB / 8GB RAM", price: 169 }
+    { id: "8-256", label: "256GB / 8GB RAM", price: 185 }
+    { id: "4-128", label: "128GB / 4GB RAM", price: 155 }
   ],
   colors: [
     { id: "gray", label: "Graphite Gray (رمادي)", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.png" },
@@ -660,8 +660,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/redmi-15c-orange.webp",
   variants: [
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 82 },
-    { id: "256-6", label: "256GB / 8+8 GB RAM", price: 95 }
+    { id: "256-6", label: "256GB / 8+8 GB RAM", price: 129 }
   ],
   colors: [
     { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.webp" },
@@ -680,76 +679,56 @@ const PRODUCTS = [
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
 },
+  
 {
-  id: "redmi-15",
-  title: "Redmi 15",
+  id: "redmi-15-5G",
+  title: "Redmi 15 5G",
   brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-15-black.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 125 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/redmi-15-black.jpg" }
   ],
   specs: [
     "شاشة 6.9 بوصة AMOLED، معدل تحديث 144Hz",
-    "المعالج: Snapdragon 685 ",
-    "الكاميرا الخلفية: 8MP + 8MP + 2MP",
+    "المعالج: Snapdragon 6s gen3 6nm ",
+    "الكاميرا الخلفية: 50MP + 8MP + 2MP",
     "الكاميرا الأمامية: 8MP",
     "البطارية: 7000mAh، شحن سريع 33W",
     "النظام: Android 14 + MIUI 16",
     "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
   ],
 },
+  {
+  id: "redmi-15c-5G",
+  title: "Redmi 15C 5G",
+  brand: "Redmi/MI",
+  category: "smart",
+  image: "assets/images/redmi-15c-orange.webp",
+  variants: [
+    { id: "256-6", label: "256GB / 8+8 GB RAM", price: 149 }
+  ],
+  colors: [
+    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.webp" },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.webp" },
+    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.webp" },
+    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.webp" }
+  ],
+  specs: [
+    "شاشة 6.9 بوصة IPS LCD، معدل تحديث 120Hz",
+    "المعالج: MediaTek Dimensity 6300 6nm ",
+    "الكاميرا الخلفية: 50MP + 2MP",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 6000mAh، شحن سريع 33W",
+    "النظام: Android 15 + MIUI 16",
+    "مقاومة الماء والغبار: IP64",
+    "الأداء: متوسط – مناسب للتصفح والاستخدام اليومي"
+  ],
+  },
   
-{
-  id: "redmi-pad-pro",
-  title: "Redmi Pad Pro",
-  brand: "Redmi/MI",
-  category: "tablet",
-  image: "assets/images/redmi-pad-pro-gray.webp",
-  variants: [
-    { id: "256-8", label: "256GB / 8GB RAM", price: 249 }
-  ],
-  colors: [
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-gray.webp" }
-  ],
-  specs: [
-    "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
-    "المعالج: Snapdragon 7s Gen 2",
-    "الكاميرا الخلفية: 8MP",
-    "الكاميرا الأمامية: 8MP",
-    "البطارية: 10000mAh، شحن سريع 33W",
-    "النظام: Android 14 + MIUI Pad",
-    "أربع سماعات Dolby Atmos",
-    "الأداء: ممتاز – مناسب للتطبيقات اليومية، الألعاب، وبعض المهام الدراسية"
-  ],
-},
-{
-  id: "redmi-pad-pro-5g",
-  title: "Redmi Pad Pro 5G",
-  brand: "Redmi/MI",
-  category: "tablet",
-  image: "assets/images/redmi-pad-pro-5g-gray.webp",
-  variants: [
-    { id: "256-8", label: "256GB / 8GB RAM", price: 289 }
-  ],
-  colors: [
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/redmi-pad-pro-5g-gray.webp" }
-  ],
-  specs: [
-    "شاشة 12.1 بوصة IPS LCD، معدل تحديث 120Hz",
-    "المعالج: Snapdragon 7s Gen 2 مع دعم 5G",
-    "الكاميرا الخلفية: 8MP",
-    "الكاميرا الأمامية: 8MP",
-    "البطارية: 10000mAh، شحن سريع 33W",
-    "النظام: Android 14 + MIUI Pad",
-    "أربع سماعات Dolby Atmos، يدعم القلم والكيبورد",
-    "الأداء: ممتاز – مناسب للتطبيقات اليومية، الألعاب، وبعض المنصات الدراسية"
-  ],
-},
-
   // Tecno / Infinix / Honor / Accessories
   {
   id: "honor-pad-10-wifi",
