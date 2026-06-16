@@ -91,9 +91,9 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/a07-black.jpg",
   variants: [
-    { id: "64-4", label: "64GB / 4+4 GB RAM", price: 65 },
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 75 },
-    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 85 }
+    { id: "64-4", label: "64GB / 4+4 GB RAM", price: 70 },
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 80 },
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 90 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a07-black.jpg" },
@@ -138,9 +138,9 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/a17-gray.webp",
   variants: [
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 105 },
-    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 120 },
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 140 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 115 },
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 140 },
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 180 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a17-black.webp" },
@@ -165,8 +165,8 @@ const PRODUCTS = [
     image: "assets/images/a16-green.webp",
     variants: [
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 99 },
-      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 115 },
-      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 135 }
+      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 120 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 145 }
     ],
     colors: [
     { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a16-black.webp"  },
@@ -261,8 +261,8 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/a36-awesome-violet.jpg",
     variants: [
-      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 190 },
-      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 210 }
+      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 220 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 270 }
     ],
     colors: [
     { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
@@ -285,9 +285,9 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/a56-pink.jpg",
     variants: [
-      { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 235 },
-      { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 260 },
-      { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 299 }
+      { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 270 },
+      { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 300 },
+      { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 340 }
     ],
     colors: [
     { id:"black",  label:"Awesome Graphite (الرصاصي)",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
