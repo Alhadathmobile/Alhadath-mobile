@@ -209,10 +209,10 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/17-pro-max-deep-blue.jpg",
   variants: [
-    { id: "256", label: "256GB / 12GB RAM", price: 1199 },
-    { id: "512", label: "512GB / 12GB RAM", price: 1399 },
-    { id: "1TB", label: "1TB / 12GB RAM", price: 1599 },
-    { id: "2TB", label: "2TB / 12GB RAM", price: 1999 }
+    { id: "256", label: "256GB / 12GB RAM", price: 1099 },
+    { id: "512", label: "512GB / 12GB RAM", price: 1299},
+    { id: "1TB", label: "1TB / 12GB RAM", price: 1499 },
+    { id: "2TB", label: "2TB / 12GB RAM", price: 1949 }
   ],
   colors: [
     { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
@@ -382,9 +382,9 @@ const PRODUCTS = [
    brand:"iPhone",
    image:"assets/images/16-pro-max-desert-titanium.jpg",
    variants: [
-      { id: "256", label: "256GB ", price: 910 },
-      { id: "512",   label: "512GB ",   price: 990 },
-     { id: "1T",   label: "1TB ",   price: 1099 }
+      { id: "256", label: "256GB ", price: 870 },
+      { id: "512",   label: "512GB ",   price: 950 },
+     { id: "1T",   label: "1TB ",   price: 990 }
     ],
    colors: [
     { id:"gold", label:"Deser Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
@@ -409,9 +409,8 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/17-white.jpg",
   variants: [
-    { id: "128", label: "128GB / 8GB RAM", price: 810 },
-    { id: "256", label: "256GB / 8GB RAM", price: 999 },
-    { id: "512", label: "512GB / 8GB RAM", price: 1099 }
+    { id: "256", label: "256GB / 8GB RAM", price: 749 },
+    { id: "512", label: "512GB / 8GB RAM", price: 999 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#1C1C1E", image: "assets/images/17-black.jpg" },
@@ -435,7 +434,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/17-pro-orange.jpg",
   variants: [
-    { id: "256", label: "256GB / 12GB RAM", price: 1099 },
+    { id: "256", label: "256GB / 12GB RAM", price: 950 },
     { id: "512", label: "512GB / 12GB RAM", price: 1249 },
     { id: "1TB", label: "1TB / 12GB RAM", price: 1449 }
   ],
