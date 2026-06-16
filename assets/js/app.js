@@ -63,14 +63,15 @@ const PRODUCTS = [
   title: "HONOR 600",
   brand: "HONOR",
   category: "smart",
-  image: "assets/images/honor-600-black.webp",
+  image: "assets/images/honor-600-all.png",
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 349 },
     { id: "512-12", label: "512GB / 12+12 GB RAM", price: 379 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-black.webp" },
-    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-400-silver.webp" }
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-600-black.webp" },
+    { id: "Golden-White", label: "Golden White – أبيض ذهبي ", hex: "#FFF8DC", image: "assets/images/honor-600-silver.webp" },
+    { id: "Orange", label: "Meteor Orange – أورانج ", hex: "#FFA500", image: "assets/images/honor-600-orange.webp" }
   ],
   specs: [
     "شاشة 6.57 بوصة AMOLED",
