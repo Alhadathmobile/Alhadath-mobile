@@ -807,7 +807,7 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/honor-pad-x8a-gray.webp",
   variants: [
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 119 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 159 }
   ],
   colors: [
     { id: "Space-Gray", label: "Space Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-gray.webp" }
@@ -858,7 +858,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-5g-black.jpg",
   variants: [
-    { id: "256-86", label: "256GB / 8+8 GB RAM", price: 144}
+    { id: "256-86", label: "256GB / 8+8 GB RAM", price: 154}
   ],
   colors: [
     { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg" },
@@ -883,7 +883,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-gold.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 129 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 139 }
   ],
   colors: [
     { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg" },
@@ -908,8 +908,8 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x6c-white.jpg",
   variants: [
-    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 85 },
-    { id: "256-6", label: "256GB / 6+6 GB RAM", price: 95 }
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 90 },
+    { id: "256-6", label: "256GB / 6+6 GB RAM", price: 100 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/honor-x6c-black.jpg" },
@@ -935,7 +935,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/tecno-pova7-ultra-black.webp",
   variants: [
-    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 269 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 299 }
   ],
   colors: [
     { id: "Geek-White", label: "Geek White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-pova7-ultra-white.webp" },
@@ -959,7 +959,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/tecno-pova7-5g-silver.webp",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 199 }
   ],
   colors: [
     { id: "Geek-Black", label: "Geek Black  – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-5g-black.webp" },
@@ -984,7 +984,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/tecno-pova7-gold.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 129 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 155 }
   ],
   colors: [
     { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-black.webp" },
@@ -1009,7 +1009,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/tecno-slim-blue.png",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 149 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 175 }
   ],
   colors: [
     { id: "Cool-Black", label: "Cool Black – أسود ", hex: "#000000", image: "assets/images/tecno-slim-black.png" },
@@ -1390,7 +1390,7 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/mate-pad-11-pin.webp",
   variants: [
-    { id: "128-8",  label: "128GB / 8GB RAM",  price: 139 }
+    { id: "128-8",  label: "128GB / 8GB RAM",  price: 149 }
   ],
   colors: [
     { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp" },
