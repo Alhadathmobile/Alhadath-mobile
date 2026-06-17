@@ -145,7 +145,7 @@ const PRODUCTS = [
     ],
     colors: [
     { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.webp"  },
-    { id:"awesome-Graygreen",  label:"Awesome Graygreen (أخضر رمادي)",  hex:"#7E857B", image:"assets/images/a37-graygreen.webp" },
+    { id:"awesome-Graygreen",  label:"Awesome Graygreen (أخضر رمادي)",  hex:"#7E857B", image:"assets/images/a37-green.webp" },
     { id:"awesome-lavender",  label:"Awesome Lavender (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a37-lavender.webp" },  
     { id:"awesome-white", label:"Awesome White (أبيض )",   hex:"#F5F5F2", image:"assets/images/a37-white.webp"}
   ],
