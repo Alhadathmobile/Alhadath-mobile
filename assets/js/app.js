@@ -84,6 +84,56 @@ const PRODUCTS = [
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
   ],
 },
+  {
+    id: "s-a57-5g",
+    title: "Samsung A57 5G",
+    brand: "Samsung",
+    image: "assets/images/a37-all.jpg",
+    variants: [
+      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 340 },
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 375 },
+      { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 450 }
+    ],
+    colors: [
+    { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg"  },
+    { id:"awesome-gray",  label:"Awesome Gray (رمادي)",  hex:"#8B8D92", image:"assets/images/a57-gray.jpg" },
+    { id:"awesome-icyblue", label:"Awesome Icyblue (أزرق ثلجي)",   hex:"#C8E8F5", image:"assets/images/a57-blue.jpg"}
+  ],
+    specs: [
+      "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+      "المعالج: Exynos 1680 4nm ",
+      "الكاميرا الخلفية: 50MP OIS + 12MP Ultra-wide + 5MP ماكرو",
+      "الكاميرا الأمامية: 12MP",
+      "البطارية: 5000mAh مع شحن سريع 45W",
+      "النظام: Android 15 + One UI",
+      "الأداء: ممتاز للتصفح والألعاب المتوسطة"
+    ],
+  },
+  {
+    id: "s-a37-5g",
+    title: "Samsung A37 5G",
+    brand: "Samsung",
+    image: "assets/images/a37-all.jpg",
+    variants: [
+      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 260 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 300 },
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 325 }
+    ],
+    colors: [
+    { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
+    { id:"violet",  label:"Awesome Lavender (اللافندر)",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg" },
+    { id:"white", label:"Awesome White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg"}
+  ],
+    specs: [
+      "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
+      "المعالج: Snapdragon 6 Gen 3",
+      "الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 5MP ماكرو",
+      "الكاميرا الأمامية: 12MP",
+      "البطارية: 5000mAh مع شحن سريع 45W",
+      "النظام: Android 14 + One UI",
+      "الأداء: ممتاز للتصفح والألعاب المتوسطة"
+    ],
+  },
  
   {
   id: "samsung-galaxy-a07",
