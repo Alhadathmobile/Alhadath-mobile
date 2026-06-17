@@ -59,6 +59,29 @@ const PRODUCTS = [
   ],
 },
   {
+    id:"s-s26-ultra-12-256",
+    title:"Samsung S26 ULTRA 5G - 256GB / 12+12GB RAM",
+    brand:"Samsung",
+    image:"assets/images/s26-all.jpg",
+    variants: [
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
+    ],
+    colors: [
+    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.jpg"  },
+    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.jpg" },
+    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.jpg"}
+  ],
+    specs: [
+      "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
+      "المعالج: Snapdragon 8 Elite Gen5",
+      "الكاميرا الخلفية: 200MP رئيسية + Ultra-wide + Telephoto (تكبير بصري حتى 5x)",
+      "الكاميرا الأمامية: 12MP",
+      "البطارية: 5000mAh مع شحن سريع 60W",
+      "النظام: Android 15 + One UI",
+      "الأداء: فائق القوة للتصوير والألعاب والمهام الاحترافية"
+    ],
+  },
+  {
   id: "honor-600",
   title: "HONOR 600",
   brand: "HONOR",
@@ -88,7 +111,7 @@ const PRODUCTS = [
     id: "s-a57-5g",
     title: "Samsung A57 5G",
     brand: "Samsung",
-    image: "assets/images/a37-all.jpg",
+    image: "assets/images/a57-all.jpg",
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 340 },
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 375 },
@@ -97,6 +120,7 @@ const PRODUCTS = [
     colors: [
     { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg"  },
     { id:"awesome-gray",  label:"Awesome Gray (رمادي)",  hex:"#8B8D92", image:"assets/images/a57-gray.jpg" },
+    { id:"awesome-lilac",  label:"Awesome Lilac (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a57-lilac.jpg" },  
     { id:"awesome-icyblue", label:"Awesome Icyblue (أزرق ثلجي)",   hex:"#C8E8F5", image:"assets/images/a57-blue.jpg"}
   ],
     specs: [
@@ -106,7 +130,7 @@ const PRODUCTS = [
       "الكاميرا الأمامية: 12MP",
       "البطارية: 5000mAh مع شحن سريع 45W",
       "النظام: Android 15 + One UI",
-      "الأداء: ممتاز للتصفح والألعاب المتوسطة"
+      "الأداء: ممتاز للتطبيقات الثقيله والألعاب المتوسطة"
     ],
   },
   {
@@ -120,17 +144,18 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 325 }
     ],
     colors: [
-    { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
-    { id:"violet",  label:"Awesome Lavender (اللافندر)",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg" },
-    { id:"white", label:"Awesome White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg"}
+    { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.jpg"  },
+    { id:"awesome-Graygreen",  label:"Awesome Graygreen (أخضر رمادي)",  hex:"#7E857B", image:"assets/images/a37-graygreen.jpg" },
+    { id:"awesome-lavender",  label:"Awesome Lavender (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a37-lavender.jpg" },  
+    { id:"awesome-white", label:"Awesome White (أبيض )",   hex:"#F5F5F2", image:"assets/images/a37-white.jpg"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
-      "المعالج: Snapdragon 6 Gen 3",
-      "الكاميرا الخلفية: 50MP OIS + 8MP Ultra-wide + 5MP ماكرو",
+      "المعالج: Exynos 1580 ",
+      "الكاميرا الخلفية: 50MP OIS + 12MP Ultra-wide + 5MP ماكرو",
       "الكاميرا الأمامية: 12MP",
       "البطارية: 5000mAh مع شحن سريع 45W",
-      "النظام: Android 14 + One UI",
+      "النظام: Android 15 + One UI",
       "الأداء: ممتاز للتصفح والألعاب المتوسطة"
     ],
   },
