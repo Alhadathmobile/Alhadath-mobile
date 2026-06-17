@@ -60,16 +60,16 @@ const PRODUCTS = [
 },
   {
     id:"s-s26-ultra-12-256",
-    title:"Samsung S26 ULTRA 5G - 256GB / 12+12GB RAM",
+    title:"Samsung S26 ULTRA 5G",
     brand:"Samsung",
     image:"assets/images/s26-all.jpg",
     variants: [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.jpg"  },
-    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.jpg" },
-    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.jpg"}
+    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.jfjf"  },
+    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png" },
+    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp"}
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
