@@ -111,7 +111,7 @@ const PRODUCTS = [
     id: "s-a57-5g",
     title: "Samsung A57 5G",
     brand: "Samsung",
-    image: "assets/images/a57-all.jpg",
+    image: "assets/images/a57-all.webp",
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 340 },
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 375 },
@@ -119,7 +119,7 @@ const PRODUCTS = [
     ],
     colors: [
     { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg"  },
-    { id:"awesome-gray",  label:"Awesome Gray (رمادي)",  hex:"#8B8D92", image:"assets/images/a57-gray.jpg" },
+    { id:"awesome-gray",  label:"Awesome Gray (رمادي)",  hex:"#8B8D92", image:"assets/images/a57-gray.webp" },
     { id:"awesome-lilac",  label:"Awesome Lilac (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a57-lilac.jpg" },  
     { id:"awesome-icyblue", label:"Awesome Icyblue (أزرق ثلجي)",   hex:"#C8E8F5", image:"assets/images/a57-blue.jpg"}
   ],
@@ -144,10 +144,10 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 325 }
     ],
     colors: [
-    { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.jpg"  },
-    { id:"awesome-Graygreen",  label:"Awesome Graygreen (أخضر رمادي)",  hex:"#7E857B", image:"assets/images/a37-graygreen.jpg" },
-    { id:"awesome-lavender",  label:"Awesome Lavender (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a37-lavender.jpg" },  
-    { id:"awesome-white", label:"Awesome White (أبيض )",   hex:"#F5F5F2", image:"assets/images/a37-white.jpg"}
+    { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.webp"  },
+    { id:"awesome-Graygreen",  label:"Awesome Graygreen (أخضر رمادي)",  hex:"#7E857B", image:"assets/images/a37-graygreen.jfif" },
+    { id:"awesome-lavender",  label:"Awesome Lavender (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a37-lavender.webp" },  
+    { id:"awesome-white", label:"Awesome White (أبيض )",   hex:"#F5F5F2", image:"assets/images/a37-white.jfif"}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
