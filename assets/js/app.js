@@ -62,12 +62,12 @@ const PRODUCTS = [
     id:"s-s26-ultra-12-256",
     title:"Samsung S26 ULTRA 5G",
     brand:"Samsung",
-    image:"assets/images/s26-all.jpg",
+    image:"assets/images/s26-all.webp",
     variants: [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.jfjf"  },
+    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp"  },
     { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png" },
     { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp"}
   ],
