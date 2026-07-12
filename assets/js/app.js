@@ -1465,7 +1465,7 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/mate-pad-11-pin.webp",
   variants: [
-    { id: "128-8",  label: "128GB / 8GB RAM",  price: 185 }
+    { id: "128-8",  label: "128GB / 8GB RAM",  price: 189 }
   ],
   colors: [
     { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp" },
