@@ -141,7 +141,7 @@ const PRODUCTS = [
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 260 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 300 },
-      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 325 }
+      { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 325 }
     ],
     colors: [
     { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.webp"  },
@@ -907,7 +907,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-400-lite-gray.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 199 }
   ],
   colors: [
     { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-lite-black.jpg" },
@@ -933,7 +933,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-5g-black.jpg",
   variants: [
-    { id: "256-86", label: "256GB / 8+8 GB RAM", price: 154}
+    { id: "256-86", label: "256GB / 8+8 GB RAM", price: 179}
   ],
   colors: [
     { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg" },
@@ -958,7 +958,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-gold.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 139 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 159 }
   ],
   colors: [
     { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg" },
@@ -1434,7 +1434,7 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/mate-pad115.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8GB RAM", price: 279 }
+    { id: "256-8", label: "256GB / 8GB RAM", price: 319 }
   ],
   colors: [
     { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/mate-pad115.jpg" }
@@ -1465,7 +1465,7 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/mate-pad-11-pin.webp",
   variants: [
-    { id: "128-8",  label: "128GB / 8GB RAM",  price: 149 }
+    { id: "128-8",  label: "128GB / 8GB RAM",  price: 185 }
   ],
   colors: [
     { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp" },
