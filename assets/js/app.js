@@ -115,7 +115,7 @@ const PRODUCTS = [
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 340 },
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 375 },
-      { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 450 }
+      { id: "512-12+12", label: "512GB / 12+12GB RAM", price: 450 }
     ],
     colors: [
     { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg"  },
@@ -167,9 +167,9 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/a07-black.jpg",
   variants: [
-    { id: "64-4", label: "64GB / 4+4 GB RAM", price: 70 },
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 80 },
-    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 90 }
+    { id: "64-4", label: "64GB / 4+4 GB RAM", price: 83 },
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 97 },
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 115 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a07-black.jpg" },
@@ -214,7 +214,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/a17-gray.webp",
   variants: [
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 115 },
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 119 },
     { id: "128-6", label: "128GB / 6+6 GB RAM", price: 140 },
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 180 }
   ],
