@@ -113,9 +113,9 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/a57-all.webp",
     variants: [
-      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 340 },
-      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 375 },
-      { id: "512-12+12", label: "512GB / 12+12GB RAM", price: 450 }
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 375 },
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 425 },
+      { id: "512-12+12", label: "512GB / 12+12GB RAM", price: 525 }
     ],
     colors: [
     { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg"  },
@@ -139,9 +139,9 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/a37-all.jpg",
     variants: [
-      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 260 },
-      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 300 },
-      { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 325 }
+      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 285 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 335 },
+      { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 389 }
     ],
     colors: [
     { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.webp"  },
@@ -167,9 +167,9 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/a07-black.jpg",
   variants: [
-    { id: "64-4", label: "64GB / 4+4 GB RAM", price: 83 },
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 97 },
-    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 115 }
+    { id: "64-4", label: "64GB / 4+4 GB RAM", price: 119 },
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 149 },
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 175 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a07-black.jpg" },
@@ -214,9 +214,9 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/a17-gray.webp",
   variants: [
-    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 119 },
-    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 140 },
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 180 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 160 },
+    { id: "128-6", label: "128GB / 6+6 GB RAM", price: 190 },
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 275 }
   ],
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a17-black.webp" },
@@ -240,9 +240,9 @@ const PRODUCTS = [
     brand: "Samsung",
     image: "assets/images/a16-green.webp",
     variants: [
-      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 99 },
-      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 120 },
-      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 145 }
+      { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 135 },
+      { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 159 }
+    
     ],
     colors: [
     { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a16-black.webp"  },
@@ -386,7 +386,7 @@ const PRODUCTS = [
     brand:"Samsung",
     image:"assets/images/s25-titanium-gray.jpg",
     variants: [
-      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 760 }
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 699 }
     ],
     colors: [
     { id:"black",  label:"Titanium Jetblack (أسود)",  hex:"#0F0F0F", image:"assets/images/s25-titanium-black.jpg"  },
