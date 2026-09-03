@@ -583,8 +583,8 @@ const PRODUCTS = [
   brand: "iPhone",
   image: "assets/images/15-black.jpg",
   variants: [
-    { id: "128", label: "128GB", price: 460 },
-    { id: "256", label: "256GB", price: 520 }
+    { id: "128", label: "128GB", price: 510 },
+    { id: "256", label: "256GB", price: 620 }
   ],
    colors: [
     { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/15-black.jpg"  }
