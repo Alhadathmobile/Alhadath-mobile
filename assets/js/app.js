@@ -1895,7 +1895,7 @@ if(addBtn){
 
     if(hasVariants(p)){
 
-      const sel = el.querySelector("#" + p.id + "-" + v);
+      const sel = el.querySelector("#" + p.id + "-v" );
       const v = p.variants.find(x=>x.id===sel.value) || p.variants[0];
 
 const key = p.id + "|" + v.id + "|" + colorId;
@@ -1944,8 +1944,6 @@ const key = p.id + "|" + v.id + "|" + colorId;
   // تحديث الزر عند تحميل البطاقة
   updateStockUI();
 } 
-}; 
-  }
 
   return el;
 }
