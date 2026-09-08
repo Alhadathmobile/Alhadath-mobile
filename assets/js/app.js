@@ -2232,3 +2232,63 @@ document.addEventListener("click", function(e){
   btn.textContent = isOpen ? "عرض المزيد" : "عرض أقل";
   btn.setAttribute("aria-expanded", (!isOpen).toString());
 });
+/* ============== Custom Notice ============== */
+
+function showNotice(message, type = "warning") {
+
+  let notice = document.getElementById("customNotice");
+
+  if (!notice) {
+    notice = document.createElement("div");
+    notice.id = "customNotice";
+
+    notice.innerHTML = `
+      <div class="notice-box">
+        <div class="notice-icon"></div>
+        <div class="notice-content">
+          <strong class="notice-title"></strong>
+          <div class="notice-message"></div>
+        </div>
+        <button type="button" class="notice-close">×</button>
+      </div>
+    `;
+
+    document.body.appendChild(notice);
+
+    notice.querySelector(".notice-close").onclick = () => {
+      notice.classList.remove("show");
+    };
+  }
+
+  const title = notice.querySelector(".notice-title");
+  const msg = notice.querySelector(".notice-message");
+  const icon = notice.querySelector(".notice-icon");
+
+  notice.className = "";
+  notice.classList.add("notice-" + type);
+
+  if (type === "error") {
+    title.textContent = "غير متوفر";
+    icon.textContent = "✕";
+  } 
+  else if (type === "success") {
+    title.textContent = "تم بنجاح";
+    icon.textContent = "✓";
+  } 
+  else {
+    title.textContent = "تنبيه";
+    icon.textContent = "!";
+  }
+
+  msg.innerHTML = message;
+
+  requestAnimationFrame(() => {
+    notice.classList.add("show");
+  });
+
+  clearTimeout(notice._timer);
+
+  notice._timer = setTimeout(() => {
+    notice.classList.remove("show");
+  }, 3500);
+}
