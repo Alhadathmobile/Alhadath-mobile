@@ -1917,7 +1917,7 @@ const key = p.id + "|" + v.id + "|" + colorId;
 
     }else{
 
-      key = ${p.id}|_|${colorId};
+      key = `${p.id}|_|${colorId}`;
 
       payload = {
         id: key,
