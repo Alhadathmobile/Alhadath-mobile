@@ -581,3 +581,24 @@ select:focus, input:focus, textarea:focus{box-shadow:0 0 0 2px var(--accent) ins
     margin-inline: auto; /* يخليها تتوسّط */
   }
 }
+/* زر المنتج عند نفاد المخزون */
+.btn.out-of-stock,
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #999 !important;
+  color: #fff !important;
+}
+.color-required {
+  animation: colorRequired 0.8s ease;
+}
+
+@keyframes colorRequired {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
