@@ -26,25 +26,29 @@ const PRODUCTS = [
       id: "midnight-black", 
       label: "Midnight Black – أسود ", 
       hex: "#000000", 
-      image: "assets/images/honor-x9d-black.webp"
+      image: "assets/images/honor-x9d-black.webp",
+      stock: 5
     },
     { 
       id: "forest-green", 
       label: "Forest Green – أخضر ", 
       hex: "#0F4F2A", 
-      image: "assets/images/honor-x9d-green.webp"
+      image: "assets/images/honor-x9d-green.webp",
+      stock:0
     },
     { 
       id: "reddish-brown", 
       label: "Reddish Brown – بني ", 
       hex: "#5A2E1A", 
-      image: "assets/images/honor-x9d-brown.webp"
+      image: "assets/images/honor-x9d-brown.webp",
+      stock:5
     },
     { 
       id: "sunrise-gold", 
       label: "Sunrise Gold – ذهبي ", 
       hex: "#E6C878", 
-      image: "assets/images/honor-x9d-gold.webp"
+      image: "assets/images/honor-x9d-gold.webp",
+      stock:5
     }
   ],
   specs: [
@@ -67,9 +71,9 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp"  },
-    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png" },
-    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp"}
+    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp", stock:5  },
+    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png", stock:5 },
+    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp", stock:1 }
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
@@ -1692,8 +1696,34 @@ document.addEventListener("click", (e)=>{
   SELECTED_COLORS[pid] = colorId;
   const product = PRODUCTS.find(x=>x.id===pid);
   const color = product?.colors?.find(c=>c.id===colorId);
+  if(color){
+
+  const stock = Number(color.stock || 0);
+
+  if(stock <= 0){
+    alert(❌ اللون ${color.label} غير متوفر حاليًا.);
+  }
+}
   const labelEl = document.querySelector(`.current-color[data-color-label-for="${pid}"]`);
   if(labelEl && color) labelEl.textContent = color.label;
+                          
+  // فحص المخزون وتحديث زر أضف للسلة
+const card = btn.closest(".card");
+
+if(card && color){
+  const addBtn = card.querySelector("[data-add]");
+  const stock = Number(color.stock || 0);
+
+  if(stock <= 0){
+    addBtn.disabled = true;
+    addBtn.textContent = "نفذت الكمية";
+    addBtn.classList.add("out-of-stock");
+  }else{
+    addBtn.disabled = false;
+    addBtn.textContent = "أضف للسلة";
+    addBtn.classList.remove("out-of-stock");
+  }
+}
 
   // بدّل الصورة
  // بدّل الصورة (مع fallback للامتدادات)
@@ -1777,43 +1807,144 @@ function cardTemplate(p){
   }
 
   // زر "أضف للسلة"
-  const addBtn = el.querySelector("[data-add]");
-  if(addBtn){
-   addBtn.onclick = ()=>{
-  const selectedColor = getSelectedColorObj(p.id);
-  const colorId = selectedColor?.id || "no-color";
+ const addBtn = el.querySelector("[data-add]");
 
-  let payload, key;
+if(addBtn){
 
-  if (hasVariants(p)) {
-    const sel = el.querySelector(`#${p.id}-v`);
-    const v   = p.variants.find(x=> x.id===sel.value) || p.variants[0];
+  function updateStockUI(){
 
-    key = `${p.id}|${v.id}|${colorId}`;
+    // إذا كان المنتج لا يحتوي ألوان
+    if(!hasColors(p)){
+      addBtn.disabled = false;
+      addBtn.textContent = "أضف للسلة";
+      return;
+    }
 
-    payload = {
-      id: key,
-      baseId: p.id,
-      title: variantFullTitle(p, v),
-      price: v.price,
-      image: selectedColor?.image || v.image || p.image,
-      variant: v.label,
-      color: selectedColor ? { id: selectedColor.id, label: selectedColor.label } : null
-    };
-  } else {
-    key = `${p.id}|_|${colorId}`;
+    const selectedColor = getSelectedColorObj(p.id);
 
-    payload = {
-      id: key,
-      baseId: p.id,
-      title: p.title,
-      price: p.price,
-      image: selectedColor?.image || p.image,
-      color: selectedColor ? { id: selectedColor.id, label: selectedColor.label } : null
-    };
+    // لم يتم اختيار لون
+    if(!selectedColor){
+      addBtn.disabled = false;
+      addBtn.textContent = "أضف للسلة";
+      return;
+    }
+
+    const stock = Number(selectedColor.stock || 0);
+    const cartQty = getCartQty(p.id, selectedColor.id);
+
+    if(stock <= 0 || cartQty >= stock){
+      addBtn.disabled = true;
+      addBtn.textContent = "نفذت الكمية";
+      addBtn.classList.add("out-of-stock");
+    }else{
+      addBtn.disabled = false;
+      addBtn.textContent = "أضف للسلة";
+      addBtn.classList.remove("out-of-stock");
+    }
   }
 
-  addToCartWithKey(payload.id, payload);
+  addBtn.onclick = ()=>{
+
+    // =========================
+    // إجبار اختيار اللون
+    // =========================
+    if(hasColors(p)){
+
+      const selectedColor = getSelectedColorObj(p.id);
+
+      if(!selectedColor){
+        alert("⚠️ يرجى اختيار اللون أولًا قبل إضافة المنتج للسلة.");
+
+        // إبراز اختيار اللون
+        const picker = el.querySelector(".color-picker");
+
+        if(picker){
+          picker.classList.add("color-required");
+
+          setTimeout(()=>{
+            picker.classList.remove("color-required");
+          }, 800);
+        }
+
+        return;
+      }
+
+      // =========================
+      // فحص المخزون
+      // =========================
+      const stock = Number(selectedColor.stock || 0);
+      const cartQty = getCartQty(p.id, selectedColor.id);
+
+      if(stock <= 0){
+        alert(❌ اللون ${selectedColor.label} غير متوفر حاليًا.);
+        updateStockUI();
+        return;
+      }
+
+      if(cartQty >= stock){
+        alert(❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.);
+        updateStockUI();
+        return;
+      }
+    }
+
+    const selectedColor = getSelectedColorObj(p.id);
+    const colorId = selectedColor?.id || "no-color";
+
+    let payload, key;
+
+    if(hasVariants(p)){
+
+      const sel = el.querySelector(#${p.id}-v);
+      const v = p.variants.find(x=>x.id===sel.value) || p.variants[0];
+
+      key = ${p.id}|${v.id}|${colorId};
+
+      payload = {
+        id: key,
+        baseId: p.id,
+        title: variantFullTitle(p, v),
+        price: v.price,
+        image: selectedColor?.image || v.image || p.image,
+        variant: v.label,
+
+        color: selectedColor
+          ? {
+              id: selectedColor.id,
+              label: selectedColor.label
+            }
+          : null
+      };
+
+    }else{
+
+      key = ${p.id}|_|${colorId};
+
+      payload = {
+        id: key,
+        baseId: p.id,
+        title: p.title,
+        price: p.price,
+        image: selectedColor?.image || p.image,
+
+        color: selectedColor
+          ? {
+              id: selectedColor.id,
+              label: selectedColor.label
+            }
+          : null
+      };
+    }
+
+    addToCartWithKey(payload.id, payload);
+
+    // تحديث حالة المخزون بعد الإضافة
+    updateStockUI();
+  };
+
+  // تحديث الزر عند تحميل البطاقة
+  updateStockUI();
+} 
 }; 
   }
 
@@ -1895,7 +2026,41 @@ function cartRow(p, qty){
 
   const inc=row.querySelector("[data-inc]");
   const dec=row.querySelector("[data-dec]");
-  if(inc){ inc.onclick=()=>{ state.cart[p.id].qty++; save("cart", state.cart); renderCart(); updateCartCount(); }; }
+  if(inc){
+  inc.onclick=()=>{
+
+    const item = state.cart[p.id];
+    const product = PRODUCTS.find(x => x.id === item.product.baseId);
+
+    let stock = Infinity;
+
+    // مخزون اللون
+    if(
+      product &&
+      item.product.color?.id &&
+      Array.isArray(product.colors)
+    ){
+      const color = product.colors.find(
+        c => c.id === item.product.color.id
+      );
+
+      stock = Number(color?.stock || 0);
+    }
+
+    if(item.qty >= stock){
+
+      alert(❌ لا يمكن إضافة كمية أكثر.\nالمتوفر من هذا اللون: ${stock} قطعة.);
+
+      return;
+    }
+
+    item.qty++;
+
+    save("cart", state.cart);
+    renderCart();
+    updateCartCount();
+  };
+}
   if(dec){ dec.onclick=()=>{ state.cart[p.id].qty--; if(state.cart[p.id].qty<=0) delete state.cart[p.id]; save("cart", state.cart); renderCart(); updateCartCount(); }; }
   return row;
 }
