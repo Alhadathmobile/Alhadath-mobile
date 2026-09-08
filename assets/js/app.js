@@ -1895,10 +1895,10 @@ if(addBtn){
 
     if(hasVariants(p)){
 
-      const sel = el.querySelector(#${p.id}-v);
+      const sel = el.querySelector(`#${p.id}-v`);
       const v = p.variants.find(x=>x.id===sel.value) || p.variants[0];
 
-      key = ${p.id}|${v.id}|${colorId};
+      key = `${p.id}|${v.id}|${colorId}`;
 
       payload = {
         id: key,
