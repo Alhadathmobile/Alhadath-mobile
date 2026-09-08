@@ -1853,8 +1853,10 @@ if(addBtn){
       const selectedColor = getSelectedColorObj(p.id);
 
       if(!selectedColor){
-        alert("⚠️ يرجى اختيار اللون أولًا قبل إضافة المنتج للسلة.");
-
+        showNotice(
+  "يرجى اختيار اللون أولًا قبل إضافة المنتج للسلة.",
+  "warning"
+);
         // إبراز اختيار اللون
         const picker = el.querySelector(".color-picker");
 
@@ -1876,7 +1878,10 @@ if(addBtn){
       const cartQty = getCartQty(p.id, selectedColor.id);
 
       if(stock <= 0){
-        alert(`❌ اللون ${selectedColor.label} غير متوفر حاليًا.`);
+        showNotice(
+  اللون `<strong>${color.label}</strong> غير متوفر حاليًا.,`
+  "error"
+);
         updateStockUI();
         return;
       }
@@ -2159,7 +2164,10 @@ const items = entries.map(it => {
 });
 
 function afterSuccess(){
-  alert("✅ تم إرسال طلبك بنجاح. سنقوم بالتواصل معك قريبًا.");
+  showNotice(
+  "تم إرسال طلبك بنجاح.<br>سنقوم بالتواصل معك قريبًا.",
+  "success"
+);
   state.cart={}; save("cart", state.cart); renderCart(); updateCartCount(); closeCart();
 }
 
