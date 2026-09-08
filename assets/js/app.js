@@ -1701,7 +1701,7 @@ document.addEventListener("click", (e)=>{
   const stock = Number(color.stock || 0);
 
   if(stock <= 0){
-    alert(❌ اللون ${color.label} غير متوفر حاليًا.);
+    alert(`❌ اللون ${color.label} غير متوفر حاليًا.`);
   }
 }
   const labelEl = document.querySelector(`.current-color[data-color-label-for="${pid}"]`);
@@ -1876,13 +1876,13 @@ if(addBtn){
       const cartQty = getCartQty(p.id, selectedColor.id);
 
       if(stock <= 0){
-        alert(❌ اللون ${selectedColor.label} غير متوفر حاليًا.);
+        alert(`❌ اللون ${selectedColor.label} غير متوفر حاليًا.`);
         updateStockUI();
         return;
       }
 
       if(cartQty >= stock){
-        alert(❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.);
+        alert(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.`);
         updateStockUI();
         return;
       }
@@ -2049,7 +2049,7 @@ function cartRow(p, qty){
 
     if(item.qty >= stock){
 
-      alert(❌ لا يمكن إضافة كمية أكثر.\nالمتوفر من هذا اللون: ${stock} قطعة.);
+      alert(`❌ لا يمكن إضافة كمية أكثر.\nالمتوفر من هذا اللون: ${stock} قطعة.`);
 
       return;
     }
