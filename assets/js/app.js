@@ -27,28 +27,28 @@ const PRODUCTS = [
       label: "Midnight Black – أسود ", 
       hex: "#000000", 
       image: "assets/images/honor-x9d-black.webp",
-      stock: 5
+      
     },
     { 
       id: "forest-green", 
       label: "Forest Green – أخضر ", 
       hex: "#0F4F2A", 
       image: "assets/images/honor-x9d-green.webp",
-      stock:0
+      
     },
     { 
       id: "reddish-brown", 
       label: "Reddish Brown – بني ", 
       hex: "#5A2E1A", 
       image: "assets/images/honor-x9d-brown.webp",
-      stock:5
+      
     },
     { 
       id: "sunrise-gold", 
       label: "Sunrise Gold – ذهبي ", 
       hex: "#E6C878", 
       image: "assets/images/honor-x9d-gold.webp",
-      stock:5
+      
     }
   ],
   specs: [
