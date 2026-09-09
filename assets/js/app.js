@@ -1705,24 +1705,24 @@ document.addEventListener("click", (e)=>{
   if(card && color){
     const addBtn = card.querySelector("[data-add]");
     const stock = Number(color.stock || 0);
-
-    if(stock <= 0){
-      addBtn.disabled = true;
-      addBtn.textContent = "نفذت الكمية";
-      addBtn.classList.add("out-of-stock");
-    }else{
-      addBtn.disabled = false;
-      addBtn.textContent = "أضف للسلة";
-      addBtn.classList.remove("out-of-stock");
-    }
+if(stock <= 0){
+    addBtn.disabled = true;
+    addBtn.textContent = "نفذت الكمية";
+    addBtn.classList.add("out-of-stock");
+  }else{
+    addBtn.disabled = false;
+    addBtn.textContent = "أضف للسلة";
+    addBtn.classList.remove("out-of-stock");
   }
+}
 
-  const img = document.querySelector([data-img-for="${pid}"]);
-  if (img) {
-    const baseNoExt = stripExt(resolveProductImage(pid));
-    tryImageFallback(img, baseNoExt);
-  }
+const img = document.querySelector(`[data-img-for="${pid}"]`);
+if (img) {
+  const baseNoExt = stripExt(resolveProductImage(pid));
+  tryImageFallback(img, baseNoExt);
+}
 });
+   
 
 /* ============== Card Template ============== */
 function cardTemplate(p){
