@@ -1551,13 +1551,11 @@ function renderTabs(){
   allBtn.className = "tab active";
   allBtn.textContent = "الكل";
   allBtn.onclick = ()=>{
-    // أعد كل شيء للوضع الافتراضي
     state.category = "all";
     state.brand    = "all";
     state.query    = "";
     state.sort     = "popular";
 
-    // نظّف مدخلات الواجهة
     const inp = document.getElementById("searchInput");
     if (inp) inp.value = "";
     const s = document.getElementById("sortSelect");
@@ -1574,7 +1572,7 @@ function renderTabs(){
   smartBtn.textContent = "الأجهزة الذكية";
   smartBtn.onclick = ()=>{
     state.category = "smart";
-    state.brand    = "all";     // لا نفلتر بالماركة هنا
+    state.brand    = "all";
     filterAndRender();
     setActiveTab("الأجهزة الذكية");
   };
@@ -1586,25 +1584,27 @@ function renderTabs(){
   tabletBtn.textContent = "الأجهزة اللوحية";
   tabletBtn.onclick = ()=>{
     state.category = "tablet";
-    state.brand    = "all";     // لا نفلتر بالماركة هنا
+    state.brand    = "all";
     filterAndRender();
     setActiveTab("الأجهزة اللوحية");
   };
   tabs.appendChild(tabletBtn);
 
-  // 🔵 بقية الماركات من المصفوفة BRANDS (بدون "الكل")
-  BRANDS.forEach((b)=>{
-    const btn = document.createElement("button");
-    btn.className = "tab";
-    btn.textContent = b;
-    btn.onclick = ()=>{
-      state.brand = b;          // فلتر ماركة
-      state.category = "all";   // ألغِ فلتر النوع
-      filterAndRender();
-      setActiveTab(b);
-    };
-    tabs.appendChild(btn);
-  });
+  // 🔵 بقية الماركات من المصفوفة BRANDS
+  if(typeof BRANDS !== 'undefined' && Array.isArray(BRANDS)){
+    BRANDS.forEach((b)=>{
+      const btn = document.createElement("button");
+      btn.className = "tab";
+      btn.textContent = b;
+      btn.onclick = ()=>{
+        state.brand = b;
+        state.category = "all";
+        filterAndRender();
+        setActiveTab(b);
+      };
+      tabs.appendChild(btn);
+    });
+  }
 }
 function setActiveTab(label){ $all(".tab").forEach(el=> el.classList.toggle("active", el.textContent===label)); }
 
@@ -1623,6 +1623,8 @@ function filterAndRender(){
   const empty=$("#emptyState");
 
   const getCat = (p)=> p.category || "smart";
+
+  if(typeof PRODUCTS === 'undefined') return;
 
   let items = PRODUCTS.filter(p=>{
     const byBrand = (state.brand === "all") || (p.brand === state.brand);
@@ -1644,7 +1646,6 @@ function filterAndRender(){
 }
 function hasColors(p){ return Array.isArray(p.colors) && p.colors.length>0; }
 function getInitialImagePreferProduct(p){
-  // اعرض صورة المنتج أولاً، ثم أول لون عند عدم توفّرها
   return p.image || (hasColors(p) && p.colors[0]?.image) || "assets/images/placeholder.jpg";
 }
 
@@ -1670,11 +1671,13 @@ function colorRowHTML(p){
 }
 const SELECTED_COLORS = {};
 function getSelectedColorObj(pid){
+  if(typeof PRODUCTS === 'undefined') return null;
   const p = PRODUCTS.find(x=>x.id===pid);
-  const chosen = SELECTED_COLORS[pid]; // قد يكون undefined حتى يضغط الزبون
+  const chosen = SELECTED_COLORS[pid];
   return p?.colors?.find(c=>c.id===chosen) || null;
 }
 function resolveProductImage(pid){
+  if(typeof PRODUCTS === 'undefined') return "assets/images/placeholder.jpg";
   const p = PRODUCTS.find(x=>x.id===pid);
   const color = getSelectedColorObj(pid);
   return (color?.image) || p?.image || "assets/images/placeholder.jpg";
@@ -1686,59 +1689,46 @@ document.addEventListener("click", (e)=>{
   const pid = btn.dataset.pid;
   const colorId = btn.dataset.colorId;
 
-  // تحديث التحديد بصريًا
   const picker = btn.closest(".color-picker");
   picker.querySelectorAll(".color-swatch").forEach(b=>{
     b.setAttribute("aria-selected", b===btn ? "true" : "false");
   });
 
-  // خزّن اللون وحدّث النص
   SELECTED_COLORS[pid] = colorId;
   const product = PRODUCTS.find(x=>x.id===pid);
   const color = product?.colors?.find(c=>c.id===colorId);
-  if(color){
 
-  const stock = Number(color.stock || 0);
-
-  if(stock <= 0){
-    alert(`❌ اللون ${color.label} غير متوفر حاليًا.`);
-  }
-}
   const labelEl = document.querySelector(`.current-color[data-color-label-for="${pid}"]`);
   if(labelEl && color) labelEl.textContent = color.label;
                           
-  // فحص المخزون وتحديث زر أضف للسلة
-const card = btn.closest(".card");
+  const card = btn.closest(".card");
+  if(card && color){
+    const addBtn = card.querySelector("[data-add]");
+    const stock = Number(color.stock || 0);
 
-if(card && color){
-  const addBtn = card.querySelector("[data-add]");
-  const stock = Number(color.stock || 0);
-
-  if(stock <= 0){
-    addBtn.disabled = true;
-    addBtn.textContent = "نفذت الكمية";
-    addBtn.classList.add("out-of-stock");
-  }else{
-    addBtn.disabled = false;
-    addBtn.textContent = "أضف للسلة";
-    addBtn.classList.remove("out-of-stock");
+    if(stock <= 0){
+      addBtn.disabled = true;
+      addBtn.textContent = "نفذت الكمية";
+      addBtn.classList.add("out-of-stock");
+    }else{
+      addBtn.disabled = false;
+      addBtn.textContent = "أضف للسلة";
+      addBtn.classList.remove("out-of-stock");
+    }
   }
-}
 
-  // بدّل الصورة
- // بدّل الصورة (مع fallback للامتدادات)
-const img = document.querySelector(`[data-img-for="${pid}"]`);
-if (img) {
-  const baseNoExt = stripExt(resolveProductImage(pid));
-  tryImageFallback(img, baseNoExt);
-}
+  const img = document.querySelector([data-img-for="${pid}"]);
+  if (img) {
+    const baseNoExt = stripExt(resolveProductImage(pid));
+    tryImageFallback(img, baseNoExt);
+  }
 });
+
 /* ============== Card Template ============== */
 function cardTemplate(p){
   const el=document.createElement("article");
   el.className="card";
 
-  // المواصفات (3 أولى ظاهرة) — class="more" للباقي
   let specsHTML = "";
   if (Array.isArray(p.specs) && p.specs.length) {
     const first3 = p.specs.slice(0, 1);
@@ -1756,24 +1746,23 @@ function cardTemplate(p){
     specsHTML += `</ul>`;
   }
 
-  // المتغيرات (إن وجدت)
   let variantHTML = "";
   let initialPrice = basePrice(p);
-  let initialImage = getInitialImagePreferProduct(p); // صورة المنتج أولاً
+  let initialImage = getInitialImagePreferProduct(p);
+
   if (hasVariants(p)) {
     variantHTML =
       `<label class="muted tiny" for="${p.id}-v">النسخة:</label>
        <select id="${p.id}-v" class="variant" data-pid="${p.id}">
          ${p.variants.map((v,i)=>`<option value="${v.id}" ${i===0?"selected":""}>${v.label} — ${formatPrice(v.price)}</option>`).join("")}
        </select>`;
-    
   }
 
   el.innerHTML =
     `<div class="card__img"><img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}"></div>
      <div class="card__body">
        <h3 class="card__title">${p.title}</h3>
-      ${colorRowHTML(p)}   <!-- ✅ صفّ الألوان -->
+       ${colorRowHTML(p)}
        ${specsHTML}
        ${variantHTML}
        <div class="card__meta">
@@ -1782,16 +1771,12 @@ function cardTemplate(p){
        </div>
      </div>`;
   
-    // ✅ تطبيق fallback على الصورة الابتدائية
-{
-  const imgEl = el.querySelector(`[data-img-for="${p.id}"]`);
+  const imgEl = el.querySelector([`data-img-for="${p.id}"]`);
   if (imgEl) {
     const baseNoExt = stripExt(resolveProductImage(p.id));
     tryImageFallback(imgEl, baseNoExt);
   }
-}
 
-  // تحديث السعر/الصورة عند تغيير المتغير
   if (hasVariants(p)) {
     const sel     = el.querySelector(`#${p.id}-v`);
     const priceEl = el.querySelector(`[data-price-for="${p.id}"]`);
@@ -1800,157 +1785,111 @@ function cardTemplate(p){
       const v = p.variants.find(x=> x.id===sel.value);
       if (v && priceEl) priceEl.textContent = formatPrice(v.price);
       if (imgEl) {
-  const baseNoExt = stripExt(resolveProductImage(p.id));
-  tryImageFallback(imgEl, baseNoExt);
-}
-});
+        const baseNoExt = stripExt(resolveProductImage(p.id));
+        tryImageFallback(imgEl, baseNoExt);
+      }
+    });
   }
 
-  // زر "أضف للسلة"
- const addBtn = el.querySelector("[data-add]");
+  const addBtn = el.querySelector("[data-add]");
 
-if(addBtn){
-
-  function updateStockUI(){
-
-    // إذا كان المنتج لا يحتوي ألوان
-    if(!hasColors(p)){
-      addBtn.disabled = false;
-      addBtn.textContent = "أضف للسلة";
-      return;
-    }
-
-    const selectedColor = getSelectedColorObj(p.id);
-
-    // لم يتم اختيار لون
-    if(!selectedColor){
-      addBtn.disabled = false;
-      addBtn.textContent = "أضف للسلة";
-      return;
-    }
-
-    const stock = Number(selectedColor.stock || 0);
-    const cartQty = getCartQty(p.id, selectedColor.id);
-
-    if(stock <= 0 || cartQty >= stock){
-      addBtn.disabled = true;
-      addBtn.textContent = "نفذت الكمية";
-      addBtn.classList.add("out-of-stock");
-    }else{
-      addBtn.disabled = false;
-      addBtn.textContent = "أضف للسلة";
-      addBtn.classList.remove("out-of-stock");
-    }
-  }
-
-  addBtn.onclick = ()=>{
-
-    // =========================
-    // إجبار اختيار اللون
-    // =========================
-    if(hasColors(p)){
+  if(addBtn){
+    function updateStockUI(){
+      if(!hasColors(p)){
+        addBtn.disabled = false;
+        addBtn.textContent = "أضف للسلة";
+        return;
+      }
 
       const selectedColor = getSelectedColorObj(p.id);
 
       if(!selectedColor){
-        showNotice(
-  "يرجى اختيار اللون أولًا قبل إضافة المنتج للسلة.",
-  "warning"
-);
-        // إبراز اختيار اللون
-        const picker = el.querySelector(".color-picker");
-
-        if(picker){
-          picker.classList.add("color-required");
-
-          setTimeout(()=>{
-            picker.classList.remove("color-required");
-          }, 800);
-        }
-
+        addBtn.disabled = false;
+        addBtn.textContent = "أضف للسلة";
         return;
       }
 
-      // =========================
-      // فحص المخزون
-      // =========================
       const stock = Number(selectedColor.stock || 0);
       const cartQty = getCartQty(p.id, selectedColor.id);
 
-     if(hasColors(p) && selectedColor){
-  const stock = Number(selectedColor.stock || 0);
-  const cartQty = getCartQty(p.id, selectedColor.id);
-
-  if(stock <= 0){
-    showNotice(`اللون <strong>${selectedColor.label}</strong> غير متوفر حاليًا.`, "error");
-    updateStockUI();
-    return;
-  }
-
-  if(cartQty >= stock){
-    showNotice(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.`, "warning");
-    updateStockUI();
-    return;
-  }
-}
-    
-
-    
-    const colorId = selectedColor?.id || "no-color";
-
-    let payload, key;
-
-    if(hasVariants(p)){
-
-      const sel = el.querySelector("#" + p.id + "-v" );
-      const v = p.variants.find(x=>x.id===sel.value) || p.variants[0];
-
- key = p.id + "|" + v.id + "|" + colorId;
-      payload = {
-        id: key,
-        baseId: p.id,
-        title: variantFullTitle(p, v),
-        price: v.price,
-        image: selectedColor?.image || v.image || p.image,
-        variant: v.label,
-
-        color: selectedColor
-          ? {
-              id: selectedColor.id,
-              label: selectedColor.label
-            }
-          : null
-      };
-
-    }else{
-
-      key = `${p.id}|_|${colorId}`;
-
-      payload = {
-        id: key,
-        baseId: p.id,
-        title: p.title,
-        price: p.price,
-        image: selectedColor?.image || p.image,
-
-        color: selectedColor
-          ? {
-              id: selectedColor.id,
-              label: selectedColor.label
-            }
-          : null
-      };
+      if(stock <= 0 || cartQty >= stock){
+        addBtn.disabled = true;
+        addBtn.textContent = "نفذت الكمية";
+        addBtn.classList.add("out-of-stock");
+      }else{
+        addBtn.disabled = false;
+        addBtn.textContent = "أضف للسلة";
+        addBtn.classList.remove("out-of-stock");
+      }
     }
 
-    addToCartWithKey(payload.id, payload);
+    addBtn.onclick = ()=>{
+      if(hasColors(p)){
+        const selectedColor = getSelectedColorObj(p.id);
 
-    // تحديث حالة المخزون بعد الإضافة
+        if(!selectedColor){
+          showNotice("يرجى اختيار اللون أولًا قبل إضافة المنتج للسلة.", "warning");
+          const picker = el.querySelector(".color-picker");
+          if(picker){
+            picker.classList.add("color-required");
+            setTimeout(()=>{ picker.classList.remove("color-required"); }, 800);
+          }
+          return;
+        }
+
+        const stock = Number(selectedColor.stock || 0);
+        const cartQty = getCartQty(p.id, selectedColor.id);
+
+        if(stock <= 0){
+          showNotice(`اللون <strong>${selectedColor.label}</strong> غير متوفر حاليًا.,` "error");
+          updateStockUI();
+          return;
+        }
+
+        if(cartQty >= stock){
+          showNotice(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.,` "warning");
+          updateStockUI();
+          return;
+        }
+      }
+
+      const selectedColor = getSelectedColorObj(p.id);
+      const colorId = selectedColor?.id || "no-color";
+
+      let payload, key;
+
+      if(hasVariants(p)){
+        const sel = el.querySelector("#" + p.id + "-v" );
+        const v = p.variants.find(x=>x.id===sel.value) || p.variants[0];
+
+        key = p.id + "|" + v.id + "|" + colorId;
+        payload = {
+          id: key,
+          baseId: p.id,
+          title: variantFullTitle(p, v),
+          price: v.price,
+          image: selectedColor?.image || v.image || p.image,
+          variant: v.label,
+          color: selectedColor ? { id: selectedColor.id, label: selectedColor.label } : null
+        };
+      }else{
+        key = `${p.id}|_|${colorId}`;
+        payload = {
+          id: key,
+          baseId: p.id,
+          title: p.title,
+          price: p.price,
+          image: selectedColor?.image || p.image,
+          color: selectedColor ? { id: selectedColor.id, label: selectedColor.label } : null
+        };
+      }
+
+      addToCartWithKey(payload.id, payload);
+      updateStockUI();
+    };
+
     updateStockUI();
-  };
-
-  // تحديث الزر عند تحميل البطاقة
-  updateStockUI();
-} 
+  } 
 
   return el;
 }
@@ -1967,32 +1906,25 @@ function addToCartWithKey(key, meta){
 
 function updateCartCount(){
   const count = Object.values(state.cart).reduce((s,it)=> s+it.qty, 0);
-  // يدعم كلًا من #cartCount و .cart-badge
   const badge = $("#cartCount") || $(".cart-badge");
   if (!badge) return;
   badge.textContent = count;
   badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump");
   setTimeout(()=> badge.classList.remove("bump"), 400);
 }
+
 function getCartQty(pid, colorId){
   let total = 0;
-
   Object.values(state.cart).forEach(item => {
     const product = item.product;
-
     if (!product) return;
-
-    // نفس المنتج
     if (product.baseId !== pid) return;
-
-    // إذا كان هناك لون
     if (colorId && product.color?.id !== colorId) return;
-
     total += Number(item.qty || 0);
   });
-
   return total;
 }
+
 function animateFab(){
   const fab=$("#cartFab"); if(!fab || !fab.animate) return;
   fab.animate([{transform:"scale(1)"},{transform:"scale(1.08)"},{transform:"scale(1)"}], {duration:260});
@@ -2024,16 +1956,16 @@ function disableScroll(lock){ document.body.style.overflow = lock? "hidden": "";
 function renderCart(){
   const wrap=$("#cartItems"); if(!wrap) return;
   wrap.innerHTML="";
-  const entries=Object.values(state.cart);
+  const entries=Object.entries(state.cart);
   if(entries.length===0){ wrap.innerHTML='<p class="muted">سلتك فارغة.</p>'; }
-  else{ entries.forEach(it=> wrap.appendChild(cartRow(it.product, it.qty))); }
+  else{ entries.forEach(([key, it])=> wrap.appendChild(cartRow(key, it.product, it.qty))); }
 
-  const total=entries.reduce((s,it)=> s + it.product.price*it.qty, 0);
+  const total=Object.values(state.cart).reduce((s,it)=> s + it.product.price*it.qty, 0);
   const ct=$("#cartTotal"); if(ct) ct.textContent=formatPrice(total);
   const f=$("#checkout-form"); if(f) f.hidden=true;
 }
 
-function cartRow(p, qty){
+function cartRow(key, p, qty){
   const row=document.createElement("div");
   const colorText = p.color?.label ? ` — <span class="tiny muted">اللون: ${p.color.label}</span>` : "";
   row.className="cart-row";
@@ -2052,54 +1984,55 @@ function cartRow(p, qty){
 
   const inc=row.querySelector("[data-inc]");
   const dec=row.querySelector("[data-dec]");
+
   if(inc){
-  inc.onclick=()=>{
+    inc.onclick=()=>{
+      const item = state.cart[key];
+      if(!item) return;
 
-    const item = state.cart[p.id];
-    const product = PRODUCTS.find(x => x.id === item.product.baseId);
+      const product = PRODUCTS.find(x => x.id === item.product.baseId);
+      let stock = Infinity;
 
-    let stock = Infinity;
+      if(product && item.product.color?.id && Array.isArray(product.colors)){
+        const color = product.colors.find(c => c.id === item.product.color.id);
+        stock = Number(color?.stock || 0);
+      }
 
-    // مخزون اللون
-    if(
-      product &&
-      item.product.color?.id &&
-      Array.isArray(product.colors)
-    ){
-      const color = product.colors.find(
-        c => c.id === item.product.color.id
-      );
+      if(item.qty >= stock){
+        showNotice(`❌ لا يمكن إضافة كمية أكثر.<br>المتوفر من هذا اللون: ${stock} قطعة.`, "warning");
+        return;
+      }
 
-      stock = Number(color?.stock || 0);
-    }
+      item.qty++;
+      save("cart", state.cart);
+      renderCart();
+      updateCartCount();
+    };
+  }
 
-    if(item.qty >= stock){
-  showNotice(`❌ لا يمكن إضافة كمية أكثر.<br>المتوفر من هذا اللون: ${stock} قطعة.`, "warning");
-  return;
-}
-
-    item.qty++;
-
-    save("cart", state.cart);
-    renderCart();
-    updateCartCount();
-  };
-}
-  if(dec){ dec.onclick=()=>{ state.cart[p.id].qty--; if(state.cart[p.id].qty<=0) delete state.cart[p.id]; save("cart", state.cart); renderCart(); updateCartCount(); }; }
+  if(dec){ 
+    dec.onclick=()=>{ 
+      if(state.cart[key]){
+        state.cart[key].qty--; 
+        if(state.cart[key].qty<=0) delete state.cart[key]; 
+        save("cart", state.cart); 
+        renderCart(); 
+        updateCartCount(); 
+      }
+    }; 
+  }
   return row;
 }
 
-/* ============== Checkout (Worker) ============== */
-// ✅ لاحظ: معرّف النموذج المصحّح هنا هو #checkout-form
+/* ============== Checkout ============== */
 const checkoutFormEl = $("#checkout-form") || $("#checkoutForm");
 safeAddEvent(checkoutFormEl, "submit", async (e)=>{
-
-  // اجمع بيانات الزبون
+  e.preventDefault();
   const fd=new FormData(e.currentTarget);
   const buyer={}; fd.forEach((v,k)=> {
-  buyer[k] = (k === "phone") ? normalizeDigits(v) : String(v || "").trim();
-});
-  // تحقق واجهة
+    buyer[k] = (k === "phone") ? normalizeDigits(v) : String(v || "").trim();
+  });
+
   const errs=[];
   if (!buyer.name || buyer.name.length < 2) errs.push("الاسم مطلوب (على الأقل حرفان).");
   if (!/^[0-9+\s\-()]{8,}$/.test(buyer.phone||"")) errs.push("رقم الهاتف غير صالح.");
@@ -2108,24 +2041,21 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
   if(entries.length===0) errs.push("السلة فارغة.");
   if (errs.length){ alert("رجاءً صحح الأخطاء التالية:\n- "+errs.join("\n- ")); return; }
 
-  
-  // ابنِ العناصر المطلوبة للـ Worker
-const items = entries.map(it => {
-  const colorLabel = it.product.color?.label || "";
-  const titleWithColor = colorLabel
-    ? `${it.product.title} — لون: ${colorLabel}`
-    : it.product.title;
+  const items = entries.map(it => {
+    const colorLabel = it.product.color?.label || "";
+    const titleWithColor = colorLabel
+      ? ${it.product.title} — لون: ${colorLabel}
+      : it.product.title;
 
-  return {
-    title: titleWithColor,                 // ← العنوان صار يحتوي اللون
-    qty: Number(it.qty || 1),
-    price: Number(it.product.price || 0),
-    color: colorLabel                      // ← حقل إضافي احتياطي
-  };
-});
+    return {
+      title: titleWithColor,
+      qty: Number(it.qty || 1),
+      price: Number(it.product.price || 0),
+      color: colorLabel
+    };
+  });
   const total=items.reduce((s,it)=> s+(it.price*it.qty), 0);
 
-  // شكل الحمولة الذي يتوقعه الـ Worker
   const payload = {
     name: buyer.name,
     phone: buyer.phone,
@@ -2139,24 +2069,19 @@ const items = entries.map(it => {
   try{
     submitBtn && (submitBtn.disabled = true);
 
-    if (!ORDER_ENDPOINT) {
-  // احتياطي: افتح واتساب بدل الإرسال
-  if (!WHATSAPP_NUMBER) {
-    alert("لا يوجد ORDER_ENDPOINT ولا رقم واتساب مُعرّف.");
-    return;
-  }
+    if (typeof ORDER_ENDPOINT === 'undefined' || !ORDER_ENDPOINT) {
+      if (typeof WHATSAPP_NUMBER === 'undefined' || !WHATSAPP_NUMBER) {
+        alert("لا يوجد ORDER_ENDPOINT ولا رقم واتساب مُعرّف.");
+        return;
+      }
 
-  const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(
-    `طلب جديد
-الاسم: ${payload.name}
-الهاتف: ${payload.phone}
-العنوان: ${payload.address}
-الإجمالي: ${total} ${CURRENCY}`
-  );
-  window.open(wa, "_blank", "noopener");
-  afterSuccess();
-  return;
-}
+      const wa = https://wa.me/${WHATSAPP_NUMBER}?text= + encodeURIComponent(
+        طلب جديد\nالاسم: ${payload.name}\nالهاتف: ${payload.phone}\nالعنوان: ${payload.address}\nالإجمالي: ${total} ${CURRENCY}
+      );
+      window.open(wa, "_blank", "noopener");
+      afterSuccess();
+      return;
+    }
 
     const res = await fetch(ORDER_ENDPOINT, {
       method:"POST",
@@ -2167,11 +2092,10 @@ const items = entries.map(it => {
     const data = await res.json().catch(()=> ({}));
 
     if (!res.ok || !data.ok) {
-      // التحقق المُفصّل من الـ Worker (422)
       if (res.status === 422 && Array.isArray(data?.details) && data.details.length) {
         alert("تعذر إرسال الطلب:\n- " + data.details.join("\n- "));
       } else {
-        alert("تعذر إرسال الطلب. رجاء المحاولة لاحقًا.\n" + (data?.error || `HTTP ${res.status}`));
+        alert("تعذر إرسال الطلب. رجاء المحاولة لاحقًا.\n" + (data?.error || HTTP ${res.status}));
       }
       return;
     }
@@ -2186,10 +2110,7 @@ const items = entries.map(it => {
 });
 
 function afterSuccess(){
-  showNotice(
-  "تم إرسال طلبك بنجاح.<br>سنقوم بالتواصل معك قريبًا.",
-  "success"
-);
+  showNotice("تم إرسال طلبك بنجاح.<br>سنقوم بالتواصل معك قريبًا.", "success");
   state.cart={}; save("cart", state.cart); renderCart(); updateCartCount(); closeCart();
 }
 
@@ -2211,7 +2132,7 @@ function renderDots(){
   const dots=$("#dots"); const slides=$all(".slide"); if(!dots || slides.length===0) return;
   dots.innerHTML="";
   slides.forEach((_,idx)=>{
-  const b=document.createElement("button"); b.className="slider-dot"+(idx===0?" active":"");
+    const b=document.createElement("button"); b.className="slider-dot"+(idx===0?" active":"");
     b.onclick=()=>{ showSlide(idx); }; dots.appendChild(b);
   });
 }
@@ -2224,7 +2145,6 @@ function init(){
   filterAndRender();
   updateCartCount();
 
-  // منع تكبير شاشة الموبايل بسبب الحقول < 16px
   document.querySelectorAll('input, select, textarea').forEach(el=>{
     const cs = getComputedStyle(el);
     if (parseFloat(cs.fontSize) < 16) el.style.fontSize = "16px";
@@ -2248,11 +2168,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btn.classList.add("added");
     setTimeout(()=> btn.classList.remove("added"), 240);
   });
- 
 });
 
-
-/* زر عرض المزيد/أقل — تفويض عام واحد فقط */
+/* زر عرض المزيد/أقل */
 document.addEventListener("click", function(e){
   const btn = e.target.closest(".show-toggle");
   if (!btn) return;
@@ -2262,10 +2180,9 @@ document.addEventListener("click", function(e){
   btn.textContent = isOpen ? "عرض المزيد" : "عرض أقل";
   btn.setAttribute("aria-expanded", (!isOpen).toString());
 });
+
 /* ============== Custom Notice ============== */
-
 function showNotice(message, type = "warning") {
-
   let notice = document.getElementById("customNotice");
 
   if (!notice) {
@@ -2322,4 +2239,4 @@ function showNotice(message, type = "warning") {
     notice.classList.remove("show");
   }, 3500);
 }
-  }
+
