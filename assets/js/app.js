@@ -1841,13 +1841,13 @@ function cardTemplate(p){
         const cartQty = getCartQty(p.id, selectedColor.id);
 
         if(stock <= 0){
-          showNotice(`اللون <strong>${selectedColor.label}</strong> غير متوفر حاليًا.,` "error");
+          showNotice(`اللون <strong>${selectedColor.label}</strong> غير متوفر حاليًا.`, "error");
           updateStockUI();
           return;
         }
 
         if(cartQty >= stock){
-          showNotice(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.,` "warning");
+          showNotice(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.`, "warning");
           updateStockUI();
           return;
         }
