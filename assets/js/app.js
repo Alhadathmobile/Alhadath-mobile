@@ -2014,7 +2014,11 @@ safeAddEvent($("#backToCart"), "click", ()=>{
 });
 
 function openCart(){ renderCart(); disableScroll(true); const m=$("#cartModal"); if(m) m.hidden=false; }
-function closeCart(){ const m=$("#cartModal"); if(m) m.hidden=true; disableScroll(false); }
+function closeCart(){ 
+  const m = $("#cartModal"); 
+  if(m) m.hidden = true; 
+  disableScroll(false); 
+}
 function disableScroll(lock){ document.body.style.overflow = lock? "hidden": ""; }
 
 function renderCart(){
@@ -2089,8 +2093,8 @@ function cartRow(p, qty){
 
 /* ============== Checkout (Worker) ============== */
 // ✅ لاحظ: معرّف النموذج المصحّح هنا هو #checkout-form
-safeAddEvent($("#checkout-form"), "submit", async (e)=>{
-  e.preventDefault();
+const checkoutFormEl = $("#checkout-form") || $("#checkoutForm");
+safeAddEvent(checkoutFormEl, "submit", async (e)=>{
 
   // اجمع بيانات الزبون
   const fd=new FormData(e.currentTarget);
