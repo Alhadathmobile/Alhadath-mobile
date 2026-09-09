@@ -1771,7 +1771,7 @@ function cardTemplate(p){
        </div>
      </div>`;
   
-  const imgEl = el.querySelector([`data-img-for="${p.id}"]`);
+  const imgEl = el.querySelector(`[data-img-for="${p.id}"]`);
   if (imgEl) {
     const baseNoExt = stripExt(resolveProductImage(p.id));
     tryImageFallback(imgEl, baseNoExt);
