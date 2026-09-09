@@ -1878,10 +1878,13 @@ if(addBtn){
       const cartQty = getCartQty(p.id, selectedColor.id);
 
       if(stock <= 0){
-        showNotice(
-  اللون `<strong>${color.label}</strong> غير متوفر حاليًا.,`
-  "error"
-);
+  showNotice(
+    `اللون <strong>${selectedColor.label}</strong> غير متوفر حاليًا.`,
+    "error"
+  );
+  updateStockUI();
+  return;
+}
         updateStockUI();
         return;
       }
