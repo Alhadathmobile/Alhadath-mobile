@@ -1877,23 +1877,22 @@ if(addBtn){
       const stock = Number(selectedColor.stock || 0);
       const cartQty = getCartQty(p.id, selectedColor.id);
 
-      if(stock <= 0){
-  showNotice(
-    `اللون <strong>${selectedColor.label}</strong> غير متوفر حاليًا.`,
-    "error"
-  );
-  updateStockUI();
-  return;
-}
-        updateStockUI();
-        return;
-    
+     if(hasColors(p) && selectedColor){
+  const stock = Number(selectedColor.stock || 0);
+  const cartQty = getCartQty(p.id, selectedColor.id);
 
-      if(cartQty >= stock){
-        alert(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.`);
-        updateStockUI();
-        return;
-      }
+  if(stock <= 0){
+    showNotice(`اللون <strong>${selectedColor.label}</strong> غير متوفر حاليًا.`, "error");
+    updateStockUI();
+    return;
+  }
+
+  if(cartQty >= stock){
+    showNotice(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.`, "warning");
+    updateStockUI();
+    return;
+  }
+}
     
 
     const selectedColor = getSelectedColorObj(p.id);
@@ -1906,7 +1905,7 @@ if(addBtn){
       const sel = el.querySelector("#" + p.id + "-v" );
       const v = p.variants.find(x=>x.id===sel.value) || p.variants[0];
 
-const key = p.id + "|" + v.id + "|" + colorId;
+ key = p.id + "|" + v.id + "|" + colorId;
       payload = {
         id: key,
         baseId: p.id,
