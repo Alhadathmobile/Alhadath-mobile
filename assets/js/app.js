@@ -2322,3 +2322,4 @@ function showNotice(message, type = "warning") {
     notice.classList.remove("show");
   }, 3500);
 }
+  }
