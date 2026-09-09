@@ -2074,11 +2074,9 @@ function cartRow(p, qty){
     }
 
     if(item.qty >= stock){
-
-      alert(`❌ لا يمكن إضافة كمية أكثر.\nالمتوفر من هذا اللون: ${stock} قطعة.`);
-
-      return;
-    }
+  showNotice(`❌ لا يمكن إضافة كمية أكثر.<br>المتوفر من هذا اللون: ${stock} قطعة.`, "warning");
+  return;
+}
 
     item.qty++;
 
