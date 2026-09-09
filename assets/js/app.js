@@ -1887,14 +1887,14 @@ if(addBtn){
 }
         updateStockUI();
         return;
-      }
+    
 
       if(cartQty >= stock){
         alert(`❌ لا يمكن إضافة كمية إضافية. المتوفر من هذا اللون: ${stock} قطعة.`);
         updateStockUI();
         return;
       }
-    }
+    
 
     const selectedColor = getSelectedColorObj(p.id);
     const colorId = selectedColor?.id || "no-color";
