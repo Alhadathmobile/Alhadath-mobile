@@ -1972,7 +1972,25 @@ function updateCartCount(){
   badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump");
   setTimeout(()=> badge.classList.remove("bump"), 400);
 }
+function getCartQty(pid, colorId){
+  let total = 0;
 
+  Object.values(state.cart).forEach(item => {
+    const product = item.product;
+
+    if (!product) return;
+
+    // نفس المنتج
+    if (product.baseId !== pid) return;
+
+    // إذا كان هناك لون
+    if (colorId && product.color?.id !== colorId) return;
+
+    total += Number(item.qty || 0);
+  });
+
+  return total;
+}
 function animateFab(){
   const fab=$("#cartFab"); if(!fab || !fab.animate) return;
   fab.animate([{transform:"scale(1)"},{transform:"scale(1.08)"},{transform:"scale(1)"}], {duration:260});
