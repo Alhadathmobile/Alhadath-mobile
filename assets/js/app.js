@@ -1895,7 +1895,7 @@ if(addBtn){
 }
     
 
-    const selectedColor = getSelectedColorObj(p.id);
+    
     const colorId = selectedColor?.id || "no-color";
 
     let payload, key;
