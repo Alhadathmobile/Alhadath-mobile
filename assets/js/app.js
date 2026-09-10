@@ -2044,7 +2044,7 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
   const items = entries.map(it => {
     const colorLabel = it.product.color?.label || "";
     const titleWithColor = colorLabel
-      ? ${it.product.title} — لون: ${colorLabel}
+      ? `${it.product.title} — لون: ${colorLabel}`
       : it.product.title;
 
     return {
