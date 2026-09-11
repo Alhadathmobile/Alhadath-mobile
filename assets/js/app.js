@@ -2075,7 +2075,7 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
         return;
       }
       }
-  }
+  
   
 
      const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(
