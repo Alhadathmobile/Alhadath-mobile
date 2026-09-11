@@ -2102,7 +2102,7 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
       if (res.status === 422 && Array.isArray(data?.details) && data.details.length) {
         alert("تعذر إرسال الطلب:\n- " + data.details.join("\n- "));
       } else {
-        alert("تعذر إرسال الطلب. رجاء المحاولة لاحقًا.\n" + (data?.error || HTTP ${res.status}));
+        alert("تعذر إرسال الطلب. رجاء المحاولة لاحقًا.\n" + (data?.error || `HTTP ${res.status}`));
       }
       return;
     }
