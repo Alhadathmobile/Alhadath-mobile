@@ -2074,9 +2074,10 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
         alert("لا يوجد ORDER_ENDPOINT ولا رقم واتساب مُعرّف.");
         return;
       }
+      }
 
-      const wa = https://wa.me/${WHATSAPP_NUMBER}?text= + encodeURIComponent(
-        طلب جديد\nالاسم: ${payload.name}\nالهاتف: ${payload.phone}\nالعنوان: ${payload.address}\nالإجمالي: ${total} ${CURRENCY}
+      const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(
+        `طلب جديد\nالاسم: ${payload.name}\nالهاتف: ${payload.phone}\nالعنوان: ${payload.address}\nالإجمالي: ${total} ${CURRENCY}`
       );
       window.open(wa, "_blank", "noopener");
       afterSuccess();
