@@ -2076,10 +2076,7 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
       }
       }
   }
-  catch (err) {
-  console.error(err);
-  alert("حدث خطأ أثناء إرسال الطلب.");
-}
+  
 
      const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(
  ` 🛒 طلب جديد\nالاسم: ${payload.name}\nالهاتف: ${payload.phone}\nالعنوان: ${payload.address}\nالإجمالي: ${total} ${CURRENCY}`
@@ -2102,13 +2099,13 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
       if (res.status === 422 && Array.isArray(data?.details) && data.details.length) {
         alert("تعذر إرسال الطلب:\n- " + data.details.join("\n- "));
       } else {
-        alert("تعذر إرسال الطلب. رجاء المحاولة لاحقًا.\n" + (data?.error || `HTTP ${res.status}`));
-      }
+        alert("تعذر إرسال الطلب. حاول مرة أخرى لاحقًا. HTTP " + res.status);
+      } 
       return;
     }
 
     afterSuccess();
-  }catch(err){
+  } catch(err) {
     console.error(err);
     alert("حدث خطأ أثناء الإرسال. حاول مجددًا.");
   }finally{
