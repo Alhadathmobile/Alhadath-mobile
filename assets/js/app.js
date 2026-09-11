@@ -2075,6 +2075,11 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
         return;
       }
       }
+  }
+  catch (err) {
+  console.error(err);
+  alert("حدث خطأ أثناء إرسال الطلب.");
+}
 
       const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(
         `طلب جديد\nالاسم: ${payload.name}\nالهاتف: ${payload.phone}\nالعنوان: ${payload.address}\nالإجمالي: ${total} ${CURRENCY}`
@@ -2082,7 +2087,7 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
       window.open(wa, "_blank", "noopener");
       afterSuccess();
       return;
-    }
+  
 
     const res = await fetch(ORDER_ENDPOINT, {
       method:"POST",
