@@ -2076,15 +2076,28 @@ safeAddEvent(checkoutFormEl, "submit", async (e)=>{
       }
       }
   
-  
+  const res = await fetch(ORDER_ENDPOINT, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(payload)
+});
 
-     const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(
- ` 🛒 طلب جديد\nالاسم: ${payload.name}\nالهاتف: ${payload.phone}\nالعنوان: ${payload.address}\nالإجمالي: ${total} ${CURRENCY}`
-       );
+const data = await res.json().catch(() => ({}));
 
-      window.open(wa, "_blank", "noopener");
-      afterSuccess();
-      return;
+if (!res.ok || !data.ok) {
+  if (res.status === 422 && Array.isArray(data?.details) && data.details.length) {
+    alert("تعذر إرسال الطلب:\n- " + data.details.join("\n- "));
+  } else {
+    alert("تعذر إرسال الطلب. حاول مرة أخرى لاحقًا. HTTP " + res.status);
+  }
+  return;
+}
+
+afterSuccess();
+return;
+
   
 
     const res = await fetch(ORDER_ENDPOINT, {
