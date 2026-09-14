@@ -2098,22 +2098,10 @@ if (!res.ok || !data.ok) {
 afterSuccess();
 return;
 
-  
-
     
-
-    const data = await res.json().catch(()=> ({}));
-
-    if (!res.ok || !data.ok) {
-      if (res.status === 422 && Array.isArray(data?.details) && data.details.length) {
-        alert("تعذر إرسال الطلب:\n- " + data.details.join("\n- "));
-      } else {
-        alert("تعذر إرسال الطلب. حاول مرة أخرى لاحقًا. HTTP " + res.status);
-      } 
-      return;
     }
 
-    afterSuccess();
+   
   } catch(err) {
     console.error(err);
     alert("حدث خطأ أثناء الإرسال. حاول مجددًا.");
