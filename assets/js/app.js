@@ -66,6 +66,7 @@ const PRODUCTS = [
     id:"s-s26-ultra-12-256",
     title:"Samsung S26 ULTRA 5G",
     brand:"Samsung",
+    category: "smart",
     image:"assets/images/s26-all.webp",
     variants: [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
@@ -115,6 +116,7 @@ const PRODUCTS = [
     id: "s-a57-5g",
     title: "Samsung A57 5G",
     brand: "Samsung",
+    category: "smart",
     image: "assets/images/a57-all.webp",
     variants: [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 375 },
@@ -141,6 +143,7 @@ const PRODUCTS = [
     id: "s-a37-5g",
     title: "Samsung A37 5G",
     brand: "Samsung",
+    category: "smart",
     image: "assets/images/a37-all.jpg",
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 285 },
@@ -195,7 +198,7 @@ const PRODUCTS = [
   id: "jellico-original-cable-A1-type-c",
   title: "Jellico Type-c A1 – كابل جيليكو أصلي ",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/jellico-A1-type-c.webp",
   variants: [
     { id: "Samsung-3.1A", label: "3.1A Fast Charging Samsung", price: 5 }
@@ -242,6 +245,7 @@ const PRODUCTS = [
     id: "s-a16",
     title: "Samsung A16",
     brand: "Samsung",
+    category: "smart",
     image: "assets/images/a16-green.webp",
     variants: [
       { id: "128-4+4", label: "128GB / 4+4GB RAM", price: 135 },
@@ -267,7 +271,7 @@ const PRODUCTS = [
   id: "apple-original-adapter",
   title: "Apple Original Adapter – أدابتر آبل أصلي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/iphone-adapter.webp",
   variants: [
     { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
