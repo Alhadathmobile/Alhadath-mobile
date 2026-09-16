@@ -26,21 +26,21 @@ const PRODUCTS = [
       id: "midnight-black", 
       label: "Midnight Black – أسود ", 
       hex: "#000000", 
-      image: "assets/images/honor-x9d-black.webp",
+      image: "assets/images/honor-x9d-black.webp",stock:2
       
     },
     { 
       id: "forest-green", 
       label: "Forest Green – أخضر ", 
       hex: "#0F4F2A", 
-      image: "assets/images/honor-x9d-green.webp",
+      image: "assets/images/honor-x9d-green.webp",stock:0
       
     },
     { 
       id: "reddish-brown", 
       label: "Reddish Brown – بني ", 
       hex: "#5A2E1A", 
-      image: "assets/images/honor-x9d-brown.webp",
+      image: "assets/images/honor-x9d-brown.webp",stock:0
       
     },
     { 
@@ -71,9 +71,9 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp", stock:5  },
-    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png", stock:5 },
-    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp", stock:1 }
+    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp", stock:2  },
+    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png", stock:2 },
+    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp", stock:2 }
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
@@ -2099,7 +2099,7 @@ afterSuccess();
 return;
 
     
-  }  
+    
 
    
   } catch(err) {
