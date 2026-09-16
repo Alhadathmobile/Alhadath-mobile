@@ -71,9 +71,9 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp", stock:2  },
-    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png", stock:2 },
-    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp", stock:2 }
+    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp",stock:2  },
+    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png",stock:2 },
+    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp",stock:2 }
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
@@ -345,7 +345,7 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 270 }
     ],
     colors: [
-    { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg", stock:0 },
+    { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg",stock:0 },
     { id:"violet",  label:"Awesome Lavender (اللافندر)",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg",stock:0 },
     { id:"white", label:"Awesome White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg",stock:0}
   ],
@@ -493,7 +493,7 @@ const PRODUCTS = [
     { id: "512", label: "512GB / 8GB RAM", price: 999 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#1C1C1E", image: "assets/images/17-black.jpg", stock:0},
+    { id: "black", label: "Black (أسود)", hex: "#1C1C1E", image: "assets/images/17-black.jpg",stock:0},
     { id: "white", label: "White (أبيض)", hex: "#FFFFFF", image: "assets/images/17-white.jpg",stock:0 },
     { id: "blue", label: "Mist Blue (أزرق)", hex: "#215EBC", image: "assets/images/17-blue.jpg",stock:0 }
   ],
@@ -520,7 +520,7 @@ const PRODUCTS = [
   ],
   colors: [
     { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg",stock:0 },
-    { id: "dark-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" ,stock:0},
+    { id: "dark-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg",stock:0},
     { id: "silver", label: "Silver (الفضي)", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg", stock:0}
   ],
   specs: [
@@ -544,8 +544,8 @@ const PRODUCTS = [
      { id: "1T",   label: "1TB ",   price: 1050 }
     ],
       colors: [
-    { id:"gold", label:"Desert Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg", stock:0 },
-    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg", stock:0 },
+    { id:"gold", label:"Desert Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg",stock:0 },
+    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg",stock:0 },
     { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg",stock:0  }
   ],
    specs: [
@@ -567,8 +567,8 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 720 }
   ],
         colors: [
-    { id:"pink", label:"Pink (االزهري)",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg", stock:0 },
-    { id:"blue",  label:"Ultramarina (أزرق)",  hex:"#0000FF", image:"assets/images/16-blue.jpg", stock:0 },
+    { id:"pink", label:"Pink (االزهري)",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg",stock:0 },
+    { id:"blue",  label:"Ultramarina (أزرق)",  hex:"#0000FF", image:"assets/images/16-blue.jpg",stock:0 },
     { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-black.jpg",stock:0  }
   ],
   specs: [
@@ -591,7 +591,7 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 620 }
   ],
    colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/15-black.jpg", stock:0 }
+    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/15-black.jpg",stock:0 }
   ],
    
   specs: [
@@ -640,7 +640,7 @@ const PRODUCTS = [
   ],
      colors: [
     { id:"white", label:"White (أبيض)",  hex:"#FFFFFF", image:"assets/images/16-plus-white.jpg",stock:0  },
-    { id:"blue",  label:"Ultramarine (أزرق)",  hex:"#0000FF", image:"assets/images/16-plus-blue.jpg", stock:0 },
+    { id:"blue",  label:"Ultramarine (أزرق)",  hex:"#0000FF", image:"assets/images/16-plus-blue.jpg",stock:0 },
     { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-plus-black.jpg",stock:0  }
   ], 
   specs: [
@@ -664,7 +664,7 @@ const PRODUCTS = [
     { id: "256", label: "256GB / 8+8 GB RAM", price: 140 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg", stock:0},
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg",stock:0},
     { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.webp",stock:0 },
   ],
   specs: [
@@ -914,7 +914,7 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 199 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-lite-black.jpg", stock:0},
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-lite-black.jpg",stock:0},
     { id: "marrs-green", label: "Marrs Green – أخضر  ", hex: "#008000", image: "assets/images/honor-400-lite-green.jpg",stock:0 },
     { id: "velvet-gray", label: "Velvet Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-400-lite-gray.jpg",stock:0 }
   ],
@@ -940,9 +940,9 @@ const PRODUCTS = [
     { id: "256-86", label: "256GB / 8+8 GB RAM", price: 179}
   ],
   colors: [
-    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg" ,stock:2},
-    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-5g-gold.jpg" ,stock:2},
-    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-silver.jpg" ,stock:2}
+    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg",stock:2},
+    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-5g-gold.jpg",stock:2},
+    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-silver.jpg",stock:2}
   ],
   specs: [
     "شاشة 6.77 بوصة TFT LCD 120Hz",
@@ -965,7 +965,7 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg", stock:2},
+    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg",stock:2},
     { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-gold.jpg",stock:2 },
     { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-silver.jpg",stock:2 }
   ],
@@ -1420,7 +1420,7 @@ const PRODUCTS = [
     { id: "10000-Beige", label: "10000mAh Beige – كريمي", price: 15 }
   ],
   colors: [
-    { id: "Beige", label: "Beige – كريمي", hex: "#F5F5DC", image: "assets/images/jellico-zp1.jpg" ,stock:5}
+    { id: "Beige", label: "Beige – كريمي", hex: "#F5F5DC", image: "assets/images/jellico-zp1.jpg",stock:5}
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1472,7 +1472,7 @@ const PRODUCTS = [
     { id: "128-8",  label: "128GB / 8GB RAM",  price: 189 }
   ],
   colors: [
-    { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp" ,stock:5},
+    { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp",stock:5},
   ],
   specs: [
     "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 بكسل، نسبة شاشة إلى جسم ≈ 85% ‎، سطوع ~400 nits", 
