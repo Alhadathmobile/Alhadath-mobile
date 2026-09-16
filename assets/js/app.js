@@ -47,7 +47,7 @@ const PRODUCTS = [
       id: "sunrise-gold", 
       label: "Sunrise Gold – ذهبي ", 
       hex: "#E6C878", 
-      image: "assets/images/honor-x9d-gold.webp",
+      image: "assets/images/honor-x9d-gold.webp",stock:0
       
     }
   ],
@@ -96,9 +96,9 @@ const PRODUCTS = [
     { id: "512-12", label: "512GB / 12+12 GB RAM", price: 379 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-600-black.webp" },
-    { id: "Golden-White", label: "Golden White – أبيض ذهبي ", hex: "#FFF8DC", image: "assets/images/honor-600-silver.webp" },
-    { id: "Orange", label: "Meteor Orange – أورانج ", hex: "#FFA500", image: "assets/images/honor-600-orange.webp" }
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-600-black.webp",stock:1 },
+    { id: "Golden-White", label: "Golden White – أبيض ذهبي ", hex: "#FFF8DC", image: "assets/images/honor-600-silver.webp",stock:1 },
+    { id: "Orange", label: "Meteor Orange – أورانج ", hex: "#FFA500", image: "assets/images/honor-600-orange.webp",stock:1 }
   ],
   specs: [
     "شاشة 6.57 بوصة AMOLED",
@@ -122,10 +122,10 @@ const PRODUCTS = [
       { id: "512-12+12", label: "512GB / 12+12GB RAM", price: 525 }
     ],
     colors: [
-    { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg"  },
-    { id:"awesome-gray",  label:"Awesome Gray (رمادي)",  hex:"#8B8D92", image:"assets/images/a57-gray.webp" },
-    { id:"awesome-lilac",  label:"Awesome Lilac (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a57-lilac.jpg" },  
-    { id:"awesome-icyblue", label:"Awesome Icyblue (أزرق ثلجي)",   hex:"#C8E8F5", image:"assets/images/a57-blue.jpg"}
+    { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg",stock:2  },
+    { id:"awesome-gray",  label:"Awesome Gray (رمادي)",  hex:"#8B8D92", image:"assets/images/a57-gray.webp",stock:2 },
+    { id:"awesome-lilac",  label:"Awesome Lilac (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a57-lilac.jpg",stock:2 },  
+    { id:"awesome-icyblue", label:"Awesome Icyblue (أزرق ثلجي)",   hex:"#C8E8F5", image:"assets/images/a57-blue.jpg",stock:2}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -148,10 +148,10 @@ const PRODUCTS = [
       { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 389 }
     ],
     colors: [
-    { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.webp"  },
-    { id:"awesome-Graygreen",  label:"Awesome Graygreen (أخضر رمادي)",  hex:"#7E857B", image:"assets/images/a37-green.webp" },
-    { id:"awesome-lavender",  label:"Awesome Lavender (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a37-lavender.webp" },  
-    { id:"awesome-white", label:"Awesome White (أبيض )",   hex:"#F5F5F2", image:"assets/images/a37-white.webp"}
+    { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.webp",stock:2  },
+    { id:"awesome-Graygreen",  label:"Awesome Graygreen (أخضر رمادي)",  hex:"#7E857B", image:"assets/images/a37-green.webp",stock:2 },
+    { id:"awesome-lavender",  label:"Awesome Lavender (بنفسجي فاتح)",  hex:"#C9B0D9", image:"assets/images/a37-lavender.webp",stock:2 },  
+    { id:"awesome-white", label:"Awesome White (أبيض )",   hex:"#F5F5F2", image:"assets/images/a37-white.webp",stock:2}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -176,8 +176,8 @@ const PRODUCTS = [
     { id: "128-6", label: "128GB / 6+6 GB RAM", price: 175 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a07-black.jpg" },
-    { id: "green", label: "Green (أخضر)", hex: "#4CAF50", image: "assets/images/a07-green.webp" },
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a07-black.jpg",stock:2 },
+    { id: "green", label: "Green (أخضر)", hex: "#4CAF50", image: "assets/images/a07-green.webp",stock:2 },
     { id: "light-violet", label: "Light Violet (بنفسجي فاتح)", hex: "#9B5DE5", image: "assets/images/a07-purple.webp" }
   ],
   specs: [
