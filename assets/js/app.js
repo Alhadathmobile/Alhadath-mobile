@@ -318,6 +318,7 @@ const PRODUCTS = [
     id: "s-a26-5g",
     title: "Samsung A26 5G",
     brand: "Samsung",
+    category: "smart",
     image: "assets/images/a26-mint.jpg",
     variants: [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 155 },
@@ -343,6 +344,7 @@ const PRODUCTS = [
     id: "s-a36-5g",
     title: "Samsung A36 5G",
     brand: "Samsung",
+    category: "smart",
     image: "assets/images/a36-awesome-violet.jpg",
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 220 },
@@ -367,6 +369,7 @@ const PRODUCTS = [
     id: "s-a56-5g",
     title: "Samsung A56 5G",
     brand: "Samsung",
+    category: "smart",
     image: "assets/images/a56-pink.jpg",
     variants: [
       { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 270 },
@@ -392,6 +395,7 @@ const PRODUCTS = [
     id:"s-s25-ultra-12-256",
     title:"Samsung S25 ULTRA 5G - 256GB / 12+12GB RAM",
     brand:"Samsung",
+    category: "smart",
     image:"assets/images/s25-titanium-gray.jpg",
     variants: [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 699 }
@@ -415,7 +419,7 @@ const PRODUCTS = [
   id: "samsung-galaxy-z-fold7",
   title: "Samsung Galaxy Z Fold7",
   brand: "Samsung",
-  category: "phones",
+  category: "smart",
   image: "assets/images/z-fold-7-blue.webp",
   variants: [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 1399 }
@@ -439,7 +443,7 @@ const PRODUCTS = [
   id: "samsung-galaxy-z-flip7",
   title: "Samsung Galaxy Z Flip7",
   brand: "Samsung",
-  category: "phones",
+  category: "smart",
   image: "assets/images/z-flip-7-black.webp",
   variants: [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 799 }
@@ -464,6 +468,7 @@ const PRODUCTS = [
   { id:"ip-16pm",
    title:"iPhone 16 Pro Max",
    brand:"iPhone",
+   category: "smart",
    image:"assets/images/16-pro-max-desert-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 870 },
@@ -541,6 +546,7 @@ const PRODUCTS = [
   { id:"iPhone-16pro",
    title:"iPhone 16 Pro",
    brand:"iPhone",
+   category: "smart",
    image:"assets/images/16-pro-natural-titanium.jpg",
    variants: [
       { id: "256", label: "256GB ", price: 850 },
@@ -565,6 +571,7 @@ const PRODUCTS = [
     {id: "iPhone-16",
   title: "iPhone 16",
   brand: "iPhone",
+  category: "smart",   
   image: "assets/images/16-blue.jpg",
   variants: [
     { id: "128", label: "128GB", price: 610 },
@@ -589,6 +596,7 @@ const PRODUCTS = [
   { id: "iPhone-15",
   title: "iPhone 15",
   brand: "iPhone",
+  category: "smart", 
   image: "assets/images/15-black.jpg",
   variants: [
     { id: "128", label: "128GB", price: 510 },
@@ -637,6 +645,7 @@ const PRODUCTS = [
     {id: "iPhone-16-plus",
   title: "iPhone 16 Plus",
   brand: "iPhone",
+  category: "smart",  
   image: "assets/images/16-plus-blue.jpg",
   variants: [
     { id: "128", label: "128GB", price: 610 },
@@ -1113,7 +1122,7 @@ const PRODUCTS = [
   id: "golf-original-cable-GC-77",
   title: "Golf Original Cable GC-77 – كابل جولف أصلي ",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/golf-GC-77.jpg",
   variants: [
     { id: "golf-original-cable-GC-77", label: "cable type-c", price: 5 }
@@ -1135,7 +1144,7 @@ const PRODUCTS = [
   id: "golf-original-cable-GC-79",
   title: "Golf Original Cable GC-79 – كابل جولف أصلي أيفون",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/golf-GC-79.jpg",
   variants: [
     { id: "golf-original-cable-GC-79", label: "cable iPhone", price: 5 }
@@ -1157,7 +1166,7 @@ const PRODUCTS = [
   id: "samsung-original-adapter",
   title: "Samsung Original Adapter – أدابتر سامسونج أصلي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/samsung-charger-25w-b.jpg",
   variants: [
     { id: "samsung-adapter-25W", label: "Power Adapter 25W", price: 12 }
@@ -1177,7 +1186,7 @@ const PRODUCTS = [
   id: "samsung-original-charge",
   title: "Samsung Original USB-C – شاحن سامسونج أصلي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/samsung-charger-full-black1.webp",
   variants: [
     { id: "samsung-charger-c-25W", label: "USB-C 25W", price: 19 }
@@ -1198,7 +1207,7 @@ const PRODUCTS = [
   id: "jellico-original-charger-AK-180-C-TO-L",
   title: "Jellico Lightning – شاحن جيليكو أصلي أيفون",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/charger-20w-jellico-lightning.webp",
   variants: [
     { id: "lightining-20w", label: "20w Fast Charging Samsung", price: 15 }
@@ -1217,7 +1226,7 @@ const PRODUCTS = [
   id: "jellico-original-charger-AK-180-C-TO-C",
   title: "Jellico Original Charger C TO C– شاحن جيليكو أصلي تايب سي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/charger-20w-jellico-usb-c-to-usb-c.webp",
   variants: [
     { id: "usb-c-20w", label: "20w Fast Charging ", price: 15 }
@@ -1236,7 +1245,7 @@ const PRODUCTS = [
   id: "jellico-original-adapter-AK180",
   title: "Jellico Original Adapter – أدابتر جيليكو أصلي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/jellico-AK180-adapter.webp",
   variants: [
     { id: "jellico-original-adapter-AK180", label: "adapter-C 20W", price: 10 }
@@ -1255,7 +1264,7 @@ const PRODUCTS = [
   id: "golf-original-cable-GC-119i",
   title: "Golf Original Cable GC-119i – كابل جولف أصلي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/golf-GC-119i.jpg",
   variants: [
     { id: "golf-original-cable-GC-119i", label: "cable lightning", price: 10 }
@@ -1276,7 +1285,7 @@ const PRODUCTS = [
   id: "golf-original-cable-GC-119",
   title: "Golf Original Cable GC-119 – كابل جولف أصلي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/golf-GC-119.jpg",
   variants: [
     { id: "golf-original-cable-GC-119", label: "cable type-c", price: 10 }
@@ -1297,7 +1306,7 @@ const PRODUCTS = [
   id: "yookie-original-charger-PC18-type-c",
   title: "Yookie Original Charger PC18 to type-c",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/charger-yookie-pc18.jpg",
   variants: [
     { id: "yookie-original-charger-PC18", label: "48W Fast Charging type-c", price: 10 }
@@ -1316,7 +1325,7 @@ const PRODUCTS = [
   id: "yookie-original-charger-PC18-iPhone",
   title: "Yookie Original Charger PC18 to iPhone",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/charger-yookie-pc18-ip.jpg",
   variants: [
     { id: "yookie-original-charger-PC18", label: "48W Fast Charging iPhone", price: 10 }
@@ -1335,7 +1344,7 @@ const PRODUCTS = [
   id: "golf-original-cable-GC-81P",
   title: "Golf Original Cable GC-81P – كابل جولف أصلي",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/golf-GC-81P.jpg",
   variants: [
     { id: "golf-original-cable-GC-81P", label: "cable iPhone ", price: 12 }
@@ -1358,7 +1367,7 @@ const PRODUCTS = [
   id: "jellico-original-cable-A1-ip",
   title: "Jellico Lightning A1 – كابل جيليكو أصلي أيفون",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/jellico-A1-ip.webp",
   variants: [
     { id: "jellico-original-cable-A1", label: "3.1A Fast Charging iPhone", price: 5 }
@@ -1378,7 +1387,7 @@ const PRODUCTS = [
   id: "jellico-powerbank-10000",
   title: "Jellico Power Bank 10000mAh – باور بانك جيليكو 10000مللي أمبير",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/jellico-p28.jpg",
   variants: [
     { id: "10000-black", label: "10000mAh Black – أسود", price: 15 }
@@ -1398,7 +1407,7 @@ const PRODUCTS = [
   id: "jellico-powerbank-20000",
   title: "Jellico Power Bank 20000mAh – باور بانك جيليكو 20000مللي أمبير",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/Jellico-p29.jpg",
   variants: [
     { id: "20000-black", label: "20000mAh Black – أسود", price: 25 }
@@ -1418,7 +1427,7 @@ const PRODUCTS = [
   id: "jellico-powerbank-10000-zp1",
   title: "Jellico Power Bank 10000mAh – باور بانك جيليكو 10000مللي أمبير",
   brand: "Accessories",
-  category: "smart",
+  category: "Accessories",
   image: "assets/images/jellico-zp1.jpg",
   variants: [
     { id: "10000-Beige", label: "10000mAh Beige – كريمي", price: 15 }
