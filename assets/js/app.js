@@ -178,7 +178,7 @@ const PRODUCTS = [
   colors: [
     { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a07-black.jpg",stock:2 },
     { id: "green", label: "Green (أخضر)", hex: "#4CAF50", image: "assets/images/a07-green.webp",stock:2 },
-    { id: "light-violet", label: "Light Violet (بنفسجي فاتح)", hex: "#9B5DE5", image: "assets/images/a07-purple.webp" }
+    { id: "light-violet", label: "Light Violet (بنفسجي فاتح)", hex: "#9B5DE5", image: "assets/images/a07-purple.webp",stock:0 }
   ],
   specs: [
     "شاشة 6.7 بوصة PLS LCD، دقة HD+، معدل تحديث 90Hz",
@@ -201,7 +201,7 @@ const PRODUCTS = [
     { id: "Samsung-3.1A", label: "3.1A Fast Charging Samsung", price: 5 }
   ],
   colors: [
-    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-type-c.webp" }
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-type-c.webp",stock:50 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -223,9 +223,9 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 275 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a17-black.webp" },
-    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/a17-gray.webp" },
-    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/a17-blue.webp" }
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/a17-black.webp",stock:2 },
+    { id: "gray", label: "Gray (رمادي)", hex: "#808080", image: "assets/images/a17-gray.webp",stock:2 },
+    { id: "blue", label: "Blue (أزرق)", hex: "#1E90FF", image: "assets/images/a17-blue.webp",stock:2 }
   ],
   specs: [
     "شاشة 6.7 بوصة Super AMOLED، دقة FHD+، معدل تحديث 90Hz",
@@ -249,9 +249,9 @@ const PRODUCTS = [
     
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a16-black.webp"  },
-    { id:"green",  label:"Light Green (أخضر)",  hex:"#86efac", image:"assets/images/a16-green.webp" },
-    { id:"silver", label:"Gray (رمادي)",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg"}
+    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a16-black.webp",stock:2  },
+    { id:"green",  label:"Light Green (أخضر)",  hex:"#86efac", image:"assets/images/a16-green.webp",stock:2 },
+    { id:"silver", label:"Gray (رمادي)",   hex:"#cbd5e1", image:"assets/images/a16-silver.jpg",stock:2}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 90Hz",
@@ -273,7 +273,7 @@ const PRODUCTS = [
     { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp",stock:0 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -295,9 +295,9 @@ const PRODUCTS = [
     { id: "2TB", label: "2TB / 12GB RAM", price: 1949 }
   ],
   colors: [
-    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg" },
-    { id: "deep-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg" },
-    { id: "silver", label: "Cosmic Silver (فضي)", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg" }
+    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-max-orange.jpg",stock:0 },
+    { id: "deep-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-max-deep-blue.jpg",stock:0 },
+    { id: "silver", label: "Cosmic Silver (فضي)", hex: "#CCCCCC", image: "assets/images/17-pro-max-silver.jpg",stock:0 }
   ],
   specs: [
     "شاشة 6.9 بوصة Super Retina XDR OLED، 120Hz",
@@ -320,9 +320,9 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 199 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a26-black.jpeg" },
-    { id:"green",  label:"Mint (أخضر)",  hex:"#86efac", image:"assets/images/a26-mint.jpg" },
-    { id:"white", label:"White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a26-white.jpg"}
+    { id:"black",  label:"Black (أسود)",  hex:"#111827", image:"assets/images/a26-black.jpeg",stock:0 },
+    { id:"green",  label:"Mint (أخضر)",  hex:"#86efac", image:"assets/images/a26-mint.jpg",stock:0 },
+    { id:"white", label:"White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a26-white.jpg",stock:0}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -345,9 +345,9 @@ const PRODUCTS = [
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 270 }
     ],
     colors: [
-    { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg"  },
-    { id:"violet",  label:"Awesome Lavender (اللافندر)",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg" },
-    { id:"white", label:"Awesome White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg"}
+    { id:"black",  label:"Awesome Black (أسود)",  hex:"#111827", image:"assets/images/a36-black.jpg", stock:0 },
+    { id:"violet",  label:"Awesome Lavender (اللافندر)",  hex:"#EE82EE", image:"assets/images/a36-awesome-violet.jpg",stock:0 },
+    { id:"white", label:"Awesome White (أبيض)",   hex:"#FFFFFF", image:"assets/images/a36-awesome-white.jpg",stock:0}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -370,9 +370,9 @@ const PRODUCTS = [
       { id: "256-12+12",label: "256GB / 12+12GB RAM", price: 340 }
     ],
     colors: [
-    { id:"black",  label:"Awesome Graphite (الرصاصي)",  hex:"#111827", image:"assets/images/a56-black.jpg"  },
-    { id:"pink",  label:"Awesome Pink (زهر)",  hex:"#FFC0CB", image:"assets/images/a56-pink.jpg" },
-    { id:"gray", label:"Awesome Lighte (رمادي)",   hex:"#D3D3D3", image:"assets/images/a56-awesome-lightgray.jpg"}
+    { id:"black",  label:"Awesome Graphite (الرصاصي)",  hex:"#111827", image:"assets/images/a56-black.jpg",stock:0  },
+    { id:"pink",  label:"Awesome Pink (زهر)",  hex:"#FFC0CB", image:"assets/images/a56-pink.jpg",stock:0 },
+    { id:"gray", label:"Awesome Lighte (رمادي)",   hex:"#D3D3D3", image:"assets/images/a56-awesome-lightgray.jpg",stock:0}
   ],
     specs: [
       "شاشة: 6.7 بوصة Super AMOLED FHD+، 120Hz",
@@ -393,9 +393,9 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 699 }
     ],
     colors: [
-    { id:"black",  label:"Titanium Jetblack (أسود)",  hex:"#0F0F0F", image:"assets/images/s25-titanium-black.jpg"  },
-    { id:"gray",  label:"Titanium Gray (رمادي)",  hex:"#878681", image:"assets/images/s25-titanium-gray.jpg" },
-    { id:"white", label:"Titanium Whitesilver (أبيض)",   hex:"#FFFFFF", image:"assets/images/s25-titanium-white.jpg"}
+    { id:"black",  label:"Titanium Jetblack (أسود)",  hex:"#0F0F0F", image:"assets/images/s25-titanium-black.jpg",stock:0  },
+    { id:"gray",  label:"Titanium Gray (رمادي)",  hex:"#878681", image:"assets/images/s25-titanium-gray.jpg",stock:0 },
+    { id:"white", label:"Titanium Whitesilver (أبيض)",   hex:"#FFFFFF", image:"assets/images/s25-titanium-white.jpg",stock:0}
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
@@ -417,8 +417,8 @@ const PRODUCTS = [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 1399 }
   ],
   colors: [
-    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/z-fold-7-blue.webp" },
-    { id: "silver-shadow", label: "Silver Shadow (فضي)", hex: "#C0C0C0", image: "assets/images/z-fold-7-silver.webp" }
+    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/z-fold-7-blue.webp",stock:0 },
+    { id: "silver-shadow", label: "Silver Shadow (فضي)", hex: "#C0C0C0", image: "assets/images/z-fold-7-silver.webp",stock:0 }
     ],
   specs: [
     "شاشة رئيسية 8.0 بوصة Dynamic AMOLED 2X، دقة 1856×2160، معدل تحديث 120Hz",
@@ -441,8 +441,8 @@ const PRODUCTS = [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 799 }
   ],
   colors: [
-    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/z-flip-7-blue.webp" },
-    { id: "jetblack", label: "Jetblack (أسود )", hex: "#000000", image: "assets/images/z-flip-7-black.webp" }
+    { id: "blue-shadow", label: "Blue Shadow (أزرق )", hex: "#2B4F81", image: "assets/images/z-flip-7-blue.webp",stock:0 },
+    { id: "jetblack", label: "Jetblack (أسود )", hex: "#000000", image: "assets/images/z-flip-7-black.webp",stock:0 }
   ],
   specs: [
     "شاشة رئيسية 6.9 بوصة Dynamic AMOLED 2X، دقة 1080×2520، معدل تحديث 120Hz",
@@ -467,9 +467,9 @@ const PRODUCTS = [
      { id: "1T",   label: "1TB ",   price: 990 }
     ],
    colors: [
-    { id:"gold", label:"Deser Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg"  },
-    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg"  },
-    { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-max-black-titanium.jpg"  }
+    { id:"gold", label:"Deser Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-max-desert-titanium.jpg",stock:0  },
+    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-max-natural-titanium.jpg",stock:0  },
+    { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-max-black-titanium.jpg",stock:0  }
   ],
    specs: [
      "الشاشة: 6.9 بوصة QHD+ Super Retina XDR OLED، 120Hz ProMotion",
@@ -493,9 +493,9 @@ const PRODUCTS = [
     { id: "512", label: "512GB / 8GB RAM", price: 999 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#1C1C1E", image: "assets/images/17-black.jpg" },
-    { id: "white", label: "White (أبيض)", hex: "#FFFFFF", image: "assets/images/17-white.jpg" },
-    { id: "blue", label: "Mist Blue (أزرق)", hex: "#215EBC", image: "assets/images/17-blue.jpg" }
+    { id: "black", label: "Black (أسود)", hex: "#1C1C1E", image: "assets/images/17-black.jpg", stock:0},
+    { id: "white", label: "White (أبيض)", hex: "#FFFFFF", image: "assets/images/17-white.jpg",stock:0 },
+    { id: "blue", label: "Mist Blue (أزرق)", hex: "#215EBC", image: "assets/images/17-blue.jpg",stock:0 }
   ],
   specs: [
     "شاشة 6.3 بوصة Super Retina XDR OLED، 120Hz",
@@ -519,9 +519,9 @@ const PRODUCTS = [
     { id: "1TB", label: "1TB / 12GB RAM", price: 1299 }
   ],
   colors: [
-    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg" },
-    { id: "dark-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" },
-    { id: "silver", label: "Silver (الفضي)", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg" }
+    { id: "cosmic-orange", label: "Cosmic Orange (أورانج)", hex: "#FF7300", image: "assets/images/17-pro-orange.jpg",stock:0 },
+    { id: "dark-blue", label: "Deep Blue (أزرق غامق)", hex: "#003366", image: "assets/images/17-pro-deep-blue.jpg" ,stock:0},
+    { id: "silver", label: "Silver (الفضي)", hex: "#E0E0E0", image: "assets/images/17-pro-silver.jpg", stock:0}
   ],
   specs: [
     "شاشة 6.3 بوصة Super Retina XDR OLED، 120Hz",
@@ -544,9 +544,9 @@ const PRODUCTS = [
      { id: "1T",   label: "1TB ",   price: 1050 }
     ],
       colors: [
-    { id:"gold", label:"Desert Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg"  },
-    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg"  },
-    { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg"  }
+    { id:"gold", label:"Desert Titanium (صحراوي)",  hex:"#C2B280", image:"assets/images/16-pro-desert-titanium.jpg", stock:0 },
+    { id:"natural",  label:"Natural Titanium (سلفر)",  hex:"#D9D9D9", image:"assets/images/16-pro-natural-titanium.jpg", stock:0 },
+    { id:"black",  label:"Black Titanium (أسود)",  hex:"#0F0F0F", image:"assets/images/16-pro-black.jpg",stock:0  }
   ],
    specs: [
     "الشاشة: 6.3 بوصة ProMotion OLED، 120Hz",
@@ -567,9 +567,9 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 720 }
   ],
         colors: [
-    { id:"pink", label:"Pink (االزهري)",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg"  },
-    { id:"blue",  label:"Ultramarina (أزرق)",  hex:"#0000FF", image:"assets/images/16-blue.jpg"  },
-    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-black.jpg"  }
+    { id:"pink", label:"Pink (االزهري)",  hex:"#FFC0CB", image:"assets/images/16-pink.jpg", stock:0 },
+    { id:"blue",  label:"Ultramarina (أزرق)",  hex:"#0000FF", image:"assets/images/16-blue.jpg", stock:0 },
+    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-black.jpg",stock:0  }
   ],
   specs: [
     "الشاشة: حوالي 6.1 بوصة OLED، 60-120Hz",
@@ -591,7 +591,7 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 620 }
   ],
    colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/15-black.jpg"  }
+    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/15-black.jpg", stock:0 }
   ],
    
   specs: [
@@ -615,8 +615,8 @@ const PRODUCTS = [
     { id: "512-12", label: "512GB / 12+8 GB RAM", price: 345 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/note-14-pro-5g-plus-black.webp" },
-    { id: "mist-purple", label: "Mist Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/note-14-pro-5g-plus-purple.webp" }
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/note-14-pro-5g-plus-black.webp",stock:0 },
+    { id: "mist-purple", label: "Mist Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/note-14-pro-5g-plus-purple.webp",stock:0 }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED، 1.5K، معدل تحديث 120Hz",
@@ -639,9 +639,9 @@ const PRODUCTS = [
     { id: "256", label: "256GB", price: 690 }
   ],
      colors: [
-    { id:"white", label:"White (أبيض)",  hex:"#FFFFFF", image:"assets/images/16-plus-white.jpg"  },
-    { id:"blue",  label:"Ultramarine (أزرق)",  hex:"#0000FF", image:"assets/images/16-plus-blue.jpg"  },
-    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-plus-black.jpg"  }
+    { id:"white", label:"White (أبيض)",  hex:"#FFFFFF", image:"assets/images/16-plus-white.jpg",stock:0  },
+    { id:"blue",  label:"Ultramarine (أزرق)",  hex:"#0000FF", image:"assets/images/16-plus-blue.jpg", stock:0 },
+    { id:"black",  label:"Black (أسود)",  hex:"#0F0F0F", image:"assets/images/16-plus-black.jpg",stock:0  }
   ], 
   specs: [
     "الشاشة: 6.7 بوصة OLED Super Retina XDR، دقة 2796×1290 بكسل، 460 ppi",
@@ -664,8 +664,8 @@ const PRODUCTS = [
     { id: "256", label: "256GB / 8+8 GB RAM", price: 140 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg" },
-    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.webp" },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-black.jpg", stock:0},
+    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-blue.webp",stock:0 },
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED، 120Hz",
@@ -685,13 +685,13 @@ const PRODUCTS = [
   category: "tablet",
   image: "assets/images/redmi-pad-2-mint.jpg",
   variants: [
-    { id: "8-256", label: "256GB / 8GB RAM", price: 185 },
-    { id: "4-128", label: "128GB / 4GB RAM", price: 155 }
+    { id: "8-256", label: "256GB / 8GB RAM", price: 206 },
+    { id: "4-128", label: "128GB / 4GB RAM", price: 169 }
   ],
   colors: [
-    { id: "gray", label: "Graphite Gray (رمادي)", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.png" },
-    { id: "green", label: "Mint Green (أخضر)", hex: "#A8E6CF", image: "assets/images/redmi-pad-2-mint.jpg" },
-    { id: "purple", label: "Lavender Purple (بنفسجي)", hex: "#9B59B6", image: "assets/images/redmi-pad-2-lavender.webp" }
+    { id: "gray", label: "Graphite Gray (رمادي)", hex: "#4B4B4B", image: "assets/images/redmi-pad-2-gray.png",stock:2 },
+    { id: "green", label: "Mint Green (أخضر)", hex: "#A8E6CF", image: "assets/images/redmi-pad-2-mint.jpg",stock:2 },
+    { id: "purple", label: "Lavender Purple (بنفسجي)", hex: "#9B59B6", image: "assets/images/redmi-pad-2-lavender.webp", stock:2}
   ],
   specs: [
     "شاشة 11 بوصة، دقة 2.5K (2560×1600)، معدل تحديث 90Hz",
@@ -716,9 +716,9 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-black.webp" },
-    { id: "aurora-purple", label: "Aurora Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/redmi-note-14-pro-purpul.webp" },
-    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-pro-blue.webp" }
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-note-14-pro-black.webp",stock:0 },
+    { id: "aurora-purple", label: "Aurora Purple (بنفسجي)", hex: "#9B5DE5", image: "assets/images/redmi-note-14-pro-purpul.webp",stock:0 },
+    { id: "ocean-blue", label: "Ocean Blue (أزرق)", hex: "#0077B6", image: "assets/images/redmi-note-14-pro-blue.webp",stock:0 }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED، معدل تحديث 120Hz",
@@ -739,13 +739,13 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/redmi-15c-orange.webp",
   variants: [
-    { id: "256-6", label: "256GB / 8+8 GB RAM", price: 129 }
+    { id: "256-6", label: "256GB / 8+8 GB RAM", price: 145 }
   ],
   colors: [
-    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.webp" },
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.webp" },
-    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.webp" },
-    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.webp" }
+    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.webp",stock:2 },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.webp",stock:2 },
+    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.webp",stock:2 },
+    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.webp",stock:2 }
   ],
   specs: [
     "شاشة 6.9 بوصة IPS LCD، معدل تحديث 120Hz",
@@ -766,10 +766,10 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/redmi-15-black.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 220 }
   ],
   colors: [
-    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/redmi-15-black.jpg" }
+    { id: "black", label: "Black (أسود)", hex: "#000000", image: "assets/images/redmi-15-black.jpg",stock:2 }
   ],
   specs: [
     "شاشة 6.9 بوصة AMOLED، معدل تحديث 144Hz",
@@ -788,13 +788,13 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/redmi-15c-orange.webp",
   variants: [
-    { id: "256-6", label: "256GB / 8+8 GB RAM", price: 149 }
+    { id: "128-4", label: "128GB / 4+4 GB RAM", price: 119 }
   ],
   colors: [
-    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.webp" },
-    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.webp" },
-    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.webp" },
-    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.webp" }
+    { id: "moonlight-blue", label: "Moonlight Blue (أزرق)", hex: "#1E90FF", image: "assets/images/redmi-15c-blue.webp",stock:2 },
+    { id: "midnight-black", label: "Midnight Black (أسود)", hex: "#000000", image: "assets/images/redmi-15c-black.webp",stock:2 },
+    { id: "mint-green", label: "Mint Green (أخضر)", hex: "#98FB98", image: "assets/images/redmi-15c-green.webp",stock:2 },
+    { id: "twilight-orange", label: "Twilight Orange (أورانج)", hex: "#FF8C00", image: "assets/images/redmi-15c-orange.webp",stock:2 }
   ],
   specs: [
     "شاشة 6.9 بوصة IPS LCD، معدل تحديث 120Hz",
@@ -819,7 +819,7 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 269 }
   ],
   colors: [
-    { id: "gray", label: " Gray – رمادي ", hex: "#7D7D7D", image: "assets/images/honor-pad-10-wifi-gray.jpg" }
+    { id: "gray", label: " Gray – رمادي ", hex: "#7D7D7D", image: "assets/images/honor-pad-10-wifi-gray.jpg",stock:3 }
   ],
   specs: [
     "شاشة 12.1 بوصة IPS LCD 120Hz",
@@ -842,7 +842,7 @@ const PRODUCTS = [
     { id: "128-8", label: "128GB / 8+8 GB RAM", price: 179 }
   ],
   colors: [
-    { id: "space-gray", label: " Space Gray –  رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-lte-gray.webp" }
+    { id: "space-gray", label: " Space Gray –  رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-lte-gray.webp",stock:3 }
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD 120Hz",
@@ -865,7 +865,7 @@ const PRODUCTS = [
     { id: "128-6", label: "128GB / 8+8 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "space-gray", label: "Space Gray – رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-wifi-gray.webp" }
+    { id: "space-gray", label: "Space Gray – رمادي ", hex: "#D8D8D8", image: "assets/images/honor-pad-x9a-wifi-gray.webp",stock:3 }
   ],
   specs: [
     "شاشة 11.5 بوصة IPS LCD 120Hz",
@@ -889,7 +889,7 @@ const PRODUCTS = [
     { id: "128-4", label: "128GB / 4+4 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "Space-Gray", label: "Space Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-gray.webp" }
+    { id: "Space-Gray", label: "Space Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-pad-x8a-gray.webp",stock:3 }
   ],
   specs: [
     "شاشة 11 بوصة IPS LCD 90Hz",
@@ -914,9 +914,9 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 199 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-lite-black.jpg" },
-    { id: "marrs-green", label: "Marrs Green – أخضر  ", hex: "#008000", image: "assets/images/honor-400-lite-green.jpg" },
-    { id: "velvet-gray", label: "Velvet Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-400-lite-gray.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود ", hex: "#000000", image: "assets/images/honor-400-lite-black.jpg", stock:0},
+    { id: "marrs-green", label: "Marrs Green – أخضر  ", hex: "#008000", image: "assets/images/honor-400-lite-green.jpg",stock:0 },
+    { id: "velvet-gray", label: "Velvet Gray – رمادي", hex: "#C0C0C0", image: "assets/images/honor-400-lite-gray.jpg",stock:0 }
   ],
   specs: [
     "شاشة 6.7 بوصة AMOLED 120Hz",
@@ -940,9 +940,9 @@ const PRODUCTS = [
     { id: "256-86", label: "256GB / 8+8 GB RAM", price: 179}
   ],
   colors: [
-    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg" },
-    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-5g-gold.jpg" },
-    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-silver.jpg" }
+    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg" ,stock:2},
+    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-5g-gold.jpg" ,stock:2},
+    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-5g-silver.jpg" ,stock:2}
   ],
   specs: [
     "شاشة 6.77 بوصة TFT LCD 120Hz",
@@ -965,9 +965,9 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 159 }
   ],
   colors: [
-    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg" },
-    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-gold.jpg" },
-    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-silver.jpg" }
+    { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg", stock:2},
+    { id: "desert-gold", label: "Desert Gold – صحراوي  ", hex: "#D4AF37", image: "assets/images/honor-x7d-gold.jpg",stock:2 },
+    { id: "meteor-silver", label: "Meteor Silver – فضي ", hex: "#C0C0C0", image: "assets/images/honor-x7d-silver.jpg",stock:2 }
   ],
   specs: [
     "شاشة 6.77 بوصة TFT Lcd 120Hz",
@@ -991,9 +991,9 @@ const PRODUCTS = [
     { id: "256-6", label: "256GB / 6+6 GB RAM", price: 100 }
   ],
   colors: [
-    { id: "midnight-black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/honor-x6c-black.jpg" },
-    { id: "ocean-cyan", label: "Ocean Cyan – أخضر  ", hex: "#00CED1", image: "assets/images/honor-x6c-green.jpg" },
-    { id: "moonlight-white", label: " Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x6c-white.jpg" }
+    { id: "midnight-black", label: "Midnight Black – أسود  ", hex: "#000000", image: "assets/images/honor-x6c-black.jpg",stock:0 },
+    { id: "ocean-cyan", label: "Ocean Cyan – أخضر  ", hex: "#00CED1", image: "assets/images/honor-x6c-green.jpg",stock:0 },
+    { id: "moonlight-white", label: " Moonlight White – أبيض ", hex: "#FFFFFF", image: "assets/images/honor-x6c-white.jpg",stock:0 }
   ],
   specs: [
     "شاشة 6.61 بوصة IPS LCD 120Hz",
@@ -1017,8 +1017,8 @@ const PRODUCTS = [
     { id: "256-12", label: "256GB / 12+12 GB RAM", price: 299 }
   ],
   colors: [
-    { id: "Geek-White", label: "Geek White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-pova7-ultra-white.webp" },
-    { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-ultra-black.webp" }
+    { id: "Geek-White", label: "Geek White – أبيض ", hex: "#FFFFFF", image: "assets/images/tecno-pova7-ultra-white.webp",stock:2 },
+    { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-ultra-black.webp",stock:2 }
   ],
   specs: [
     "شاشة 6.67 بوصة AMOLED 144Hz",
@@ -1041,9 +1041,9 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 199 }
   ],
   colors: [
-    { id: "Geek-Black", label: "Geek Black  – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-5g-black.webp" },
-    { id: "Qasis-Green", label: "Qasis Green – أخضر ", hex: "#228B22", image: "assets/images/tecno-pova7-5g-green.webp" },
-    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-5g-silver.webp" }
+    { id: "Geek-Black", label: "Geek Black  – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-5g-black.webp",stock:0 },
+    { id: "Qasis-Green", label: "Qasis Green – أخضر ", hex: "#228B22", image: "assets/images/tecno-pova7-5g-green.webp",stock:0 },
+    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-5g-silver.webp",stock:0 }
   ],
   specs: [
     "شاشة 6.78 بوصة FHD+ 144Hz",
@@ -1066,9 +1066,9 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 155 }
   ],
   colors: [
-    { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-black.webp" },
-    { id: "Hyper-Titanium", label: "Hyper Titanium –  ذهبي ", hex: "#D4AF37", image: "assets/images/tecno-pova7-gold.jpg" },
-    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-silver.webp" }
+    { id: "Geek-Black", label: "Geek Black – أسود ", hex: "#000000", image: "assets/images/tecno-pova7-black.webp",stock:0 },
+    { id: "Hyper-Titanium", label: "Hyper Titanium –  ذهبي ", hex: "#D4AF37", image: "assets/images/tecno-pova7-gold.jpg",stock:0 },
+    { id: "Magic-Silver", label: "Magic Silver – سلفر ", hex: "#C0C0C0", image: "assets/images/tecno-pova7-silver.webp",stock:0 }
   ],
   specs: [
     "شاشة 6.78 بوصة FHD+ 120Hz",
@@ -1091,8 +1091,8 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 175 }
   ],
   colors: [
-    { id: "Cool-Black", label: "Cool Black – أسود ", hex: "#000000", image: "assets/images/tecno-slim-black.png" },
-    { id: "Slim-Blue", label: "Slim Blue – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-slim-blue.png" }
+    { id: "Cool-Black", label: "Cool Black – أسود ", hex: "#000000", image: "assets/images/tecno-slim-black.png",stock:1 },
+    { id: "Slim-Blue", label: "Slim Blue – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-slim-blue.png",stock:0 }
   ],
   specs: [
     "شاشة 6.78 بوصة AMOLED 144Hz",
@@ -1115,7 +1115,7 @@ const PRODUCTS = [
     { id: "golf-original-cable-GC-77", label: "cable type-c", price: 5 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-77.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-77.jpg",stock:50 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1137,7 +1137,7 @@ const PRODUCTS = [
     { id: "golf-original-cable-GC-79", label: "cable iPhone", price: 5 }
   ],
   colors: [
-    { id: "Green", label: "Green – أخضر", hex: "#008000", image: "assets/images/golf-GC-79.jpg" }
+    { id: "Green", label: "Green – أخضر", hex: "#008000", image: "assets/images/golf-GC-79.jpg",stock:50 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1159,8 +1159,8 @@ const PRODUCTS = [
     { id: "samsung-adapter-25W", label: "Power Adapter 25W", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/Samsung-charger-25w-white.jpg" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-25w-black.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/Samsung-charger-25w-white.jpg",stock:0 },
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-25w-black.jpg",stock:10 }
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1179,8 +1179,8 @@ const PRODUCTS = [
     { id: "samsung-charger-c-25W", label: "USB-C 25W", price: 19 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-charger-full-white1.webp" },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-full-black.webp" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/samsung-charger-full-white1.webp",stock:2 },
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-full-black.webp" ,stock:2}
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1200,7 +1200,7 @@ const PRODUCTS = [
     { id: "lightining-20w", label: "20w Fast Charging Samsung", price: 15 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-lightning1.webp" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-lightning1.webp",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1219,7 +1219,7 @@ const PRODUCTS = [
     { id: "usb-c-20w", label: "20w Fast Charging ", price: 15 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-usb-c-to-usb-c1.webp" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-20w-jellico-usb-c-to-usb-c1.webp",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1238,7 +1238,7 @@ const PRODUCTS = [
     { id: "jellico-original-adapter-AK180", label: "adapter-C 20W", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/jellico-AK180-adapter.webp" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/jellico-AK180-adapter.webp",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1257,7 +1257,7 @@ const PRODUCTS = [
     { id: "golf-original-cable-GC-119i", label: "cable lightning", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-119i.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-119i.jpg",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1278,7 +1278,7 @@ const PRODUCTS = [
     { id: "golf-original-cable-GC-119", label: "cable type-c", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-119.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-119.jpg",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1299,7 +1299,7 @@ const PRODUCTS = [
     { id: "yookie-original-charger-PC18", label: "48W Fast Charging type-c", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-yookie-pc18.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-yookie-pc18.jpg",stock:5 }
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1318,7 +1318,7 @@ const PRODUCTS = [
     { id: "yookie-original-charger-PC18", label: "48W Fast Charging iPhone", price: 10 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-yookie-pc18-ip.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/charger-yookie-pc18-ip.jpg",stock:5 }
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1337,7 +1337,7 @@ const PRODUCTS = [
     { id: "golf-original-cable-GC-81P", label: "cable iPhone ", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-81P.jpg" }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-81P.jpg",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1360,7 +1360,7 @@ const PRODUCTS = [
     { id: "jellico-original-cable-A1", label: "3.1A Fast Charging iPhone", price: 5 }
   ],
   colors: [
-    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-ip.webp" }
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-ip.webp",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1380,7 +1380,7 @@ const PRODUCTS = [
     { id: "10000-black", label: "10000mAh Black – أسود", price: 15 }
   ],
   colors: [
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-p28.jpg" }
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-p28.jpg",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1400,7 +1400,7 @@ const PRODUCTS = [
     { id: "20000-black", label: "20000mAh Black – أسود", price: 25 }
   ],
   colors: [
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/Jellico-p29.jpg" }
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/Jellico-p29.jpg",stock:5 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1420,7 +1420,7 @@ const PRODUCTS = [
     { id: "10000-Beige", label: "10000mAh Beige – كريمي", price: 15 }
   ],
   colors: [
-    { id: "Beige", label: "Beige – كريمي", hex: "#F5F5DC", image: "assets/images/jellico-zp1.jpg" }
+    { id: "Beige", label: "Beige – كريمي", hex: "#F5F5DC", image: "assets/images/jellico-zp1.jpg" ,stock:5}
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1432,7 +1432,7 @@ const PRODUCTS = [
   ],
 },
   {
-  id: "h-matepad-115",
+  id: "h-matepad-11.5",
   title: "Huawei MatePad 11.5",
   brand: "Huawei",
   category: "tablet",
@@ -1441,7 +1441,7 @@ const PRODUCTS = [
     { id: "256-8", label: "256GB / 8GB RAM", price: 319 }
   ],
   colors: [
-    { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/mate-pad115.jpg" }
+    { id: "gray", label: "Space Gray (رمادي )", hex: "#8a8d91", image: "assets/images/mate-pad115.jpg",stock:5 }
   ],
   specs: [
     "شاشة: 11.5 بوصة TFT LCD بدقة 2K (120Hz)",
@@ -1472,7 +1472,7 @@ const PRODUCTS = [
     { id: "128-8",  label: "128GB / 8GB RAM",  price: 189 }
   ],
   colors: [
-    { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp" },
+    { id:"nebula_gray",  label:"Nebula Gray (رمادي فضائي)", hex:"#4a4a4a",   image:"assets/images/mate-pad-11-pin.webp" ,stock:5},
   ],
   specs: [
     "شاشة: ‎11.0 بوصة IPS LCD بدقة ‎1920×1200 بكسل، نسبة شاشة إلى جسم ≈ 85% ‎، سطوع ~400 nits", 
