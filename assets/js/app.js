@@ -1772,7 +1772,10 @@ function cardTemplate(p){
   }
 
   el.innerHTML =
-    `<div class="card__img"><img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}"></div>
+    `<div class="card__img">
+  <div class="product-badges" data-badges-for="${p.id}"></div>
+  <img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}">
+</div>
      <div class="card__body">
        <h3 class="card__title">${p.title}</h3>
        ${colorRowHTML(p)}
