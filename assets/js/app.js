@@ -674,6 +674,7 @@ const PRODUCTS = [
   brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-note-14-black.jpg",
+  stock: 0,  
   variants: [
     { id: "256", label: "256GB / 8+8 GB RAM", price: 140 }
   ],
@@ -726,6 +727,7 @@ const PRODUCTS = [
   brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-note-14-pro-purpul.jpg",
+  stock: 0, 
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 179 }
   ],
@@ -1812,6 +1814,12 @@ function cardTemplate(p){
 
   if(addBtn){
     function updateStockUI(){
+     if(Number(p.stock || 0) <= 0 && p.stock !== undefined){
+  addBtn.disabled = true;
+  addBtn.textContent = "نفذت الكمية";
+  addBtn.classList.add("out-of-stock");
+  return;
+}
       if(!hasColors(p)){
         addBtn.disabled = false;
         addBtn.textContent = "أضف للسلة";
