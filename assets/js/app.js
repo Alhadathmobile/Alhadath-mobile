@@ -1758,7 +1758,7 @@ function cardTemplate(p){
     }
     specsHTML += `</ul>`;
   }
-
+  
   let variantHTML = "";
   let initialPrice = basePrice(p);
   let initialImage = getInitialImagePreferProduct(p);
