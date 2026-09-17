@@ -1773,7 +1773,7 @@ function cardTemplate(p){
 
   el.innerHTML =
     `<div class="card__img">
-  <div class="product-badges" data-badges-for="${p.id}"></div>
+  <div class="product-badges" data-badges-for="${p.id}">${p.badge ? `<span class="badge-new">${p.badge}</span>` : ""}</div>
   <img data-img-for="${p.id}" src="${initialImage}" alt="${p.title}">
 </div>
      <div class="card__body">
