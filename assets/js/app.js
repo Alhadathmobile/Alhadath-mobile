@@ -512,15 +512,15 @@ const PRODUCTS = [
   {
   id: "redmi-a7-pro",
   title: "Redmi A7 Pro",
-  brand: "Redmi",
+  brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/redmi-a7-pro-all.webp",
   variants: [
-    { id: "128-4", label: "128GB / 4GB RAM", price: 0 }
+    { id: "128-4", label: "128GB / 4GB RAM", price: 125 }
   ],
   colors: [
     { id:"black", label:"Black (أسود)", hex:"#191A1D", image:"assets/images/redmi-a7-pro-black.webp", stock:2 },
-    { id:"mist-blue", label:"Mist Blue (أزرق ضبابي)", hex:"#AFC8D8", image:"assets/images/redmi-a7-pro-blue.webp", stock:2 }
+    { id:"mist-blue", label:"Mist Blue (أزرق ضبابي)", hex:"#AFC8D8", image:"assets/images/redmi-A7-pro-blue.webp", stock:2 }
   ],
   specs: [
     "شاشة: 6.9 بوصة LCD، دقة HD+، حتى 120Hz",
