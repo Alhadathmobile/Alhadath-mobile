@@ -279,7 +279,7 @@ const PRODUCTS = [
   image: "assets/images/iphone-adapter.webp",
  stock: 0, 
   variants: [
-    { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
+    { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 19 }
   ],
   colors: [
     { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/iphone-adapter.webp",stock:0 }
@@ -936,6 +936,7 @@ const PRODUCTS = [
   brand: "HONOR",
   category: "smart",
   image: "assets/images/honor-400-lite-gray.jpg",
+  stock: 0,
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 199 }
   ],
@@ -1012,6 +1013,7 @@ const PRODUCTS = [
   brand: "HONOR",
   category: "smart",
   image: "assets/images/honor-x6c-white.jpg",
+  stock: 0,
   variants: [
     { id: "128-6", label: "128GB / 6+6 GB RAM", price: 90 },
     { id: "256-6", label: "256GB / 6+6 GB RAM", price: 100 }
@@ -1063,6 +1065,7 @@ const PRODUCTS = [
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-pova7-5g-silver.webp",
+  stock: 0,
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 199 }
   ],
@@ -1088,6 +1091,7 @@ const PRODUCTS = [
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-pova7-gold.jpg",
+  stock: 0,  
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 155 }
   ],
@@ -1113,11 +1117,12 @@ const PRODUCTS = [
   brand: "TECNO",
   category: "smart",
   image: "assets/images/tecno-slim-blue.png",
+  stock: 0,
   variants: [
     { id: "256-8", label: "256GB / 8+8 GB RAM", price: 175 }
   ],
   colors: [
-    { id: "Cool-Black", label: "Cool Black – أسود ", hex: "#000000", image: "assets/images/tecno-slim-black.png",stock:1 },
+    { id: "Cool-Black", label: "Cool Black – أسود ", hex: "#000000", image: "assets/images/tecno-slim-black.png",stock:0 },
     { id: "Slim-Blue", label: "Slim Blue – أزرق ", hex: "#1E90FF", image: "assets/images/tecno-slim-blue.png",stock:0 }
   ],
   specs: [
@@ -1185,8 +1190,8 @@ const PRODUCTS = [
     { id: "samsung-adapter-25W", label: "Power Adapter 25W", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/Samsung-charger-25w-white.jpg",stock:0 },
-    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-25w-black.jpg",stock:10 }
+    { id: "black", label: "Black – أسود", hex: "#000000", image: "assets/images/samsung-charger-25w-black.jpg",stock:10 },
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/Samsung-charger-25w-white.jpg",stock:0 }
   ],
   specs: [
     "كفالة 6 أشهر ",
@@ -1359,11 +1364,12 @@ const PRODUCTS = [
   brand: "Accessories",
   category: "Accessories",
   image: "assets/images/golf-GC-81P.jpg",
+  stock: 0,
   variants: [
     { id: "golf-original-cable-GC-81P", label: "cable iPhone ", price: 12 }
   ],
   colors: [
-    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-81P.jpg",stock:5 }
+    { id: "white", label: "White – أبيض", hex: "#FFFFFF", image: "assets/images/golf-GC-81P.jpg",stock:0 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -1382,11 +1388,12 @@ const PRODUCTS = [
   brand: "Accessories",
   category: "Accessories",
   image: "assets/images/jellico-A1-ip.webp",
+   stock: 0, 
   variants: [
     { id: "jellico-original-cable-A1", label: "3.1A Fast Charging iPhone", price: 5 }
   ],
   colors: [
-    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-ip.webp",stock:5 }
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-ip.webp",stock:0 }
   ],
   specs: [
     "كفالة 12 شهر ",
