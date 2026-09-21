@@ -66,7 +66,7 @@ const PRODUCTS = [
   {
   id: "iphone-18-pro-max",
   title: "iPhone 18 Pro Max",
-  brand: "Apple",
+  brand: "iPhone",
   category: "smart",
   image: "assets/images/iphone18-pro-max-all.webp",
   variants: [
@@ -95,7 +95,7 @@ const PRODUCTS = [
   {
   id: "iphone-18-pro",
   title: "iPhone 18 Pro",
-  brand: "Apple",
+  brand: "iPhone",
   category: "smart",
   image: "assets/images/iphone18-pro-all.webp",
   variants: [
@@ -147,7 +147,7 @@ const PRODUCTS = [
   {
   id: "honor-play20a",
   title: "HONOR Play20A",
-  brand: "Honor",
+  brand: "HONOR",
   category: "smart",
   image: "assets/images/play20a-all.png",
   variants: [
@@ -285,7 +285,7 @@ const PRODUCTS = [
   {
   id: "honor-choice-t10",
   title: "HONOR CHOICE T10",
-  brand: "Honor",
+  brand: "HONOR",
   category: "smart",
   image: "assets/images/t10-all.webp",
   variants: [
@@ -460,7 +460,7 @@ const PRODUCTS = [
   {
   id: "honor-x8d",
   title: "HONOR X8d",
-  brand: "Honor",
+  brand: "HONOR",
   category: "smart",
   image: "assets/images/x8d-all.webp",
   variants: [
