@@ -73,9 +73,9 @@ const PRODUCTS = [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
     ],
     colors: [
-    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp",stock:2  },
-    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png",stock:2 },
-    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp",stock:2 }
+    { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp",stock:1  },
+    { id:"blue",  label:"Sky Blue (أزرق سماوي)",  hex:"#C9E7F2", image:"assets/images/s26-blue.png",stock:1 },
+    { id:"white", label:" White (أبيض)",   hex:"#F4F4F2", image:"assets/images/s26-white.webp",stock:1 }
   ],
     specs: [
       "شاشة: 6.9 بوصة QHD+ Dynamic AMOLED 2X، 120Hz",
@@ -139,6 +139,7 @@ const PRODUCTS = [
       "النظام: Android 15 + One UI",
       "الأداء: ممتاز للتطبيقات الثقيله والألعاب المتوسطة"
     ],
+    badge: "وصل حديثًا"
   },
   {
     id: "s-a37-5g",
@@ -166,6 +167,7 @@ const PRODUCTS = [
       "النظام: Android 15 + One UI",
       "الأداء: ممتاز للتصفح والألعاب المتوسطة"
     ],
+    badge: "وصل حديثًا"
   },
  
   {
@@ -201,11 +203,12 @@ const PRODUCTS = [
   brand: "Accessories",
   category: "Accessories",
   image: "assets/images/jellico-A1-type-c.webp",
+  stock: 0, 
   variants: [
     { id: "Samsung-3.1A", label: "3.1A Fast Charging Samsung", price: 5 }
   ],
   colors: [
-    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-type-c.webp",stock:50 }
+    { id: "Black", label: "Black – أسود", hex: "#000000", image: "assets/images/jellico-A1-type-c.webp",stock:0 }
   ],
   specs: [
     "كفالة 12 شهر ",
@@ -274,6 +277,7 @@ const PRODUCTS = [
   brand: "Accessories",
   category: "Accessories",
   image: "assets/images/iphone-adapter.webp",
+ stock: 0, 
   variants: [
     { id: "adapter-iphone-c-20w", label: "adapter-C 20W", price: 29 }
   ],
@@ -321,6 +325,7 @@ const PRODUCTS = [
     brand: "Samsung",
     category: "smart",
     image: "assets/images/a26-mint.jpg",
+    stock: 0,
     variants: [
       { id: "128-6+6", label: "128GB / 6+6GB RAM", price: 155 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 199 }
@@ -347,6 +352,7 @@ const PRODUCTS = [
     brand: "Samsung",
     category: "smart",
     image: "assets/images/a36-awesome-violet.jpg",
+    stock: 0,
     variants: [
       { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 220 },
       { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 270 }
@@ -372,6 +378,7 @@ const PRODUCTS = [
     brand: "Samsung",
     category: "smart",
     image: "assets/images/a56-pink.jpg",
+    stock: 0,
     variants: [
       { id: "128-8+8",  label: "128GB / 8+8GB RAM",  price: 270 },
       { id: "256-8+8",  label: "256GB / 8+8GB RAM",  price: 300 },
@@ -398,6 +405,7 @@ const PRODUCTS = [
     brand:"Samsung",
     category: "smart",
     image:"assets/images/s25-titanium-gray.jpg",
+    stock: 0,
     variants: [
       { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 699 }
     ],
@@ -422,6 +430,7 @@ const PRODUCTS = [
   brand: "Samsung",
   category: "smart",
   image: "assets/images/z-fold-7-blue.webp",
+  stock: 0,   
   variants: [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 1399 }
   ],
@@ -438,7 +447,6 @@ const PRODUCTS = [
     "البطارية: 4400mAh، شحن سريع 25W، شحن لاسلكي 15W، شحن عكسي 4.5W",
     "النظام: Android 16 + One UI 8"
   ],
-  badge: "وصل حديثًا"
 },
 {
   id: "samsung-galaxy-z-flip7",
@@ -446,6 +454,7 @@ const PRODUCTS = [
   brand: "Samsung",
   category: "smart",
   image: "assets/images/z-flip-7-black.webp",
+  stock: 0,
   variants: [
     { id: "256-12", label: "256GB / 12 GB RAM", price: 799 }
   ],
@@ -462,7 +471,6 @@ const PRODUCTS = [
     "البطارية: 4300mAh، شحن سريع 25W، شحن لاسلكي 15W، شحن عكسي 4.5W",
     "النظام: Android 16 + One UI 8"
   ],
-  badge: "وصل حديثًا"
 },
 
   // Iphone
@@ -599,6 +607,7 @@ const PRODUCTS = [
   brand: "iPhone",
   category: "smart", 
   image: "assets/images/15-black.jpg",
+  stock: 0, 
   variants: [
     { id: "128", label: "128GB", price: 510 },
     { id: "256", label: "256GB", price: 620 }
@@ -624,6 +633,7 @@ const PRODUCTS = [
   brand: "Redmi/MI",
   category: "smart",
   image: "assets/images/note-14-pro-5g-plus-black.webp",
+  stock: 0,  
   variants: [
     { id: "512-12", label: "512GB / 12+8 GB RAM", price: 345 }
   ],
@@ -953,7 +963,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-5g-black.jpg",
   variants: [
-    { id: "256-86", label: "256GB / 8+8 GB RAM", price: 179}
+    { id: "256-86", label: "256GB / 8+8 GB RAM", price: 189}
   ],
   colors: [
     { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-5g-black.jpg",stock:2},
@@ -978,7 +988,7 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x7d-gold.jpg",
   variants: [
-    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 159 }
+    { id: "256-8", label: "256GB / 8+8 GB RAM", price: 169 }
   ],
   colors: [
     { id: "velvet-black", label: "Velvet Black – أسود  ", hex: "#000000", image: "assets/images/honor-x7d-black.jpg",stock:2},
