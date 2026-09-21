@@ -442,7 +442,6 @@ const PRODUCTS = [
   colors: [
     { id:"black", label:"Black (أسود)", hex:"#171717", image:"assets/images/a27-black.webp", stock:2 },
     { id:"blue", label:"Blue (أزرق)", hex:"#4A668F", image:"assets/images/a27-blue.webp", stock:2 },
-    { id:"light-green", label:"Light Green (أخضر فاتح)", hex:"#C9E3C5", image:"assets/images/a27-green.webp", stock:2 },
     { id:"light-pink", label:"Light Pink (وردي فاتح)", hex:"#F0C7CF", image:"assets/images/a27-pink.webp", stock:2 }
   ],
   specs: [
