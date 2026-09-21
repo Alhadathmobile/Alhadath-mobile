@@ -140,6 +140,7 @@ const PRODUCTS = [
     "الأداء: قوي – ممتاز للاستخدام اليومي والألعاب الخفيفة والمتوسطة"
   ],
 },
+  
   {
     id: "s-a57-5g",
     title: "Samsung A57 5G",
@@ -221,6 +222,31 @@ const PRODUCTS = [
     "البطارية: 5000mAh، شحن سريع 25W",
     "النظام: Android 15 + One UI 7",
     "مقاومة الماء والغبار: IP54"
+  ],
+  badge: "وصل حديثًا"
+},
+  {
+  id: "honor-choice-t10",
+  title: "HONOR CHOICE T10",
+  brand: "Honor",
+  category: "smart",
+  image: "assets/images/t10-all.webp",
+  variants: [
+    { id: "64-4", label: "64GB / 4GB RAM", price: 70 }
+  ],
+  colors: [
+    { id:"black", label:"Black (أسود)", hex:"#171717", image:"assets/images/t10-black.webp", stock:2 },
+    { id:"silver", label:"Silver (فضي)", hex:"#C8C8C8", image:"assets/images/t10-silver.webp", stock:2 }
+  ],
+  specs: [
+    "شاشة: 6.745 بوصة LCD، دقة 1600×720",
+    "المعالج: ثماني النواة",
+    "الكاميرا الخلفية: 13MP مع تركيز تلقائي",
+    "الكاميرا الأمامية: 5MP",
+    "البطارية: 5000mAh",
+    "الشحن: USB-C بقدرة 10W تقريبًا",
+    "الشبكات: Dual SIM مع دعم microSD",
+    "الأداء: مناسب للاستخدام اليومي والتصفح والتطبيقات الأساسية"
   ],
   badge: "وصل حديثًا"
 },
@@ -347,6 +373,60 @@ const PRODUCTS = [
   ],
 },
   {
+  id: "s-a27-5g",
+  title: "Samsung Galaxy A27 5G",
+  brand: "Samsung",
+  category: "smart",
+  image: "assets/images/a27-all.webp",
+  variants: [
+    { id: "128-6", label: "128GB / 6GB RAM", price: 239 },
+    { id: "256-8", label: "256GB / 8GB RAM", price: 295 }
+  ],
+  colors: [
+    { id:"black", label:"Black (أسود)", hex:"#171717", image:"assets/images/a27-black.webp", stock:2 },
+    { id:"blue", label:"Blue (أزرق)", hex:"#4A668F", image:"assets/images/a27-blue.webp", stock:2 },
+    { id:"light-green", label:"Light Green (أخضر فاتح)", hex:"#C9E3C5", image:"assets/images/a27-green.webp", stock:2 },
+    { id:"light-pink", label:"Light Pink (وردي فاتح)", hex:"#F0C7CF", image:"assets/images/a27-pink.webp", stock:2 }
+  ],
+  specs: [
+    "شاشة: 6.7 بوصة FHD+ Super AMOLED، 120Hz",
+    "المعالج: Snapdragon 6 Gen 3",
+    "الكاميرا الخلفية: 50MP OIS + 5MP Ultra-wide + 2MP ماكرو",
+    "الكاميرا الأمامية: 12MP",
+    "البطارية: 5000mAh مع شحن سريع 25W",
+    "النظام: Android + One UI",
+    "الشبكات: 5G",
+    "الأداء: ممتاز للاستخدام اليومي والألعاب والاستخدام المتعدد"
+  ],
+  badge: "وصل حديثًا"
+},
+  {
+  id: "honor-x8d",
+  title: "HONOR X8d",
+  brand: "Honor",
+  category: "smart",
+  image: "assets/images/x8d-all.webp",
+  variants: [
+    { id: "256-8", label: "256GB / 8GB RAM", price: 189 },
+    { id: "512-8", label: "512GB / 8GB RAM", price: 199 }
+  ],
+  colors: [
+    { id:"light-blue", label:"Light Blue (أزرق فاتح)", hex:"#B9DCEB", image:"assets/images/x8d-blue.webp", stock:2 },
+    { id:"velvet-black", label:"Velvet Black (أسود مخملي)", hex:"#17181A", image:"assets/images/x8d-black.webp", stock:2 }
+  ],
+  specs: [
+    "شاشة: AMOLED عالية الدقة مع معدل تحديث مرتفع",
+    "الكاميرا الخلفية: 108MP AI",
+    "البطارية: 7000mAh",
+    "مقاومة الماء والغبار: IP65",
+    "مقاومة السقوط: حتى 2 متر",
+    "زر AI مخصص",
+    "التصميم: نحيف وخفيف",
+    "الأداء: مناسب للاستخدام اليومي والتصوير والألعاب"
+  ],
+  badge: "وصل حديثًا"
+},
+  {
     id: "s-a26-5g",
     title: "Samsung A26 5G",
     brand: "Samsung",
@@ -372,7 +452,31 @@ const PRODUCTS = [
       "الأداء: قوي للألعاب المتوسطة وتعدد المهام"
     ],
   },
-  
+  {
+  id: "redmi-a7-pro",
+  title: "Redmi A7 Pro",
+  brand: "Redmi",
+  category: "smart",
+  image: "assets/images/redmi-a7-pro-all.webp",
+  variants: [
+    { id: "128-4", label: "128GB / 4GB RAM", price: 0 }
+  ],
+  colors: [
+    { id:"black", label:"Black (أسود)", hex:"#191A1D", image:"assets/images/redmi-a7-pro-black.webp", stock:2 },
+    { id:"mist-blue", label:"Mist Blue (أزرق ضبابي)", hex:"#AFC8D8", image:"assets/images/redmi-a7-pro-blue.webp", stock:2 }
+  ],
+  specs: [
+    "شاشة: 6.9 بوصة LCD، دقة HD+، حتى 120Hz",
+    "المعالج: UNISOC T7250، ثماني النواة",
+    "الكاميرا الخلفية: 13MP AI + مستشعر مساعد",
+    "الكاميرا الأمامية: 8MP",
+    "البطارية: 6000mAh",
+    "النظام: Xiaomi HyperOS",
+    "الذاكرة: 4GB RAM مع إمكانية توسيع الذاكرة حتى 8GB",
+    "الأداء: مناسب للاستخدام اليومي والتصفح والتطبيقات الأساسية"
+  ],
+  badge: "وصل حديثًا"
+},
   {
     id: "s-a36-5g",
     title: "Samsung A36 5G",
