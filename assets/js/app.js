@@ -92,16 +92,16 @@ const PRODUCTS = [
   title: "HONOR Play20A",
   brand: "Honor",
   category: "smart",
-  image: "assets/images/play20a-all.webp",
+  image: "assets/images/play20a-all.png",
   variants: [
     { id: "64-4", label: "64GB / 4GB RAM", price: 80 },
     { id: "128-4", label: "128GB / 4GB RAM", price: 95 }
     
   ],
   colors: [
-    { id:"midnight-black", label:"Midnight Black (أسود)", hex:"#17181C", image:"assets/images/play20a-black.webp", stock:2 },
-    { id:"light-blue", label:"Light Blue (أزرق فاتح)", hex:"#B9D9E8", image:"assets/images/play20a-blue.webp", stock:2 },
-    { id:"starry-purple", label:"Starry Purple (بنفسجي نجمي)", hex:"#B99BC7", image:"assets/images/play20a-purple.webp", stock:0 }
+    { id:"midnight-black", label:"Midnight Black (أسود)", hex:"#17181C", image:"assets/images/play20a-black.jpg", stock:2 },
+    { id:"light-blue", label:"Light Blue (أزرق فاتح)", hex:"#B9D9E8", image:"assets/images/play20a-blue.png", stock:2 },
+    { id:"starry-purple", label:"Starry Purple (بنفسجي نجمي)", hex:"#B99BC7", image:"assets/images/play20a-purple.png", stock:0 }
   ],
   specs: [
     "شاشة: 6.9 بوصة LCD، دقة HD+، معدل تحديث 90Hz",
