@@ -64,6 +64,63 @@ const PRODUCTS = [
     badge: "الأكثر مبيعًا"
 },
   {
+  id: "iphone-18-pro-max",
+  title: "iPhone 18 Pro Max",
+  brand: "Apple",
+  category: "smart",
+  image: "assets/images/iphone18-pro-max-all.webp",
+  variants: [
+    { id: "256", label: "256GB", price: 1399 },
+    { id: "512", label: "512GB", price: 1499 }
+  ],
+  colors: [
+    { id:"burgundy", label:"Burgundy (عنابي)", hex:"#641F2A", image:"assets/images/iphone18-pro-max-burgundy.webp", stock:2 },
+    { id:"black", label:"Black (أسود)", hex:"#1D1D1F", image:"assets/images/iphone18-pro-max-black.webp", stock:2 },
+    { id:"silver", label:"Silver (فضي)", hex:"#D9D9D9", image:"assets/images/iphone18-pro-max-silver.webp", stock:2 },
+    { id:"glacier", label:"Glacier (جليدي)", hex:"#C8D9E5", image:"assets/images/iphone18-pro-max-glacier.webp", stock:2 }
+  ],
+  specs: [
+    "شاشة: 6.9 بوصة Super Retina XDR OLED، ProMotion حتى 120Hz",
+    "المعالج: Apple A20 Pro",
+    "الكاميرا الخلفية: 48MP Fusion رئيسية + 48MP Ultra Wide + 48MP Telephoto",
+    "الكاميرا الأمامية: 18MP Center Stage",
+    "التقريب: حتى 8x بجودة بصرية",
+    "البطارية: حتى 30 ساعة استخدام نموذجي",
+    "الحماية: Ceramic Shield 2 أمامي وCeramic Shield خلفي",
+    "مقاومة الماء والغبار: IP68",
+    "الأداء: أداء احترافي للتصوير والألعاب والتطبيقات الثقيلة"
+  ],
+  badge: "وصل حديثًا"
+},
+  {
+  id: "iphone-18-pro",
+  title: "iPhone 18 Pro",
+  brand: "Apple",
+  category: "smart",
+  image: "assets/images/iphone18-pro-all.webp",
+  variants: [
+    { id: "256", label: "256GB", price: 1199 },
+    { id: "512", label: "512GB", price: 1399 }
+  ],
+  colors: [
+    { id:"black", label:"Black (أسود)", hex:"#1D1D1F", image:"assets/images/iphone18-pro-black.webp", stock:2 },
+    { id:"silver", label:"Silver (فضي)", hex:"#D9D9D9", image:"assets/images/iphone18-pro-silver.webp", stock:2 },
+    { id:"glacier", label:"Glacier (جليدي)", hex:"#C8D9E5", image:"assets/images/iphone18-pro-glacier.webp", stock:2 },
+    { id:"burgundy", label:"Burgundy (عنابي)", hex:"#641F2A", image:"assets/images/iphone18-pro-burgundy.webp", stock:2 }
+  ],
+  specs: [
+    "شاشة: 6.3 بوصة Super Retina XDR OLED، ProMotion حتى 120Hz",
+    "المعالج: Apple A20 Pro",
+    "الكاميرا الخلفية: 48MP Fusion رئيسية + 48MP Ultra Wide + 48MP Telephoto",
+    "الكاميرا الأمامية: 18MP Center Stage",
+    "التقريب: حتى 8x بجودة بصرية",
+    "الحماية: Ceramic Shield 2 أمامي وCeramic Shield خلفي",
+    "مقاومة الماء والغبار: IP68",
+    "الأداء: أداء احترافي للتصوير والألعاب والتطبيقات الثقيلة"
+  ],
+  badge: "وصل حديثًا"
+},
+  {
     id:"s-s26-ultra-12-256",
     title:"Samsung S26 ULTRA 5G",
     brand:"Samsung",
