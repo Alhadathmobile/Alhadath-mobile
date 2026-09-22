@@ -2477,7 +2477,11 @@ function showNotice(message, type = "warning") {
   const params = new URLSearchParams(window.location.search);
 
   // يعمل فقط عند الدخول من رابط الحملة
-  if (params.get("campaign") !== "a37-a57") return;
+  const isCampaign =
+  params.get("campaign") === "a37-a57" ||
+  window.location.pathname.endsWith("/a37-a57");
+
+if (!isCampaign) return;
 
   const campaignIds = new Set([
     "s-a37-5g",
