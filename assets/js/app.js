@@ -2469,4 +2469,53 @@ function showNotice(message, type = "warning") {
     notice.classList.remove("show");
   }, 3500);
 }
+/* =========================================
+   Alhadath Mobile - A37 + A57 Campaign
+   ========================================= */
 
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  // يعمل فقط عند الدخول من رابط الحملة
+  if (params.get("campaign") !== "a37-a57") return;
+
+  const campaignIds = new Set([
+    "s-a37-5g",
+    "s-a57-5g"
+  ]);
+
+  // الاحتفاظ فقط بجهازي A37 و A57
+  const campaignProducts = PRODUCTS.filter(product =>
+    campaignIds.has(product.id)
+  );
+
+  if (!campaignProducts.length) return;
+
+  // استبدال قائمة العرض مؤقتًا لهذه الزيارة فقط
+  PRODUCTS.splice(
+    0,
+    PRODUCTS.length,
+    ...campaignProducts
+  );
+
+  // إعادة عرض المنتجات
+  if (typeof filterAndRender === "function") {
+    filterAndRender();
+  }
+
+  // الانتقال إلى قسم المنتجات
+  setTimeout(() => {
+    const productsSection =
+      document.querySelector("#products") ||
+      document.querySelector(".products") ||
+      document.querySelector('[class*="products"]');
+
+    if (productsSection) {
+      productsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }, 300);
+
+})();
