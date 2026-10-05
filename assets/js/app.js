@@ -18,8 +18,8 @@ const PRODUCTS = [
   category: "smart",
   image: "assets/images/honor-x9d-all.webp",
   variants: [
-    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 279 },
-    { id: "256-12", label: "256GB / 8+8 GB RAM", price: 249 }
+    { id: "256-12", label: "256GB / 12+12 GB RAM", price: 299 },
+    { id: "256-12", label: "256GB / 8+8 GB RAM", price: 269 }
   ],
   colors: [
     { 
@@ -127,7 +127,7 @@ const PRODUCTS = [
     category: "smart",
     image:"assets/images/s26-all.webp",
     variants: [
-      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 849 }
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 999 }
     ],
     colors: [
     { id:"black",  label:"Black (أسود)",  hex:"#1C1C1E", image:"assets/images/s26-black.webp",stock:1  },
@@ -205,9 +205,9 @@ const PRODUCTS = [
     category: "smart",
     image: "assets/images/a57-all.webp",
     variants: [
-      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 375 },
-      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 425 },
-      { id: "512-12+12", label: "512GB / 12+12GB RAM", price: 525 }
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 409 },
+      { id: "256-12+12", label: "256GB / 12+12GB RAM", price: 459 },
+      { id: "512-12+12", label: "512GB / 12+12GB RAM", price: 560 }
     ],
     colors: [
     { id:"awesome-navy",  label:"Awesome Navy (كحلي)",  hex:"#2A3550", image:"assets/images/a57-navy.jpg",stock:2  },
@@ -233,9 +233,9 @@ const PRODUCTS = [
     category: "smart",
     image: "assets/images/a37-all.jpg",
     variants: [
-      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 285 },
-      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 335 },
-      { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 389 }
+      { id: "128-8+8", label: "128GB / 8+8GB RAM", price: 315 },
+      { id: "256-8+8", label: "256GB / 8+8GB RAM", price: 365 },
+      { id: "512-12+12", label: "256GB / 12+12GB RAM", price: 415 }
     ],
     colors: [
     { id:"awesome-charcoal",  label:"Awesome Charcoal (كحلي)",  hex:"#2B2B2D", image:"assets/images/a37-black.webp",stock:2  },
@@ -437,7 +437,7 @@ const PRODUCTS = [
   image: "assets/images/a27-all.webp",
   variants: [
     { id: "128-6", label: "128GB / 6GB RAM", price: 239 },
-    { id: "256-8", label: "256GB / 8GB RAM", price: 295 }
+    { id: "256-8", label: "256GB / 8GB RAM", price: 315 }
   ],
   colors: [
     { id:"black", label:"Black (أسود)", hex:"#171717", image:"assets/images/a27-black.webp", stock:2 },
